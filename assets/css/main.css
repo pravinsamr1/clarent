@@ -7550,3 +7550,7 @@ input.main-search-input::placeholder {
   font-size: 40px;
   line-height: 50px;
 }
+
+.white-logoo{
+  filter: brightness(0) invert(1);
+}
