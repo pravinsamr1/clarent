@@ -29,11 +29,78 @@ CSS TABLE OF CONTENTS
 
 	$(document).ready(function () {
 		//>> Mobile Menu Js Start <<//
-		$("#mobile-menu").meanmenu({
-			meanMenuContainer: ".mobile-menu",
-			meanScreenWidth: "1199",
-			meanExpand: ['<i class="far fa-plus"></i>'],
-		});
+		if ($("#mobile-menu").length > 0) {
+			// Clone the desktop menu for mobile
+			const $mobileMenu = $("#mobile-menu").clone().attr("id", "mobile-menu-active");
+			
+			// Find the Services menu item in the mobile clone
+			const $servicesLi = $mobileMenu.find('a').filter(function() {
+				return $(this).text().trim().toLowerCase() === "services";
+			}).first().parent();
+			
+			const $megaMenu = $servicesLi.children("ul.services-mega");
+			if ($megaMenu.length > 0) {
+				const $newSubmenu = $('<ul class="submenu"></ul>');
+				
+				$megaMenu.find('.services-mega__panel').each(function() {
+					const $panel = $(this);
+					let categoryName = $panel.find('.services-mega__panel-heading, h3').first().text().trim();
+					if (!categoryName) {
+						const tabId = $panel.attr('data-services-panel');
+						const $tabBtn = $megaMenu.find(`[data-services-tab="${tabId}"]`);
+						categoryName = $tabBtn.text().trim();
+					}
+					
+					// Create category item
+					const $catLi = $('<li></li>');
+					const $catLink = $('<a href="services.html"></a>').text(categoryName);
+					$catLi.append($catLink);
+					
+					// Create submenu for the category services
+					const $subList = $('<ul class="submenu"></ul>');
+					
+					// Clone and clean all services under this category
+					$panel.find('> .services-mega__list > .services-mega__item').each(function() {
+						const $item = $(this).clone();
+						$item.removeClass();
+						$item.find('*').each(function() {
+							const $el = $(this);
+							$el.removeAttr('style');
+							if ($el.is('a')) {
+								$el.removeClass();
+							} else if ($el.is('ul')) {
+								$el.removeClass().addClass('submenu');
+							} else if ($el.is('li')) {
+								$el.removeClass();
+							}
+						});
+						$subList.append($item);
+					});
+					
+					if ($subList.children().length > 0) {
+						$catLi.append($subList);
+					}
+					$newSubmenu.append($catLi);
+				});
+				
+				$megaMenu.replaceWith($newSubmenu);
+			}
+			
+			// Append the mobile menu, so meanmenu can process it
+			$mobileMenu.appendTo(".mean__menu-wrapper");
+			
+			$("#mobile-menu-active").meanmenu({
+				meanMenuContainer: ".mobile-menu",
+				meanScreenWidth: "1199",
+				meanExpand: ['<i class="far fa-plus"></i>'],
+			});
+		} else {
+			$("#mobile-menu").meanmenu({
+				meanMenuContainer: ".mobile-menu",
+				meanScreenWidth: "1199",
+				meanExpand: ['<i class="far fa-plus"></i>'],
+			});
+		}
 
 		//>> Sidebar Toggle Js Start <<//
 		$(".offcanvas__close,.offcanvas__overlay").on("click", function () {
