@@ -1483,27 +1483,6 @@
 
     <script src="assets/js/common-header.js"></script>
 
-    <script>
-        document.querySelectorAll('.services-mega').forEach(function (megaMenu) {
-            const tabs = megaMenu.querySelectorAll('[data-services-tab]');
-            const panels = megaMenu.querySelectorAll('[data-services-panel]');
-
-            tabs.forEach(function (tab) {
-                tab.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    const target = tab.getAttribute('data-services-tab');
-
-                    tabs.forEach(function (item) {
-                        item.classList.toggle('active', item === tab);
-                    });
-
-                    panels.forEach(function (panel) {
-                        panel.classList.toggle('active', panel.getAttribute('data-services-panel') === target);
-                    });
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>

@@ -28,88 +28,130 @@ CSS TABLE OF CONTENTS
 	("use strict");
 
 	$(document).ready(function () {
-		//>> Mobile Menu Js Start <<//
-		if ($("#mobile-menu").length > 0) {
-			// Clone the desktop menu for mobile
-			const $mobileMenu = $("#mobile-menu").clone().attr("id", "mobile-menu-active");
-			
-			// Find the Services menu item in the mobile clone
-			const $servicesLi = $mobileMenu.find('a').filter(function() {
-				return $(this).text().trim().toLowerCase() === "services";
-			}).first().parent();
-			
-			const $megaMenu = $servicesLi.children("ul.services-mega");
-			if ($megaMenu.length > 0) {
-				const $newSubmenu = $('<ul class="submenu"></ul>');
-				
-				$megaMenu.find('.services-mega__panel').each(function() {
-					const $panel = $(this);
-					let categoryName = $panel.find('.services-mega__panel-heading, h3').first().text().trim();
-					if (!categoryName) {
-						const tabId = $panel.attr('data-services-panel');
-						const $tabBtn = $megaMenu.find(`[data-services-tab="${tabId}"]`);
-						categoryName = $tabBtn.text().trim();
-					}
-					
-					// Create category item
-					const $catLi = $('<li></li>');
-					const $catLink = $('<a href="services.html"></a>').text(categoryName);
-					$catLi.append($catLink);
-					
-					// Create submenu for the category services
-					const $subList = $('<ul class="submenu"></ul>');
-					
-					// Clone and clean all services under this category
-					$panel.find('> .services-mega__list > .services-mega__item').each(function() {
-						const $item = $(this).clone();
-						$item.removeClass();
-						$item.find('*').each(function() {
-							const $el = $(this);
-							$el.removeAttr('style');
-							if ($el.is('a')) {
-								$el.removeClass();
-							} else if ($el.is('ul')) {
-								$el.removeClass().addClass('submenu');
-							} else if ($el.is('li')) {
-								$el.removeClass();
-							}
+		//>> Mobile Menu and Sidebar feature initialization <<//
+		function initHeaderFeatures() {
+			// Avoid duplicate initialization
+			if (window.headerFeaturesInitialized) return;
+
+			if ($("#mobile-menu").length > 0) {
+				window.headerFeaturesInitialized = true;
+
+				// 1. Initialize Services Mega Menu Tabs
+				$(".services-mega").each(function () {
+					const $megaMenu = $(this);
+					const $tabs = $megaMenu.find('[data-services-tab]');
+					const $panels = $megaMenu.find('[data-services-panel]');
+
+					$tabs.off('click').on('click', function (event) {
+						event.preventDefault();
+						const $tab = $(this);
+						const target = $tab.attr('data-services-tab');
+
+						$tabs.each(function () {
+							$(this).toggleClass('active', this === $tab[0]);
 						});
-						$subList.append($item);
+
+						$panels.each(function () {
+							const $panel = $(this);
+							$panel.toggleClass('active', $panel.attr('data-services-panel') === target);
+						});
+					});
+				});
+
+				// 2. Clone the desktop menu for mobile
+				const $mobileMenu = $("#mobile-menu").clone().attr("id", "mobile-menu-active");
+				
+				// Find the Services menu item in the mobile clone
+				const $servicesLi = $mobileMenu.find('a').filter(function() {
+					return $(this).text().trim().toLowerCase() === "services";
+				}).first().parent();
+				
+				const $megaMenu = $servicesLi.children("ul.services-mega");
+				if ($megaMenu.length > 0) {
+					const $newSubmenu = $('<ul class="submenu"></ul>');
+					
+					$megaMenu.find('.services-mega__panel').each(function() {
+						const $panel = $(this);
+						let categoryName = $panel.find('.services-mega__panel-heading, h3').first().text().trim();
+						if (!categoryName) {
+							const tabId = $panel.attr('data-services-panel');
+							const $tabBtn = $megaMenu.find(`[data-services-tab="${tabId}"]`);
+							categoryName = $tabBtn.text().trim();
+						}
+						
+						// Create category item
+						const $catLi = $('<li></li>');
+						const $catLink = $('<a href="services.html"></a>').text(categoryName);
+						$catLi.append($catLink);
+						
+						// Create submenu for the category services
+						const $subList = $('<ul class="submenu"></ul>');
+						
+						// Clone and clean all services under this category
+						$panel.find('> .services-mega__list > .services-mega__item').each(function() {
+							const $item = $(this).clone();
+							$item.removeClass();
+							$item.find('*').each(function() {
+								const $el = $(this);
+								$el.removeAttr('style');
+								if ($el.is('a')) {
+									$el.removeClass();
+								} else if ($el.is('ul')) {
+									$el.removeClass().addClass('submenu');
+								} else if ($el.is('li')) {
+									$el.removeClass();
+								}
+							});
+							$subList.append($item);
+						});
+						
+						if ($subList.children().length > 0) {
+							$catLi.append($subList);
+						}
+						$newSubmenu.append($catLi);
 					});
 					
-					if ($subList.children().length > 0) {
-						$catLi.append($subList);
-					}
-					$newSubmenu.append($catLi);
-				});
+					$megaMenu.replaceWith($newSubmenu);
+				}
 				
-				$megaMenu.replaceWith($newSubmenu);
+				// Append the mobile menu, so meanmenu can process it
+				$mobileMenu.appendTo(".mean__menu-wrapper");
+				
+				$("#mobile-menu-active").meanmenu({
+					meanMenuContainer: ".mobile-menu",
+					meanScreenWidth: "1199",
+					meanExpand: ['<i class="far fa-plus"></i>'],
+				});
+			} else {
+				// Handle case when meanmenu container is already active or we just bind meanmenu directly if #mobile-menu is present but simple
+				if ($("#mobile-menu").length > 0) {
+					$("#mobile-menu").meanmenu({
+						meanMenuContainer: ".mobile-menu",
+						meanScreenWidth: "1199",
+						meanExpand: ['<i class="far fa-plus"></i>'],
+					});
+				}
 			}
-			
-			// Append the mobile menu, so meanmenu can process it
-			$mobileMenu.appendTo(".mean__menu-wrapper");
-			
-			$("#mobile-menu-active").meanmenu({
-				meanMenuContainer: ".mobile-menu",
-				meanScreenWidth: "1199",
-				meanExpand: ['<i class="far fa-plus"></i>'],
+
+			//>> Sidebar Toggle Js Start <<//
+			$(".offcanvas__close,.offcanvas__overlay").off("click").on("click", function () {
+				$(".offcanvas__info").removeClass("info-open");
+				$(".offcanvas__overlay").removeClass("overlay-open");
 			});
-		} else {
-			$("#mobile-menu").meanmenu({
-				meanMenuContainer: ".mobile-menu",
-				meanScreenWidth: "1199",
-				meanExpand: ['<i class="far fa-plus"></i>'],
+			$(".sidebar__toggle").off("click").on("click", function () {
+				$(".offcanvas__info").addClass("info-open");
+				$(".offcanvas__overlay").addClass("overlay-open");
 			});
 		}
 
-		//>> Sidebar Toggle Js Start <<//
-		$(".offcanvas__close,.offcanvas__overlay").on("click", function () {
-			$(".offcanvas__info").removeClass("info-open");
-			$(".offcanvas__overlay").removeClass("overlay-open");
-		});
-		$(".sidebar__toggle").on("click", function () {
-			$(".offcanvas__info").addClass("info-open");
-			$(".offcanvas__overlay").addClass("overlay-open");
+		// Initialize immediately if elements are already in the DOM (static/inline header)
+		if ($("#mobile-menu").length > 0) {
+			initHeaderFeatures();
+		}
+
+		// Listen for headerLoaded event (dynamic/common header)
+		$(document).on("headerLoaded", function () {
+			initHeaderFeatures();
 		});
 
 		//>> Body Overlay Js Start <<//
