@@ -749,3 +749,223 @@
                 padding: 30px 20px;
             }
         }
+
+.touchhh{
+    font-size: 40px;
+}
+
+.white-color{
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Outcome Card Styling for Cybersecurity SOP Program */
+.outcome-card {
+    background: #ffffff;
+    border: 1px solid rgba(81, 53, 255, 0.08);
+    border-radius: 24px;
+    padding: 36px 30px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
+    position: relative;
+    overflow: hidden;
+}
+
+.outcome-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(93deg, #5135FF 10.65%, #FF5455 89.35%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.outcome-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 20px 40px rgba(81, 53, 255, 0.08);
+    border-color: rgba(81, 53, 255, 0.15);
+}
+
+.outcome-card:hover::before {
+    opacity: 1;
+}
+
+.outcome-card__icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    background: rgba(81, 53, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: #5135FF;
+    margin-bottom: 24px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.outcome-card:hover .outcome-card__icon-box {
+    background: linear-gradient(93deg, #5135FF 10.65%, #FF5455 89.35%);
+    color: #ffffff;
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0px 8px 20px rgba(81, 53, 255, 0.2);
+}
+
+.outcome-card__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #17111f;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.outcome-card:hover .outcome-card__title {
+    color: #5135FF;
+}
+
+.outcome-card__text {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #5e6282;
+    margin: 0;
+}
+
+/* Premium Risk Management Program Styles */
+.framework-card {
+    background: #ffffff;
+    border: 1px solid rgba(81, 53, 255, 0.08);
+    border-radius: 20px;
+    padding: 30px 24px;
+    transition: all 0.4s ease;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.framework-card:hover {
+    transform: translateY(-5px);
+    border-color: #5135FF;
+    box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.1);
+}
+
+.framework-card__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: rgba(81, 53, 255, 0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #5135FF;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+}
+
+.framework-card:hover .framework-card__icon {
+    background: #5135FF;
+    color: #ffffff;
+}
+
+/* Process Cards (SP-RMM Process Flow) */
+.process-card {
+    background: #ffffff;
+    border: 1px solid rgba(81, 53, 255, 0.06);
+    border-radius: 20px;
+    padding: 30px 20px;
+    position: relative;
+    transition: all 0.4s ease;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.01);
+}
+
+.process-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #5135FF, #FF5455);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.08);
+}
+
+.process-card:hover::before {
+    opacity: 1;
+}
+
+.process-card__step {
+    font-size: 13px;
+    font-weight: 700;
+    color: #FF5455;
+    background: rgba(255, 84, 85, 0.08);
+    padding: 4px 12px;
+    border-radius: 100px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+/* Scope Cards */
+.scope-card {
+    background: rgba(81, 53, 255, 0.02);
+    border: 1px solid rgba(81, 53, 255, 0.05);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.scope-card:hover {
+    background: #ffffff;
+    border-color: rgba(81, 53, 255, 0.15);
+    box-shadow: 0px 10px 30px rgba(81, 53, 255, 0.05);
+    transform: scale(1.02);
+}
+
+/* Culture Card */
+.culture-card {
+    background: linear-gradient(135deg, #120e2e 0%, #1c133a 100%);
+    border-radius: 24px;
+    padding: 45px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 15px 40px rgba(18, 14, 46, 0.2);
+}
+
+.culture-card::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(81, 53, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+/* Advantage Callout Slogan Banner */
+.advantage-banner {
+    background: linear-gradient(93deg, rgba(81, 53, 255, 0.05), rgba(255, 84, 85, 0.05));
+    border-left: 5px solid #5135FF;
+    border-radius: 8px 24px 24px 8px;
+    padding: 24px 30px;
+    margin: 30px 0;
+}
+
+.advantage-banner__text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #5135FF;
+    margin: 0;
+    letter-spacing: 0.5px;
+}

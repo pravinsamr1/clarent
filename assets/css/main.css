@@ -2815,16 +2815,16 @@ footer {
   background: url(../img/footer/footer-subscribebg.png) no-repeat center center;
   background-size: cover;
   border-radius: 24px;
-  padding: 50px 80px;
+  padding: 50px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 2px;
 }
 
 .customer-touch-wrap .section-title {
-  max-width: 700px;
+  max-width: 900px;
 }
 
 @media (max-width: 991px) {
@@ -4091,10 +4091,60 @@ footer {
 }
 
 .banner-section-wrap.style3 .banner-bg-slide {
-  background: url(../../assets/img/banner/banner3-slide1.png) no-repeat top center;
+  background: url(../../assets/webimages/image.png) no-repeat top center;
   background-size: cover;
-  padding: 320px 0 260px;
+  padding: 220px 0 200px;
 }
+
+.banner-section-wrap.style3 .banner-bg-slide {
+
+  position: relative;
+
+  background: url(../../assets/webimages/image.png) no-repeat top center;
+
+  background-size: cover;
+
+  padding: 160px 0 200px;
+
+  overflow: hidden;
+
+}
+
+.banner-section-wrap.style3 .banner-bg-slide::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+
+    90deg,
+
+    rgba(3, 5, 10, 0.75) 0%,
+
+    rgba(37, 18, 18, 0.45) 40%,
+
+    rgba(0, 80, 160, 0.25) 100%
+
+  );
+
+  z-index: 1;
+
+}
+
+.banner-section-wrap.style3 .banner-content {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+
+
 
 .banner-section-wrap.style3 .banner-bg-slide.style2 {
   background: url(../../assets/img/banner/banner3-slide2.png) no-repeat top center;
@@ -4102,7 +4152,7 @@ footer {
 }
 
 .banner-section-wrap.style3 .banner-bg-slide.style3 {
-  background: url(../../assets/img/banner/banner1-slide1.png) no-repeat top center;
+  background: url(../../assets/webimages/banenr.jpg) no-repeat top center;
   background-size: cover;
 }
 
@@ -4141,7 +4191,7 @@ footer {
 }
 
 .banner-section-wrap.style3 .banner-content {
-  max-width: 850px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
@@ -8775,15 +8825,15 @@ input.main-search-input::placeholder {
 }
 
 .about-clarent h2 {
-  font-size: 40px !important;
-  line-height: 120%;
+  font-size: 30px !important;
+  line-height: 140%;
 }
 
 .sticky-sidebar-box {
   position: -webkit-sticky;
   position: sticky;
   top: 120px;
-  align-self: flex-start;
+  align-self: fle x-start;
 }
 
 @media (max-width: 991px) {

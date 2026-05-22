@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="authorName">
-    <meta name="description" content="Tecmo - IT Solution and Technology HTML Template">
+    <meta name="author" content="Clarent360">
+    <meta name="description" content="Clarent360 Data Privacy Program helps organizations build resilient, compliant, and secure environments with privacy-first governance and operational controls.">
     <!-- ======== Page title ============ -->
-    <title>Shared on THEMELOCK.COM - Tecmo - IT Solution and Technology HTML Template</title>
+    <title>Data Privacy Program | Clarent360</title>
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="assets/img/logo/favs.png">
     <!--<< Bootstrap min.css >>-->
@@ -29,10 +29,11 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
-    <!--<< Custom.css >>-->
-    <link rel="stylesheet" href="assets/css/custom.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
 </head>
 
 <body>
@@ -86,7 +87,87 @@
     </div>
     <!-- End Cursor Pointer -->
 
-     <header id="header-sticky" class="header-1 w-100">
+    <!-- Offcanvas Area Start -->
+    <div class="fix-area">
+        <div class="offcanvas__info">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top mb-4 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="index.html">
+                                <img src="assets/webimages/log.png" alt="logo-img">
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mobile-menu fix mb-3"></div>
+                    <div class="offcanvas__contact">
+                        <h4 class="n900-clr">Contact Info</h4>
+                        <ul class="d-grid gap-2 mb-5">
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">3517 W. Gray St. Utica, Pennsylvania</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-envelope"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="mailto:info@example.com"><span
+                                            class="mailto:info@example.com">alma.lawson@example.com</span></a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-clock"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">Sun-friday, 02am -09pm</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="tel:+11002345909">(219) 555-0114</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="header-button mt-4">
+                            <a href="contact.html" class="theme-btn p2-bg text-center">
+                                <span>
+                                    Get A Quote
+                                    <span class="ani-arrow">
+                                        <i class="fa-solid fa-arrow-right-long"></i>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+
+    <!-- Header Section Start -->
+    <header id="header-sticky" class="header-1 w-100">
         <div class="container">
             <div class="mega-menu-wrapper">
                 <div class="header-main">
@@ -107,11 +188,11 @@
                                                 Home
                                             </a>
                                         </li>
-                                        <li>
+                                        <li class="active">
                                             <a href="about.html">About Us</a>
                                         </li>
                                         <li>
-                                            <a>
+                                            <a href="services.html">
                                                 Services
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
@@ -439,7 +520,6 @@
     </header>
     <div class="services-mega-backdrop"></div>
 
-   
     <!-- Banner Section Start -->
     <section class="breadcrumb-section position-relative fix">
         <div class="container">
@@ -449,9 +529,9 @@
                         <a href="index.html" class="p3-clr">Home</a>
                     </li>
                     <li class="p3-clr">/</li>
-                    <li class="white">About Us</li>
+                    <li class="white">Programs</li>
                 </ul>
-                <h1 class="white visible-from-right">About Us</h1>
+                <h1 class="white visible-from-right">Data Privacy Program</h1>
             </div>
         </div>
         <!-- bread Element -->
@@ -460,133 +540,72 @@
     <!-- Banner Section Start -->
 
     <!-- About Section Start -->
-    <section class="about-section style2 fix">
-        <div class="about-wrapper section-padding">
+    <section class="about-section style2 section-padding fix">
+        <div class="about-wrapper ">
             <div class="container">
                 <div
-                    class="row flex-row-reverse justify-content-lg-between justify-content-center g-4 align-items-center">
-                    <div class="col-xl-5 col-lg-7">
+                    class="row justify-content-lg-between align-items-center justify-content-center g-4">
+                    <div class="col-xl-6 col-lg-7" >
                         <div class="about-content">
                             <div class="section-title text-lg-start text-center mb-4 about-clarent">
-                                <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-3">
-                                    ABOUT CLARENT
-                                </span>
-                                <h2 class="mb-xxl-4 mb-3 wow fadeInUp black fw-bold visible-slowly-right "
+                                <h4 class="mb-xxl-4 mb-3 wow fadeInUp black "
                                     data-wow-delay=".3s">
-                                    Trust engineered through security for a resilient digital future.
-                                </h2>
+                                    Bolster your privacy posture with Clarent360’s Data Privacy Program
+                                </h4>
                                 <p class="pra fs-seven">
-                                    Clarent360 empowers organizations with strategic cybersecurity, digital assurance and risk
-                                    management solutions designed to strengthen governance, reduce cyber risk and build operational
-                                    resilience. We help businesses confidently embrace digital transformation by securing critical
-                                    systems, cloud environments, identities and data across evolving digital ecosystems.
+                                    The Data Privacy Program by Clarent360 is an enterprise data protection and privacy framework designed to help organizations build resilient, compliant, and secure digital environments with privacy as a priority.
                                 </p>
-                            </div>
-                            <ul
-                                class="about-list d-grid justify-content-center justify-content-lg-start gap-2 border-bottom mb-xl-3 mb-4 pb-xl-5 pb-4">
-                                <li class="d-flex align-items-center gap-2">
-                                    <span class="icon d-center"><i class="fa-solid fa-check p1-clr fs-eight"></i></span>
-                                    <span class="fw-semibold black">
-                                        Strategic cybersecurity advisory and assurance services
-                                    </span>
-                                </li>
-                                <li class="d-flex align-items-center gap-2">
-                                    <span class="icon d-center"><i class="fa-solid fa-check p1-clr fs-eight"></i></span>
-                                    <span class="fw-semibold black">
-                                        Globally aligned security frameworks and compliance practices
-                                    </span>
-                                </li>
-                                <li class="d-flex align-items-center gap-2">
-                                    <span class="icon d-center"><i class="fa-solid fa-check p1-clr fs-eight"></i></span>
-                                    <span class="fw-semibold black">
-                                        Sustainable security programs focused on resilience and digital trust
-                                    </span>
-                                </li>
-                            </ul>
-                            <div class="d-flex gap-2 align-items-center justify-content-lg-start justify-content-center">
 
-                                <div class="d-flex align-items-center gap-3 px-4 py-3"
-                                    style="border-radius:20px; min-width:240px;">
+                                <p class="pra fs-seven mb-3">
+                                    Our DPP focuses into several functional domains, not limited to:
+                                </p>
 
-                                    <div class="d-flex align-items-center justify-content-center"
-                                        style="width:90px; height:70px; border-radius:18px; background:linear-gradient(135deg,#5135FF,#7B61FF);">
-                                        <i class="fa-solid fa-shield-halved text-white" style="font-size:30px;"></i>
-                                    </div>
+                                <ul class="about-list d-grid gap-2 mb-4">
+                                    <li class="d-flex gap-2 align-items-start">
+                                        <span class="icon mt-1 d-center">
+                                            <i class="fa-solid fa-check p1-clr fs-eight"></i>
+                                        </span>
+                                        <p class="fs-seven fw_500 black mb-0">System development</p>
+                                    </li>
 
-                                    <div>
-                                        <p class="fs-six mb-1">Cyber Assurance</p>
-                                    </div>
-                                </div>
+                                    <li class="d-flex gap-2 align-items-start">
+                                        <span class="icon mt-1 d-center">
+                                            <i class="fa-solid fa-check p1-clr fs-eight"></i>
+                                        </span>
+                                        <p class="fs-seven fw_500 black mb-0">Digital transformation initiatives</p>
+                                    </li>
 
-                                <div class="d-flex align-items-center gap-3 px-4 py-3"
-                                    style="border-radius:20px; min-width:240px; ">
+                                    <li class="d-flex gap-2 align-items-start">
+                                        <span class="icon mt-1 d-center">
+                                            <i class="fa-solid fa-check p1-clr fs-eight"></i>
+                                        </span>
+                                        <p class="fs-seven fw_500 black mb-0">Cloud adoption</p>
+                                    </li>
 
-                                    <div class="d-flex align-items-center justify-content-center"
-                                        style="width:90px; height:70px; border-radius:18px; background:linear-gradient(135deg,#00B8A9,#00D2C8);">
-                                        <i class="fa-solid fa-chart-line text-white" style="font-size:30px;"></i>
-                                    </div>
+                                    <li class="d-flex gap-2 align-items-start">
+                                        <span class="icon mt-1 d-center">
+                                            <i class="fa-solid fa-check p1-clr fs-eight"></i>
+                                        </span>
+                                        <p class="fs-seven fw_500 black mb-0">Vendor onboarding</p>
+                                    </li>
 
-                                    <div>
-                                        <p class="fs-six mb-1">Risk Management</p>
-                                    </div>
-                                </div>
+                                    <li class="d-flex gap-2 align-items-start">
+                                        <span class="icon mt-1 d-center">
+                                            <i class="fa-solid fa-check p1-clr fs-eight"></i>
+                                        </span>
+                                        <p class="fs-seven fw_500 black mb-0">Business process design</p>
+                                    </li>
+                                </ul>
 
+                                <p class="pra fs-seven">
+                                    Our privacy specialists work closely with executive leadership, technology teams, and business units to ensure accountability and sustainable privacy governance.
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-5">
-                        <div class="about-thumb position-relative reveal-left w-100">
-                            <img src="assets/webimages/about.webp" alt="img" class="w-100">
-                            <!-- Ele -->
-                            <img src="assets/img/element/dot-grp1.png" alt="img" class="about-ele">
-                            <img src="assets/img/about/about2-ele.png" alt="img" class="about-ele2">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="event-work-section fix bg-color section-padding">
-        <div class="container">
-            <div class="row mb-lg-5 mb-sm-5 mb-4 pb-lg-1">
-                <div class="col-lg-7">
-                    <div class="section-title">
-                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-3">WHAT WE SOLVED
-                            What we do.
-                        </span>
-                        <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
-                            Our Mission and Vision
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="event-work-items text-center">
-                        <div class="boxes">
-                            <img src="assets/img/icon/even1.png" alt="img" class="mb-5 m-auto d-block">
-                            <span class="pra fs-seven text-uppercase d-block mb-3">Mission</span>
-                            <p class="mb-3">
-                                <a href="portfolio-details.html" class="black fs-six">
-                                    To redefine digital trust by becoming a globally trusted cybersecurity and digital assurance leader, empowering organizations with clarity in cyber risk, build resilience against evolving threats, and innovate with confidence in a secure digital future.
-                                </a>
-                            </p>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="event-work-items text-center">
-                        <div class="boxes">
-                            <img src="assets/img/icon/even2.png" alt="img" class="mb-5 m-auto d-block">
-                            <span class="pra fs-seven text-uppercase d-block mb-3">Vision</span>
-                            <p class="mb-5">
-                                <a href="portfolio-details.html" class="black fs-six">
-                                   Clarent360’s mission is to deliver strategic cybersecurity, digital security programs, and risk management that protect organizations, strengthen governance, and enable secure business transformation
-                                </a>
-                            </p>
-                            
+                        <div class="about-thumb position-relative reveal-right w-100">
+                            <img src="assets/webimages/about.webp" alt="img" class="w-100" height="500" style="border-radius: 30px;">
                         </div>
                     </div>
                 </div>
@@ -594,210 +613,258 @@
         </div>
     </section>
 
-
-    <!-- Working Step Section Start -->
-    <section class="working-step-section fix section-padding">
-        <div class="container">
-            <div class="section-title-area align-items-end mb-60">
+    <section class="event-work-section fix bg-light section-padding">
+    <div class="container">
+        <div class="row mb-lg-5 mb-sm-5 mb-4 pb-lg-1">
+            <div class="col-lg-8">
                 <div class="section-title">
-                    <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-2">
-                        OUR SERVICE APPROACH
-                    </span>
-                    <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
-                        How we secure your business
-                    </h2>
+                    <h3 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
+                        Benefits of Implementing Clarent360’s DPP
+                    </h3>
                 </div>
-                <a href="blog.html"
-                    class="common-btn heading-font box-style d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 fs18 fw-semibold black overflow-hidden border rounded100">
-                    Learn More
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                <div class="event-work-items text-center h-100">
+                    <div class="boxes h-100">
+                        <img src="assets/img/icon/even1.png" alt="img" class="mb-5 m-auto d-block">
+                        <span class="pra fs-seven text-uppercase d-block mb-3">Compliance</span>
+                        <p class="mb-2">
+                            <a href="#" class="black">
+                                Regulatory compliance readiness
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
+                <div class="event-work-items text-center h-100">
+                    <div class="boxes h-100">
+                        <img src="assets/img/icon/even2.png" alt="img" class="mb-5 m-auto d-block">
+                        <span class="pra fs-seven text-uppercase d-block mb-3">Risk Reduction</span>
+                        <p class="mb-2">
+                            <a href="#" class="black">
+                                Reduced privacy and legal risk exposure
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".7s">
+                <div class="event-work-items text-center h-100">
+                    <div class="boxes h-100">
+                        <img src="assets/img/icon/even1.png" alt="img" class="mb-5 m-auto d-block">
+                        <span class="pra fs-seven text-uppercase d-block mb-3">Governance</span>
+                        <p class="mb-2">
+                            <a href="#" class="black">
+                                Stronger governance and accountability
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                <div class="event-work-items text-center h-100">
+                    <div class="boxes h-100">
+                        <img src="assets/img/icon/even2.png" alt="img" class="mb-5 m-auto d-block">
+                        <span class="pra fs-seven text-uppercase d-block mb-3">Trust</span>
+                        <p class="mb-2">
+                            <a href="#" class="black">
+                                Improved customer trust and transparency
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
+                <div class="event-work-items text-center h-100">
+                    <div class="boxes h-100">
+                        <img src="assets/img/icon/even1.png" alt="img" class="mb-5 m-auto d-block">
+                        <span class="pra fs-seven text-uppercase d-block mb-3">Data Protection</span>
+                        <p class="mb-2">
+                            <a href="#" class="black">
+                                Secure data lifecycle management
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".7s">
+                <div class="event-work-items text-center h-100">
+                    <div class="boxes h-100">
+                        <img src="assets/img/icon/even2.png" alt="img" class="mb-5 m-auto d-block">
+                        <span class="pra fs-seven text-uppercase d-block mb-3">Due Diligence</span>
+                        <p class="mb-2">
+                            <a href="#" class="black">
+                                Demonstrable due diligence in data protection
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+ <section class="techgon-section fix position-relative">
+        <div class="container">
+            <div class="row g-6 align-items-xxl-center">
+                <div class="col-xxl-8 col-xl-6 col-lg-6">
+                    <div class="techgon-thumb">
+                        <img src="assets/webimages/programs.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-6 col-lg-6">
+                    <div class="techgon-content">
+                        <div class="mb-lg-5 mb-4">
+                            <h3 class="black mb-lg-3 mb-2 wow fadeInUp" data-wow-delay=".3s">
+                               Privacy Incident Response & Data Breach Management
+                            </h3>
+                        </div>
+                        <ul class="d-grid gap-3">
+                            <li class="d-flex align-items-center gap-2 fs-six fw_500 black wow fadeInUp"
+                                data-wow-delay=".5s">
+                                <span class="d-center"><i class="fa-solid fa-plus"></i></span>Evaluation of data breach events for privacy impact
+                            </li>
+                            <li class="d-flex align-items-center gap-2 fs-six fw_500 black wow fadeInUp"
+                                data-wow-delay=".6s">
+                                <span class="d-center"><i class="fa-solid fa-plus"></i></span>Incident classification and regulatory reporting support
+                            <li class="d-flex align-items-center gap-2 fs-six fw_500 black wow fadeInUp"
+                                data-wow-delay=".7s">
+                                <span class="d-center"><i class="fa-solid fa-plus"></i></span> Breach containment and mitigation advisory
+                            </li>
+                            <li class="d-flex align-items-center gap-2 fs-six fw_500 black wow fadeInUp"
+                                data-wow-delay=".8s">
+                                <span class="d-center"><i class="fa-solid fa-plus"></i></span> Post-incident privacy risk assessment
+                            </li>
+                            <li class="d-flex align-items-center gap-2 fs-six fw_500 black wow fadeInUp"
+                                data-wow-delay=".8s">
+                                <span class="d-center"><i class="fa-solid fa-plus"></i></span> Lessons-learned and control improvement programs
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ele -->
+        <img src="assets/img/services/techgon-ele.png" alt="img" class="techgon-ele">
+    </section>
+
+
+    
+
+    <section class="blog-details-section fix section-padding" style="padding-bottom:0px">
+        <div class="container">
+                            
+                            <div class="row g-4 mb-lg-5 mb-4">
+
+    <div class="col-lg-6 col-md-6">
+        <div class="p-4 h-100" style="background:#f5f7ff; border-radius:24px;">
+            <h4 class="black mb-lg-3 mb-2">Privacy Governance &amp; Compliance</h4>
+            <p class="pra mb-3">
+                Clarent360 establishes strong privacy governance structures aligned with international best practices.
+            </p>
+
+            <ul class="d-grid gap-2">
+                <li class="fs-seven fw_500 black">Identification of applicable privacy laws and regulatory obligations</li>
+                <li class="fs-seven fw_500 black">Development of privacy policies, standards, and control frameworks</li>
+                <li class="fs-seven fw_500 black">Governance of organizational privacy controls</li>
+                <li class="fs-seven fw_500 black">Assignment of data protection responsibilities</li>
+                <li class="fs-seven fw_500 black">Oversight and assurance of privacy control implementation</li>
+                <li class="fs-seven fw_500 black">Privacy consulting for business and technology teams</li>
+                <li class="fs-seven fw_500 black">Validation and testing of privacy safeguards prior to deployment</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-md-6">
+        <div class="p-4 h-100" style="background:#f5f7ff; border-radius:24px;">
+            <h4 class="black mb-lg-3 mb-2">Data Protection Officer (DPO) Services</h4>
+
+            <p class="pra mb-3">
+                Clarent360 provides expert Data Protection Officer (DPO) support to ensure compliant handling of personal data throughout its lifecycle.
+            </p>
+
+            <ul class="about-list d-grid gap-lg-3 gap-2">
+                <li class="d-flex gap-2"><span class="icon mt-1 d-center"><i class="fa-solid fa-check p1-clr fs-eight"></i></span><p class="fs-seven fw_500 black">Collaboration with business process owners on data protection requirements</p></li>
+                <li class="d-flex gap-2"><span class="icon mt-1 d-center"><i class="fa-solid fa-check p1-clr fs-eight"></i></span><p class="fs-seven fw_500 black">Performance of Data Protection Impact Assessments (DPIAs)</p></li>
+                <li class="d-flex gap-2"><span class="icon mt-1 d-center"><i class="fa-solid fa-check p1-clr fs-eight"></i></span><p class="fs-seven fw_500 black">Continuous evaluation of data handling practices</p></li>
+                <li class="d-flex gap-2"><span class="icon mt-1 d-center"><i class="fa-solid fa-check p1-clr fs-eight"></i></span><p class="fs-seven fw_500 black">Monitoring regulatory compliance obligations</p></li>
+                <li class="d-flex gap-2"><span class="icon mt-1 d-center"><i class="fa-solid fa-check p1-clr fs-eight"></i></span><p class="fs-seven fw_500 black">Privacy awareness and secure data handling training</p></li>
+                <li class="d-flex gap-2"><span class="icon mt-1 d-center"><i class="fa-solid fa-check p1-clr fs-eight"></i></span><p class="fs-seven fw_500 black">Advisory services for cross-border data transfers and regulatory alignment</p></li>
+            </ul>
+        </div>
+    </div>
+
+    
+    
+
+</div>
+
+                            <!-- <div class="mb-lg-5 mb-4">
+                                <h3 class="black mb-lg-3 mb-2">Start Your Data Privacy Enforcement Today</h3>
+
+                                <p class="pra mb-3">
+                                    Clarent360’s Data Privacy Program delivers a complete cybersecurity operating model designed to secure modern organizations against data breaches ensuring privacy.
+                                </p>
+
+                                <p class="pra mb-4">
+                                    Build resilience. Protect data. Enable trust.
+                                </p>
+
+                                <a href="contact.html"
+                                    class="common-btn box-style cmn-style1 d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 fs18 fw-semibold white overflow-hidden rounded-5 p3-bg">
+                                    Contact Clarent360 Today
+                                </a>
+                            </div> -->
+                        </div>
+    </section>
+
+
+    <section class="customer-touh fix" style="padding-bottom: 40px;">
+        <div class="container">
+            <div class="customer-touch-wrap">
+                <div class="section-title">
+                    
+                    <h2 class="wow fadeInUp white fw-bold mb-2 touchhh">
+                       Start Your Data Privacy Enforcement Today
+                    </h2>
+                    <p class="sub-badg white fs-seven  d-block mb-2">Clarent360’s Data Privacy Program delivers a complete cybersecurity operating model designed to secure modern organizations against data breaches ensuring privacy.</p>
+                </div>
+                <a href="contact.html"
+                    class="common-btn text-nowrap heading-font box-style d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 fs18 fw-semibold black overflow-hidden bg-white rounded100">
+                     Contact Clarent360
                 </a>
             </div>
-            <div class="row g-4">
-                <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="work-learn-item text-center">
-                        <div class="thumb-author d-center mb-xl-4 mb-3">
-                            <div class="thumb rounded-circle">
-                                <img src="assets/img/team/work-author1.png" alt="img" class="rounded-circle">
-                            </div>
-                            <span class="serial d-center rounded-circle">
-                                01
-                            </span>
-                        </div>
-                        <h4 class="mb-xl-3 mb-2"><a href="team-details.html" class="black">Assessment</a></h4>
-                        <p class="fs-seven pra">
-                            We analyze your current infrastructure, risks, and business requirements.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="work-learn-item text-center">
-                        <div class="thumb-author d-center mb-xl-4 mb-3">
-                            <div class="thumb rounded-circle">
-                                <img src="assets/img/team/work-author2.png" alt="img" class="rounded-circle">
-                            </div>
-                            <span class="serial d-center rounded-circle">
-                                02
-                            </span>
-                        </div>
-                        <h4 class="mb-xl-3 mb-2"><a href="team-details.html" class="black">Planning</a></h4>
-                        <p class="fs-seven pra">
-                            Our experts design customized security and cloud strategies for your organization.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".7s">
-                    <div class="work-learn-item text-center">
-                        <div class="thumb-author d-center mb-xl-4 mb-3">
-                            <div class="thumb rounded-circle">
-                                <img src="assets/img/team/work-author3.png" alt="img" class="rounded-circle">
-                            </div>
-                            <span class="serial d-center rounded-circle">
-                                03
-                            </span>
-                        </div>
-                        <h4 class="mb-xl-3 mb-2"><a href="team-details.html" class="black">Implementation</a></h4>
-                        <p class="fs-seven pra">
-                            We deploy secure, scalable, and compliant IT solutions across your environment.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".9s">
-                    <div class="work-learn-item text-center">
-                        <div class="thumb-author d-center mb-xl-4 mb-3">
-                            <div class="thumb rounded-circle">
-                                <img src="assets/img/team/work-author4.png" alt="img" class="rounded-circle">
-                            </div>
-                            <span class="serial d-center rounded-circle">
-                                02
-                            </span>
-                        </div>
-                        <h4 class="mb-xl-3 mb-2"><a href="team-details.html" class="black">Monitoring</a></h4>
-                        <p class="fs-seven pra">
-                            Continuous monitoring and proactive support ensure long-term protection and performance.
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
-    <!-- Working Step Section end -->
 
-     <!-- Team Section Start -->
-    <section class="team-section fix bg-color section-padding">
-        <div class="container">
-            <div class="row justify-content-center mb-lg-5 mb-sm-5 mb-4 pb-lg-1">
-                <div class="col-lg-7">
-                    <div class="section-title text-center">
-                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-3">
-                            DELIVERY SPECIALISTS
-                        </span>
-                        <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
-                            Our Insights
-                        </h2>
+    <!--<< Footer Section Start >>-->
+    <div id="footer"></div>
+
+
+    <!-- Search Area Start -->
+    <div class="search-wrap">
+        <div class="search-inner">
+            <i class="fas fa-times search-close" id="search-close"></i>
+            <div class="search-cell">
+                <form method="get">
+                    <div class="search-field-holder">
+                        <input type="search" class="main-search-input" placeholder="Search...">
                     </div>
-                </div>
-            </div>
-            <div class="row justify-content-center g-sm-6 g-4">
-                <div class="col-md-6 col-lg-6 col-xl-4">
-                    <div class="team-items bg-transparent style4">
-                        <div class="thumb position-relative w-100 mb-lg-4 mb-3">
-                            <img src="assets/webimages/s1.jpg" alt="img" class="w-100">
-                        </div>
-                        <div class="content d-flex justify-content-between">
-                            <div class="cont">
-                                <h4 class="black mb-1"><a href="team-details.html" class="black">Security Engineer</a>
-                                </h4>
-                                <span class="fs-seven fw-medium">DLP, threat hunting and cloud hardening</span>
-                            </div>
-                            <div class="plus-icon position-relative top-0 start-0">
-                                <div class="icons white-bg d-center">
-                                    <i class="fa-solid fa-plus black"></i>
-                                </div>
-                                <div
-                                    class="social-wrapper p1-bg rounded-2 d-grid justify-content-center flex-wrap align-items-center gap-xxl-1 gap-1">
-                                    <a href="#" class="rounded-3">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#" class="rounded-3">
-                                        <i class="fa-brands fa-twitter"></i>
-                                    </a>
-                                    <a href="#" class="rounded-3">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4">
-                    <div class="team-items bg-transparent style4">
-                        <div class="thumb position-relative w-100 mb-lg-4 mb-3">
-                            <img src="assets/webimages/s1.jpg" alt="img" class="w-100">
-                        </div>
-                        <div class="content d-flex justify-content-between">
-                            <div class="cont">
-                                <h4 class="black mb-1"><a href="team-details.html" class="black">GRC Consultant</a>
-                                </h4>
-                                <span class="fs-seven fw-medium">Risk, compliance and audit services</span>
-                            </div>
-                            <div class="plus-icon position-relative top-0 start-0">
-                                <div class="icons white-bg d-center">
-                                    <i class="fa-solid fa-plus black"></i>
-                                </div>
-                                <div
-                                    class="social-wrapper p1-bg rounded-2 d-grid justify-content-center flex-wrap align-items-center gap-xxl-1 gap-1">
-                                    <a href="#" class="rounded-3">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#" class="rounded-3">
-                                        <i class="fa-brands fa-twitter"></i>
-                                    </a>
-                                    <a href="#" class="rounded-3">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4">
-                    <div class="team-items bg-transparent style4">
-                        <div class="thumb position-relative w-100 mb-lg-4 mb-3">
-                            <img src="assets/webimages/s1.jpg" alt="img" class="w-100">
-                        </div>
-                        <div class="content d-flex justify-content-between">
-                            <div class="cont">
-                                <h4 class="black mb-1"><a href="team-details.html" class="black">ServiceNow
-                                        Specialist</a></h4>
-                                <span class="fs-seven fw-medium">Implementation, managed services and training</span>
-                            </div>
-                            <div class="plus-icon position-relative top-0 start-0">
-                                <div class="icons white-bg d-center">
-                                    <i class="fa-solid fa-plus black"></i>
-                                </div>
-                                <div
-                                    class="social-wrapper p1-bg rounded-2 d-grid justify-content-center flex-wrap align-items-center gap-xxl-1 gap-1">
-                                    <a href="#" class="rounded-3">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#" class="rounded-3">
-                                        <i class="fa-brands fa-twitter"></i>
-                                    </a>
-                                    <a href="#" class="rounded-3">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
-    </section>
-   
-
-
-   <div id="footer"></div>
+    </div>
 
     <!--<< All JS Plugins >>-->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
@@ -833,8 +900,30 @@
     <script src="assets/js/vanilla-tilt.min.js"></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
+        <script src="assets/js/common-header.js"></script>
 
-    <script src="assets/js/common-header.js"></script>
+
+    <script>
+        document.querySelectorAll('.services-mega').forEach(function (megaMenu) {
+            const tabs = megaMenu.querySelectorAll('[data-services-tab]');
+            const panels = megaMenu.querySelectorAll('[data-services-panel]');
+
+            tabs.forEach(function (tab) {
+                tab.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const target = tab.getAttribute('data-services-tab');
+
+                    tabs.forEach(function (item) {
+                        item.classList.toggle('active', item === tab);
+                    });
+
+                    panels.forEach(function (panel) {
+                        panel.classList.toggle('active', panel.getAttribute('data-services-panel') === target);
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
