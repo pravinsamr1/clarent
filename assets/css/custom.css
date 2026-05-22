@@ -1,6 +1,6 @@
         .header-main .main-menu ul li .submenu.services-mega {
             position: fixed;
-            width: min(1300px, calc(100vw - 96px));
+            width: min(1200px, calc(100vw - 96px));
             top: 80px;
             left: 50vw;
             inset-inline-start: auto;
@@ -14,7 +14,7 @@
             border: 1px solid #d8d8e8;
             border-radius: 22px;
             background: #ffffff;
-            box-shadow: 0 28px 70px rgba(17, 24, 39, 0.18);
+            /* box-shadow: 0 28px 70px rgba(17, 24, 39, 0.18); */
             transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
         }
 
