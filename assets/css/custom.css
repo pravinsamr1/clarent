@@ -1026,3 +1026,7 @@
         position: relative;
         z-index: 2;
     }
+
+.footer-section ul li a{
+    font-weight: 300 !important;
+}
