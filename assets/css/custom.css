@@ -519,6 +519,7 @@
            Mobile View Premium Header Adjustments (<= 1199px)
            ---------------------------------------------------- */
         @media (max-width: 1199px) {
+
             /* Hide the desktop main menu completely on mobile view */
             .main-menu,
             #mobile-menu {
@@ -534,7 +535,8 @@
                 width: 100% !important;
                 background: #ffffff !important;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
-                z-index: 1005 !important; /* Remain above slider overlays, loaders, etc. */
+                z-index: 1005 !important;
+                /* Remain above slider overlays, loaders, etc. */
                 padding: 12px 0 !important;
                 border-bottom: 1px solid rgba(81, 53, 255, 0.08) !important;
                 animation: none !important;
@@ -593,6 +595,7 @@
             flex-direction: column;
             gap: 24px;
         }
+
         .contact-detail-card {
             background: #fff;
             border: 1px solid #E3E3E3;
@@ -604,11 +607,13 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
         }
+
         .contact-detail-card:hover {
             transform: translateY(-5px);
             box-shadow: 0px 10px 30px rgba(81, 53, 255, 0.08);
             border-color: var(--p1-clr);
         }
+
         .contact-icon-box {
             width: 60px;
             height: 60px;
@@ -622,33 +627,40 @@
             color: var(--p1-clr);
             transition: all 0.4s ease;
         }
+
         .contact-detail-card:hover .contact-icon-box {
             background: var(--p1-clr);
             color: #fff;
         }
+
         .contact-detail-card.email-card .contact-icon-box {
             background: rgba(255, 84, 85, 0.05);
             color: var(--p3-clr);
         }
+
         .contact-detail-card.email-card:hover .contact-icon-box {
             background: var(--p3-clr);
             color: #fff;
         }
+
         .contact-detail-card.address-card .contact-icon-box {
             background: rgba(254, 213, 0, 0.1);
             color: #dcb300;
         }
+
         .contact-detail-card.address-card:hover .contact-icon-box {
             background: var(--p2-clr);
             color: var(--black);
         }
+
         .contact-detail-info h5 {
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 6px;
             color: var(--black);
         }
-        .contact-detail-info p, 
+
+        .contact-detail-info p,
         .contact-detail-info a {
             font-size: 15px;
             color: var(--pra);
@@ -656,12 +668,15 @@
             line-height: 24px;
             transition: color 0.3s;
         }
+
         .contact-detail-card:hover .contact-detail-info a {
             color: var(--p1-clr);
         }
+
         .contact-detail-card.email-card:hover .contact-detail-info a {
             color: var(--p3-clr);
         }
+
         .contact-img-container {
             position: relative;
             border-radius: 20px;
@@ -669,15 +684,17 @@
             box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.06);
             transition: transform 0.4s ease;
         }
+
         .contact-img-container:hover {
             transform: scale(1.02);
         }
+
         .contact-img-container img {
             width: 100%;
             height: auto;
             display: block;
         }
-        
+
         /* Section 2 Grid styles */
         .contact-form-card {
             background: #fff;
@@ -687,20 +704,24 @@
             box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.04);
             transition: border-color 0.3s, box-shadow 0.3s;
         }
+
         .contact-form-card:hover {
             border-color: rgba(81, 53, 255, 0.2);
             box-shadow: 0px 12px 50px rgba(81, 53, 255, 0.06);
         }
+
         .contact-form-card h3 {
             font-size: 28px;
             font-weight: 700;
             color: var(--black);
             margin-bottom: 30px;
         }
+
         .form-input-wrapper {
             margin-bottom: 20px;
             position: relative;
         }
+
         .form-input-wrapper input,
         .form-input-wrapper textarea {
             width: 100%;
@@ -713,10 +734,12 @@
             font-family: "Inter", sans-serif;
             transition: all 0.3s ease;
         }
+
         .form-input-wrapper input::placeholder,
         .form-input-wrapper textarea::placeholder {
             color: #8C99B2;
         }
+
         .form-input-wrapper input:focus,
         .form-input-wrapper textarea:focus {
             border-color: var(--p1-clr);
@@ -725,6 +748,7 @@
             color: var(--black);
             outline: none;
         }
+
         .contact-map-card {
             height: 100%;
             min-height: 450px;
@@ -733,6 +757,7 @@
             border: 1px solid #E3E3E3;
             box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.04);
         }
+
         .contact-map-card iframe {
             width: 100%;
             height: 100%;
@@ -740,293 +765,424 @@
             border: 0;
             display: block;
         }
+
         @media (max-width: 991px) {
-            .contact-map-card, .contact-map-card iframe {
+
+            .contact-map-card,
+            .contact-map-card iframe {
                 min-height: 350px;
                 height: 350px;
             }
+
             .contact-form-card {
                 padding: 30px 20px;
             }
         }
 
-.touchhh{
-    font-size: 40px;
-}
+        .touchhh {
+            font-size: 40px;
+        }
 
-.white-color{
-    color: #fff;
-    font-weight: 600;
-}
+        .white-color {
+            color: #fff;
+            font-weight: 600;
+        }
 
-/* Outcome Card Styling for Cybersecurity SOP Program */
-.outcome-card {
-    background: #ffffff;
-    border: 1px solid rgba(81, 53, 255, 0.08);
-    border-radius: 24px;
-    padding: 36px 30px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
-    position: relative;
-    overflow: hidden;
-}
+        /* Outcome Card Styling for Cybersecurity SOP Program */
+        .outcome-card {
+            background: #ffffff;
+            border: 1px solid rgba(81, 53, 255, 0.08);
+            border-radius: 24px;
+            padding: 36px 30px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
+            position: relative;
+            overflow: hidden;
+        }
 
-.outcome-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(93deg, #5135FF 10.65%, #FF5455 89.35%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+        .outcome-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(93deg, #5135FF 10.65%, #FF5455 89.35%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
-.outcome-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 20px 40px rgba(81, 53, 255, 0.08);
-    border-color: rgba(81, 53, 255, 0.15);
-}
+        .outcome-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 20px 40px rgba(81, 53, 255, 0.08);
+            border-color: rgba(81, 53, 255, 0.15);
+        }
 
-.outcome-card:hover::before {
-    opacity: 1;
-}
+        .outcome-card:hover::before {
+            opacity: 1;
+        }
 
-.outcome-card__icon-box {
-    width: 64px;
-    height: 64px;
-    border-radius: 18px;
-    background: rgba(81, 53, 255, 0.06);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    color: #5135FF;
-    margin-bottom: 24px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
+        .outcome-card__icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            background: rgba(81, 53, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: #5135FF;
+            margin-bottom: 24px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-.outcome-card:hover .outcome-card__icon-box {
-    background: linear-gradient(93deg, #5135FF 10.65%, #FF5455 89.35%);
-    color: #ffffff;
-    transform: scale(1.05) rotate(5deg);
-    box-shadow: 0px 8px 20px rgba(81, 53, 255, 0.2);
-}
+        .outcome-card:hover .outcome-card__icon-box {
+            background: linear-gradient(93deg, #5135FF 10.65%, #FF5455 89.35%);
+            color: #ffffff;
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0px 8px 20px rgba(81, 53, 255, 0.2);
+        }
 
-.outcome-card__title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #17111f;
-    margin-bottom: 12px;
-    line-height: 1.4;
-    transition: color 0.3s ease;
-}
+        .outcome-card__title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #17111f;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            transition: color 0.3s ease;
+        }
 
-.outcome-card:hover .outcome-card__title {
-    color: #5135FF;
-}
+        .outcome-card:hover .outcome-card__title {
+            color: #5135FF;
+        }
 
-.outcome-card__text {
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #5e6282;
-    margin: 0;
-}
+        .outcome-card__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #5e6282;
+            margin: 0;
+        }
 
-/* Premium Risk Management Program Styles */
-.framework-card {
-    background: #ffffff;
-    border: 1px solid rgba(81, 53, 255, 0.08);
-    border-radius: 20px;
-    padding: 30px 24px;
-    transition: all 0.4s ease;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
-}
+        /* Premium Risk Management Program Styles */
+        .framework-card {
+            background: #ffffff;
+            border: 1px solid rgba(81, 53, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px 24px;
+            transition: all 0.4s ease;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
+        }
 
-.framework-card:hover {
-    transform: translateY(-5px);
-    border-color: #5135FF;
-    box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.1);
-}
+        .framework-card:hover {
+            transform: translateY(-5px);
+            border-color: #5135FF;
+            box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.1);
+        }
 
-.framework-card__icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 12px;
-    background: rgba(81, 53, 255, 0.08);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    color: #5135FF;
-    margin-bottom: 16px;
-    transition: all 0.3s ease;
-}
+        .framework-card__icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: rgba(81, 53, 255, 0.08);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #5135FF;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+        }
 
-.framework-card:hover .framework-card__icon {
-    background: #5135FF;
-    color: #ffffff;
-}
+        .framework-card:hover .framework-card__icon {
+            background: #5135FF;
+            color: #ffffff;
+        }
 
-/* Process Cards (SP-RMM Process Flow) */
-.process-card {
-    background: #ffffff;
-    border: 1px solid rgba(81, 53, 255, 0.06);
-    border-radius: 20px;
-    padding: 30px 20px;
-    position: relative;
-    transition: all 0.4s ease;
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.01);
-}
+        /* Process Cards (SP-RMM Process Flow) */
+        .process-card {
+            background: #ffffff;
+            border: 1px solid rgba(81, 53, 255, 0.06);
+            border-radius: 20px;
+            padding: 30px 20px;
+            position: relative;
+            transition: all 0.4s ease;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.01);
+        }
 
-.process-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #5135FF, #FF5455);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+        .process-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #5135FF, #FF5455);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
-.process-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.08);
-}
+        .process-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.08);
+        }
 
-.process-card:hover::before {
-    opacity: 1;
-}
+        .process-card:hover::before {
+            opacity: 1;
+        }
 
-.process-card__step {
-    font-size: 13px;
-    font-weight: 700;
-    color: #FF5455;
-    background: rgba(255, 84, 85, 0.08);
-    padding: 4px 12px;
-    border-radius: 100px;
-    display: inline-block;
-    margin-bottom: 16px;
-}
+        .process-card__step {
+            font-size: 13px;
+            font-weight: 700;
+            color: #FF5455;
+            background: rgba(255, 84, 85, 0.08);
+            padding: 4px 12px;
+            border-radius: 100px;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
 
-/* Scope Cards */
-.scope-card {
-    background: rgba(81, 53, 255, 0.02);
-    border: 1px solid rgba(81, 53, 255, 0.05);
-    border-radius: 16px;
-    padding: 24px;
-    transition: all 0.3s ease;
-}
+        /* Scope Cards */
+        .scope-card {
+            background: rgba(81, 53, 255, 0.02);
+            border: 1px solid rgba(81, 53, 255, 0.05);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
 
-.scope-card:hover {
-    background: #ffffff;
-    border-color: rgba(81, 53, 255, 0.15);
-    box-shadow: 0px 10px 30px rgba(81, 53, 255, 0.05);
-    transform: scale(1.02);
-}
+        .scope-card:hover {
+            background: #ffffff;
+            border-color: rgba(81, 53, 255, 0.15);
+            box-shadow: 0px 10px 30px rgba(81, 53, 255, 0.05);
+            transform: scale(1.02);
+        }
 
-/* Culture Card */
-.culture-card {
-    background: linear-gradient(135deg, #120e2e 0%, #1c133a 100%);
-    border-radius: 24px;
-    padding: 45px;
-    color: #ffffff;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0px 15px 40px rgba(18, 14, 46, 0.2);
-}
+        /* Culture Card */
+        .culture-card {
+            background: linear-gradient(135deg, #120e2e 0%, #1c133a 100%);
+            border-radius: 24px;
+            padding: 45px;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0px 15px 40px rgba(18, 14, 46, 0.2);
+        }
 
-.culture-card::after {
-    content: '';
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(81, 53, 255, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
-}
+        .culture-card::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(81, 53, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
 
-/* Advantage Callout Slogan Banner */
-.advantage-banner {
-    background: linear-gradient(93deg, rgba(81, 53, 255, 0.05), rgba(255, 84, 85, 0.05));
-    border-left: 5px solid #5135FF;
-    border-radius: 8px 24px 24px 8px;
-    padding: 24px 30px;
-    margin: 30px 0;
-}
+        /* Advantage Callout Slogan Banner */
+        .advantage-banner {
+            background: linear-gradient(93deg, rgba(81, 53, 255, 0.05), rgba(255, 84, 85, 0.05));
+            border-left: 5px solid #5135FF;
+            border-radius: 8px 24px 24px 8px;
+            padding: 24px 30px;
+            margin: 30px 0;
+        }
 
-.advantage-banner__text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #5135FF;
-    margin: 0;
-    letter-spacing: 0.5px;
-}
+        .advantage-banner__text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #5135FF;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
 
 
 
-    .gradient-footer {
-        position: relative;
-        overflow: hidden;
-        background:
-            radial-gradient(circle at top left,
-                rgba(76, 110, 245, 0.38),
-                transparent 32%),
+        .gradient-footer {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at top left,
+                    rgba(76, 110, 245, 0.38),
+                    transparent 32%),
 
-            radial-gradient(circle at bottom right,
-                rgba(0, 238, 255, 0.28),
-                transparent 34%),
+                radial-gradient(circle at bottom right,
+                    rgba(0, 238, 255, 0.28),
+                    transparent 34%),
 
-            radial-gradient(circle at center,
-                rgba(129, 92, 255, 0.18),
-                transparent 45%),
+                radial-gradient(circle at center,
+                    rgba(129, 92, 255, 0.18),
+                    transparent 45%),
 
-            linear-gradient(135deg,
-                #020617 0%,
-                #071226 25%,
-                #0a1930 55%,
-                #102a43 100%);
-    }
+                linear-gradient(135deg,
+                    #020617 0%,
+                    #071226 25%,
+                    #0a1930 55%,
+                    #102a43 100%);
+        }
 
-    .gradient-footer::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-image:
-            linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-        background-size: 40px 40px;
-        opacity: 0.6;
-        pointer-events: none;
-    }
+        .gradient-footer::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.6;
+            pointer-events: none;
+        }
 
-    .gradient-footer::after {
-        content: "";
-        position: absolute;
-        width: 500px;
-        height: 500px;
-        background: radial-gradient(circle,
-            rgba(0, 225, 255, 0.28),
-            rgba(79, 70, 229, 0.18),
-            transparent 72%);
-        top: -150px;
-        right: -120px;
-        pointer-events: none;
-        filter: blur(10px);
-    }
+        .gradient-footer::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle,
+                    rgba(0, 225, 255, 0.28),
+                    rgba(79, 70, 229, 0.18),
+                    transparent 72%);
+            top: -150px;
+            right: -120px;
+            pointer-events: none;
+            filter: blur(10px);
+        }
 
-    .gradient-footer .container {
-        position: relative;
-        z-index: 2;
-    }
+        .gradient-footer .container {
+            position: relative;
+            z-index: 2;
+        }
 
-.footer-section ul li a{
-    font-weight: 300 !important;
-}
+        .footer-section ul li a {
+            font-weight: 300 !important;
+        }
+
+        /* ==========================================================================
+   Core Security Principles (DSP) Glowing Vector Badges
+   ========================================================================== */
+        .dsp-card-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #ffffff;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Subtle outer ring border */
+        .dsp-card-icon::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
+            z-index: -1;
+            transition: all 0.4s ease;
+        }
+
+        /* Individual Gradient Palettes */
+        .dsp-card-icon.confidentiality {
+            background: linear-gradient(135deg, #00C6FF 0%, #0072FF 100%);
+            box-shadow: 0 8px 24px rgba(0, 114, 255, 0.2);
+        }
+
+        .dsp-card-icon.integrity {
+            background: linear-gradient(135deg, #7F00FF 0%, #E100FF 100%);
+            box-shadow: 0 8px 24px rgba(127, 0, 255, 0.2);
+        }
+
+        .dsp-card-icon.availability {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            box-shadow: 0 8px 24px rgba(56, 239, 125, 0.2);
+        }
+
+        .dsp-card-icon.safety {
+            background: linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%);
+            box-shadow: 0 8px 24px rgba(255, 75, 43, 0.2);
+        }
+
+        /* Interaction Micro-Animations */
+        .event-work-items:hover .dsp-card-icon {
+            transform: translateY(-8px) scale(1.08);
+        }
+
+        .event-work-items:hover .dsp-card-icon.confidentiality {
+            box-shadow: 0 15px 30px rgba(0, 114, 255, 0.45);
+        }
+
+        .event-work-items:hover .dsp-card-icon.integrity {
+            box-shadow: 0 15px 30px rgba(127, 0, 255, 0.45);
+        }
+
+        .event-work-items:hover .dsp-card-icon.availability {
+            box-shadow: 0 15px 30px rgba(56, 239, 125, 0.45);
+        }
+
+        .event-work-items:hover .dsp-card-icon.safety {
+            box-shadow: 0 15px 30px rgba(255, 75, 43, 0.45);
+        }
+
+        /* DPP Section Specific Gradients & Shadow Glows */
+        .dsp-card-icon.compliance {
+            background: linear-gradient(135deg, #00C6FF 0%, #0072FF 100%);
+            box-shadow: 0 8px 24px rgba(0, 114, 255, 0.2);
+        }
+
+        .dsp-card-icon.risk-reduction {
+            background: linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%);
+            box-shadow: 0 8px 24px rgba(255, 75, 43, 0.2);
+        }
+
+        .dsp-card-icon.governance {
+            background: linear-gradient(135deg, #7F00FF 0%, #E100FF 100%);
+            box-shadow: 0 8px 24px rgba(127, 0, 255, 0.2);
+        }
+
+        .dsp-card-icon.trust {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            box-shadow: 0 8px 24px rgba(56, 239, 125, 0.2);
+        }
+
+        .dsp-card-icon.data-protection {
+            background: linear-gradient(135deg, #F37335 0%, #FDC830 100%);
+            box-shadow: 0 8px 24px rgba(243, 115, 53, 0.2);
+        }
+
+        .dsp-card-icon.due-diligence {
+            background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
+            box-shadow: 0 8px 24px rgba(79, 172, 254, 0.2);
+        }
+
+        /* Hover States for DPP classes */
+        .event-work-items:hover .dsp-card-icon.compliance {
+            box-shadow: 0 15px 30px rgba(0, 114, 255, 0.45);
+        }
+
+        .event-work-items:hover .dsp-card-icon.risk-reduction {
+            box-shadow: 0 15px 30px rgba(255, 75, 43, 0.45);
+        }
+
+        .event-work-items:hover .dsp-card-icon.governance {
+            box-shadow: 0 15px 30px rgba(127, 0, 255, 0.45);
+        }
+
+        .event-work-items:hover .dsp-card-icon.trust {
+            box-shadow: 0 15px 30px rgba(56, 239, 125, 0.45);
+        }
+
+        .event-work-items:hover .dsp-card-icon.data-protection {
+            box-shadow: 0 15px 30px rgba(243, 115, 53, 0.45);
+        }
+
+        .event-work-items:hover .dsp-card-icon.due-diligence {
+            box-shadow: 0 15px 30px rgba(79, 172, 254, 0.45);
+        }
