@@ -509,7 +509,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <li><a href="#">ISO 9001:2015 Quality Checklist</a></li>
                             <li><a href="#">ISO 42001:2023 Artificial Intelligence Management System</a></li>
                             <li><a href="iso-27001-2022-Information-security-checklist.html">ISO 27001:2022 Information Security Checklist</a></li>
-                            <li><a href="#">ISO 27701:2019 Privacy Checklist</a></li>
+                            <li><a href="iso-27001-2022-Information-security-checklist-copy.html">ISO 27701:2019 Privacy Checklist</a></li>
                             <li><a href="#">ISO 31000 Risk Checklist</a></li>
 
                         </ul>
