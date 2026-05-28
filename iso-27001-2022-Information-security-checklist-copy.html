@@ -30,33 +30,91 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
-
+    <!--<< Custom.css >>-->
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <!-- Page Specific Premium GRC Tabbed Checklist Styling -->
     <style>
-        /* Color Palette & Theme Alignment */
-        :root {
-            --dark-blue: #020718;
-            --light-bg: #f8fafc;
-            --border-color: rgba(3, 23, 64, 0.08);
-            --card-glow: 0 10px 40px rgba(81, 53, 255, 0.04);
+        /* Immersive Premium Dark Hero Banner */
+        .premium-banner {
+            position: relative;
+            background: linear-gradient(135deg, #031740 0%, #0b2150 100%);
+            padding: 90px 0 130px;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(81, 53, 255, 0.15);
+            text-align: center;
         }
 
+        .premium-banner::before {
+            content: "";
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(81, 53, 255, 0.12) 0%, rgba(81, 53, 255, 0) 70%);
+            z-index: 1;
+            pointer-events: none;
+            animation: orbFloat 10s ease-in-out infinite alternate;
+        }
+
+        .premium-banner::after {
+            content: "";
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 550px;
+            height: 550px;
+            background: radial-gradient(circle, rgba(255, 84, 85, 0.08) 0%, rgba(255, 84, 85, 0) 70%);
+            z-index: 1;
+            pointer-events: none;
+            animation: orbFloat2 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes orbFloat {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+
+            100% {
+                transform: translateY(30px) scale(1.1);
+            }
+        }
+
+        @keyframes orbFloat2 {
+            0% {
+                transform: translateY(0) scale(1.1);
+            }
+
+            100% {
+                transform: translateY(-40px) scale(0.9);
+            }
+        }
+
+        .premium-banner-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Glassmorphic Segmented Navigation Tabs */
         .checklist-tabs-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 16px;
-            margin: 40px auto;
-            max-width: 780px;
-            background: #ffffff;
+            gap: 8px;
+            margin: -45px auto 50px;
+            max-width: 820px;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             padding: 8px;
             border-radius: 100px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 30px rgba(3, 23, 64, 0.04);
+            border: 1px solid rgba(81, 53, 255, 0.12);
+            box-shadow: 0 20px 40px rgba(3, 23, 64, 0.08);
+            position: relative;
+            z-index: 10;
         }
 
         .checklist-tab {
@@ -65,7 +123,7 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
-            padding: 14px 28px;
+            padding: 15px 30px;
             font-size: 16px;
             font-weight: 700;
             color: #385469;
@@ -92,279 +150,654 @@
 
         .checklist-tab.active {
             background: linear-gradient(93deg, var(--p1-clr) 10.65%, var(--p3-clr) 89.35%);
-            color: #ffffff;
-            box-shadow: 0 12px 28px rgba(81, 53, 255, 0.2);
+            color: #ffffff !important;
+            box-shadow: 0 12px 28px rgba(81, 53, 255, 0.25);
         }
 
         .tab-panel {
-            animation: fadeIn 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            animation: fadeInOpacity 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
 
-        @keyframes fadeIn {
+        @keyframes fadeInOpacity {
             from {
                 opacity: 0;
-                transform: translateY(12px);
             }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Split-Pane Dashboard Layout */
+        .grc-dashboard-layout {
+            display: grid;
+            grid-template-columns: 280px minmax(0, 1fr);
+            gap: 30px;
+            align-items: start;
+            min-height: 750px;
+        }
+
+        @media (max-width: 991px) {
+            .grc-dashboard-layout {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* Sticky Clause Navigator HUD */
+        .clause-navigator-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: var(--box-shadow);
+            position: -webkit-sticky;
+            position: sticky;
+            top: 130px;
+            z-index: 100;
+            transition: all 0.3s ease;
+            align-self: start;
+        }
+
+        .clause-navigator-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 2px solid rgba(81, 53, 255, 0.08);
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .clause-navigator-title i {
+            color: var(--p1-clr);
+        }
+
+        .clause-navigator-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .clause-nav-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--pra);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            background: transparent;
+            border: 1px solid transparent;
+            text-align: left;
+            width: 100%;
+        }
+
+        .clause-nav-item:hover {
+            background: var(--bg);
+            color: var(--p1-clr);
+        }
+
+        .clause-nav-item.active {
+            background: rgba(81, 53, 255, 0.06);
+            border-color: rgba(81, 53, 255, 0.12);
+            color: var(--p1-clr);
+        }
+
+        .clause-nav-badge {
+            font-size: 11px;
+            font-weight: 800;
+            background: #e2e8f0;
+            color: var(--pra);
+            padding: 2px 8px;
+            border-radius: 99px;
+            transition: all 0.25s ease;
+            flex-shrink: 0;
+        }
+
+        .clause-nav-item.active .clause-nav-badge {
+            background: var(--p1-clr);
+            color: #ffffff;
+        }
+
+        .clause-nav-item.completed .clause-nav-badge {
+            background: #10b981;
+            color: #ffffff;
+        }
+
+        /* Responsive Mobile Behavior for Sidebar HUD */
+        @media (max-width: 991px) {
+            .clause-navigator-card {
+                position: sticky;
+                top: 80px;
+                margin-bottom: 10px;
+                padding: 12px;
+                border-radius: 16px;
+                box-shadow: 0 10px 30px rgba(3, 23, 64, 0.04);
+            }
+
+            .clause-navigator-title {
+                display: none;
+            }
+
+            .clause-navigator-list {
+                flex-direction: row;
+                overflow-x: auto;
+                gap: 6px;
+                padding-bottom: 2px;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .clause-nav-item {
+                flex: 0 0 auto;
+                padding: 8px 14px;
+                font-size: 13px;
+                scroll-snap-align: start;
+                width: auto;
+            }
+        }
+
+        /* Right Content Panels & Section Markers */
+        .clause-content-section {
+            scroll-margin-top: 130px;
+            margin-bottom: 45px;
+        }
+
+        @media (max-width: 991px) {
+            .clause-content-section {
+                scroll-margin-top: 160px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .clause-card-header {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--black);
+            background: #ffffff;
+            padding: 16px 24px;
+            border-radius: 16px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid var(--border);
+            border-left: 5px solid var(--p1-clr);
+            box-shadow: var(--box-shadow);
+        }
+
+        .clause-card-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .clause-card-header-left i {
+            color: var(--p1-clr);
+            font-size: 18px;
+        }
+
+        .clause-card-header-progress {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--pra);
+            background: var(--bg);
+            padding: 4px 12px;
+            border-radius: 99px;
+        }
+
+        /* Beautiful GRC Checklist Item Cards */
+        .checklist-item-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 20px 24px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--box-shadow);
+        }
+
+        .checklist-item-card:hover {
+            border-color: rgba(81, 53, 255, 0.22);
+            box-shadow: 0 12px 30px rgba(81, 53, 255, 0.05);
+            transform: translateX(4px);
+        }
+
+        .checklist-item-card.checked-active {
+            border-color: var(--p1-clr);
+            background: rgba(81, 53, 255, 0.012);
+            box-shadow: 0 8px 25px rgba(81, 53, 255, 0.04);
+        }
+
+        /* Modern Morphing Checkbox Controls */
+        .custom-checkbox-wrap {
+            position: relative;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-top: 3px;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .custom-checkbox-wrap input {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .custom-checkmark-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 24px;
+            width: 24px;
+            background: #ffffff;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .custom-checkbox-wrap:hover input~.custom-checkmark-box {
+            border-color: var(--p1-clr);
+            background: rgba(81, 53, 255, 0.04);
+        }
+
+        .custom-checkbox-wrap input:checked~.custom-checkmark-box {
+            background: var(--p1-clr);
+            border-color: var(--p1-clr);
+            box-shadow: 0 0 10px rgba(81, 53, 255, 0.3);
+        }
+
+        .custom-checkmark-box::after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 8px;
+            top: 4px;
+            width: 5px;
+            height: 10px;
+            border: solid #ffffff;
+            border-width: 0 2.5px 2.5px 0;
+            transform: rotate(45deg);
+        }
+
+        .custom-checkbox-wrap input:checked~.custom-checkmark-box::after {
+            display: block;
+        }
+
+        .card-content-wrap {
+            flex: 1;
+        }
+
+        .card-item-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 6px;
+            transition: color 0.3s;
+        }
+
+        .checklist-item-card.checked-active .card-item-title {
+            color: var(--p1-clr);
+        }
+
+        .card-item-desc {
+            font-size: 14.5px;
+            color: var(--pra);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* GRC Score & Completion HUD Scoreboard */
+        .premium-score-widget {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 20px 50px rgba(3, 23, 64, 0.08);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid var(--p1-clr);
+        }
+
+        .score-widget-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .score-metrics {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .score-big-number {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--p1-clr);
+        }
+
+        .score-percent-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--pra);
+            background: var(--bg);
+            padding: 4px 12px;
+            border-radius: 99px;
+        }
+
+        .btn-reset-checklist {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--pra);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-reset-checklist:hover {
+            background: rgba(255, 84, 85, 0.05);
+            border-color: rgba(255, 84, 85, 0.2);
+            color: var(--p3-clr);
+        }
+
+        .score-bar-bg {
+            width: 100%;
+            height: 12px;
+            background: #e2e8f0;
+            border-radius: 99px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .score-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--p1-clr), var(--p3-clr));
+            border-radius: 99px;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 10px rgba(81, 53, 255, 0.25);
+        }
+
+        .score-widget-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--pra);
+        }
+
+        /* Maturity Levels Multi-Tier Dashboard */
+        .maturity-dashboard-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: 767px) {
+            .maturity-dashboard-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .maturity-badge-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--box-shadow);
+            opacity: 0.55;
+            transform: scale(0.97);
+            position: relative;
+        }
+
+        .maturity-badge-card.active {
+            opacity: 1;
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(3, 23, 64, 0.15);
+        }
+
+        .maturity-badge-card.active.developing {
+            border: 2px solid var(--p3-clr);
+            background: rgba(255, 84, 85, 0.02);
+        }
+
+        .maturity-badge-card.active.managed {
+            border: 2px solid var(--p2-clr);
+            background: rgba(254, 213, 0, 0.02);
+        }
+
+        .maturity-badge-card.active.optimized {
+            border: 2px solid var(--p1-clr);
+            background: rgba(81, 53, 255, 0.02);
+        }
+
+        .maturity-badge-pill {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 99px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .developing .maturity-badge-pill {
+            background: rgba(255, 84, 85, 0.1);
+            color: var(--p3-clr);
+        }
+
+        .managed .maturity-badge-pill {
+            background: rgba(254, 213, 0, 0.15);
+            color: #d97706;
+        }
+
+        .optimized .maturity-badge-pill {
+            background: rgba(81, 53, 255, 0.1);
+            color: var(--p1-clr);
+        }
+
+        .maturity-title {
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .maturity-subtitle {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--pra);
+            margin: 0;
+        }
+
+        /* Executive Advisory Action Panels */
+        .premium-advisory-panel {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            display: none;
+        }
+
+        .premium-advisory-panel.active {
+            display: block;
+            animation: slideUpFade 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        /* Progress Bar Widget */
-        .progress-widget {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 24px 32px;
-            margin-bottom: 36px;
-            box-shadow: var(--card-glow);
+        .advisory-card-low {
+            border-left: 6px solid var(--p3-clr);
         }
 
-        .progress-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 14px;
+        .advisory-card-mid {
+            border-left: 6px solid var(--p2-clr);
         }
 
-        .progress-bar-container {
-            width: 100%;
-            height: 12px;
-            background: #e2e8f0;
-            border-radius: 99px;
-            overflow: hidden;
-            position: relative;
+        .advisory-card-high {
+            border-left: 6px solid var(--p1-clr);
         }
 
-        .checklist-progress-fill {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, var(--p1-clr), var(--p3-clr));
-            border-radius: 99px;
-            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 0 10px rgba(81, 53, 255, 0.2);
-        }
-
-        /* Checklist Theme Cards */
-        .checklist-group {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: var(--card-glow);
-            transition: all 0.3s ease;
-        }
-
-        .checklist-group:hover {
-            border-color: rgba(81, 53, 255, 0.2);
-            box-shadow: 0 14px 45px rgba(81, 53, 255, 0.08);
-        }
-
-        .checklist-group-title {
-            font-size: 20px;
-            font-weight: 800;
-            color: #031740;
+        .advisory-panel-header {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 20px;
+            gap: 15px;
+            margin-bottom: 18px;
         }
 
-        .checklist-group-title i {
+        .advisory-panel-header i {
+            font-size: 24px;
+        }
+
+        .advisory-card-low .advisory-panel-header i {
+            color: var(--p3-clr);
+        }
+
+        .advisory-card-mid .advisory-panel-header i {
+            color: #d97706;
+        }
+
+        .advisory-card-high .advisory-panel-header i {
             color: var(--p1-clr);
         }
 
-        .checklist-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            padding: 16px 12px;
-            border-radius: 12px;
-            margin-bottom: 8px;
-            transition: all 0.25s ease;
-            border: 1px solid transparent;
-        }
-
-        .checklist-item:hover {
-            background: var(--light-bg);
-            border-color: rgba(3, 23, 64, 0.04);
-        }
-
-        /* Custom Checkbox Graphics */
-        .checkbox-container {
-            display: inline-flex;
-            position: relative;
-            cursor: pointer;
-            user-select: none;
-            padding-top: 2px;
-        }
-
-        .checkbox-container input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-        }
-
-        .checkmark {
-            height: 22px;
-            width: 22px;
-            background-color: #ffffff;
-            border: 2px solid #cbd5e1;
-            border-radius: 6px;
-            display: inline-block;
-            position: relative;
-            transition: all 0.2s ease;
-        }
-
-        .checkbox-container:hover input ~ .checkmark {
-            border-color: var(--p1-clr);
-        }
-
-        .checkbox-container input:checked ~ .checkmark {
-            background-color: var(--p1-clr);
-            border-color: var(--p1-clr);
-            box-shadow: 0 0 8px rgba(81, 53, 255, 0.3);
-        }
-
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-            left: 7px;
-            top: 3px;
-            width: 5px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            transform: rotate(45deg);
-        }
-
-        .checkbox-container input:checked ~ .checkmark:after {
-            display: block;
-        }
-
-        .checklist-content {
-            flex: 1;
-        }
-
-        .checklist-code {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 800;
-            color: var(--p1-clr);
-            background: rgba(81, 53, 255, 0.08);
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-bottom: 4px;
-            letter-spacing: 0.5px;
-        }
-
-        .checklist-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: #031740;
-            margin-bottom: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .checklist-desc {
-            font-size: 14px;
-            color: #64748b;
-            line-height: 1.5;
-            margin: 0;
-            transition: all 0.3s ease;
-        }
-
-        /* Checked completion state */
-        .checklist-item.checked-active {
-            background: rgba(81, 53, 255, 0.02) !important;
-            border-color: rgba(81, 53, 255, 0.12) !important;
-        }
-
-        .checklist-item.checked-active .checklist-title {
-            color: var(--p1-clr);
-            text-decoration: line-through;
-            opacity: 0.8;
-        }
-
-        .checklist-item.checked-active .checklist-desc {
-            opacity: 0.65;
-        }
-
-        /* About / GRC Info Layout */
-        .grc-intro-card {
+        /* Premium "About" tab elements */
+        .premium-grc-card {
             background: #ffffff;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--border);
             border-radius: 24px;
-            padding: 36px;
+            padding: 40px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .premium-grc-card h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 18px;
+        }
+
+        .benefit-accent-quote {
+            background: rgba(81, 53, 255, 0.03);
+            border-left: 4px solid var(--p1-clr);
+            border-radius: 0 16px 16px 0;
+            padding: 24px;
             margin-bottom: 30px;
-            box-shadow: var(--card-glow);
+        }
+
+        .benefit-accent-quote h4 {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+
+        .benefit-accent-quote p {
+            font-size: 14.5px;
+            color: var(--pra);
+            line-height: 1.6;
+        }
+
+        .benefit-accent-quote p:last-child {
+            margin-bottom: 0;
         }
 
         .grc-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 24px;
-            margin-top: 32px;
+            margin-top: 30px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             .grc-grid {
                 grid-template-columns: 1fr;
             }
-            .checklist-tabs-container {
-                flex-direction: column;
-                border-radius: 20px;
-                padding: 12px;
-            }
-            .checklist-tab {
-                width: 100%;
-            }
         }
 
-        .grc-benefit-card {
-            background: var(--light-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 24px;
+        .benefit-card-elegant {
+            background: var(--bg);
+            border: 1px solid rgba(81, 53, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
             transition: all 0.3s ease;
         }
 
-        .grc-benefit-card:hover {
-            transform: translateY(-4px);
+        .benefit-card-elegant:hover {
+            background: #ffffff;
             border-color: rgba(81, 53, 255, 0.15);
-            box-shadow: 0 8px 30px rgba(3, 23, 64, 0.05);
+            box-shadow: 0 15px 35px rgba(3, 23, 64, 0.06);
+            transform: translateY(-4px);
         }
 
-        .grc-benefit-icon {
+        .benefit-icon-elegant {
             font-size: 28px;
             color: var(--p1-clr);
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
 
-        /* Resource Card Layout */
-        .resource-card {
+        /* Premium "Resources" tab elements */
+        .premium-resource-card {
             background: #ffffff;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--border);
             border-radius: 20px;
-            padding: 28px;
-            height: 100%;
-            box-shadow: var(--card-glow);
-            transition: all 0.3s ease;
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            height: 100%;
         }
 
-        .resource-card::before {
+        .premium-resource-card::before {
             content: "";
             position: absolute;
             top: 0;
@@ -376,283 +809,68 @@
             transition: opacity 0.3s ease;
         }
 
-        .resource-card:hover {
+        .premium-resource-card:hover {
             transform: translateY(-5px);
             border-color: rgba(81, 53, 255, 0.15);
-            box-shadow: 0 16px 45px rgba(81, 53, 255, 0.08);
+            box-shadow: 0 15px 40px rgba(81, 53, 255, 0.08);
         }
 
-        .resource-card:hover::before {
+        .premium-resource-card:hover::before {
             opacity: 1;
         }
 
-        .resource-icon {
-            width: 48px;
-            height: 48px;
+        .resource-icon-elegant {
+            width: 54px;
+            height: 54px;
             border-radius: 12px;
-            background: rgba(81, 53, 255, 0.06);
+            background: rgba(81, 53, 255, 0.05);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 22px;
+            font-size: 24px;
             color: var(--p1-clr);
             margin-bottom: 20px;
             transition: all 0.3s ease;
         }
 
-        .resource-card:hover .resource-icon {
+        .premium-resource-card:hover .resource-icon-elegant {
             background: var(--p1-clr);
             color: #ffffff;
-            transform: scale(1.05);
         }
 
-        .resource-btn {
+        .resource-btn-elegant {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             color: var(--p1-clr);
             font-weight: 700;
             font-size: 14px;
-            margin-top: 16px;
+            margin-top: 15px;
             transition: all 0.25s ease;
         }
 
-        .resource-card:hover .resource-btn {
+        .premium-resource-card:hover .resource-btn-elegant {
             color: var(--p3-clr);
         }
 
-        .resource-btn i {
+        .resource-btn-elegant i {
             transition: transform 0.2s ease;
         }
 
-        .resource-btn:hover i {
+        .resource-btn-elegant:hover i {
             transform: translateX(4px);
         }
 
-        /* GRC Maturity Self-Assessment Styles */
-        .self-assessment-intro {
-            background: rgba(81, 53, 255, 0.03);
-            border-left: 4px solid var(--p1-clr);
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin-bottom: 30px;
-        }
-
-        .maturity-dashboard {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 36px;
-        }
-
-        @media (max-width: 991px) {
-            .maturity-dashboard {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .maturity-card {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 18px;
-            padding: 22px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(3, 23, 64, 0.02);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            opacity: 0.65;
-            transform: scale(0.97);
-        }
-
-        .maturity-card.active {
-            opacity: 1;
-            transform: scale(1.02);
-            /* box-shadow: 0 10px 30px rgba(81, 53, 255, 0.12); */
-        }
-
-        .maturity-card-low.active {
-            border: 2px solid var(--p3-clr);
-        }
-        
-        .maturity-card-mid.active {
-            border: 2px solid var(--p2-clr);
-        }
-
-        .maturity-card-high.active {
-            border: 2px solid var(--p1-clr);
-            /* box-shadow: 0 10px 30px rgba(81, 53, 255, 0.15); */
-        }
-
-        .maturity-badge {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 800;
-            text-transform: uppercase;
-            padding: 3px 10px;
-            border-radius: 100px;
-            margin-bottom: 12px;
-            letter-spacing: 0.5px;
-        }
-
-        .maturity-card-low .maturity-badge {
-            background: rgba(255, 84, 85, 0.1);
-            color: var(--p3-clr);
-        }
-
-        .maturity-card-mid .maturity-badge {
-            background: rgba(254, 213, 0, 0.1);
-            color: #d97706;
-        }
-
-        .maturity-card-high .maturity-badge {
-            background: rgba(81, 53, 255, 0.1);
-            color: var(--p1-clr);
-        }
-
-        .maturity-score-range {
-            font-size: 24px;
-            font-weight: 800;
-            color: #031740;
-            margin-bottom: 6px;
-        }
-
-        .maturity-level-title {
-            font-size: 15px;
-            font-weight: 700;
-            color: #475569;
-            margin-bottom: 0;
-        }
-
-        .active-advisory-container {
-            margin-bottom: 40px;
-        }
-
-        .advisory-panel {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 32px;
-            box-shadow: var(--card-glow);
-            transition: all 0.4s ease;
-        }
-
-        .advisory-panel-low {
-            border-left: 6px solid var(--p3-clr);
-        }
-
-        .advisory-panel-mid {
-            border-left: 6px solid var(--p2-clr);
-        }
-
-        .advisory-panel-high {
-            border-left: 6px solid var(--p1-clr);
-        }
-
-        .advisory-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .advisory-header i {
-            font-size: 24px;
-        }
-
-        .advisory-panel-low .advisory-header i {
-            color: var(--p3-clr);
-        }
-
-        .advisory-panel-mid .advisory-header i {
-            color: #d97706;
-        }
-
-        .advisory-panel-high .advisory-header i {
-            color: var(--p1-clr);
-        }
-
-        .clause-header {
-            font-size: 18px;
-            font-weight: 800;
-            color: #031740;
-            background: #f1f5f9;
-            padding: 12px 20px;
-            border-radius: 10px;
-            margin-top: 36px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-left: 4px solid var(--p1-clr);
-        }
-
-        .clause-header i {
-            color: var(--p1-clr);
-            font-size: 18px;
-        }
-
-        .checklist-item-q {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            padding: 18px 16px;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            transition: all 0.25s ease;
-        }
-
-        .checklist-item-q:hover {
-            background: var(--light-bg);
-            border-color: rgba(81, 53, 255, 0.15);
-            transform: translateX(4px);
-        }
-
-        .checklist-item-q.checked-active {
-            background: rgba(81, 53, 255, 0.02);
-            border-color: rgba(81, 53, 255, 0.12);
-        }
-
-        .checklist-item-q.checked-active .checklist-title {
-            color: var(--p1-clr);
-            /* text-decoration: line-through; */
-            opacity: 0.8;
-        }
-
-        .btn-reset-checklist {
-            background: transparent;
-            border: 1px solid var(--border-color);
-            color: #64748b;
-            font-size: 12px;
-            font-weight: 700;
-            padding: 6px 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-left: 14px;
-        }
-
-        .btn-reset-checklist:hover {
-            background: rgba(255, 84, 85, 0.05);
-            border-color: rgba(255, 84, 85, 0.2);
-            color: var(--p3-clr);
-        }
-
-        /* Premium Custom Modal Styles */
+        /* Glassmorphic Reset Confirmation Dialog overlay and animations */
         .custom-modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(2, 7, 24, 0.65);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
+            background: rgba(3, 23, 64, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             z-index: 9999;
             display: flex;
             justify-content: center;
@@ -668,18 +886,18 @@
         .custom-modal-card {
             background: #ffffff;
             border-radius: 24px;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--border);
             padding: 40px;
-            max-width: 460px;
+            max-width: 480px;
             width: 90%;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(2, 7, 24, 0.18);
-            transform: translateY(20px);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 25px 60px rgba(3, 23, 64, 0.15);
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         .custom-modal-overlay.active .custom-modal-card {
-            transform: translateY(0);
+            transform: scale(1);
         }
 
         .custom-modal-icon {
@@ -700,9 +918,11 @@
             0% {
                 box-shadow: 0 0 0 0 rgba(255, 84, 85, 0.35);
             }
+
             70% {
                 box-shadow: 0 0 0 10px rgba(255, 84, 85, 0);
             }
+
             100% {
                 box-shadow: 0 0 0 0 rgba(255, 84, 85, 0);
             }
@@ -711,13 +931,13 @@
         .custom-modal-title {
             font-size: 24px;
             font-weight: 800;
-            color: #031740;
+            color: var(--black);
             margin-bottom: 12px;
         }
 
         .custom-modal-text {
             font-size: 15px;
-            color: #64748b;
+            color: var(--pra);
             line-height: 1.6;
             margin-bottom: 30px;
         }
@@ -761,6 +981,103 @@
             box-shadow: 0 6px 20px rgba(255, 84, 85, 0.35);
             transform: translateY(-1px);
         }
+
+        /* Dynamic GRC Contact Call-To-Action Section */
+        .premium-cta-card {
+            background: linear-gradient(135deg, rgba(81, 53, 255, 0.04) 0%, rgba(255, 84, 85, 0.04) 100%);
+            border: 1px dashed rgba(81, 53, 255, 0.25);
+            border-radius: 24px;
+            padding: 35px 40px;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(3, 23, 64, 0.02);
+            transition: all 0.3s ease;
+        }
+
+        .premium-cta-card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(81, 53, 255, 0.06) 0%, rgba(81, 53, 255, 0) 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .premium-cta-card:hover {
+            border-color: var(--p1-clr);
+            box-shadow: 0 15px 35px rgba(81, 53, 255, 0.06);
+            transform: translateY(-2px);
+        }
+
+        .cta-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .cta-desc {
+            font-size: 15px;
+            color: var(--pra);
+            line-height: 1.6;
+        }
+
+        .cmn-btn-elegant {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(93deg, var(--p1-clr) 10.65%, var(--p3-clr) 89.35%);
+            color: #ffffff !important;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 100px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(81, 53, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+        }
+
+        .cmn-btn-elegant i {
+            transition: transform 0.3s ease;
+        }
+
+        .cmn-btn-elegant:hover {
+            box-shadow: 0 12px 28px rgba(81, 53, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .cmn-btn-elegant:hover i {
+            transform: translateX(5px);
+        }
+
+        .btn-download-report {
+            background: var(--p1-clr);
+            border: 1px solid var(--p1-clr);
+            color: #ffffff !important;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(81, 53, 255, 0.15);
+        }
+
+        .btn-download-report:hover {
+            background: var(--black);
+            border-color: var(--black);
+            box-shadow: 0 4px 12px rgba(3, 23, 64, 0.15);
+        }
     </style>
 
 </head>
@@ -794,19 +1111,15 @@
                 <span data-text-preloader="O" class="letters-loading">
                     T
                 </span>
-
                 <span data-text-preloader="O" class="letters-loading">
 
                 </span>
-
                 <span data-text-preloader="O" class="letters-loading">
                     3
                 </span>
-
                 <span data-text-preloader="O" class="letters-loading">
                     6
                 </span>
-
                 <span data-text-preloader="O" class="letters-loading">
                     0
                 </span>
@@ -834,12 +1147,12 @@
     <!-- Start Cursor Pointer -->
     <div class="mouse-follower">
         <span class="cursor-outline"></span>
-        <!-- <span class="cursor-dot"></span> -->
     </div>
     <!-- End Cursor Pointer -->
 
     <div id="header"></div>
-<!-- Banner Section Start -->
+
+    <!-- Banner Section Start -->
     <section class="breadcrumb-section position-relative fix">
         <div class="container">
             <div class="bread-content text-center">
@@ -856,19 +1169,20 @@
         <!-- bread Element -->
         <img src="assets/img/element/bread-ele.png" alt="img" class="bread-ele">
     </section>
-    <!-- Banner Section Start -->
+    <!-- Banner Section End -->
 
     <!-- Main Tabbed Interface Section Start -->
-    <section class="checklist-section fix section-padding bg-light">
+    <section class="checklist-section section-padding bg-light">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
                     <div class="section-title mb-4">
-                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-3">GRC Compliance Matrix</span>
-                        <h2 class="black fw-bold mb-3" style="font-size: 38px;">ISO/IEC 27001:2022 self-assessment</h2>
+                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-3">GRC Compliance
+                            Matrix</span>
+                        <h2 class="black fw-bold mb-3" style="font-size: 38px;">ISO/IEC 27001:2022 Self-Assessment</h2>
                         <p class="pra fs-six">
-                            Evaluate your system controls and audit readiness using this interactive GRC assessment. 
-                            Select a tab below to view standard specifications, track compliance progress, or access resources.
+                            Gauge your standard readiness, track real-time maturity, and review comprehensive
+                            administrative protocols aligned directly with security clauses.
                         </p>
                     </div>
                 </div>
@@ -877,558 +1191,820 @@
             <!-- Tab Buttons Container -->
             <div class="checklist-tabs-container">
                 <button type="button" class="checklist-tab active" data-checklist-tab="panel-about">
-                    <i class="fa-solid fa-circle-info"></i> About the Checklist
+                    <i class="fa-solid fa-circle-info"></i> About the Standard
                 </button>
                 <button type="button" class="checklist-tab" data-checklist-tab="panel-checklist">
-                    <i class="fa-solid fa-list-check"></i> Standard Checklist
+                    <i class="fa-solid fa-list-check"></i> Interactive Checklist
                 </button>
                 <button type="button" class="checklist-tab" data-checklist-tab="panel-external">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> External Resources
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Resources
                 </button>
             </div>
 
             <!-- Tab Panels Wrapper -->
             <div class="tab-panels-wrapper">
-                
+
                 <!-- Panel 1: About -->
                 <div id="panel-about" class="tab-panel">
-                    <div class="grc-intro-card">
-                        <!-- Intro Header -->
-                        <div class="row mb-5">
-                            <div class="col-lg-12">
-                                <h3 class="black fw-bold mb-3" style="font-size: 26px;">Introducing ISO/IEC 27001:2022 – Information Security Management System</h3>
-                                <p class="pra fs-six mb-4">
-                                    Globally recognized best practice, ISO/IEC 27001, provides the robust framework and flexibility you need to manage and protect your information. It helps you continually review and refine your processes, building information security resilience today, while ensuring readiness for tomorrow.
+
+                    <!-- Two Column Introduction Section -->
+                    <div class="row align-items-center g-5 mb-5 pt-3">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="about-content">
+                                <h3 class="black fw-bold mb-4" style="font-size: 32px; line-height: 1.25;">
+                                    Introducing ISO/IEC 27001:2022
+                                </h3>
+                                <p class="pra fs-six mb-4" style="line-height: 1.75;">
+                                    Globally recognized best practice, ISO/IEC 27001, provides the robust framework and
+                                    flexibility you need to manage and protect your information. It helps you
+                                    continually review and refine your processes, building information security
+                                    resilience today, while ensuring readiness for tomorrow.
                                 </p>
-                                
-                                <div class="p-4 mb-4" style="background: rgba(81, 53, 255, 0.03); border-left: 4px solid var(--p1-clr); border-radius: 0 16px 16px 0;">
-                                    <h4 class="black fw-bold mb-2" style="font-size: 20px;">The benefits of certification</h4>
+
+                                <div class="benefit-accent-quote" style="margin-top: 30px; margin-bottom: 0;">
+                                    <h4 class="black fw-bold mb-2"><i class="fa-solid fa-award p1-clr mr-2"></i> The
+                                        Benefits of Certification</h4>
                                     <p class="pra fs-seven mb-2">
-                                        Independent certification demonstrates your organization’s commitment to excellence.
+                                        Independent certification demonstrates your organization’s commitment to
+                                        excellence.
                                     </p>
                                     <p class="pra fs-seven mb-0">
-                                        By gaining third-party assurance that your information security management system (ISMS) meets the requirements of ISO/IEC 27001, you can inspire confidence in your ability to safeguard your information assets, mitigate risks, and build trust with an internationally recognized mark of excellence.
+                                        By gaining third-party assurance that your information security management
+                                        system (ISMS) meets the requirements of ISO/IEC 27001, you can inspire
+                                        confidence in your ability to safeguard your information assets, mitigate risks,
+                                        and build trust with an internationally recognized mark of excellence.
                                     </p>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Why organizations require Section -->
-                        <div class="row border-top pt-4">
-                            <div class="col-lg-12">
-                                <h3 class="black fw-bold mb-3" style="font-size: 24px;">Why organizations require ISO 27001?</h3>
-                                <p class="pra fs-six">
-                                    Organizations adopt ISO/IEC 27001:2022 to establish a structured and internationally recognized approach for managing information security risks. In today’s digital environment, organizations depend heavily on information assets such as customer data, intellectual property, financial records, and operational systems. ISO 27001 provides a systematic framework to protect these assets while supporting business objectives.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="grc-grid mb-5">
-                            <!-- 1. Risk Management -->
-                            <div class="grc-benefit-card">
-                                <div class="grc-benefit-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                                <h5 class="fs-six fw_800 black mb-2">Proactive Risk Management</h5>
-                                <p class="fs-seven pra mb-0">
-                                    A primary reason for implementing ISO 27001 is risk management. The standard enables organizations to identify threats, assess vulnerabilities, evaluate potential impacts, and apply appropriate security controls. Rather than responding reactively to cyber incidents, organizations build proactive resilience against data breaches, ransomware attacks, insider threats, and operational disruptions.
-                                </p>
-                            </div>
-                            
-                            <!-- 2. Compliance -->
-                            <div class="grc-benefit-card">
-                                <div class="grc-benefit-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-                                <h5 class="fs-six fw_800 black mb-2">Legal & Regulatory Compliance</h5>
-                                <p class="fs-seven pra mb-0">
-                                    ISO 27001 also supports legal, regulatory, and contractual compliance. Many industries require organizations to demonstrate strong governance over data protection and privacy. Certification provides verifiable evidence that information security practices are properly designed, implemented, and continuously monitored, helping organizations meet regulatory obligations and customer expectations.
-                                </p>
-                            </div>
-                            
-                            <!-- 3. Trust & Advantage -->
-                            <div class="grc-benefit-card">
-                                <div class="grc-benefit-icon"><i class="fa-solid fa-handshake-angle"></i></div>
-                                <h5 class="fs-six fw_800 black mb-2">Trust & Competitive Advantage</h5>
-                                <p class="fs-seven pra mb-0">
-                                    Another key driver is trust and competitive advantage. Certification reassures customers, partners, and stakeholders that sensitive information is handled securely. Many clients and government tenders now require ISO 27001 certification as a prerequisite for business engagement, making it a strategic enabler for market access and growth.
-                                </p>
-                            </div>
-                            
-                            <!-- 4. Governance & Continuity -->
-                            <div class="grc-benefit-card">
-                                <div class="grc-benefit-icon"><i class="fa-solid fa-sitemap"></i></div>
-                                <h5 class="fs-six fw_800 black mb-2">Organizational Governance & Continuity</h5>
-                                <p class="fs-seven pra mb-0">
-                                    The standard strengthens organizational governance by defining roles, responsibilities, policies, and performance measurement processes. Information security becomes a management responsibility rather than solely an IT function. It also enhances business continuity, ensuring organizations can maintain operations and recover effectively during incidents.
-                                </p>
-                            </div>
-
-                            <!-- 5. Continuous Improvement -->
-                            <div class="grc-benefit-card" style="grid-column: 1 / -1;">
-                                <div class="grc-benefit-icon"><i class="fa-solid fa-arrows-spin"></i></div>
-                                <h5 class="fs-six fw_800 black mb-2">Continuous Improvement Culture</h5>
-                                <p class="fs-seven pra mb-0">
-                                    Finally, ISO 27001 promotes a culture of continuous improvement through regular audits, monitoring, and corrective actions. This ensures security practices evolve alongside emerging threats and technological changes.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Maturity Path Callout -->
-                        <div class="row border-top pt-5">
-                            <div class="col-lg-12">
-                                <div class="p-4 p-md-5 rounded-4 text-center" style="background: linear-gradient(135deg, rgba(81, 53, 255, 0.05) 0%, rgba(81, 53, 255, 0.01) 100%); border: 1px solid rgba(81, 53, 255, 0.15);">
-                                    <h4 class="black fw-bold mb-3" style="font-size: 22px;">Where is your organization on the path to information security management maturity?</h4>
-                                    <p class="pra fs-six mb-4" style="max-width: 850px; margin: 0 auto 20px;">
-                                        Increasing reliance on digital tools, technologies, and services throughout the supply chain is driving the need for greater information security and cybersecurity attention.
-                                    </p>
-                                    <p class="pra fs-seven mb-3" style="max-width: 850px; margin: 0 auto 10px;">
-                                        With a mature and certified Information Security Management System (ISMS) in place, organizations can keep the data they are responsible for safe, as well as unlock additional advantages for the future.
-                                    </p>
-                                    <p class="pra fs-seven fw-bold p1-clr mb-0" style="max-width: 850px; margin: 0 auto;">
-                                        This includes effectively protecting customers and minimizing risk, to opening doors to new growth opportunities, regardless of industry or region.
-                                    </p>
-                                </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="about-thumb position-relative reveal-right w-100"
+                                style="border-radius: 30px; overflow: hidden; box-shadow: 0 20px 45px rgba(3, 23, 64, 0.1);">
+                                <img src="assets/webimages/about.webp" height="500" alt="ISO 27001 GRC" class="w-100"
+                                    style="display: block; border-radius: 30px;">
                             </div>
                         </div>
                     </div>
+
+                    <!-- Centered Title for Why Adopt -->
+                    <div class="row justify-content-center text-center mt-5 mb-4">
+                        <div class="col-lg-8">
+                            <h3 class="black fw-bold mb-3" style="font-size: 28px;">Why Organizations Adopt ISO 27001
+                            </h3>
+                            <p class="pra fs-six">
+                                Establish a structured, internationally recognized framework to secure critical assets,
+                                mitigate systemic risks, and foster stakeholder trust.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2x2 Grid of Centered Icon Cards -->
+                    <div class="row g-4 mb-5">
+                        <!-- 1. Risk Management -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="benefit-card-elegant h-100"
+                                style="background: #ffffff; border: 1px solid var(--border); border-radius: 24px; padding: 36px 30px; box-shadow: var(--box-shadow); transition: all 0.3s ease;">
+                                <div class="benefit-icon-elegant"
+                                    style="font-size: 32px; color: var(--p1-clr); margin-bottom: 20px;">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <h4 class="black fw-bold mb-3" style="font-size: 18px;">Proactive Risk Management</h4>
+                                <p class="pra fs-seven mb-0" style="line-height: 1.6;">
+                                    Identify threats, assess vulnerabilities, evaluate potential impacts, and apply
+                                    security controls. Build proactive resilience against data breaches, ransomware
+                                    attacks, and insider threats.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2. Compliance -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="benefit-card-elegant h-100"
+                                style="background: #ffffff; border: 1px solid var(--border); border-radius: 24px; padding: 36px 30px; box-shadow: var(--box-shadow); transition: all 0.3s ease;">
+                                <div class="benefit-icon-elegant"
+                                    style="font-size: 32px; color: var(--p3-clr); margin-bottom: 20px;">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                </div>
+                                <h4 class="black fw-bold mb-3" style="font-size: 18px;">Legal & Regulatory Compliance
+                                </h4>
+                                <p class="pra fs-seven mb-0" style="line-height: 1.6;">
+                                    Support regulatory, contractual, and privacy expectations. Certification provides
+                                    verifiable proof that your information security practices are properly designed,
+                                    implemented, and continuously monitored.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3. Trust & Advantage -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="benefit-card-elegant h-100"
+                                style="background: #ffffff; border: 1px solid var(--border); border-radius: 24px; padding: 36px 30px; box-shadow: var(--box-shadow); transition: all 0.3s ease;">
+                                <div class="benefit-icon-elegant"
+                                    style="font-size: 32px; color: var(--p1-clr); margin-bottom: 20px;">
+                                    <i class="fa-solid fa-handshake-angle"></i>
+                                </div>
+                                <h4 class="black fw-bold mb-3" style="font-size: 18px;">Trust & Competitive Advantage
+                                </h4>
+                                <p class="pra fs-seven mb-0" style="line-height: 1.6;">
+                                    Reassure customers, partners, and stakeholders that sensitive information is handled
+                                    securely. Win enterprise contracts and tenders that require ISO 27001 certification
+                                    as a prerequisite.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 4. Governance & Continuity -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="benefit-card-elegant h-100"
+                                style="background: #ffffff; border: 1px solid var(--border); border-radius: 24px; padding: 36px 30px; box-shadow: var(--box-shadow); transition: all 0.3s ease;">
+                                <div class="benefit-icon-elegant"
+                                    style="font-size: 32px; color: var(--p3-clr); margin-bottom: 20px;">
+                                    <i class="fa-solid fa-sitemap"></i>
+                                </div>
+                                <h4 class="black fw-bold mb-3" style="font-size: 18px;">Governance & Continuity</h4>
+                                <p class="pra fs-seven mb-0" style="line-height: 1.6;">
+                                    Strengthen organizational governance by defining GRC roles and responsibilities.
+                                    Build resilient recovery capabilities to protect assets and ensure business
+                                    continuity during operational disruptions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Callout Maturity Path CTA Banner -->
+                    <div class="p-4 p-md-5 rounded-4 text-center mt-5 mb-4"
+                        style="background: linear-gradient(135deg, rgba(81, 53, 255, 0.05) 0%, rgba(81, 53, 255, 0.01) 100%); border: 1px solid rgba(81, 53, 255, 0.15); border-radius: 24px;">
+                        <h4 class="black fw-bold mb-3" style="font-size: 22px;">Are you ready to audit your security
+                            maturity?</h4>
+                        <p class="pra fs-six mb-4 mx-auto" style="max-width: 850px; line-height: 1.7;">
+                            Increasing reliance on digital services makes information security a necessity. Unlock your
+                            GRC score, gauge your ISO 27001 readiness range, and receive tailored action recommendations
+                            instantly.
+                        </p>
+                        <button type="button"
+                            class="common-btn box-style cmn-style1 box-bg white overflow-hidden rounded-5 px-5"
+                            style="border-radius: 100px; font-weight: 700; box-shadow: 0 10px 30px rgba(81, 53, 255, 0.25);"
+                            onclick="document.querySelector('[data-checklist-tab=\'panel-checklist\']').click();">
+                            Start Self-Assessment <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                        </button>
+                    </div>
+
                 </div>
 
                 <!-- Panel 2: Checklist -->
                 <div id="panel-checklist" class="tab-panel d-none">
-                    
+
                     <!-- How the Self-Assessment Works Intro -->
-                    <div class="self-assessment-intro">
-                        <h4 class="black fw-bold mb-2">How the Self-Assessment Works</h4>
-                        <p class="pra fs-seven mb-2">
-                            By filling in the checklist below, you can gauge what stage of maturity your ISMS is currently at in relation to the main requirements of the standard, and what actions you can take next. No matter where you are in your digital trust journey, our range of solutions can help you move forward.
+                    <div class="benefit-accent-quote" style="border-radius: 16px; margin-bottom: 40px; padding: 28px;">
+                        <h4 class="black fw-bold mb-2"><i class="fa-solid fa-circle-question p1-clr mr-2"></i> How the
+                            Self-Assessment Works</h4>
+                        <p class="pra fs-seven mb-3">
+                            By filling in the checklist below, you can gauge what stage of maturity your ISMS is
+                            currently at in relation to the main requirements of the standard, and what actions you can
+                            take next.
                         </p>
                         <p class="pra fs-seven fw-bold mb-0">
-                            <i class="fa-solid fa-square-check p1-clr mr-1"></i> Please fill in the checklist below, each 'YES' counts as one point towards your final score and subsequent maturity range.
+                            <i class="fa-solid fa-square-check p1-clr mr-1"></i> Check each box once you have validated
+                            the corresponding controls. Each completed item counts as one point towards your final
+                            score.
                         </p>
                     </div>
 
-                    <!-- Clause 4 -->
-                    <div class="clause-header">
-                        <i class="fa-solid fa-sitemap"></i> Clause 4 - Context of the Organization
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-1" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">1. Factors Influencing Information Security</h5>
-                            <p class="checklist-desc">Has the organization evaluated internal and external factors influencing information security, including stakeholder expectations, regulatory obligations, customer requirements, and the potential impact of climate change?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-2" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">2. Stakeholder Expectations & Obligations</h5>
-                            <p class="checklist-desc">Has the organization determined which stakeholder expectations, legal obligations, and relevant requirements must be addressed by the Information Security Management System (ISMS)?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-3" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">3. Establishing ISMS Scope</h5>
-                            <p class="checklist-desc">Has the organization clearly established the scope of its Information Security Management System, including organizational boundaries, outsourced activities, partner involvement, and any climate change–related considerations?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-4" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">4. Defining Required ISMS Processes</h5>
-                            <p class="checklist-desc">Has the organization defined and implemented the necessary processes, roles, responsibilities, and continual improvement mechanisms required to ensure the ongoing effectiveness of the Information Security Management System?</p>
-                        </div>
-                    </div>
+                    <!-- Split-Pane GRC Layout Grid -->
+                    <div class="grc-dashboard-layout">
 
-                    <!-- Clause 5 -->
-                    <div class="clause-header">
-                        <i class="fa-solid fa-users-gear"></i> Clause 5 - Leadership
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-5" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">5. Policies, Objectives & Communication</h5>
-                            <p class="checklist-desc">Has your organization established an information security policy and defined objectives that align with its strategic direction, and have these been effectively communicated to employees and relevant stakeholders?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-6" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">6. Roles, Responsibilities & Authorities</h5>
-                            <p class="checklist-desc">Have roles, responsibilities, and authorities been clearly defined and assigned to ensure effective management, operation, and reporting of the information security management system (ISMS)?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-7" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">7. Achieving Objectives & Personal Duties</h5>
-                            <p class="checklist-desc">Has leadership ensured that a structured plan exists to achieve information security objectives, and that personnel understand their importance and their individual responsibilities in supporting them?</p>
-                        </div>
-                    </div>
-
-                    <!-- Clause 6 -->
-                    <div class="clause-header">
-                        <i class="fa-solid fa-diagram-project"></i> Clause 6 – Planning
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-8" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">8. Risks and Opportunities Identification</h5>
-                            <p class="checklist-desc">Has the organization identified key risks and opportunities that may impact the effectiveness of the Information Security Management System (ISMS), and established appropriate actions to address them?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-9" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">9. Repeatable Risk Assessment Methodology</h5>
-                            <p class="checklist-desc">Is there a defined, consistent, and repeatable methodology for conducting information security risk assessments, including evaluation of risk likelihood and potential impact?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-10" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">10. Risk Acceptance Criteria & Priorities</h5>
-                            <p class="checklist-desc">Have risk acceptance criteria been formally established, and are identified risks evaluated and prioritized according to these criteria?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-11" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">11. Assigned Risk Owners</h5>
-                            <p class="checklist-desc">Are risk owners assigned for each identified risk, with defined responsibilities to review, approve, and oversee risk treatment activities?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-12" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">12. Controls Verification (Annex A Alignment)</h5>
-                            <p class="checklist-desc">Have suitable risk treatment options and security controls been selected and implemented, and verified against ISO/IEC 27001 Annex A to ensure no applicable controls have been overlooked?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-13" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">13. Statement of Applicability (SoA)</h5>
-                            <div class="checklist-desc">
-                                Has a Statement of Applicability (SoA) been developed that:
-                                <ul class="mt-2 pl-3" style="list-style-type: disc;">
-                                    <li>identifies selected security controls,</li>
-                                    <li>specifies applicable Annex A controls,</li>
-                                    <li>justifies inclusion or exclusion decisions,</li>
-                                    <li>documents any additional controls implemented, and</li>
-                                    <li>confirms implementation status?</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-14" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">14. Risk Treatment Plan & Residual Risks</h5>
-                            <p class="checklist-desc">Is a formal risk treatment plan maintained, and are any residual risks explicitly reviewed and accepted by authorized management?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-15" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">15. Measurable ISMS Objectives</h5>
-                            <p class="checklist-desc">Have measurable ISMS objectives been defined, communicated, and aligned with organizational information security goals?</p>
-                        </div>
-                    </div>
-
-                    <!-- Clause 7 -->
-                    <div class="clause-header">
-                        <i class="fa-solid fa-handshake-angle"></i> Clause 7 - Support
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-16" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">16. Structured Change Management</h5>
-                            <p class="checklist-desc">Does the organization follow a controlled and structured process to plan, evaluate, and manage changes affecting the ISMS?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-17" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">17. Resource Provisioning</h5>
-                            <p class="checklist-desc">Are adequate resources—including personnel, technology, infrastructure, and operational environment—provided to establish, operate, maintain, and continually improve the ISMS?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-18" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">18. Competency, Awareness & Training</h5>
-                            <div class="checklist-desc">
-                                Are individuals performing ISMS-related roles competent through appropriate education, training, or experience, and aware of:
-                                <ul class="mt-2 pl-3" style="list-style-type: disc;">
-                                    <li>their responsibilities,</li>
-                                    <li>the information security policy, and</li>
-                                    <li>the significance of their contributions to ISMS effectiveness?</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-19" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">19. Documented Information Control</h5>
-                            <p class="checklist-desc">Is documented information properly created, maintained, protected, and controlled, and are internal and external communication requirements clearly defined and managed?</p>
-                        </div>
-                    </div>
-
-                    <!-- Clause 8 -->
-                    <div class="clause-header">
-                        <i class="fa-solid fa-gears"></i> Clause 8 - Operation
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-20" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">20. Integrating Risks into Operations</h5>
-                            <p class="checklist-desc">Have risk and opportunity management actions been integrated into operational processes, and are these processes consistently executed as planned?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-21" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">21. Controlling Planned & Unplanned Changes</h5>
-                            <p class="checklist-desc">When organizational or system changes occur, are they planned, reviewed, and controlled to minimize potential impacts on information security?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-22" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">22. Outsourcing & Third-Party Governance</h5>
-                            <p class="checklist-desc">Are outsourced activities and third-party service providers effectively governed to ensure compliance with established information security requirements?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-23" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">23. Periodic Risk Assessments</h5>
-                            <p class="checklist-desc">Are information security risks periodically assessed, with documented records maintained for risk evaluations, treatment decisions, and management approvals?</p>
-                        </div>
-                    </div>
-
-                    <!-- Clause 9 -->
-                    <div class="clause-header">
-                        <i class="fa-solid fa-square-poll-vertical"></i> Clause 9 - Performance Evaluation
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-24" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">24. Monitoring & Measurement Criteria</h5>
-                            <p class="checklist-desc">Have measurement criteria been established, including what is monitored, the methods used, the frequency of measurement, responsible personnel, and the maintenance of documented results?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-25" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">25. Independent Internal Audits</h5>
-                            <p class="checklist-desc">Are internal audits conducted by independent and impartial auditors, with findings properly documented and communicated to management?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-26" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">26. Resolving Audit & Monitoring Nonconformities</h5>
-                            <p class="checklist-desc">Is a formal process established to identify, manage, and resolve issues or nonconformities detected through monitoring activities or audit outcomes?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-27" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">27. Qualified Audit Reports</h5>
-                            <p class="checklist-desc">Are internal audits performed objectively by qualified auditors, and are audit results recorded and reported to relevant management stakeholders?</p>
-                        </div>
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-28" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">28. Performance Records Retention</h5>
-                            <p class="checklist-desc">Has the organization defined monitoring and measurement requirements, including responsibilities, timing, methodologies, and retention of performance records?</p>
-                        </div>
-                    </div>
-
-                    <!-- Clause 10 -->
-                    <div class="clause-header">
-                        <i class="fa-solid fa-arrows-spin"></i> Clause 10 – Improvement
-                    </div>
-                    <div class="checklist-item-q">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="q-29" class="checklist-checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="checklist-content">
-                            <h5 class="checklist-title">29. Corrective Actions & Root Cause Analysis</h5>
-                            <p class="checklist-desc">When an issue occurs, do you take corrective action, identify and address the root cause, verify the effectiveness of the fix, and document the outcome?</p>
-                        </div>
-                    </div>
-
-                    <!-- Progress Bar & Maturity Widget (Moved to the Last) -->
-                    <div class="progress-widget mt-5" style="border-top: 2px solid var(--border-color); padding-top: 30px; margin-top: 40px;">
-                        <div class="progress-meta">
-                            <span class="fs-six fw_800 black" style="display: inline-flex; align-items: center;">
-                                <i class="fa-solid fa-chart-line p1-clr mr-2"></i> ISMS Maturity Score
-                                <button type="button" class="btn-reset-checklist" id="btn-reset">
-                                    <i class="fa-solid fa-rotate-left"></i> Reset Assessment
+                        <!-- Left Navigation HUD Sidebar -->
+                        <aside class="clause-navigator-card">
+                            <h4 class="clause-navigator-title"><i class="fa-solid fa-compass"></i> Clause Tracker</h4>
+                            <div class="clause-navigator-list">
+                                <button type="button" class="clause-nav-item active" data-clause-nav="clause-4">
+                                    <span>Clause 4</span>
+                                    <span class="clause-nav-badge">0 / 4</span>
                                 </button>
-                            </span>
-                            <span class="checklist-progress-percent fs-four fw_800 p1-clr">0 / 29 Points</span>
-                        </div>
-                        <div class="progress-bar-container">
-                            <div class="checklist-progress-fill"></div>
-                        </div>
-                        <div class="progress-meta mt-2 mb-0">
-                            <span class="checklist-progress-count fs-seven pra text-muted">0% Completed</span>
-                            <span class="fs-seven fw_600 p2-clr">Audit Ready Threshold: 22+ Points</span>
-                        </div>
+                                <button type="button" class="clause-nav-item" data-clause-nav="clause-5">
+                                    <span>Clause 5</span>
+                                    <span class="clause-nav-badge">0 / 3</span>
+                                </button>
+                                <button type="button" class="clause-nav-item" data-clause-nav="clause-6">
+                                    <span>Clause 6</span>
+                                    <span class="clause-nav-badge">0 / 8</span>
+                                </button>
+                                <button type="button" class="clause-nav-item" data-clause-nav="clause-7">
+                                    <span>Clause 7</span>
+                                    <span class="clause-nav-badge">0 / 4</span>
+                                </button>
+                                <button type="button" class="clause-nav-item" data-clause-nav="clause-8">
+                                    <span>Clause 8</span>
+                                    <span class="clause-nav-badge">0 / 4</span>
+                                </button>
+                                <button type="button" class="clause-nav-item" data-clause-nav="clause-9">
+                                    <span>Clause 9</span>
+                                    <span class="clause-nav-badge">0 / 5</span>
+                                </button>
+                                <button type="button" class="clause-nav-item" data-clause-nav="clause-10">
+                                    <span>Clause 10</span>
+                                    <span class="clause-nav-badge">0 / 1</span>
+                                </button>
+                            </div>
+                        </aside>
+
+                        <!-- Right Checklist Pane -->
+                        <main class="clause-cards-pane">
+
+                            <!-- Clause 4 -->
+                            <section id="clause-4" class="clause-content-section">
+                                <div class="clause-card-header">
+                                    <div class="clause-card-header-left">
+                                        <i class="fa-solid fa-sitemap"></i>
+                                        <span>Clause 4 - Context of the Organization</span>
+                                    </div>
+                                    <span class="clause-card-header-progress">0 / 4 Completed</span>
+                                </div>
+
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-1" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">1. Factors Influencing Information Security</h5>
+                                        <p class="card-item-desc">Has the organization evaluated internal and external
+                                            factors influencing information security, including stakeholder
+                                            expectations, regulatory obligations, customer requirements, and the
+                                            potential impact of climate change?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-2" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">2. Stakeholder Expectations & Obligations</h5>
+                                        <p class="card-item-desc">Has the organization determined which stakeholder
+                                            expectations, legal obligations, and relevant requirements must be addressed
+                                            by the Information Security Management System (ISMS)?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-3" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">3. Establishing ISMS Scope</h5>
+                                        <p class="card-item-desc">Has the organization clearly established the scope of
+                                            its Information Security Management System, including organizational
+                                            boundaries, outsourced activities, partner involvement, and any climate
+                                            change–related considerations?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-4" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">4. Defining Required ISMS Processes</h5>
+                                        <p class="card-item-desc">Has the organization defined and implemented the
+                                            necessary processes, roles, responsibilities, and continual improvement
+                                            mechanisms required to ensure the ongoing effectiveness of the Information
+                                            Security Management System?</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Clause 5 -->
+                            <section id="clause-5" class="clause-content-section d-none">
+                                <div class="clause-card-header">
+                                    <div class="clause-card-header-left">
+                                        <i class="fa-solid fa-users-gear"></i>
+                                        <span>Clause 5 - Leadership</span>
+                                    </div>
+                                    <span class="clause-card-header-progress">0 / 3 Completed</span>
+                                </div>
+
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-5" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">5. Policies, Objectives & Communication</h5>
+                                        <p class="card-item-desc">Has your organization established an information
+                                            security policy and defined objectives that align with its strategic
+                                            direction, and have these been effectively communicated to employees and
+                                            relevant stakeholders?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-6" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">6. Roles, Responsibilities & Authorities</h5>
+                                        <p class="card-item-desc">Have roles, responsibilities, and authorities been
+                                            clearly defined and assigned to ensure effective management, operation, and
+                                            reporting of the information security management system (ISMS)?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-7" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">7. Achieving Objectives & Personal Duties</h5>
+                                        <p class="card-item-desc">Has leadership ensured that a structured plan exists
+                                            to achieve information security objectives, and that personnel understand
+                                            their importance and their individual responsibilities in supporting them?
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Clause 6 -->
+                            <section id="clause-6" class="clause-content-section d-none">
+                                <div class="clause-card-header">
+                                    <div class="clause-card-header-left">
+                                        <i class="fa-solid fa-diagram-project"></i>
+                                        <span>Clause 6 - Planning</span>
+                                    </div>
+                                    <span class="clause-card-header-progress">0 / 8 Completed</span>
+                                </div>
+
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-8" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">8. Risks and Opportunities Identification</h5>
+                                        <p class="card-item-desc">Has the organization identified key risks and
+                                            opportunities that may impact the effectiveness of the Information Security
+                                            Management System (ISMS), and established appropriate actions to address
+                                            them?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-9" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">9. Repeatable Risk Assessment Methodology</h5>
+                                        <p class="card-item-desc">Is there a defined, consistent, and repeatable
+                                            methodology for conducting information security risk assessments, including
+                                            evaluation of risk likelihood and potential impact?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-10" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">10. Risk Acceptance Criteria & Priorities</h5>
+                                        <p class="card-item-desc">Have risk acceptance criteria been formally
+                                            established, and are identified risks evaluated and prioritized according to
+                                            these criteria?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-11" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">11. Assigned Risk Owners</h5>
+                                        <p class="card-item-desc">Are risk owners assigned for each identified risk,
+                                            with defined responsibilities to review, approve, and oversee risk treatment
+                                            activities?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-12" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">12. Controls Verification (Annex A Alignment)</h5>
+                                        <p class="card-item-desc">Have suitable risk treatment options and security
+                                            controls been selected and implemented, and verified against ISO/IEC 27001
+                                            Annex A to ensure no applicable controls have been overlooked?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-13" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">13. Statement of Applicability (SoA)</h5>
+                                        <div class="card-item-desc">
+                                            Has a Statement of Applicability (SoA) been developed that:
+                                            <ul class="mt-2 pl-3" style="list-style-type: disc;">
+                                                <li>identifies selected security controls,</li>
+                                                <li>specifies applicable Annex A controls,</li>
+                                                <li>justifies inclusion or exclusion decisions,</li>
+                                                <li>documents any additional controls implemented, and</li>
+                                                <li>confirms implementation status?</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-14" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">14. Risk Treatment Plan & Residual Risks</h5>
+                                        <p class="card-item-desc">Is a formal risk treatment plan maintained, and are
+                                            any residual risks explicitly reviewed and accepted by authorized
+                                            management?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-15" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">15. Measurable ISMS Objectives</h5>
+                                        <p class="card-item-desc">Have measurable ISMS objectives been defined,
+                                            communicated, and aligned with organizational information security goals?
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Clause 7 -->
+                            <section id="clause-7" class="clause-content-section d-none">
+                                <div class="clause-card-header">
+                                    <div class="clause-card-header-left">
+                                        <i class="fa-solid fa-handshake-angle"></i>
+                                        <span>Clause 7 - Support</span>
+                                    </div>
+                                    <span class="clause-card-header-progress">0 / 4 Completed</span>
+                                </div>
+
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-16" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">16. Structured Change Management</h5>
+                                        <p class="card-item-desc">Does the organization follow a controlled and
+                                            structured process to plan, evaluate, and manage changes affecting the ISMS?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-17" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">17. Resource Provisioning</h5>
+                                        <p class="card-item-desc">Are adequate resources—including personnel,
+                                            technology, infrastructure, and operational environment—provided to
+                                            establish, operate, maintain, and continually improve the ISMS?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-18" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">18. Competency, Awareness & Training</h5>
+                                        <div class="card-item-desc">
+                                            Are individuals performing ISMS-related roles competent through appropriate
+                                            education, training, or experience, and aware of:
+                                            <ul class="mt-2 pl-3" style="list-style-type: disc;">
+                                                <li>their responsibilities,</li>
+                                                <li>the information security policy, and</li>
+                                                <li>the significance of their contributions to ISMS effectiveness?</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-19" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">19. Documented Information Control</h5>
+                                        <p class="card-item-desc">Is documented information properly created,
+                                            maintained, protected, and controlled, and are internal and external
+                                            communication requirements clearly defined and managed?</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Clause 8 -->
+                            <section id="clause-8" class="clause-content-section d-none">
+                                <div class="clause-card-header">
+                                    <div class="clause-card-header-left">
+                                        <i class="fa-solid fa-gears"></i>
+                                        <span>Clause 8 - Operation</span>
+                                    </div>
+                                    <span class="clause-card-header-progress">0 / 4 Completed</span>
+                                </div>
+
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-20" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">20. Integrating Risks into Operations</h5>
+                                        <p class="card-item-desc">Have risk and opportunity management actions been
+                                            integrated into operational processes, and are these processes consistently
+                                            executed as planned?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-21" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">21. Controlling Planned & Unplanned Changes</h5>
+                                        <p class="card-item-desc">When organizational or system changes occur, are they
+                                            planned, reviewed, and controlled to minimize potential impacts on
+                                            information security?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-22" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">22. Outsourcing & Third-Party Governance</h5>
+                                        <p class="card-item-desc">Are outsourced activities and third-party service
+                                            providers effectively governed to ensure compliance with established
+                                            information security requirements?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-23" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">23. Periodic Risk Assessments</h5>
+                                        <p class="card-item-desc">Are information security risks periodically assessed,
+                                            with documented records maintained for risk evaluations, treatment
+                                            decisions, and management approvals?</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Clause 9 -->
+                            <section id="clause-9" class="clause-content-section d-none">
+                                <div class="clause-card-header">
+                                    <div class="clause-card-header-left">
+                                        <i class="fa-solid fa-square-poll-vertical"></i>
+                                        <span>Clause 9 - Performance Evaluation</span>
+                                    </div>
+                                    <span class="clause-card-header-progress">0 / 5 Completed</span>
+                                </div>
+
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-24" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">24. Monitoring & Measurement Criteria</h5>
+                                        <p class="card-item-desc">Have measurement criteria been established, including
+                                            what is monitored, the methods used, the frequency of measurement,
+                                            responsible personnel, and the maintenance of documented results?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-25" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">25. Independent Internal Audits</h5>
+                                        <p class="card-item-desc">Are internal audits conducted by independent and
+                                            impartial auditors, with findings properly documented and communicated to
+                                            management?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-26" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">26. Resolving Audit & Monitoring Nonconformities
+                                        </h5>
+                                        <p class="card-item-desc">Is a formal process established to identify, manage,
+                                            and resolve issues or nonconformities detected through monitoring activities
+                                            or audit outcomes?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-27" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">27. Qualified Audit Reports</h5>
+                                        <p class="card-item-desc">Are internal audits performed objectively by qualified
+                                            auditors, and are audit results recorded and reported to relevant management
+                                            stakeholders?</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-28" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">28. Performance Records Retention</h5>
+                                        <p class="card-item-desc">Has the organization defined monitoring and
+                                            measurement requirements, including responsibilities, timing, methodologies,
+                                            and retention of performance records?</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Clause 10 -->
+                            <section id="clause-10" class="clause-content-section d-none">
+                                <div class="clause-card-header">
+                                    <div class="clause-card-header-left">
+                                        <i class="fa-solid fa-arrows-spin"></i>
+                                        <span>Clause 10 - Improvement</span>
+                                    </div>
+                                    <span class="clause-card-header-progress">0 / 1 Completed</span>
+                                </div>
+
+                                <div class="checklist-item-card">
+                                    <label class="custom-checkbox-wrap">
+                                        <input type="checkbox" id="q-29" class="checklist-checkbox">
+                                        <span class="custom-checkmark-box"></span>
+                                    </label>
+                                    <div class="card-content-wrap">
+                                        <h5 class="card-item-title">29. Corrective Actions & Root Cause Analysis</h5>
+                                        <p class="card-item-desc">When an issue occurs, do you take corrective action,
+                                            identify and address the root cause, verify the effectiveness of the fix,
+                                            and document the outcome?</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </main>
                     </div>
 
-                    <!-- Maturity Levels Dashboard (Moved to the Last) -->
-                    <div class="maturity-dashboard">
-                        <!-- Tier 1 -->
-                        <div class="maturity-card maturity-card-low" id="card-low">
-                            <span class="maturity-badge">Maturity Score: 0-13</span>
-                            <div class="maturity-score-range">Developing</div>
-                            <p class="maturity-level-title">Initial Stage</p>
-                        </div>
-                        <!-- Tier 2 -->
-                        <div class="maturity-card maturity-card-mid" id="card-mid">
-                            <span class="maturity-badge">Maturity Score: 14-21</span>
-                            <div class="maturity-score-range">Managed</div>
-                            <p class="maturity-level-title">Defined Program</p>
-                        </div>
-                        <!-- Tier 3 -->
-                        <div class="maturity-card maturity-card-high" id="card-high">
-                            <span class="maturity-badge">Maturity Score: 22-29</span>
-                            <div class="maturity-score-range">Optimized</div>
-                            <p class="maturity-level-title">Audit Ready</p>
-                        </div>
-                    </div>
-
-                    <!-- Active GRC Recommendation Panels (Moved to the Last) -->
-                    <div class="active-advisory-container">
-                        <!-- Advisory 1 (Score 0-13) -->
-                        <div class="advisory-panel advisory-panel-low d-none" id="advisory-low">
-                            <div class="advisory-header">
-                                <i class="fa-solid fa-circle-exclamation"></i>
-                                <h4 class="black fw_800 mb-0">Action Recommended: Implement Information Security Training</h4>
+                    <!-- GRC Dashboard Scoreboard, Maturity Levels & Executive Advisory (Full 12-Grid Column) -->
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <!-- GRC Maturity HUD Scoreboard Widget -->
+                            <div class="premium-score-widget">
+                                <div class="score-widget-top">
+                                    <div class="score-metrics">
+                                        <i class="fa-solid fa-chart-line p1-clr fs-four"></i>
+                                        <span class="score-big-number">0 / 29 Points</span>
+                                        <span class="score-percent-label">Developing</span>
+                                    </div>
+                                    <div class="d-flex gap-2 flex-wrap">
+                                        <button type="button" class="btn-download-report" id="btn-download">
+                                            <i class="fa-solid fa-file-pdf"></i> Download GRC Report
+                                        </button>
+                                        <button type="button" class="btn-reset-checklist" id="btn-reset">
+                                            <i class="fa-solid fa-rotate-left"></i> Reset Assessment
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="score-bar-bg">
+                                    <div class="score-bar-fill"></div>
+                                </div>
+                                <div class="score-widget-footer">
+                                    <span class="score-progress-count">0% Completed</span>
+                                    <span class="p1-clr">Audit Ready Threshold: 22+ Points</span>
+                                </div>
                             </div>
-                            <p class="pra fs-six mb-3">
-                                Based on your organization’s maturity score, we’d recommend exploring information security courses and qualifications for you and your team.
-                            </p>
-                            <p class="pra fs-seven mb-0">
-                                Our bespoke information security training courses aligned to professional certifications provide the most relevant and up-to-date skills and knowledge. Our courses can help you to interpret and understand the standard requirements and how to audit the management system. We also offer customized courses focused on key skills that bolster your abilities and knowledge as a security professional, such as cybersecurity, data and privacy, AI, cloud security, and more. Wherever you are on your journey, whatever your role, we have a course to help you be more efficient at what you do.
-                            </p>
-                        </div>
 
-                        <!-- Advisory 2 (Score 14-21) -->
-                        <div class="advisory-panel advisory-panel-mid d-none" id="advisory-mid">
-                            <div class="advisory-header">
-                                <i class="fa-solid fa-magnifying-glass-chart"></i>
-                                <h4 class="black fw_800 mb-0">Action Recommended: Schedule Clarent360 GAP Assessment</h4>
+                            <!-- Maturity Levels Visual Gauge -->
+                            <div class="maturity-dashboard-row">
+                                <!-- Tier 1 -->
+                                <div class="maturity-badge-card developing active" id="card-low">
+                                    <span class="maturity-badge-pill">Developing</span>
+                                    <div class="maturity-title">0 - 13 Points</div>
+                                    <p class="maturity-subtitle">Initial Stage</p>
+                                </div>
+                                <!-- Tier 2 -->
+                                <div class="maturity-badge-card managed" id="card-mid">
+                                    <span class="maturity-badge-pill">Managed</span>
+                                    <div class="maturity-title">14 - 21 Points</div>
+                                    <p class="maturity-subtitle">Defined Program</p>
+                                </div>
+                                <!-- Tier 3 -->
+                                <div class="maturity-badge-card optimized" id="card-high">
+                                    <span class="maturity-badge-pill">Optimized</span>
+                                    <div class="maturity-title">22 - 29 Points</div>
+                                    <p class="maturity-subtitle">Audit Ready</p>
+                                </div>
                             </div>
-                            <p class="pra fs-six mb-3">
-                                Based on your organization’s maturity score, you may benefit from a Gap Assessment from our experts to improve your organization’s security posture.
-                            </p>
-                            <p class="pra fs-seven mb-0">
-                                A Gap Assessment with CLARENT360 provides you with a method of assessing your current situation against future goals, pinpointing areas where your existing program does not meet the requirements of ISO/IEC 27001. Our specialists are uniquely positioned to help you, thanks to their significant experience and expertise in information security management across many industry sectors. Following your assessment, you’ll have information to act upon taking your ISMS maturity to the next level, progressing your organization towards achieving ISO/IEC 27001 certification.
-                            </p>
-                        </div>
 
-                        <!-- Advisory 3 (Score 22-29) -->
-                        <div class="advisory-panel advisory-panel-high d-none" id="advisory-high">
-                            <div class="advisory-header">
-                                <i class="fa-solid fa-award"></i>
-                                <h4 class="black fw_800 mb-0">Congratulations: Ready for ISO/IEC 27001 Certification!</h4>
+                            <!-- Active GRC Recommendation Panels -->
+                            <div class="active-advisory-container">
+                                <!-- Advisory 1 (Score 0-13) -->
+                                <div class="premium-advisory-panel advisory-card-low active" id="advisory-low">
+                                    <div class="advisory-panel-header">
+                                        <i class="fa-solid fa-circle-exclamation"></i>
+                                        <h4 class="black fw_800 mb-0">Action Recommended: Implement Information Security
+                                            Training</h4>
+                                    </div>
+                                    <p class="pra fs-six mb-3">
+                                        Based on your organization’s maturity score, we’d recommend exploring
+                                        information security training and qualifications for you and your team.
+                                    </p>
+                                    <p class="pra fs-seven mb-0">
+                                        Our bespoke information security training courses aligned to professional
+                                        certifications provide the most relevant and up-to-date skills and knowledge.
+                                        Our courses can help you to interpret and understand the standard requirements
+                                        and how to audit the management system. We also offer customized courses focused
+                                        on key skills that bolster your abilities and knowledge as a security
+                                        professional, such as cybersecurity, data and privacy, AI, cloud security, and
+                                        more. Wherever you are on your journey, whatever your role, we have a training
+                                        solution to help you succeed.
+                                    </p>
+                                </div>
+
+                                <!-- Advisory 2 (Score 14-21) -->
+                                <div class="premium-advisory-panel advisory-card-mid" id="advisory-mid">
+                                    <div class="advisory-panel-header">
+                                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                                        <h4 class="black fw_800 mb-0">Action Recommended: Schedule Clarent360 GAP
+                                            Assessment</h4>
+                                    </div>
+                                    <p class="pra fs-six mb-3">
+                                        Based on your organization’s maturity score, you may benefit from a Gap
+                                        Assessment from our experts to improve your organization’s security posture.
+                                    </p>
+                                    <p class="pra fs-seven mb-0">
+                                        A Gap Assessment with CLARENT360 provides you with a method of assessing your
+                                        current situation against future goals, pinpointing areas where your existing
+                                        program does not meet the requirements of ISO/IEC 27001. Our specialists are
+                                        uniquely positioned to help you, thanks to their significant experience and
+                                        expertise in information security management across many industry sectors.
+                                        Following your assessment, you’ll have actionable metrics to act upon,
+                                        progressing your organization towards achieving ISO/IEC 27001 certification.
+                                    </p>
+                                </div>
+
+                                <!-- Advisory 3 (Score 22-29) -->
+                                <div class="premium-advisory-panel advisory-card-high" id="advisory-high">
+                                    <div class="advisory-panel-header">
+                                        <i class="fa-solid fa-award"></i>
+                                        <h4 class="black fw_800 mb-0">Congratulations: Ready for ISO/IEC 27001
+                                            Certification!</h4>
+                                    </div>
+                                    <p class="pra fs-six mb-3">
+                                        Based on your organization’s maturity score, you may be ready to achieve ISO/IEC
+                                        27001 certification.
+                                    </p>
+                                    <p class="pra fs-seven mb-0">
+                                        Certification with ISO 27001:2022 comes with the confidence of partnering with
+                                        an independent, trusted, global organization. Our expert and qualified auditors
+                                        have deep knowledge of information security management across industries, so
+                                        they understand your needs and challenges. CLARENT360 can provide you with
+                                        internal certification audits and support you with external audit preparations,
+                                        acknowledging your organization’s commitment to driving growth, risk management,
+                                        and regulatory compliance.
+                                    </p>
+                                </div>
                             </div>
-                            <p class="pra fs-six mb-3">
-                                Based on your organization’s maturity score, you may be ready to achieve ISO/IEC 27001 certification.
-                            </p>
-                            <p class="pra fs-seven mb-0">
-                                Certification with ISO 27001:2022 comes with the confidence of partnering with an independent, trusted, global organization. Our expert and qualified auditors have a deep knowledge of information security management across industries, so they understand your needs and challenges. CLARENT360 can provide you with internal certification audit and support you with external audit preparation as well thereby acknowledging your organization’s commitment to driving growth, risk management, regulatory compliance and continual improvement inspiring confidence and trust in your organization from employees and external parties.
-                            </p>
+
+                            <!-- GRC Dynamic Contact Call-To-Action Section -->
+                            <div class="grc-contact-cta-section">
+                                <div class="premium-cta-card">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-8">
+                                            <h4 class="cta-title black fw_800 mb-2">Ready to take the next step in your
+                                                GRC journey?</h4>
+                                            <p class="cta-desc pra fs-seven mb-0" id="cta-dynamic-text">Based on your
+                                                Developing status, contact our experts to get professional training and
+                                                establish your ISMS baseline.</p>
+                                        </div>
+                                        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                                            <a href="contact.html" class="cmn-btn-elegant">
+                                                <span>Reach Us for Support <i
+                                                        class="fa-solid fa-arrow-right-long"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -1436,23 +2012,28 @@
 
                 <!-- Panel 3: External Links -->
                 <div id="panel-external" class="tab-panel d-none">
-                    <div class="row g-4 justify-content-center">
-                        
+                    <div class="row g-4">
+
                         <!-- Card 1: Official Standard -->
                         <div class="col-lg-12 col-md-6">
-                            <div class="resource-card">
-                                <div>
-                                    <div class="resource-icon"><i class="fa-solid fa-globe"></i></div>
-                                    <h4 class="black fw_800 fs-six mb-2">ISO/IEC 27001:2022 Official Standard</h4>
-                                    <p class="pra fs-seven mb-3" style="line-height:1.5;">
-                                        Access the official ISO publication, detailed requirements, structural indices, and GRC compliance frameworks.
-                                    </p>
-                                </div>
-                                <a href="https://www.iso.org/standard/27001" target="_blank" class="resource-btn">
+                            <div class="premium-resource-card h-100"
+                                style="background: #ffffff; border: 1px solid var(--border); border-radius: 20px; padding: 30px; box-shadow: var(--box-shadow); transition: all 0.3s ease;">
+                                <div class="resource-icon-elegant"
+                                    style="width: 54px; height: 54px; border-radius: 12px; background: rgba(81, 53, 255, 0.05); display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--p1-clr); margin-bottom: 20px;">
+                                    <i class="fa-solid fa-globe"></i></div>
+                                <h4 class="black fw_800 fs-six mb-2">ISO/IEC 27001:2022 Official Standard</h4>
+                                <p class="pra fs-seven mb-3" style="line-height:1.6;">
+                                    Access the official ISO publication directory to review standard clauses, mandatory
+                                    guidelines, and full certification requisites.
+                                </p>
+                                <a href="https://www.iso.org/standard/27001" target="_blank"
+                                    class="resource-btn-elegant"
+                                    style="color: var(--p1-clr); font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
                                     Visit ISO Directory <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
                             </div>
                         </div>
+
 
                     </div>
                 </div>
@@ -1461,29 +2042,6 @@
     </section>
     <!-- Main Tabbed Interface Section End -->
 
-    <!-- CTA Section Start -->
-    <!-- <section class="customer-touh fix" style="padding-bottom: 40px;">
-        <div class="container">
-            <div class="customer-touch-wrap">
-                <div class="section-title text-center text-lg-start">
-                    <h2 class="wow fadeInUp white fw-bold mb-2 touchhh">
-                        Navigate Your GRC Certification Journey
-                    </h2>
-                    <p class="sub-badg white fs-seven d-block mb-0" style="max-width:850px;">
-                        Achieving standard certification requires robust, proven controls. Partner with Clarent360 to 
-                        streamline audit preparations, implement structural Annex A frameworks, and build digital trust.
-                    </p>
-                </div>
-                <a href="contact.html"
-                    class="common-btn text-nowrap heading-font box-style d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 fs18 fw-semibold black overflow-hidden bg-white rounded100">
-                    Consult Clarent360 Specialists
-                </a>
-            </div>
-        </div>
-    </section> -->
-
-
-    <!--<< Footer Section Start >>-->
     <div id="footer"></div>
 
     <!-- Premium Custom Confirmation Modal for GRC Self-Assessment Reset -->
@@ -1493,7 +2051,8 @@
                 <i class="fa-solid fa-triangle-exclamation"></i>
             </div>
             <h4 class="custom-modal-title">Reset Assessment?</h4>
-            <p class="custom-modal-text">This will clear all 29 self-assessment checklist selections and reset your maturity score. This action cannot be undone.</p>
+            <p class="custom-modal-text">This will clear all 29 self-assessment checklist selections and reset your
+                maturity score. This action cannot be undone.</p>
             <div class="custom-modal-actions">
                 <button type="button" class="custom-modal-btn btn-cancel" id="btn-reset-cancel">Cancel</button>
                 <button type="button" class="custom-modal-btn btn-confirm" id="btn-reset-confirm">Yes, Reset</button>
@@ -1576,9 +2135,10 @@
 
         // GRC Checklist Interactive Engine with LocalStorage Persistence
         const checkboxes = document.querySelectorAll('.checklist-checkbox');
-        const progressBarFill = document.querySelector('.checklist-progress-fill');
-        const progressPercentText = document.querySelector('.checklist-progress-percent');
-        const progressCountText = document.querySelector('.checklist-progress-count');
+        const progressBarFill = document.querySelector('.score-bar-fill');
+        const progressPercentText = document.querySelector('.score-big-number');
+        const progressCountText = document.querySelector('.score-progress-count');
+        const progressPercentLabel = document.querySelector('.score-percent-label');
 
         // Cards & Advisory Tiers
         const cardLow = document.getElementById('card-low');
@@ -1589,27 +2149,74 @@
         const advisoryMid = document.getElementById('advisory-mid');
         const advisoryHigh = document.getElementById('advisory-high');
 
+        // GRC Clause structures to calculate dynamic progress inside Navigator HUD
+        const clauseMap = [
+            { id: 'clause-4', start: 1, end: 4 },
+            { id: 'clause-5', start: 5, end: 7 },
+            { id: 'clause-6', start: 8, end: 15 },
+            { id: 'clause-7', start: 16, end: 19 },
+            { id: 'clause-8', start: 20, end: 23 },
+            { id: 'clause-9', start: 24, end: 28 },
+            { id: 'clause-10', start: 29, end: 29 }
+        ];
+
         function updateChecklistProgress() {
             const total = checkboxes.length;
             let checkedCount = 0;
 
+            // Global checked count mapping and checklist card state update
             checkboxes.forEach(function (cb) {
-                const itemRow = cb.closest('.checklist-item-q');
+                const itemCard = cb.closest('.checklist-item-card');
                 if (cb.checked) {
                     checkedCount++;
-                    if (itemRow) {
-                        itemRow.classList.add('checked-active');
+                    if (itemCard) {
+                        itemCard.classList.add('checked-active');
                     }
                 } else {
-                    if (itemRow) {
-                        itemRow.classList.remove('checked-active');
+                    if (itemCard) {
+                        itemCard.classList.remove('checked-active');
                     }
+                }
+            });
+
+            // Calculate clause-by-clause progress counts
+            clauseMap.forEach(function (clause) {
+                let clauseTotal = 0;
+                let clauseChecked = 0;
+                for (let i = clause.start; i <= clause.end; i++) {
+                    const cb = document.getElementById('q-' + i);
+                    if (cb) {
+                        clauseTotal++;
+                        if (cb.checked) {
+                            clauseChecked++;
+                        }
+                    }
+                }
+
+                // Update Clause Navigator HUD Badges
+                const navBadge = document.querySelector(`[data-clause-nav="${clause.id}"] .clause-nav-badge`);
+                if (navBadge) {
+                    navBadge.textContent = `${clauseChecked} / ${clauseTotal}`;
+                    const navItem = navBadge.closest('.clause-nav-item');
+                    if (navItem) {
+                        if (clauseChecked === clauseTotal) {
+                            navItem.classList.add('completed');
+                        } else {
+                            navItem.classList.remove('completed');
+                        }
+                    }
+                }
+
+                // Update right pane Clause Section Header progress label
+                const headerProgress = document.querySelector(`#${clause.id} .clause-card-header-progress`);
+                if (headerProgress) {
+                    headerProgress.textContent = `${clauseChecked} / ${clauseTotal} Completed`;
                 }
             });
 
             // Calculate percentage
             const percent = total > 0 ? Math.round((checkedCount / total) * 100) : 0;
-            
+
             // Update GRC metrics
             if (progressBarFill) {
                 progressBarFill.style.width = percent + '%';
@@ -1621,34 +2228,48 @@
                 progressCountText.textContent = `${percent}% Completed`;
             }
 
-            // Update Maturity Cards and advisory text
+            // Update Maturity Cards, labels, advisory text, and dynamic contact CTA section
+            const ctaText = document.getElementById('cta-dynamic-text');
+
             if (checkedCount <= 13) {
                 // Tier 1: 0 - 13
+                if (progressPercentLabel) progressPercentLabel.textContent = "Developing";
+
                 if (cardLow) cardLow.classList.add('active');
                 if (cardMid) cardMid.classList.remove('active');
                 if (cardHigh) cardHigh.classList.remove('active');
 
-                if (advisoryLow) advisoryLow.classList.remove('d-none');
-                if (advisoryMid) advisoryMid.classList.add('d-none');
-                if (advisoryHigh) advisoryHigh.classList.add('d-none');
+                if (advisoryLow) advisoryLow.classList.add('active');
+                if (advisoryMid) advisoryMid.classList.remove('active');
+                if (advisoryHigh) advisoryHigh.classList.remove('active');
+
+                if (ctaText) ctaText.textContent = "Based on your Developing status, contact our experts to get professional training and establish your ISMS baseline.";
             } else if (checkedCount <= 21) {
                 // Tier 2: 14 - 21
+                if (progressPercentLabel) progressPercentLabel.textContent = "Managed";
+
                 if (cardLow) cardLow.classList.remove('active');
                 if (cardMid) cardMid.classList.add('active');
                 if (cardHigh) cardHigh.classList.remove('active');
 
-                if (advisoryLow) advisoryLow.classList.add('d-none');
-                if (advisoryMid) advisoryMid.classList.remove('d-none');
-                if (advisoryHigh) advisoryHigh.classList.add('d-none');
+                if (advisoryLow) advisoryLow.classList.remove('active');
+                if (advisoryMid) advisoryMid.classList.add('active');
+                if (advisoryHigh) advisoryHigh.classList.remove('active');
+
+                if (ctaText) ctaText.textContent = "Based on your Managed status, schedule a professional GAP Assessment to identify security holes and prepare for auditing.";
             } else {
                 // Tier 3: 22 - 29
+                if (progressPercentLabel) progressPercentLabel.textContent = "Optimized";
+
                 if (cardLow) cardLow.classList.remove('active');
                 if (cardMid) cardMid.classList.remove('active');
                 if (cardHigh) cardHigh.classList.add('active');
 
-                if (advisoryLow) advisoryLow.classList.add('d-none');
-                if (advisoryMid) advisoryMid.classList.add('d-none');
-                if (advisoryHigh) advisoryHigh.classList.remove('d-none');
+                if (advisoryLow) advisoryLow.classList.remove('active');
+                if (advisoryMid) advisoryMid.classList.remove('active');
+                if (advisoryHigh) advisoryHigh.classList.add('active');
+
+                if (ctaText) ctaText.textContent = "Based on your Optimized status, you are ready for certification! Reach out to initiate your official ISO 27001 audit today.";
             }
         }
 
@@ -1656,7 +2277,7 @@
         checkboxes.forEach(function (cb) {
             const controlId = cb.getAttribute('id');
             const savedState = localStorage.getItem('iso_clause_' + controlId);
-            
+
             if (savedState === 'true') {
                 cb.checked = true;
             }
@@ -1667,27 +2288,61 @@
             });
         });
 
-        // Reset assessment progress button handler with custom modal confirmation
+        // Tabbed Clause Selection Logic: Show only active clause, hide others
+        const navItems = document.querySelectorAll('.clause-nav-item');
+
+        function showClause(clauseId) {
+            navItems.forEach(function (nav) {
+                const isTarget = nav.getAttribute('data-clause-nav') === clauseId;
+                nav.classList.toggle('active', isTarget);
+            });
+
+            document.querySelectorAll('.clause-content-section').forEach(function (section) {
+                const isTarget = section.getAttribute('id') === clauseId;
+                if (isTarget) {
+                    section.classList.remove('d-none');
+                } else {
+                    section.classList.add('d-none');
+                }
+            });
+        }
+
+        navItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                const targetId = item.getAttribute('data-clause-nav');
+                showClause(targetId);
+
+                // If on mobile/tablet view, smooth-scroll right cards pane into view
+                const cardsPane = document.querySelector('.clause-cards-pane');
+                if (window.innerWidth <= 991 && cardsPane) {
+                    cardsPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Initialize by showing only the first clause (Clause 4 Context)
+        showClause('clause-4');
+
+        // Reset assessment progress button handler with custom glassmorphic modal
         const btnReset = document.getElementById('btn-reset');
         const confirmModal = document.getElementById('reset-confirm-modal');
         const btnResetConfirm = document.getElementById('btn-reset-confirm');
         const btnResetCancel = document.getElementById('btn-reset-cancel');
 
         if (btnReset && confirmModal && btnResetConfirm && btnResetCancel) {
-            // Open modal function
+            // Open modal
             btnReset.addEventListener('click', function () {
                 confirmModal.classList.remove('d-none');
-                // Force a browser reflow/repaint to trigger the opacity & scale transitions
-                confirmModal.offsetHeight; 
+                confirmModal.offsetHeight; // trigger reflow
                 confirmModal.classList.add('active');
             });
 
-            // Close modal function
+            // Close modal
             function closeModal() {
                 confirmModal.classList.remove('active');
                 setTimeout(function () {
                     confirmModal.classList.add('d-none');
-                }, 300); // matches the CSS transition duration
+                }, 300);
             }
 
             // Click Cancel
@@ -1712,6 +2367,340 @@
                     closeModal();
                 }
             });
+        }
+
+        // Download GRC Compliance Report function
+        const btnDownload = document.getElementById('btn-download');
+        if (btnDownload) {
+            btnDownload.addEventListener('click', function () {
+                generateGRCReport();
+            });
+        }
+
+        function generateGRCReport() {
+            // 1. Gather all checked checkboxes
+            const checkedBoxes = Array.from(checkboxes).filter(cb => cb.checked);
+
+            // 2. Calculate scores & results
+            const total = checkboxes.length;
+            const checkedCount = checkedBoxes.length;
+            const percent = total > 0 ? Math.round((checkedCount / total) * 100) : 0;
+
+            let maturityLevel = "Developing";
+            let statusClass = "status-low";
+            let statusAdvisory = "Based on your organization’s maturity score, we’d recommend exploring information security training and qualifications for you and your team to build baseline awareness.";
+
+            if (checkedCount > 13 && checkedCount <= 21) {
+                maturityLevel = "Managed";
+                statusClass = "status-mid";
+                statusAdvisory = "Based on your organization’s maturity score, you may benefit from a Gap Assessment from our experts to evaluate controls alignment and prepare for auditing.";
+            } else if (checkedCount > 21) {
+                maturityLevel = "Optimized";
+                statusClass = "status-high";
+                statusAdvisory = "Based on your organization’s maturity score, you are ready to undergo formal third-party audits to achieve official ISO/IEC 27001:2022 certification.";
+            }
+
+            // 3. Compile list of checked items by clause
+            let itemsHtml = "";
+            if (checkedBoxes.length === 0) {
+                itemsHtml = `
+                    <div style="text-align: center; padding: 30px; border: 1px dashed #cbd5e1; border-radius: 12px; color: #64748b;">
+                        <i class="fa-solid fa-clipboard-list" style="font-size: 32px; margin-bottom: 10px; color: #94a3b8;"></i>
+                        <p style="margin: 0; font-weight: 600;">No controls verified yet.</p>
+                        <p style="margin: 5px 0 0; font-size: 13px;">Please complete checklist points in the assessment tab before downloading your report.</p>
+                    </div>
+                `;
+            } else {
+                // Group items by Clause Section
+                const grouped = {};
+                checkedBoxes.forEach(cb => {
+                    const id = cb.getAttribute('id');
+                    const num = parseInt(id.replace('q-', ''));
+
+                    // Find which clause map this belongs to
+                    const clause = clauseMap.find(c => num >= c.start && num <= c.end);
+                    if (clause) {
+                        const clauseNameElement = document.querySelector(`[data-clause-nav="${clause.id}"] span`);
+                        const clauseName = clauseNameElement ? clauseNameElement.textContent : clause.id.toUpperCase();
+                        if (!grouped[clauseName]) {
+                            grouped[clauseName] = [];
+                        }
+
+                        const itemCard = cb.closest('.checklist-item-card');
+                        const itemTitle = itemCard ? itemCard.querySelector('.card-item-title').textContent : `Control ${num}`;
+                        const itemDesc = itemCard ? itemCard.querySelector('.card-item-desc').textContent : '';
+
+                        grouped[clauseName].push({ title: itemTitle, desc: itemDesc });
+                    }
+                });
+
+                for (const [clauseName, list] of Object.entries(grouped)) {
+                    itemsHtml += `
+                        <div class="report-clause-section" style="margin-bottom: 25px; page-break-inside: avoid;">
+                            <h3 style="font-size: 15px; font-weight: 800; color: #031740; background: #f8fafc; border-left: 4px solid #5135FF; padding: 8px 12px; margin: 0 0 12px; border-radius: 0 6px 6px 0;">
+                                ${clauseName}
+                            </h3>
+                    `;
+
+                    list.forEach(item => {
+                        itemsHtml += `
+                            <div style="display: flex; gap: 15px; align-items: flex-start; padding: 12px; border-bottom: 1px solid #f1f5f9; page-break-inside: avoid;">
+                                <div style="color: #10b981; font-size: 18px; line-height: 1;"><i class="fa-solid fa-circle-check"></i></div>
+                                <div style="flex: 1;">
+                                    <h4 style="font-size: 13.5px; font-weight: 700; color: #031740; margin: 0 0 4px;">${item.title}</h4>
+                                    <p style="font-size: 12.5px; color: #475569; margin: 0; line-height: 1.5;">${item.desc}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    itemsHtml += `</div>`;
+                }
+            }
+
+            // 4. Generate clean, highly professional printable HTML Document
+            const printWindow = window.open('', '_blank', 'width=900,height=900');
+            if (!printWindow) {
+                alert('Pop-up blocker is preventing the download. Please allow pop-ups for this site to export your report.');
+                return;
+            }
+
+            const currentDate = new Date().toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            printWindow.document.write(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>ISO 27001 GRC Readiness Report - Clarent360</title>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+                    <style>
+                        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+                        
+                        body {
+                            font-family: 'Inter', sans-serif;
+                            color: #334155;
+                            background: #ffffff;
+                            margin: 0;
+                            padding: 40px;
+                            line-height: 1.5;
+                            -webkit-print-color-adjust: exact;
+                            print-color-adjust: exact;
+                        }
+
+                        /* Header design */
+                        .header-table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            margin-bottom: 35px;
+                            border-bottom: 2px solid #5135FF;
+                            padding-bottom: 20px;
+                        }
+
+                        .logo-text {
+                            font-size: 24px;
+                            font-weight: 900;
+                            color: #031740;
+                        }
+
+                        .logo-accent {
+                            color: #5135FF;
+                        }
+
+                        .report-meta {
+                            text-align: right;
+                            font-size: 12px;
+                            color: #64748b;
+                        }
+
+                        .title-section {
+                            margin-bottom: 30px;
+                        }
+
+                        .title-section h1 {
+                            font-size: 24px;
+                            font-weight: 800;
+                            color: #031740;
+                            margin: 0 0 6px 0;
+                        }
+
+                        .title-section p {
+                            font-size: 14px;
+                            color: #64748b;
+                            margin: 0;
+                        }
+
+                        /* Scorecard Grid */
+                        .scorecard-row {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 20px;
+                            margin-bottom: 35px;
+                        }
+
+                        .score-card {
+                            background: #f8fafc;
+                            border: 1px solid #e2e8f0;
+                            border-radius: 12px;
+                            padding: 20px;
+                            text-align: center;
+                        }
+
+                        .score-card-label {
+                            font-size: 11px;
+                            font-weight: 800;
+                            color: #64748b;
+                            text-transform: uppercase;
+                            letter-spacing: 0.5px;
+                            margin-bottom: 8px;
+                        }
+
+                        .score-card-value {
+                            font-size: 24px;
+                            font-weight: 800;
+                            color: #031740;
+                        }
+
+                        .score-card-value.primary {
+                            color: #5135FF;
+                        }
+
+                        /* Maturity badges colors */
+                        .score-card.status-low { border-top: 4px solid #FF5455; }
+                        .score-card.status-mid { border-top: 4px solid #FED500; }
+                        .score-card.status-high { border-top: 4px solid #10b981; }
+
+                        .score-card-value.Developing { color: #FF5455; }
+                        .score-card-value.Managed { color: #d97706; }
+                        .score-card-value.Optimized { color: #10b981; }
+
+                        /* Executive summary callout box */
+                        .summary-box {
+                            background: rgba(81, 53, 255, 0.03);
+                            border-left: 4px solid #5135FF;
+                            border-radius: 0 12px 12px 0;
+                            padding: 20px;
+                            margin-bottom: 35px;
+                        }
+
+                        .summary-box h3 {
+                            font-size: 14px;
+                            font-weight: 800;
+                            color: #031740;
+                            margin: 0 0 8px;
+                            text-transform: uppercase;
+                            letter-spacing: 0.5px;
+                        }
+
+                        .summary-box p {
+                            font-size: 13.5px;
+                            color: #475569;
+                            margin: 0;
+                            line-height: 1.6;
+                        }
+
+                        /* Section titles */
+                        .section-title {
+                            font-size: 16px;
+                            font-weight: 800;
+                            color: #031740;
+                            margin-bottom: 20px;
+                            text-transform: uppercase;
+                            letter-spacing: 0.5px;
+                            border-bottom: 1px solid #cbd5e1;
+                            padding-bottom: 8px;
+                        }
+
+                        /* Footer style */
+                        .footer-section {
+                            margin-top: 50px;
+                            border-top: 1px solid #e2e8f0;
+                            padding-top: 15px;
+                            text-align: center;
+                            font-size: 11px;
+                            color: #94a3b8;
+                        }
+
+                        @media print {
+                            body {
+                                padding: 20px;
+                            }
+                            
+                            .no-print {
+                                display: none !important;
+                            }
+                        }
+                    </style>
+                </head>
+                <body>
+                    <!-- Custom Header -->
+                    <table class="header-table">
+                        <tr>
+                            <td>
+                                <span class="logo-text">CLAREN<span class="logo-accent">Y</span>360</span>
+                            </td>
+                            <td class="report-meta">
+                                <strong>ISO/IEC 27001 Compliance Report</strong><br/>
+                                Generated on: ${currentDate}
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="title-section">
+                        <h1>ISMS Compliance Assessment Summary</h1>
+                        <p>A self-assessment evaluation detailing alignment with the ISO/IEC 27001:2022 GRC core clauses.</p>
+                    </div>
+
+                    <!-- Scorecard Metrics -->
+                    <div class="scorecard-row">
+                        <div class="score-card">
+                            <div class="score-card-label">Controls Verified</div>
+                            <div class="score-card-value primary">${checkedCount} / ${total}</div>
+                        </div>
+                        <div class="score-card">
+                            <div class="score-card-label">Completion Status</div>
+                            <div class="score-card-value">${percent}%</div>
+                        </div>
+                        <div class="score-card ${statusClass}">
+                            <div class="score-card-label">ISMS Maturity Level</div>
+                            <div class="score-card-value ${maturityLevel}">${maturityLevel}</div>
+                        </div>
+                    </div>
+
+                    <!-- Executive Advisory summary -->
+                    <div class="summary-box">
+                        <h3>Compliance Advisory & Next Steps</h3>
+                        <p>${statusAdvisory}</p>
+                    </div>
+
+                    <div class="section-title">Verified Security Controls Directory</div>
+                    
+                    <!-- Checklist details -->
+                    ${itemsHtml}
+
+                    <!-- Footer -->
+                    <div class="footer-section">
+                        This report is dynamically compiled and generated via the Clarent360 Information Security Management System (ISMS) portal.<br/>
+                        &copy; 2026 Clarent360. All rights reserved. Self-assessed controls report.
+                    </div>
+
+                    \u003cscript>
+                        window.onload = function() {
+                            setTimeout(function() {
+                                window.print();
+                            }, 500);
+                        }
+                    \u003c/script>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
         }
 
         // Run baseline setup calculation
