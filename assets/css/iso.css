@@ -1037,7 +1037,14 @@
             transform: translateX(5px);
         }
 
+        .grc-checklist-title {
+            font-size: 38px;
+        }
+
         @media (max-width: 767px) {
+            .grc-checklist-title {
+                font-size: 30px !important;
+            }
             .score-widget-top {
                 flex-direction: column;
                 align-items: flex-start;

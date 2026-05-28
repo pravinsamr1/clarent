@@ -5036,7 +5036,7 @@ footer {
 
 @media (max-width: 575px) {
   .bread-content {
-    padding: 80px 0 80px;
+    padding: 40px 0 40px;
     justify-content: center;
   }
 
@@ -8779,7 +8779,7 @@ input.main-search-input::placeholder {
 }
 
 .text-smalll {
-  font-size: 40px;
+  font-size: 38px;
   line-height: 50px;
 }
 
