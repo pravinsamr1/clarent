@@ -54,6 +54,61 @@
             box-shadow: 0 12px 28px rgba(81, 53, 255, 0.25);
         }
 
+        @media (max-width: 767px) {
+            .checklist-tabs-container {
+                margin: -25px 12px 30px;
+                padding: 6px;
+                border-radius: 16px;
+                overflow-x: auto;
+                justify-content: flex-start;
+                gap: 6px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* IE 10+ */
+            }
+            .checklist-tabs-container::-webkit-scrollbar {
+                display: none; /* Safari and Chrome */
+            }
+            .checklist-tab {
+                flex: 0 0 auto;
+                padding: 10px 18px;
+                font-size: 13.5px;
+                border-radius: 12px;
+                gap: 6px;
+            }
+            .checklist-tab.active {
+                border-radius: 12px;
+            }
+            .checklist-item-card {
+                padding: 15px 16px;
+                gap: 12px;
+                border-radius: 14px;
+            }
+            .clause-card-header {
+                padding: 12px 16px;
+                font-size: 15px;
+                border-radius: 12px;
+                margin-bottom: 12px;
+            }
+            .premium-score-widget {
+                padding: 20px 16px;
+                border-radius: 16px;
+                margin-bottom: 25px;
+            }
+            .score-big-number {
+                font-size: 22px;
+            }
+            .premium-advisory-panel {
+                padding: 20px 16px;
+                border-radius: 16px;
+            }
+            .premium-cta-card {
+                padding: 20px 16px;
+                border-radius: 16px;
+                margin-top: 25px;
+            }
+        }
+
         .tab-panel {
             animation: fadeInOpacity 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
@@ -79,8 +134,11 @@
 
         @media (max-width: 991px) {
             .grc-dashboard-layout {
-                grid-template-columns: 1fr;
-                gap: 20px;
+                display: block;
+            }
+            .clause-cards-pane {
+                width: 100%;
+                min-width: 0;
             }
         }
 
@@ -277,7 +335,7 @@
         .checklist-item-card.checked-active {
             border-color: var(--p1-clr);
             background: rgba(81, 53, 255, 0.012);
-            box-shadow: 0 8px 25px rgba(81, 53, 255, 0.04);
+            /* box-shadow: 0 8px 25px rgba(81, 53, 255, 0.04); */
         }
 
         /* Modern Morphing Checkbox Controls */
@@ -977,4 +1035,37 @@
 
         .cmn-btn-elegant:hover i {
             transform: translateX(5px);
+        }
+
+        @media (max-width: 767px) {
+            .score-widget-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            .score-metrics {
+                width: 100%;
+                justify-content: space-between;
+                gap: 10px;
+            }
+            .score-big-number {
+                font-size: 24px;
+            }
+            .score-widget-top > .d-flex {
+                width: 100%;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .btn-download-report, .btn-reset-checklist {
+                width: 100%;
+                justify-content: center;
+                padding: 12px 16px;
+                font-size: 13.5px;
+                border-radius: 12px;
+            }
+            .score-widget-footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
         }
