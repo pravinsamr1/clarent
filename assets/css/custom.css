@@ -1182,7 +1182,36 @@
         .event-work-items:hover .dsp-card-icon.data-protection {
             box-shadow: 0 15px 30px rgba(243, 115, 53, 0.45);
         }
-
         .event-work-items:hover .dsp-card-icon.due-diligence {
             box-shadow: 0 15px 30px rgba(79, 172, 254, 0.45);
+        }
+
+        /* Justify span and p tag content on mobile view only */
+        @media (max-width: 767px) {
+            .about-clarent span,
+            .about-clarent p,
+            .about-content span,
+            .about-content p,
+            .event-work-items span,
+            .event-work-items p {
+                text-align: justify !important;
+            }
+        }
+
+        /* Responsive height for main about/program images */
+        .about-thumb img {
+            height: 500px !important;
+            object-fit: cover !important;
+        }
+
+        @media (max-width: 991px) {
+            .about-thumb img {
+                height: 400px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .about-thumb img {
+                height: 300px !important;
+            }
         }

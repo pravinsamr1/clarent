@@ -8842,3 +8842,15 @@ input.main-search-input::placeholder {
     top: auto;
   }
 }
+
+/* Justify span and p tag content on mobile view only */
+@media (max-width: 767px) {
+    .about-clarent span,
+    .about-clarent p,
+    .about-content span,
+    .about-content p,
+    .event-work-items span,
+    .event-work-items p {
+        text-align: justify !important;
+    }
+}

@@ -475,17 +475,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <ul class="list-area d-grid gap-1">
  
-                            <li><a href="iso-27001-2022-Information-security-checklist.html">ISO 27001</a></li>
+                            <li><a href="#">Essentials 8</a></li>
+                            <li><a href="#">SOC 2</a></li>
+                            <li><a href="iso-27001.html">ISO 27001</a></li>
+                            <li><a href="iso-31000.html">ISO 31000</a></li>
+                            <li><a href="iso-20000.html">ISO 20000</a></li>
+                            <li><a href="iso-22301.html">ISO 22301</a></li>
+                            <li><a href="iso-27701.html">ISO 27701</a></li>
+                            <li><a href="iso-9001.html">ISO 9001</a></li>
                             <li><a href="#">NIST CSF</a></li>
                             <li><a href="#">NIST SP 800 53</a></li>
                             <li><a href="#">NIS AI RMF</a></li>
-                            <li><a href="#">SOC 2</a></li>
-                            <li><a href="iso-3100-risk-checklist.html">ISO 31000</a></li>
-                            <li><a href="#">ISO 20000</a></li>
-                            <li><a href="#">ISO 22301</a></li>
-                            <li><a href="#">ISO 27701</a></li>
-                            <li><a href="iso-9001-2015-quality-checklist.html">ISO 9001</a></li>
-                            <li><a href="#">Essentials 8</a></li>
                             <li><a href="#">Cyber Essentials</a></li>
                             <li><a href="#">CPS 234</a></li>
                             <li><a href="#">GDPR</a></li>
