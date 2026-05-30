@@ -483,13 +483,13 @@ document.addEventListener("DOMContentLoaded", () => {
                             <li><a href="iso-22301.html">ISO 22301</a></li>
                             <li><a href="iso-27701.html">ISO 27701</a></li>
                             <li><a href="iso-9001.html">ISO 9001</a></li>
-                            <li><a href="#">NIST CSF</a></li>
-                            <li><a href="#">NIST SP 800 53</a></li>
+                            <li><a href="nist-csf.html">NIST CSF</a></li>
+                            <li><a href="nist-sp-800-53.html">NIST SP 800 53</a></li>
                             <li><a href="#">NIS AI RMF</a></li>
-                            <li><a href="#">Cyber Essentials</a></li>
-                            <li><a href="#">CPS 234</a></li>
-                            <li><a href="#">GDPR</a></li>
-                            <li><a href="#">HIPAA</a></li>
+                            <li><a href="cyber-essentials.html">Cyber Essentials</a></li>
+                            <li><a href="cps-234.html">CPS 234</a></li>
+                            <li><a href="gdpr.html">GDPR</a></li>
+                            <li><a href="hipaa.html">HIPAA</a></li>
 
                         </ul>
 
@@ -629,7 +629,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const closeBtn = document.querySelector('.offcanvas__close button');
         const overlay = document.querySelector('.offcanvas__overlay');
         const infoArea = document.querySelector('.offcanvas__info');
-        
+
         if (toggleBtn && infoArea && overlay) {
             toggleBtn.addEventListener('click', () => {
                 infoArea.classList.add('info-open');
