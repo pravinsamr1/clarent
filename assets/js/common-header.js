@@ -475,8 +475,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <ul class="list-area d-grid gap-1">
  
-                            <li><a href="#">Essentials 8</a></li>
-                            <li><a href="#">SOC 2</a></li>
+                            <li><a href="essential-8.html">Essentials 8</a></li>
+                            <li><a href="soc-2.html">SOC 2</a></li>
                             <li><a href="iso-27001.html">ISO 27001</a></li>
                             <li><a href="iso-31000.html">ISO 31000</a></li>
                             <li><a href="iso-20000.html">ISO 20000</a></li>
