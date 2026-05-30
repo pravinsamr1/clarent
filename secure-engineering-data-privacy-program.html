@@ -132,8 +132,16 @@
 
     <style>
         /* Custom SDLC and Secure SDLC Stepper Styles (Previously Used) */
+        .sdlc-heading {
+            font-size: 38px;
+        }
+
         .sdlc-container {
-            padding: 80px 0;
+            padding: 60px 0;
+        }
+
+        .secure-flow {
+            margin-bottom: 0px;
         }
 
         .sdlc-flow-title {
@@ -303,9 +311,14 @@
         }
 
         @media (max-width: 991px) {
+            .sdlc-container {
+                padding: 40px 0 !important;
+            }
+
             .sdlc-wrapper {
                 flex-direction: column;
                 gap: 32px;
+                margin-bottom: 20px !important;
             }
 
             .sdlc-step {
@@ -321,6 +334,13 @@
                 transform: translateX(-50%);
                 top: auto;
             }
+
+        }
+
+        @media (max-width: 767px) {
+            .sdlc-heading {
+                font-size: 30px !important;
+            }
         }
     </style>
 
@@ -330,7 +350,7 @@
             <!-- Header description -->
             <div class="row justify-content-center mb-5 text-center">
                 <div class="col-lg-10">
-                    <h2 class="black fw-bold mb-3 wow fadeInUp" data-wow-delay=".3s" style="font-size: 38px;">
+                    <h2 class="black fw-bold mb-3 wow fadeInUp sdlc-heading" data-wow-delay=".3s">
                         Secure Software Development Lifecycle
                     </h2>
                     <p class="pra fs-six mb-0 wow fadeInUp" data-wow-delay=".4s">
@@ -455,7 +475,7 @@
         <div class="about-wrapper">
             <div class="container">
                 <div class="row justify-content-lg-between justify-content-center g-4 align-items-center">
-                    <div class="col-xl-6 col-lg-7" style="padding-top: 100px;">
+                    <div class="col-xl-6 col-lg-7 about-content-col">
                         <div class="about-content">
                             <div class="section-title text-lg-start text-center mb-4 about-clarent">
                                 <h3 class="black fw-bold mb-3 wow fadeInUp" data-wow-delay=".3s"
@@ -502,7 +522,7 @@
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-5">
-                        <div class="about-thumb position-relative reveal-right w-100">
+                        <div class="about-thumbbb position-relative reveal-right w-100">
                             <img src="assets/webimages/about.webp" alt="img" class="w-100" style="border-radius: 30px;">
                         </div>
                     </div>
@@ -628,7 +648,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="about-thumb position-relative reveal-right w-100 wow fadeInRight"
+                        <div class="about-thumbbb position-relative reveal-right w-100 wow fadeInRight"
                             data-wow-delay=".4s">
                             <img src="assets/webimages/programs.jpg" alt="img" class="w-100"
                                 style="border-radius: 30px;">
@@ -739,7 +759,7 @@
             <div class="container">
                 <div class="row justify-content-lg-between align-items-center justify-content-center g-4">
                     <div class="col-lg-6">
-                        <div class="about-thumb position-relative reveal-right w-100 wow fadeInLeft"
+                        <div class="about-thumbbb position-relative reveal-right w-100 wow fadeInLeft"
                             data-wow-delay=".4s">
                             <img src="assets/webimages/about.webp" alt="img" class="w-100"
                                 style="border-radius: 30px;">

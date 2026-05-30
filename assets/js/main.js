@@ -314,7 +314,7 @@ CSS TABLE OF CONTENTS
 		new WOW().init();
 
 		//>> Nice Select Start <<//
-		$("select").niceSelect();
+		$("select:not(.clarent-popup-select)").niceSelect();
 
 		//>> Testimonial Slider Start <<//
 		const bannerSectionWrap = new Swiper(".banner-section-wrap", {

@@ -44,22 +44,29 @@
                 position: absolute !important;
                 top: 100% !important;
                 left: 0 !important;
-                width: 100vw !important; /* Full width of the screen */
-                height: auto !important; /* Dynamic height based on content (completely non-scrollable) */
-                max-height: none !important; /* Completely disabled height restrictions */
-                padding: 28px max(20px, calc((100vw - 1200px) / 2)) !important; /* Centered content alignment */
+                width: 100vw !important;
+                /* Full width of the screen */
+                height: auto !important;
+                /* Dynamic height based on content (completely non-scrollable) */
+                max-height: none !important;
+                /* Completely disabled height restrictions */
+                padding: 28px max(20px, calc((100vw - 1200px) / 2)) !important;
+                /* Centered content alignment */
                 border: 1px solid rgba(81, 53, 255, 0.12) !important;
                 border-top: none !important;
-                border-radius: 0 0 28px 28px !important; /* Clean rounded bottom corners only */
+                border-radius: 0 0 28px 28px !important;
+                /* Clean rounded bottom corners only */
                 background: rgba(255, 255, 255, 0.99) !important;
                 backdrop-filter: blur(25px) !important;
                 box-shadow: 0 40px 90px rgba(3, 23, 64, 0.12) !important;
-                display: flex !important; /* Tabbed old style flex alignment side-by-side */
+                display: flex !important;
+                /* Tabbed old style flex alignment side-by-side */
                 gap: 40px !important;
                 align-items: stretch !important;
                 margin: 0 !important;
                 box-sizing: border-box !important;
-                overflow: visible !important; /* Absolutely zero scrollbars */
+                overflow: visible !important;
+                /* Absolutely zero scrollbars */
                 overflow-y: visible !important;
                 transform: translateY(15px) !important;
                 opacity: 0 !important;
@@ -77,17 +84,21 @@
         .indexx-services-menu .services-mega__rail {
             display: flex !important;
             flex-direction: column !important;
-            flex: 0 0 220px !important; /* Wide, clean rail space */
+            flex: 0 0 220px !important;
+            /* Wide, clean rail space */
             width: 220px !important;
             background: #f8fafc !important;
             border: 1px solid rgba(3, 23, 64, 0.04) !important;
             border-radius: 14px !important;
             padding: 16px 12px !important;
             gap: 6px !important;
-            height: auto !important; /* Dynamic height based on content */
-            align-self: stretch !important; /* Naturally stretches vertically to match the details panel height */
+            height: auto !important;
+            /* Dynamic height based on content */
+            align-self: stretch !important;
+            /* Naturally stretches vertically to match the details panel height */
             box-sizing: border-box !important;
-            overflow: visible !important; /* Absolutely zero scrollbar tracks */
+            overflow: visible !important;
+            /* Absolutely zero scrollbar tracks */
             overflow-y: visible !important;
         }
 
@@ -95,9 +106,11 @@
         .indexx-services-menu .services-mega__rail::-webkit-scrollbar {
             width: 4px !important;
         }
+
         .indexx-services-menu .services-mega__rail::-webkit-scrollbar-track {
             background: transparent !important;
         }
+
         .indexx-services-menu .services-mega__rail::-webkit-scrollbar-thumb {
             background: rgba(3, 23, 64, 0.05) !important;
             border-radius: 4px !important;
@@ -136,21 +149,25 @@
             color: #ffffff !important;
             box-shadow: 0 6px 18px rgba(81, 53, 255, 0.2) !important;
         }
+
         .indexx-services-menu .services-mega__tab.active[data-services-tab="testing"] {
             background: linear-gradient(135deg, #00d2ff 0%, #0070f3 100%) !important;
             color: #ffffff !important;
             box-shadow: 0 6px 18px rgba(0, 112, 243, 0.2) !important;
         }
+
         .indexx-services-menu .services-mega__tab.active[data-services-tab="governance"] {
             background: linear-gradient(135deg, #ff9f43 0%, #ff5455 100%) !important;
             color: #ffffff !important;
             box-shadow: 0 6px 18px rgba(255, 84, 85, 0.2) !important;
         }
+
         .indexx-services-menu .services-mega__tab.active[data-services-tab="training"] {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
             color: #ffffff !important;
             box-shadow: 0 6px 18px rgba(16, 185, 129, 0.2) !important;
         }
+
         .indexx-services-menu .services-mega__tab.active[data-services-tab="platforms"] {
             background: linear-gradient(135deg, #ec4899 0%, #a855f7 100%) !important;
             color: #ffffff !important;
@@ -164,10 +181,13 @@
         /* Details panels container (Non-Scrollable) */
         .indexx-services-menu .services-mega__panels {
             flex: 1 !important;
-            height: auto !important; /* Flow naturally without height clamping */
-            overflow: visible !important; /* Absolutely zero scrollbar tracks */
+            height: auto !important;
+            /* Flow naturally without height clamping */
+            overflow: visible !important;
+            /* Absolutely zero scrollbar tracks */
             overflow-y: visible !important;
-            padding-right: 0 !important; /* Space for scrollbars is no longer needed */
+            padding-right: 0 !important;
+            /* Space for scrollbars is no longer needed */
             box-sizing: border-box !important;
         }
 
@@ -177,23 +197,29 @@
             min-width: 0 !important;
             box-sizing: border-box !important;
         }
+
         .indexx-services-menu .services-mega__panel.active {
             display: block !important;
         }
 
         .indexx-services-menu .services-mega__panel h3,
         .indexx-services-menu .security-headding h3 {
-            color: #ffffff !important; /* Premium white text */
-            font-size: 14px !important; /* Highly legible scale */
+            color: #ffffff !important;
+            /* Premium white text */
+            font-size: 14px !important;
+            /* Highly legible scale */
             font-weight: 800 !important;
             text-transform: uppercase !important;
             letter-spacing: 0.8px !important;
             text-align: center !important;
             margin-top: 0 !important;
             margin-bottom: 20px !important;
-            padding: 10px 14px !important; /* Spacing inside the capsule */
-            border-radius: 10px !important; /* Smooth rounded corners */
-            border-bottom: none !important; /* Removed plain line */
+            padding: 10px 14px !important;
+            /* Spacing inside the capsule */
+            border-radius: 10px !important;
+            /* Smooth rounded corners */
+            border-bottom: none !important;
+            /* Removed plain line */
             box-shadow: 0 4px 12px rgba(3, 23, 64, 0.05) !important;
         }
 
@@ -203,18 +229,22 @@
             background: linear-gradient(135deg, #5135ff 0%, #8b5cf6 100%) !important;
             box-shadow: 0 4px 14px rgba(81, 53, 255, 0.16) !important;
         }
+
         .indexx-services-menu .services-mega__panel[data-services-panel="testing"] h3 {
             background: linear-gradient(135deg, #00d2ff 0%, #0070f3 100%) !important;
             box-shadow: 0 4px 14px rgba(0, 112, 243, 0.16) !important;
         }
+
         .indexx-services-menu .services-mega__panel[data-services-panel="governance"] h3 {
             background: linear-gradient(135deg, #ff9f43 0%, #ff5455 100%) !important;
             box-shadow: 0 4px 14px rgba(255, 84, 85, 0.16) !important;
         }
+
         .indexx-services-menu .services-mega__panel[data-services-panel="training"] h3 {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
             box-shadow: 0 4px 14px rgba(16, 185, 129, 0.16) !important;
         }
+
         .indexx-services-menu .services-mega__panel[data-services-panel="platforms"] h3 {
             background: linear-gradient(135deg, #ec4899 0%, #a855f7 100%) !important;
             box-shadow: 0 4px 14px rgba(236, 72, 153, 0.16) !important;
@@ -231,8 +261,10 @@
         /* Spacious Two-Column Grid layout restored for the links */
         .indexx-services-menu .services-mega__list {
             display: grid !important;
-            gap: 16px 36px !important; /* Restored premium spacious grid gaps */
-            grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* Restored balanced 2-column layout */
+            gap: 16px 36px !important;
+            /* Restored premium spacious grid gaps */
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            /* Restored balanced 2-column layout */
             margin: 0 !important;
             padding: 0 !important;
         }
@@ -248,7 +280,8 @@
         }
 
         .indexx-services-menu .services-mega__link--main {
-            color: #4a5d73 !important; /* Elegant slate grey text */
+            color: #4a5d73 !important;
+            /* Elegant slate grey text */
             font-size: 13.5px !important;
             font-weight: 700 !important;
             line-height: 1.35 !important;
@@ -281,15 +314,19 @@
         .indexx-services-menu .services-mega__panel[data-services-panel="security"] .services-mega__link:hover {
             color: #5135ff !important;
         }
+
         .indexx-services-menu .services-mega__panel[data-services-panel="testing"] .services-mega__link:hover {
             color: #0070f3 !important;
         }
+
         .indexx-services-menu .services-mega__panel[data-services-panel="governance"] .services-mega__link:hover {
             color: #ff5455 !important;
         }
+
         .indexx-services-menu .services-mega__panel[data-services-panel="training"] .services-mega__link:hover {
             color: #059669 !important;
         }
+
         .indexx-services-menu .services-mega__panel[data-services-panel="platforms"] .services-mega__link:hover {
             color: #a855f7 !important;
         }
@@ -298,15 +335,19 @@
         .indexx-services-menu .services-mega__panel[data-services-panel="security"] .services-mega__sublist {
             border-left: 2px solid rgba(81, 53, 255, 0.25) !important;
         }
+
         .indexx-services-menu .services-mega__panel[data-services-panel="testing"] .services-mega__sublist {
             border-left: 2px solid rgba(0, 112, 243, 0.25) !important;
         }
+
         .indexx-services-menu .services-mega__panel[data-services-panel="governance"] .services-mega__sublist {
             border-left: 2px solid rgba(255, 84, 85, 0.25) !important;
         }
+
         .indexx-services-menu .services-mega__panel[data-services-panel="training"] .services-mega__sublist {
             border-left: 2px solid rgba(16, 185, 129, 0.25) !important;
         }
+
         .indexx-services-menu .services-mega__panel[data-services-panel="platforms"] .services-mega__sublist {
             border-left: 2px solid rgba(236, 72, 153, 0.25) !important;
         }
@@ -329,7 +370,8 @@
         }
 
         .indexx-services-menu .services-mega__link--child {
-            color: #637381 !important; /* Slate sub-link color */
+            color: #637381 !important;
+            /* Slate sub-link color */
             font-size: 12.5px !important;
             font-weight: 500 !important;
             line-height: 1.4 !important;
@@ -341,7 +383,8 @@
         }
 
         .indexx-services-menu .services-mega__sublist>.services-mega__item>.services-mega__link--child {
-            color: #4a5d73 !important; /* Highlight intermediate nested headers */
+            color: #4a5d73 !important;
+            /* Highlight intermediate nested headers */
             font-weight: 700 !important;
         }
 
@@ -370,7 +413,7 @@
             margin-top: -90px;
         }
 
-        .header-1.header-style2 .mega-menu-wrapper{
+        .header-1.header-style2 .mega-menu-wrapper {
             border-radius: 0px 0px 10px 10px;
         }
 
@@ -639,7 +682,7 @@
     </div>
     <!-- End Cursor Pointer -->
 
-   <!-- Header Top Start -->
+    <!-- Header Top Start -->
     <div class="header-top-section d-lg-block d-none bg-color3 py-2">
         <div class="container">
             <div class="sub-header-wrapper d-flex align-items-center justify-content-between">
@@ -957,11 +1000,15 @@
                                                     <div class="services-mega__panel" data-services-panel="testing">
                                                         <h3 class="services-mega__panel-heading">Pentest Services</h3>
                                                         <ul class="services-mega__list">
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Red teaming</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Web application pentesting</a></li>
-                                                            
+                                                            <li class="services-mega__item"><a
+                                                                    href="services-details.html"
+                                                                    class="services-mega__link services-mega__link--main">Red
+                                                                    teaming</a></li>
+                                                            <li class="services-mega__item"><a
+                                                                    href="services-details.html"
+                                                                    class="services-mega__link services-mega__link--main">Web
+                                                                    application pentesting</a></li>
+
                                                         </ul>
                                                     </div>
 
@@ -969,40 +1016,55 @@
                                                         <h3 class="services-mega__panel-heading">GRC services
                                                         </h3>
                                                         <ul class="services-mega__list">
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Security baseline assessment (Essentials 8 or ISO 27001 dependent)</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
+                                                            <li class="services-mega__item"><a
+                                                                    href="services-details.html"
+                                                                    class="services-mega__link services-mega__link--main">Security
+                                                                    baseline assessment (Essentials 8 or ISO 27001
+                                                                    dependent)</a></li>
+                                                            <li class="services-mega__item"><a
+                                                                    href="services-details.html"
                                                                     class="services-mega__link services-mega__link--main">Compliance
                                                                     Audits</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
+                                                            <li class="services-mega__item"><a
+                                                                    href="services-details.html"
                                                                     class="services-mega__link services-mega__link--main">Risk
                                                                     Management Audits</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">OT Audit
-                                                                    </a></li>
+                                                            <li class="services-mega__item"><a
+                                                                    href="services-details.html"
+                                                                    class="services-mega__link services-mega__link--main">OT
+                                                                    Audit
+                                                                </a></li>
                                                         </ul>
                                                     </div>
 
                                                     <div class="services-mega__panel" data-services-panel="training">
                                                         <h3 class="services-mega__panel-heading">Training solutions</h3>
                                                         <ul class="services-mega__list">
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Cyber Security Essentialss</a></li>
-                                                            
-                                                            <li class="services-mega__item"><a href="services-details.html"
+                                                            <li class="services-mega__item"><a
+                                                                    href="services-details.html"
+                                                                    class="services-mega__link services-mega__link--main">Cyber
+                                                                    Security Essentialss</a></li>
+
+                                                            <li class="services-mega__item"><a
+                                                                    href="services-details.html"
                                                                     class="services-mega__link services-mega__link--main">Ethical
                                                                     Hacker</a></li>
                                                         </ul>
                                                     </div>
 
                                                     <div class="services-mega__panel" data-services-panel="platforms">
-                                                        <h3 class="services-mega__panel-heading">Consultation services</h3>
+                                                        <h3 class="services-mega__panel-heading">Consultation services
+                                                        </h3>
                                                         <ul class="services-mega__list">
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Bespoke policies and procedures</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">GRC outsourcing 
-                                                                    </a></li>
+                                                            <li class="services-mega__item"><a
+                                                                    href="services-details.html"
+                                                                    class="services-mega__link services-mega__link--main">Bespoke
+                                                                    policies and procedures</a></li>
+                                                            <li class="services-mega__item"><a
+                                                                    href="services-details.html"
+                                                                    class="services-mega__link services-mega__link--main">GRC
+                                                                    outsourcing
+                                                                </a></li>
                                                         </ul>
                                                     </div>
                                                 </li>
@@ -1169,7 +1231,7 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="about-thumb4 rounded-4 w-100 position-relative ps-lg-5 mt-lg-0 mt-2">
+                    <div class="about-thumbb4 rounded-4 w-100 position-relative ps-lg-5 mt-lg-0 mt-2">
                         <img src="assets/webimages/about.webp" alt="img" class="rounded-4 w-100">
 
                         <div class="counter-box p3-bg rounded-3 p-4 bottom-0 end-0 m-4">

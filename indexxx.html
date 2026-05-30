@@ -266,12 +266,14 @@
         .modern-content-layout {
             padding: 100px 0 100px;
         }
+
         .modern-hero-title {
             font-size: clamp(38px, 5.5vw, 72px);
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -2px;
         }
+
         .gradient-text-glow {
             font-size: inherit !important;
             font-weight: inherit !important;
@@ -284,6 +286,7 @@
             position: relative;
             text-shadow: 0 0 35px rgba(81, 53, 255, 0.25);
         }
+
         .modern-hero-desc {
             max-width: 720px;
             font-size: 17px;
@@ -306,11 +309,13 @@
             letter-spacing: 1px;
             text-decoration: none !important;
         }
+
         .btn-primary-glow {
             background: #ffffff;
             color: #030611 !important;
             box-shadow: 0 8px 20px rgba(255, 255, 255, 0.06);
         }
+
         .btn-primary-glow:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 35px rgba(81, 53, 255, 0.4);
@@ -318,18 +323,22 @@
             color: #ffffff !important;
             z-index: 10;
         }
+
         .btn-primary-glow:hover .arrow-icon {
             transform: translateX(4px);
         }
+
         .arrow-icon {
             transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .btn-secondary-outline {
             background: transparent;
             border: 1px solid rgba(255, 255, 255, 0.15);
             color: #ffffff !important;
             backdrop-filter: blur(4px);
         }
+
         .btn-secondary-outline:hover {
             background: rgba(0, 243, 255, 0.04);
             border-color: #00f3ff;
@@ -346,7 +355,8 @@
             opacity: 0.38;
             mix-blend-mode: screen;
             pointer-events: none;
-            z-index: 2; /* Directly above the video background and linear overlay, but below text (z-index 10) */
+            z-index: 2;
+            /* Directly above the video background and linear overlay, but below text (z-index 10) */
             animation: orbFloat 22s ease-in-out infinite alternate;
         }
 
@@ -382,9 +392,11 @@
             0% {
                 transform: translateY(0) scale(1) rotate(0deg);
             }
+
             50% {
                 transform: translateY(-50px) translateX(30px) scale(1.15) rotate(90deg);
             }
+
             100% {
                 transform: translateY(20px) translateX(-40px) scale(0.9) rotate(180deg);
             }
@@ -394,17 +406,18 @@
             0% {
                 transform: translateY(0) scale(1) rotate(0deg);
             }
+
             50% {
                 transform: translateY(60px) translateX(-50px) scale(0.9) rotate(-90deg);
             }
+
             100% {
                 transform: translateY(-30px) translateX(20px) scale(1.12) rotate(-180deg);
             }
         }
-
     </style>
 
-    
+
 </head>
 
 <body>
@@ -484,13 +497,14 @@
 
 
 
-    
+
     <section class="modern-cyber-hero" id="cyber-banner-mount">
         <!-- Background Video (Muted, Autoplay, Loop, Playinline, Pointer-Events None, No Context Menu) -->
-        <video autoplay loop muted playsinline preload="auto" class="video-background" oncontextmenu="return false;" style="pointer-events: none;">
+        <video autoplay loop muted playsinline preload="auto" class="video-background" oncontextmenu="return false;"
+            style="pointer-events: none;">
             <source src="videos/cyber-security.mp4" type="video/mp4">
         </video>
-        
+
         <!-- Video Overlay for Superior Contrast & Accessibility -->
         <div class="video-overlay"></div>
 
@@ -508,8 +522,9 @@
                             Secure, Govern
                             <span class="gradient-text-glow" style="font-size: inherit;">&amp; Transform</span>
                         </h1>
-                        
-                        <p class="pra fs-six mb-5 white-color modern-hero-dsc" style="text-align: center; max-width: 720px; margin: 0 auto;">
+
+                        <p class="pra fs-six mb-5 white-color modern-hero-dsc"
+                            style="text-align: center; max-width: 720px; margin: 0 auto;">
                             Practical cybersecurity services for cloud, data protection, Zero Trust,
                             ServiceNow, GRC, penetration testing, virtualization and hands-on security training.
                         </p>
@@ -517,7 +532,11 @@
                         <div class="d-flex flex-sm-row flex-column justify-content-center align-items-sm-center gap-3">
                             <a href="#discover" class="modern-action-btn btn-primary-glow">
                                 <span>Discover More</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="arrow-icon"><path d="M3.33334 8H12.6667M12.6667 8L8.00001 3.33334M12.6667 8L8.00001 12.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="arrow-icon">
+                                    <path d="M3.33334 8H12.6667M12.6667 8L8.00001 3.33334M12.6667 8L8.00001 12.6667"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </a>
                             <a href="contact.html" class="modern-action-btn btn-secondary-outline">
                                 <span>Contact Us</span>
@@ -573,7 +592,7 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="about-thumb4 rounded-4 w-100 position-relative ps-lg-5 mt-lg-0 mt-2">
+                    <div class="about-thumbb4 rounded-4 w-100 position-relative ps-lg-5 mt-lg-0 mt-2">
                         <img src="assets/webimages/about.webp" alt="img" class="rounded-4 w-100">
 
                         <div class="counter-box p3-bg rounded-3 p-4 bottom-0 end-0 m-4">
@@ -1193,7 +1212,7 @@
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center gap-1 pra fs-eight heading-font">
-                                        <i class="fa-regular fa-eye pra"></i> 234,5k 
+                                        <i class="fa-regular fa-eye pra"></i> 234,5k
                                     </div>
                                 </div>
                             </div>
@@ -1264,7 +1283,7 @@
     <script src="assets/js/common-header.js"></script>
 
 
-    
+
 
 </body>
 
