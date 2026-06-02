@@ -141,19 +141,19 @@ document.addEventListener("DOMContentLoaded", () => {
                                                         <ul class="services-mega__list">
 
                                                             <li class="services-mega__item">
-                                                                <a href="services-details.html"
+                                                                <a href="dlp-solutions.html"
                                                                     class="services-mega__link services-mega__link--main">DLP
                                                                     solutions</a>
                                                             </li>
 
                                                             <li class="services-mega__item">
-                                                                <a href="services-details.html"
+                                                                <a href="threat-hunting.html"
                                                                     class="services-mega__link services-mega__link--main">Threat
                                                                     hunting</a>
                                                             </li>
 
                                                             <li class="services-mega__item">
-                                                                <a href="services-details.html"
+                                                                <a href="cloud-solutions.html"
                                                                     class="services-mega__link services-mega__link--main">Cloud
                                                                     solutions</a>
                                                                 <ul class="services-mega__sublist">
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                     </li>
 
                                                                     <li class="services-mega__item">
-                                                                        <a href="services-details.html"
+                                                                        <a href="amazon-aws-security.html"
                                                                             class="services-mega__link services-mega__link--child">Amazon
                                                                             AWS</a>
                                                                     </li>
@@ -225,21 +225,6 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                         <a href="services-details.html"
                                                                             class="services-mega__link services-mega__link--child">Zero
                                                                             Trust</a>
-                                                                    </li>
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">Zero
-                                                                            Trust implementations</a>
-                                                                    </li>
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">Passwordless
-                                                                            MFA solutions - SDO</a>
-                                                                    </li>
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">Data
-                                                                            centric security solutions - Seclore</a>
                                                                     </li>
                                                                 </ul>
                                                             </li>

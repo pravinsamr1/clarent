@@ -1624,3 +1624,254 @@
                 transform: translateY(-30px) translateX(20px) scale(1.12) rotate(-180deg);
             }
         }
+        
+        /* Modern styling additions for the Service Details Page */
+        .service-details-tab-btn {
+            padding: 28px 24px;
+            background: #ffffff;
+            border: 2px solid rgba(81, 53, 255, 0.08);
+            color: #17111f;
+            border-radius: 20px;
+            font-weight: 700;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(81, 53, 255, 0.02);
+            border-bottom: 4px solid rgba(81, 53, 255, 0.12);
+        }
+
+        .service-details-tab-btn i {
+            font-size: 36px;
+            transition: all 0.4s ease;
+        }
+
+        .service-details-tab-btn.active,
+        .service-details-tab-btn:hover {
+            background: linear-gradient(135deg, #17111f, #231238);
+            color: #ffffff !important;
+            border-color: #5135FF;
+            border-bottom: 4px solid #FF5455;
+            box-shadow: 0 15px 35px rgba(81, 53, 255, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .service-details-tab-btn.active i,
+        .service-details-tab-btn:hover i {
+            color: #FF5455 !important;
+            transform: scale(1.15);
+        }
+
+        .service-details-tab-btn.active span,
+        .service-details-tab-btn:hover span {
+            color: #ffffff !important;
+        }
+
+        .service-details-tab-btn.active .pra,
+        .service-details-tab-btn:hover .pra {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        .service-details-tab-pane {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out forwards;
+        }
+
+        .service-details-tab-pane.active {
+            display: block;
+        }
+
+        .sidebar-consult-card {
+            background: linear-gradient(145deg, #17111f, #241233);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(81, 53, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .process-serial-badge {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #5135FF, #FF5455);
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(81, 53, 255, 0.4);
+        }
+
+        .principle-card {
+            background: #ffffff;
+            border: 1px solid rgba(81, 53, 255, 0.08);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 12px 30px rgba(17, 24, 39, 0.04);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .principle-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(81, 53, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(81, 53, 255, 0.12);
+        }
+
+        .objective-plus-list li {
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 18px;
+            font-size: 16px;
+            color: #17111f;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .objective-plus-list li i {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: #5135FF;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .objective-plus-list li:hover i {
+            transform: rotate(90deg);
+            color: #FF5455;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .pillar-card {
+            background: #ffffff;
+            border: 1px solid rgba(81, 53, 255, 0.08);
+            border-radius: 20px;
+            padding: 28px 24px;
+            box-shadow: 0 12px 30px rgba(17, 24, 39, 0.04);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(81, 53, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(81, 53, 255, 0.12);
+        }
+
+        @media (min-width: 992px) {
+            .border-start-lg {
+                border-left: 1px solid rgba(0, 0, 0, 0.08) !important;
+                padding-left: 3rem !important;
+            }
+        }
+
+        .card-icon-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: rgba(81, 53, 255, 0.08);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #5135FF;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover transitions */
+        .shadow-sm:hover .card-icon-box,
+        .pillar-card:hover .card-icon-box {
+            background: linear-gradient(93deg, #5135FF 10.65%, #FF5455 89.35%);
+            color: #ffffff;
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0px 8px 20px rgba(81, 53, 255, 0.2);
+        }
+
+        /* Platform Security Section Styles */
+        .platform-card {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid rgba(81, 53, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .platform-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 20px 40px rgba(81, 53, 255, 0.1);
+        }
+        .platform-card.microsoft-platform:hover {
+            border-color: rgba(0, 164, 239, 0.4);
+            box-shadow: 0px 20px 40px rgba(0, 164, 239, 0.1);
+        }
+        .platform-card.aws-platform:hover {
+            border-color: rgba(255, 153, 0, 0.4);
+            box-shadow: 0px 20px 40px rgba(255, 153, 0, 0.1);
+        }
+        .platform-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(81, 53, 255, 0.05);
+            background: #0b0f19;
+            height: 350px;
+        }
+        .platform-img-wrapper img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .platform-card:hover .platform-img-wrapper img {
+            transform: scale(1.04);
+        }
+        .platform-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .platform-icon-list {
+            margin-top: 15px;
+            padding-left: 0;
+            list-style: none;
+        }
+        .platform-icon-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #6d6d86;
+        }
+        .platform-icon-list li i {
+            font-size: 14px;
+        }
+        .platform-icon-list li.microsoft-item i {
+            color: #00a4ef;
+        }
+        .platform-icon-list li.aws-item i {
+            color: #ff9900;
+        }
