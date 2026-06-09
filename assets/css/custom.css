@@ -1867,3 +1867,12 @@
         .platform-icon-list li.aws-item i {
             color: #ff9900;
         }
+
+@media(max-width:767px){
+    .sidebar-consult-card{
+        display: none;
+    }
+    .section-padding{
+        padding: 40px 0px;
+    }
+}

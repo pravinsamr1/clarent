@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                             </li>
 
                                                             <li class="services-mega__item">
-                                                                <a href="services-details.html"
+                                                                <a href="security-design-architecture.html"
                                                                     class="services-mega__link services-mega__link--main">Security
                                                                     design and architecture</a>
                                                                 <ul class="services-mega__sublist">
@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                             </li>
 
                                                             <li class="services-mega__item">
-                                                                <a href="services-details.html"
+                                                                <a href="virtualization-services.html"
                                                                     class="services-mega__link services-mega__link--main">Virtualization
                                                                     services</a>
                                                                 <ul class="services-mega__sublist">
@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                             <li class="services-mega__item"><a href="services-details.html"
                                                                     class="services-mega__link services-mega__link--main">Cyber Security Essentialss</a></li>
                                                             
-                                                            <li class="services-mega__item"><a href="services-details.html"
+                                                            <li class="services-mega__item"><a href="ethical-hacking.html"
                                                                     class="services-mega__link services-mega__link--main">Ethical
                                                                     Hacker</a></li>
                                                         </ul>
@@ -353,7 +353,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                             </a>
                                             <ul class="submenu">
                                                 <li><a href="services-details.html">Cyber Security Essentials</a></li>
-                                                <li><a href="team-details.html">Ethical hackers</a></li>
+                                                <li><a href="ethical-hacking.html">Ethical hackers</a></li>
                                             </ul>
                                         </li>
                                     </ul>
