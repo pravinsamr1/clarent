@@ -1820,14 +1820,6 @@
             transform: translateY(-8px);
             box-shadow: 0px 20px 40px rgba(81, 53, 255, 0.1);
         }
-        .platform-card.microsoft-platform:hover {
-            border-color: rgba(0, 164, 239, 0.4);
-            box-shadow: 0px 20px 40px rgba(0, 164, 239, 0.1);
-        }
-        .platform-card.aws-platform:hover {
-            border-color: rgba(255, 153, 0, 0.4);
-            box-shadow: 0px 20px 40px rgba(255, 153, 0, 0.1);
-        }
         .platform-img-wrapper {
             position: relative;
             overflow: hidden;

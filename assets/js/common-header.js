@@ -159,26 +159,26 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                 <ul class="services-mega__sublist">
                                                                     <li
                                                                         class="services-mega__item services-mega__item--full">
-                                                                        <a href="services-details.html"
+                                                                        <a
                                                                             class="services-mega__link services-mega__link--child">Microsoft</a>
                                                                         <ul class="services-mega__sublist">
                                                                             <li class="services-mega__item">
-                                                                                <a href="services-details.html"
+                                                                                <a href="microsoft-365-security-review.html"
                                                                                     class="services-mega__link services-mega__link--child">Microsoft
                                                                                     365 security reviews</a>
                                                                             </li>
                                                                             <li class="services-mega__item">
-                                                                                <a href="services-details.html"
+                                                                                <a href="microsoft-purview-review.html"
                                                                                     class="services-mega__link services-mega__link--child">Microsoft
                                                                                     Purview review</a>
                                                                             </li>
                                                                             <li class="services-mega__item">
-                                                                                <a href="services-details.html"
+                                                                                <a href="microsoft-defender-security-review.html"
                                                                                     class="services-mega__link services-mega__link--child">Microsoft
                                                                                     Defender security reviews</a>
                                                                             </li>
                                                                             <li class="services-mega__item">
-                                                                                <a href="services-details.html"
+                                                                                <a href="microsoft-intune-compliance-review.html"
                                                                                     class="services-mega__link services-mega__link--child">Microsoft
                                                                                     Intune compliance reviews</a>
                                                                             </li>
@@ -230,22 +230,22 @@ document.addEventListener("DOMContentLoaded", () => {
                                                             </li>
 
                                                             <li class="services-mega__item">
-                                                                <a href="services-details.html"
+                                                                <a href="rsa-archer-solutions.html"
                                                                     class="services-mega__link services-mega__link--main">RSA
                                                                     Archer solutions</a>
                                                             </li>
                                                             <li class="services-mega__item">
-                                                                <a href="services-details.html"
+                                                                <a href="zero-trust-implementations.html"
                                                                     class="services-mega__link services-mega__link--main">Zero
                                                                     Trust implementations</a>
                                                             </li>
                                                             <li class="services-mega__item">
-                                                                <a href="services-details.html"
+                                                                <a href="passwordless-mfa-solutions-sdo.html"
                                                                     class="services-mega__link services-mega__link--main">Passwordless
                                                                     MFA solutions - SDO</a>
                                                             </li>
                                                             <li class="services-mega__item">
-                                                                <a href="services-details.html"
+                                                                <a href="data-centric-security-solutions.html"
                                                                     class="services-mega__link services-mega__link--main">Data
                                                                     centric security solutions - Seclore</a>
                                                             </li>
