@@ -130,7 +130,8 @@ document.addEventListener("DOMContentLoaded", () => {
                                                         data-services-tab="platforms">
                                                         Consultation <i class="fa-solid fa-arrow-right"></i>
                                                     </button>
-                                                    <button type="button" class="services-mega__tab" id="psychometricBtn">
+                                                    <button type="button" class="services-mega__tab onclick="pyschometric()"
+                                                        data-services-tab="pyschometric">
                                                         Pyschometric Analysis <i class="fa-solid fa-arrow-right"></i>
                                                     </button>
                                                 </li>
@@ -583,13 +584,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const headerContainer = document.getElementById("header");
     if (headerContainer) {
         headerContainer.innerHTML = HEADER_HTML;
-
-        const psychometricBtn = document.getElementById('psychometricBtn');
-        if (psychometricBtn) {
-            psychometricBtn.addEventListener('click', () => {
-                window.location.href = 'about.html';
-            });
-        }
 
         // Active Menu Highlighting Logic
         const currentPage = window.location.pathname.split("/").pop() || "index.html";
