@@ -1876,3 +1876,12 @@
         padding: 40px 0px;
     }
 }
+
+/* Vertically center the capabilities card relative to the techgon section/image on desktop */
+@media (min-width: 1400px) {
+    .techgon-content {
+        bottom: auto !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+}

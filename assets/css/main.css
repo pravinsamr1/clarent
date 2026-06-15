@@ -8860,3 +8860,7 @@ input.main-search-input::placeholder {
                 padding: 40px 0px !important;
             }
         }
+
+.infra-padd{
+  padding: 70px 0px !important;
+}
