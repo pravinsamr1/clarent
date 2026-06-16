@@ -402,7 +402,7 @@ p {
 span {
   font-size: 16px;
   line-height: 25.6px;
-  letter-spacing: 1.2px;
+  /* letter-spacing: 1.2px; */
   margin: 0px;
   transition: all 0.4s ease-in-out;
 }

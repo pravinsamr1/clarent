@@ -45,6 +45,7 @@
             list-style: none;
             margin-top: 15px;
         }
+
         .franchise-portfolio-list li {
             position: relative;
             padding-left: 25px;
@@ -52,6 +53,7 @@
             font-weight: 500;
             color: #17111f;
         }
+
         .franchise-portfolio-list li i {
             position: absolute;
             left: 0;
@@ -59,12 +61,14 @@
             color: var(--p1-clr);
             font-size: 14px;
         }
+
         .service-pill-box {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 15px;
         }
+
         .service-pill {
             background: rgba(81, 53, 255, 0.05);
             border: 1px solid rgba(81, 53, 255, 0.08);
@@ -73,27 +77,32 @@
             padding: 6px 16px;
             font-size: 13px;
             font-weight: 600;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .service-pill:hover {
             background: var(--p1-clr);
             color: #ffffff;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 15px rgba(81, 53, 255, 0.15);
         }
+
         .franchise-card {
             background: #ffffff;
             border: 1px solid rgba(81, 53, 255, 0.08);
             border-radius: 20px;
             padding: 35px 28px;
             height: 100%;
-            transition: all 0.4s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.01);
         }
+
         .franchise-card:hover {
             transform: translateY(-6px);
             border-color: var(--p1-clr);
-            box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.08);
+            box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.1);
         }
+
         .franchise-card__icon {
             width: 55px;
             height: 55px;
@@ -107,24 +116,27 @@
             margin-bottom: 22px;
             transition: all 0.3s ease;
         }
+
         .franchise-card:hover .franchise-card__icon {
             background: var(--p1-clr);
             color: #ffffff;
+            transform: scale(1.05);
         }
+
         .franchise-card__title {
-            font-family: 'Poppins', sans-serif;
             font-size: 20px;
             font-weight: 700;
             color: #17111f;
             margin-bottom: 12px;
         }
+
         .franchise-card__text {
-            font-family: 'Inter', sans-serif;
             font-size: 14px;
             line-height: 1.6;
             color: #5e6282;
             margin: 0;
         }
+
         .ideal-split-box {
             background: #ffffff;
             border: 1px solid rgba(81, 53, 255, 0.08);
@@ -132,37 +144,78 @@
             padding: 40px;
             height: 100%;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.01);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
+        .ideal-split-box:hover {
+            transform: translateY(-6px);
+            border-color: var(--p1-clr);
+            box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.08);
+        }
+
+        .works-dark-section {
+            background: var(--bg3) !important;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
         .principle-dark-card {
-            background: #131929;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 25px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px 24px;
             height: 100%;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .principle-dark-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--p1-clr);
+            box-shadow: 0 15px 30px rgba(81, 53, 255, 0.2);
+        }
+
+        .principle-icon {
+            font-size: 28px;
+            color: var(--p3-clr);
+            margin-bottom: 18px;
+            display: inline-block;
             transition: all 0.3s ease;
         }
-        .principle-dark-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(81, 53, 255, 0.3);
-            box-shadow: 0 15px 30px rgba(81, 53, 255, 0.1);
+
+        .principle-dark-card:hover .principle-icon {
+            transform: scale(1.1);
+            color: var(--p1-clr);
         }
-        .principle-icon {
-            font-size: 26px;
-            color: var(--p3-clr);
-            margin-bottom: 15px;
-            display: inline-block;
-        }
+
         .difference-list-item {
             background: #ffffff;
             border: 1px solid rgba(81, 53, 255, 0.06);
             border-radius: 12px;
             padding: 18px 20px;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .difference-list-item:hover {
-            transform: translateX(5px);
+            transform: translateX(6px);
             border-color: var(--p1-clr);
             box-shadow: 0 8px 20px rgba(81, 53, 255, 0.05);
+        }
+
+        .difference-content-card {
+            background: #ffffff;
+            border: 1px solid rgba(81, 53, 255, 0.08);
+            border-radius: 20px;
+            padding: 40px;
+            height: 100%;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.01);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .difference-content-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--p1-clr);
+            box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.08);
         }
     </style>
 </head>
@@ -236,37 +289,48 @@
     <!-- Banner Section End -->
 
     <!-- Section 1: Overview Start -->
-    <section class="services-development-section fix section-padding whitebg" id="overview-section">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <!-- Main Content Area (Left) -->
-                <div class="col-lg-7">
-                    <div class="service-details-content">
-                        <div class="mb-4">
-                            <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-inline-block mb-2">
-                                FRANCHISE PARTNER PROGRAM
-                            </span>
-                            <h2 class="black mb-4 fw-bold">
-                                Build a Cybersecurity and Governance Business with an Established Framework
-                            </h2>
-                            <p class="pra fs-seven mb-3">
-                                Clarent360’s Franchise Partner Program is designed for experienced cybersecurity professionals, consultants, advisory firms, and technology leaders seeking to establish or expand a professional services business under a recognised framework.
-                            </p>
-                            <p class="pra fs-seven mb-3">
-                                Franchise Partners gain access to Clarent360’s methodologies, service delivery frameworks, operational processes, training systems, intellectual property, and brand standards to deliver services within their approved territory.
-                            </p>
-                            <p class="pra fs-seven mb-0">
-                                Rather than building a cybersecurity consultancy from scratch, franchise partners operate using proven delivery models, established service offerings, and structured operational guidance.
-                            </p>
+    <section class="about-section style2 fix section-padding whitebg" id="overview-section">
+        <div class="about-wrapper">
+            <div class="container">
+                <div class="row justify-content-lg-between justify-content-center g-4 align-items-center">
+                    <!-- Main Content Area (Left) -->
+                    <div class="col-xl-6 col-lg-7">
+                        <div class="about-content">
+                            <div class="section-title text-lg-start text-center mb-4">
+                                <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-3">
+                                    FRANCHISE PARTNER PROGRAM
+                                </span>
+                                <h2 class="mb-xxl-4 mb-3 wow fadeInUp black fw-bold visible-slowly-right"
+                                    data-wow-delay=".3s">
+                                    Build a Cybersecurity and Governance Business with an Established Framework
+                                </h2>
+                                <p class="pra fs-seven mb-3 wow fadeInUp" data-wow-delay=".4s">
+                                    Clarent360’s Franchise Partner Program is designed for experienced cybersecurity
+                                    professionals, consultants, advisory firms, and technology leaders seeking to
+                                    establish or expand a professional services business under a recognised framework.
+                                </p>
+                                <p class="pra fs-seven mb-3 wow fadeInUp" data-wow-delay=".5s">
+                                    Franchise Partners gain access to Clarent360’s methodologies, service delivery
+                                    frameworks, operational processes, training systems, intellectual property, and
+                                    brand standards to deliver services within their approved territory.
+                                </p>
+                                <p class="pra fs-seven mb-0 wow fadeInUp" data-wow-delay=".6s">
+                                    Rather than building a cybersecurity consultancy from scratch, franchise partners
+                                    operate using proven delivery models, established service offerings, and structured
+                                    operational guidance.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Image/Graphic Area (Right) -->
-                <div class="col-lg-5">
-                    <div class="reveal-left position-relative w-100">
-                        <img src="assets/webimages/about.webp" alt="Clarent360 franchise network" class="w-100 rounded-4 border shadow-sm">
-                        <!-- Ele -->
-                        <img src="assets/img/element/dot-grp1.png" alt="decorative dots grid" class="about-ele" style="right: -20px; bottom: -20px; z-index: -1;">
+                    <!-- Image/Graphic Area (Right) -->
+                    <div class="col-xl-5 col-lg-5">
+                        <div class="about-thumb position-relative reveal-left w-100">
+                            <img src="assets/webimages/about.webp" alt="Clarent360 franchise network"
+                                class="w-100 rounded-4 border shadow-sm">
+                            <!-- Ele -->
+                            <img src="assets/img/element/dot-grp1.png" alt="decorative dots grid" class="about-ele">
+                            <img src="assets/img/about/about2-ele.png" alt="img" class="about-ele2">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -275,7 +339,7 @@
     <!-- Section 1: Overview End -->
 
     <!-- Section 2: Why a Clarent360 Franchise? Start -->
-    <section class="section-padding bg-light fix" id="why-franchise-section">
+    <section class="section-padding bg-color2 fix" id="why-franchise-section">
         <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
@@ -294,7 +358,7 @@
             <div class="row g-4 justify-content-center mb-4">
                 <!-- Large Card 1: Proven Service Portfolio (Takes Full Width or 12 Cols for layout flow) -->
                 <div class="col-lg-12">
-                    <div class="franchise-card">
+                    <div class="franchise-card wow fadeInUp" data-wow-delay=".3s">
                         <div class="d-flex align-items-center gap-3 mb-3">
                             <div class="franchise-card__icon mb-0">
                                 <i class="fa-solid fa-cubes"></i>
@@ -304,19 +368,30 @@
                         <p class="franchise-card__text mb-3">
                             Deliver a comprehensive range of professional services including:
                         </p>
-                        
+
                         <div class="service-pill-box">
-                            <span class="service-pill"><i class="fa-solid fa-shield-halved me-1"></i> Cybersecurity Advisory</span>
-                            <span class="service-pill"><i class="fa-solid fa-scale-balanced me-1"></i> Governance, Risk & Compliance</span>
-                            <span class="service-pill"><i class="fa-solid fa-file-contract me-1"></i> ISO 27001 Implementation & Auditing Support</span>
-                            <span class="service-pill"><i class="fa-solid fa-robot me-1"></i> ISO 42001 AI Governance Programs</span>
-                            <span class="service-pill"><i class="fa-solid fa-magnifying-glass-chart me-1"></i> Security Assessments & Reviews</span>
-                            <span class="service-pill"><i class="fa-solid fa-cloud me-1"></i> Cloud Security Consulting</span>
-                            <span class="service-pill"><i class="fa-solid fa-briefcase me-1"></i> Risk Management Frameworks</span>
-                            <span class="service-pill"><i class="fa-solid fa-users-gear me-1"></i> Security Awareness Programs</span>
-                            <span class="service-pill"><i class="fa-solid fa-brain me-1"></i> AI Risk & Governance Services</span>
-                            <span class="service-pill"><i class="fa-solid fa-user-tie me-1"></i> Executive Advisory Services</span>
-                            <span class="service-pill"><i class="fa-solid fa-graduation-cap me-1"></i> Workforce Development & Training</span>
+                            <span class="service-pill"><i class="fa-solid fa-shield-halved me-1"></i> Cybersecurity
+                                Advisory</span>
+                            <span class="service-pill"><i class="fa-solid fa-scale-balanced me-1"></i> Governance, Risk
+                                & Compliance</span>
+                            <span class="service-pill"><i class="fa-solid fa-file-contract me-1"></i> ISO 27001
+                                Implementation & Auditing Support</span>
+                            <span class="service-pill"><i class="fa-solid fa-robot me-1"></i> ISO 42001 AI Governance
+                                Programs</span>
+                            <span class="service-pill"><i class="fa-solid fa-magnifying-glass-chart me-1"></i> Security
+                                Assessments & Reviews</span>
+                            <span class="service-pill"><i class="fa-solid fa-cloud me-1"></i> Cloud Security
+                                Consulting</span>
+                            <span class="service-pill"><i class="fa-solid fa-briefcase me-1"></i> Risk Management
+                                Frameworks</span>
+                            <span class="service-pill"><i class="fa-solid fa-users-gear me-1"></i> Security Awareness
+                                Programs</span>
+                            <span class="service-pill"><i class="fa-solid fa-brain me-1"></i> AI Risk & Governance
+                                Services</span>
+                            <span class="service-pill"><i class="fa-solid fa-user-tie me-1"></i> Executive Advisory
+                                Services</span>
+                            <span class="service-pill"><i class="fa-solid fa-graduation-cap me-1"></i> Workforce
+                                Development & Training</span>
                         </div>
                     </div>
                 </div>
@@ -325,52 +400,57 @@
             <div class="row g-4">
                 <!-- Card 2: Established Methodologies -->
                 <div class="col-lg-6 col-md-6">
-                    <div class="franchise-card">
+                    <div class="franchise-card wow fadeInUp" data-wow-delay=".4s">
                         <div class="franchise-card__icon">
                             <i class="fa-solid fa-sitemap"></i>
                         </div>
                         <h4 class="franchise-card__title">Established Methodologies</h4>
                         <p class="franchise-card__text">
-                            Gain access to structured delivery approaches, templates, frameworks, assessment models, reporting standards, and quality management processes developed by experienced practitioners.
+                            Gain access to structured delivery approaches, templates, frameworks, assessment models,
+                            reporting standards, and quality management processes developed by experienced
+                            practitioners.
                         </p>
                     </div>
                 </div>
 
                 <!-- Card 3: Accelerated Market Entry -->
                 <div class="col-lg-6 col-md-6">
-                    <div class="franchise-card">
+                    <div class="franchise-card wow fadeInUp" data-wow-delay=".5s">
                         <div class="franchise-card__icon">
                             <i class="fa-solid fa-gauge-high"></i>
                         </div>
                         <h4 class="franchise-card__title">Accelerated Market Entry</h4>
                         <p class="franchise-card__text">
-                            Reduce the time, effort, and uncertainty associated with creating new service offerings, operational processes, and market positioning.
+                            Reduce the time, effort, and uncertainty associated with creating new service offerings,
+                            operational processes, and market positioning.
                         </p>
                     </div>
                 </div>
 
                 <!-- Card 4: Continuous Capability Development -->
                 <div class="col-lg-6 col-md-6">
-                    <div class="franchise-card">
+                    <div class="franchise-card wow fadeInUp" data-wow-delay=".6s">
                         <div class="franchise-card__icon">
                             <i class="fa-solid fa-chart-line"></i>
                         </div>
                         <h4 class="franchise-card__title">Continuous Capability Development</h4>
                         <p class="franchise-card__text">
-                            Franchise Partners receive ongoing training, updates, operational guidance, and access to evolving service frameworks aligned with industry developments.
+                            Franchise Partners receive ongoing training, updates, operational guidance, and access to
+                            evolving service frameworks aligned with industry developments.
                         </p>
                     </div>
                 </div>
 
                 <!-- Card 5: Global Opportunity -->
                 <div class="col-lg-6 col-md-6">
-                    <div class="franchise-card">
+                    <div class="franchise-card wow fadeInUp" data-wow-delay=".7s">
                         <div class="franchise-card__icon">
                             <i class="fa-solid fa-globe"></i>
                         </div>
                         <h4 class="franchise-card__title">Global Opportunity</h4>
                         <p class="franchise-card__text">
-                            Operate within a growing ecosystem of cybersecurity, governance, and advisory professionals while building local market presence.
+                            Operate within a growing ecosystem of cybersecurity, governance, and advisory professionals
+                            while building local market presence.
                         </p>
                     </div>
                 </div>
@@ -398,42 +478,59 @@
             <div class="row g-4">
                 <!-- Column Left: Demonstrated Traits -->
                 <div class="col-lg-6 col-md-12">
-                    <div class="ideal-split-box">
+                    <div class="ideal-split-box wow fadeInUp" data-wow-delay=".3s">
                         <h4 class="black fw-bold mb-4 d-flex align-items-center gap-2">
-                            <i class="fa-solid fa-circle-nodes p1-clr"></i> We seek professionals and organisations that demonstrate:
+                            <i class="fa-solid fa-circle-nodes p1-clr"></i> We seek professionals and organisations that
+                            demonstrate:
                         </h4>
-                        
+
                         <ul class="about-list d-grid gap-3 mb-0">
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-shield-halved p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-shield-halved p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Cybersecurity Experience</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-user-tie p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-user-tie p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Consulting or Advisory Background</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-scale-balanced p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-scale-balanced p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Governance, Risk, or Compliance Expertise</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-chart-line p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-chart-line p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Business Development Capability</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-users-gear p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-users-gear p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Leadership Experience</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-award p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-award p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Commitment to Quality Service Delivery</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-network-wired p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-network-wired p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Strong Professional Networks</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-lightbulb p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-lightbulb p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Entrepreneurial Mindset</p>
                             </li>
                         </ul>
@@ -442,42 +539,58 @@
 
                 <!-- Column Right: Ideal Candidates -->
                 <div class="col-lg-6 col-md-12">
-                    <div class="ideal-split-box">
+                    <div class="ideal-split-box wow fadeInUp" data-wow-delay=".4s">
                         <h4 class="black fw-bold mb-4 d-flex align-items-center gap-2">
                             <i class="fa-solid fa-user-check p1-clr"></i> Ideal candidates include:
                         </h4>
-                        
+
                         <ul class="about-list d-grid gap-3 mb-0">
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-user-gear p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-user-gear p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Cybersecurity Consultants</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-briefcase p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-briefcase p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Boutique Consulting Firms</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-clipboard-check p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-clipboard-check p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">GRC Specialists</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-user-shield p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-user-shield p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Information Security Managers</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-shield-halved p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-shield-halved p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Former CISOs</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-cloud-shield p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-cloud-shield p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Cloud Security Specialists</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-laptop-code p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-laptop-code p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Technology Advisory Firms</p>
                             </li>
                             <li class="d-flex align-items-center gap-3">
-                                <span class="icon d-center" style="background:#f0f4fd; width:30px; height:30px; border-radius:50%;"><i class="fa-solid fa-rocket p1-clr fs-eight"></i></span>
+                                <span class="icon d-center"
+                                    style="background: rgba(81, 53, 255, 0.08); width: 32px; height: 32px; min-width: 32px; border-radius: 50%;"><i
+                                        class="fa-solid fa-rocket p1-clr fs-eight"></i></span>
                                 <p class="fw-semibold black mb-0">Digital Transformation Consultancies</p>
                             </li>
                         </ul>
@@ -489,7 +602,7 @@
     <!-- Section 3: Ideal Partner End -->
 
     <!-- Section 4: What Franchise Partners Receive Start -->
-    <section class="section-padding bg-light fix" id="receives-section">
+    <section class="section-padding bg-color fix" id="receives-section">
         <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
@@ -507,78 +620,84 @@
             <div class="row g-4">
                 <!-- Brand & Market Positioning -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="framework-card">
+                    <div class="framework-card wow fadeInUp" data-wow-delay=".3s">
                         <div class="framework-card__icon">
                             <i class="fa-solid fa-tag"></i>
                         </div>
                         <h5 class="black fw-bold mb-3" style="font-size: 19px;">Brand & Market Positioning</h5>
                         <p class="pra fs-seven mb-0">
-                            Operate under the Clarent360 brand while leveraging established market credibility and service positioning.
+                            Operate under the Clarent360 brand while leveraging established market credibility and
+                            service positioning.
                         </p>
                     </div>
                 </div>
 
                 <!-- Service Delivery Frameworks -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="framework-card">
+                    <div class="framework-card wow fadeInUp" data-wow-delay=".4s">
                         <div class="framework-card__icon">
                             <i class="fa-solid fa-folder-open"></i>
                         </div>
                         <h5 class="black fw-bold mb-3" style="font-size: 19px;">Service Delivery Frameworks</h5>
                         <p class="pra fs-seven mb-0">
-                            Access delivery methodologies, assessment models, templates, operational documentation, and engagement standards.
+                            Access delivery methodologies, assessment models, templates, operational documentation, and
+                            engagement standards.
                         </p>
                     </div>
                 </div>
 
                 <!-- Training & Certification -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="framework-card">
+                    <div class="framework-card wow fadeInUp" data-wow-delay=".5s">
                         <div class="framework-card__icon">
                             <i class="fa-solid fa-award"></i>
                         </div>
                         <h5 class="black fw-bold mb-3" style="font-size: 19px;">Training & Certification</h5>
                         <p class="pra fs-seven mb-0">
-                            Participate in structured onboarding and capability development programs covering Clarent360’s service portfolio.
+                            Participate in structured onboarding and capability development programs covering
+                            Clarent360’s service portfolio.
                         </p>
                     </div>
                 </div>
 
                 <!-- Operational Guidance -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="framework-card">
+                    <div class="framework-card wow fadeInUp" data-wow-delay=".6s">
                         <div class="framework-card__icon">
                             <i class="fa-solid fa-compass"></i>
                         </div>
                         <h5 class="black fw-bold mb-3" style="font-size: 19px;">Operational Guidance</h5>
                         <p class="pra fs-seven mb-0">
-                            Receive support for project delivery, quality assurance, customer engagement, and service expansion.
+                            Receive support for project delivery, quality assurance, customer engagement, and service
+                            expansion.
                         </p>
                     </div>
                 </div>
 
                 <!-- Business Growth Resources -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="framework-card">
+                    <div class="framework-card wow fadeInUp" data-wow-delay=".7s">
                         <div class="framework-card__icon">
                             <i class="fa-solid fa-chart-pie"></i>
                         </div>
                         <h5 class="black fw-bold mb-3" style="font-size: 19px;">Business Growth Resources</h5>
                         <p class="pra fs-seven mb-0">
-                            Access marketing collateral, proposal templates, capability statements, case study frameworks, and business development support.
+                            Access marketing collateral, proposal templates, capability statements, case study
+                            frameworks, and business development support.
                         </p>
                     </div>
                 </div>
 
                 <!-- Knowledge Transfer -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="framework-card">
+                    <div class="framework-card wow fadeInUp" data-wow-delay=".8s">
                         <div class="framework-card__icon">
                             <i class="fa-solid fa-arrows-spin"></i>
                         </div>
                         <h5 class="black fw-bold mb-3" style="font-size: 19px;">Knowledge Transfer</h5>
                         <p class="pra fs-seven mb-0">
-                            Benefit from ongoing updates across cybersecurity, AI governance, cloud security, compliance, risk management, and emerging technologies.
+                            Benefit from ongoing updates across cybersecurity, AI governance, cloud security,
+                            compliance, risk management, and emerging technologies.
                         </p>
                     </div>
                 </div>
@@ -593,7 +712,8 @@
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
                     <div class="section-title">
-                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-2" style="color: #ffffff !important; border-color: rgba(255, 255, 255, 0.1);">
+                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-2"
+                            style="color: #ffffff !important; border-color: rgba(255, 255, 255, 0.1);">
                             CORE VALUES
                         </span>
                         <h2 class="white fw-bold">
@@ -609,7 +729,7 @@
             <div class="row g-4">
                 <!-- Principle 1 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="principle-dark-card">
+                    <div class="principle-dark-card wow fadeInUp" data-wow-delay=".2s">
                         <i class="fa-solid fa-award principle-icon"></i>
                         <h5 class="white fw-semibold fs-six mb-2">Professional Standards</h5>
                         <p class="white65 fs-seven mb-0">Maintain the highest professional standards</p>
@@ -617,7 +737,7 @@
                 </div>
                 <!-- Principle 2 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="principle-dark-card">
+                    <div class="principle-dark-card wow fadeInUp" data-wow-delay=".25s">
                         <i class="fa-solid fa-sitemap principle-icon"></i>
                         <h5 class="white fw-semibold fs-six mb-2">Approved Approaches</h5>
                         <p class="white65 fs-seven mb-0">Follow approved methodologies</p>
@@ -625,7 +745,7 @@
                 </div>
                 <!-- Principle 3 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="principle-dark-card">
+                    <div class="principle-dark-card wow fadeInUp" data-wow-delay=".3s">
                         <i class="fa-solid fa-user-shield principle-icon"></i>
                         <h5 class="white fw-semibold fs-six mb-2">Client Trust</h5>
                         <p class="white65 fs-seven mb-0">Protect client confidentiality</p>
@@ -633,7 +753,7 @@
                 </div>
                 <!-- Principle 4 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="principle-dark-card">
+                    <div class="principle-dark-card wow fadeInUp" data-wow-delay=".35s">
                         <i class="fa-solid fa-tag principle-icon"></i>
                         <h5 class="white fw-semibold fs-six mb-2">Brand Identity</h5>
                         <p class="white65 fs-seven mb-0">Uphold Clarent360 brand values</p>
@@ -641,7 +761,7 @@
                 </div>
                 <!-- Principle 5 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="principle-dark-card">
+                    <div class="principle-dark-card wow fadeInUp" data-wow-delay=".4s">
                         <i class="fa-solid fa-scale-balanced principle-icon"></i>
                         <h5 class="white fw-semibold fs-six mb-2">Ethical Delivery</h5>
                         <p class="white65 fs-seven mb-0">Deliver services consistently and ethically</p>
@@ -649,7 +769,7 @@
                 </div>
                 <!-- Principle 6 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="principle-dark-card">
+                    <div class="principle-dark-card wow fadeInUp" data-wow-delay=".45s">
                         <i class="fa-solid fa-graduation-cap principle-icon"></i>
                         <h5 class="white fw-semibold fs-six mb-2">Ongoing Learning</h5>
                         <p class="white65 fs-seven mb-0">Participate in continuous professional development</p>
@@ -657,7 +777,7 @@
                 </div>
                 <!-- Principle 7 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="principle-dark-card">
+                    <div class="principle-dark-card wow fadeInUp" data-wow-delay=".5s">
                         <i class="fa-solid fa-clipboard-check principle-icon"></i>
                         <h5 class="white fw-semibold fs-six mb-2">Quality Assurance</h5>
                         <p class="white65 fs-seven mb-0">Support quality assurance initiatives</p>
@@ -665,7 +785,7 @@
                 </div>
                 <!-- Principle 8 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="principle-dark-card">
+                    <div class="principle-dark-card wow fadeInUp" data-wow-delay=".55s">
                         <i class="fa-solid fa-lightbulb principle-icon"></i>
                         <h5 class="white fw-semibold fs-six mb-2">Excellence Culture</h5>
                         <p class="white65 fs-seven mb-0">Contribute to a culture of excellence and innovation</p>
@@ -677,7 +797,7 @@
     <!-- Section 5: Franchise Operating Principles End -->
 
     <!-- Section 6: Franchise Journey Start -->
-    <section class="section-padding bg-light fix" id="journey-section">
+    <section class="section-padding bg-color2 fix" id="journey-section">
         <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
@@ -695,25 +815,27 @@
             <div class="row g-4">
                 <!-- Step 1 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="process-card">
+                    <div class="process-card wow fadeInUp" data-wow-delay=".3s">
                         <span class="process-card__step">Step 01</span>
                         <h4 class="black fw-bold fs-five mb-2 mt-2">Discovery & Qualification</h4>
-                        <p class="pra fs-seven mb-0">Understand the opportunity, territory model, and operational expectations.</p>
+                        <p class="pra fs-seven mb-0">Understand the opportunity, territory model, and operational
+                            expectations.</p>
                     </div>
                 </div>
 
                 <!-- Step 2 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="process-card">
+                    <div class="process-card wow fadeInUp" data-wow-delay=".4s">
                         <span class="process-card__step">Step 02</span>
                         <h4 class="black fw-bold fs-five mb-2 mt-2">Assessment & Alignment</h4>
-                        <p class="pra fs-seven mb-0">Evaluate strategic fit, professional capabilities, and long-term business objectives.</p>
+                        <p class="pra fs-seven mb-0">Evaluate strategic fit, professional capabilities, and long-term
+                            business objectives.</p>
                     </div>
                 </div>
 
                 <!-- Step 3 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="process-card">
+                    <div class="process-card wow fadeInUp" data-wow-delay=".5s">
                         <span class="process-card__step">Step 03</span>
                         <h4 class="black fw-bold fs-five mb-2 mt-2">Onboarding & Certification</h4>
                         <p class="pra fs-seven mb-0">Complete franchise onboarding and service delivery training.</p>
@@ -722,28 +844,31 @@
 
                 <!-- Step 4 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="process-card">
+                    <div class="process-card wow fadeInUp" data-wow-delay=".6s">
                         <span class="process-card__step">Step 04</span>
                         <h4 class="black fw-bold fs-five mb-2 mt-2">Launch Preparation</h4>
-                        <p class="pra fs-seven mb-0">Establish operational readiness, local business planning, and market engagement activities.</p>
+                        <p class="pra fs-seven mb-0">Establish operational readiness, local business planning, and
+                            market engagement activities.</p>
                     </div>
                 </div>
 
                 <!-- Step 5 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="process-card">
+                    <div class="process-card wow fadeInUp" data-wow-delay=".7s">
                         <span class="process-card__step">Step 05</span>
                         <h4 class="black fw-bold fs-five mb-2 mt-2">Business Launch</h4>
-                        <p class="pra fs-seven mb-0">Begin delivering Clarent360 services within the approved territory.</p>
+                        <p class="pra fs-seven mb-0">Begin delivering Clarent360 services within the approved territory.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Step 6 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="process-card">
+                    <div class="process-card wow fadeInUp" data-wow-delay=".8s">
                         <span class="process-card__step">Step 06</span>
                         <h4 class="black fw-bold fs-five mb-2 mt-2">Growth & Expansion</h4>
-                        <p class="pra fs-seven mb-0">Scale service offerings, strengthen local presence, and build long-term client relationships.</p>
+                        <p class="pra fs-seven mb-0">Scale service offerings, strengthen local presence, and build
+                            long-term client relationships.</p>
                     </div>
                 </div>
             </div>
@@ -757,7 +882,7 @@
             <div class="row g-5 align-items-center">
                 <!-- Left Column: Description -->
                 <div class="col-lg-6">
-                    <div class="techgon-content pe-lg-4">
+                    <div class="difference-content-card pe-lg-4 wow fadeInUp" data-wow-delay=".3s">
                         <div class="mb-4">
                             <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-2">
                                 UNIQUE VALUE
@@ -766,7 +891,11 @@
                                 The Clarent360 Difference
                             </h2>
                             <p class="fs-seven pra mb-0">
-                                Most consulting businesses rely heavily on individual expertise. Clarent360 combines proven methodologies, practical industry experience, governance-driven delivery, cybersecurity expertise, AI governance capability, continuous innovation, and structured quality assurance. This enables franchise partners to deliver enterprise-grade services while building sustainable local businesses.
+                                Most consulting businesses rely heavily on individual expertise. Clarent360 combines
+                                proven methodologies, practical industry experience, governance-driven delivery,
+                                cybersecurity expertise, AI governance capability, continuous innovation, and structured
+                                quality assurance. This enables franchise partners to deliver enterprise-grade services
+                                while building sustainable local businesses.
                             </p>
                         </div>
                     </div>
@@ -775,44 +904,59 @@
                 <!-- Right Column: Component elements list -->
                 <div class="col-lg-6">
                     <div class="d-grid gap-3">
-                        <div class="difference-list-item d-flex align-items-center gap-3">
-                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i class="fa-solid fa-sitemap"></i></span>
+                        <div class="difference-list-item d-flex align-items-center gap-3 wow fadeInUp"
+                            data-wow-delay=".3s">
+                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i
+                                    class="fa-solid fa-sitemap"></i></span>
                             <div>
                                 <h5 class="black fw-bold mb-0" style="font-size:16px;">Proven Methodologies</h5>
                             </div>
                         </div>
-                        <div class="difference-list-item d-flex align-items-center gap-3">
-                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i class="fa-solid fa-briefcase"></i></span>
+                        <div class="difference-list-item d-flex align-items-center gap-3 wow fadeInUp"
+                            data-wow-delay=".35s">
+                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i
+                                    class="fa-solid fa-briefcase"></i></span>
                             <div>
-                                <h5 class="black fw-bold mb-0" style="font-size:16px;">Practical Industry Experience</h5>
+                                <h5 class="black fw-bold mb-0" style="font-size:16px;">Practical Industry Experience
+                                </h5>
                             </div>
                         </div>
-                        <div class="difference-list-item d-flex align-items-center gap-3">
-                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i class="fa-solid fa-scale-balanced"></i></span>
+                        <div class="difference-list-item d-flex align-items-center gap-3 wow fadeInUp"
+                            data-wow-delay=".4s">
+                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i
+                                    class="fa-solid fa-scale-balanced"></i></span>
                             <div>
                                 <h5 class="black fw-bold mb-0" style="font-size:16px;">Governance-Driven Delivery</h5>
                             </div>
                         </div>
-                        <div class="difference-list-item d-flex align-items-center gap-3">
-                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i class="fa-solid fa-shield-halved"></i></span>
+                        <div class="difference-list-item d-flex align-items-center gap-3 wow fadeInUp"
+                            data-wow-delay=".45s">
+                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i
+                                    class="fa-solid fa-shield-halved"></i></span>
                             <div>
                                 <h5 class="black fw-bold mb-0" style="font-size:16px;">Cybersecurity Expertise</h5>
                             </div>
                         </div>
-                        <div class="difference-list-item d-flex align-items-center gap-3">
-                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i class="fa-solid fa-robot"></i></span>
+                        <div class="difference-list-item d-flex align-items-center gap-3 wow fadeInUp"
+                            data-wow-delay=".5s">
+                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i
+                                    class="fa-solid fa-robot"></i></span>
                             <div>
                                 <h5 class="black fw-bold mb-0" style="font-size:16px;">AI Governance Capability</h5>
                             </div>
                         </div>
-                        <div class="difference-list-item d-flex align-items-center gap-3">
-                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i class="fa-solid fa-lightbulb"></i></span>
+                        <div class="difference-list-item d-flex align-items-center gap-3 wow fadeInUp"
+                            data-wow-delay=".55s">
+                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i
+                                    class="fa-solid fa-lightbulb"></i></span>
                             <div>
                                 <h5 class="black fw-bold mb-0" style="font-size:16px;">Continuous Innovation</h5>
                             </div>
                         </div>
-                        <div class="difference-list-item d-flex align-items-center gap-3">
-                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i class="fa-solid fa-clipboard-check"></i></span>
+                        <div class="difference-list-item d-flex align-items-center gap-3 wow fadeInUp"
+                            data-wow-delay=".6s">
+                            <span class="d-center fs-four p1-clr" style="min-width: 40px;"><i
+                                    class="fa-solid fa-clipboard-check"></i></span>
                             <div>
                                 <h5 class="black fw-bold mb-0" style="font-size:16px;">Structured Quality Assurance</h5>
                             </div>
@@ -827,19 +971,25 @@
     <!-- Section 7: The Clarent360 Difference End -->
 
     <!-- Section 8: CTA Section Start -->
-    <section class="customer-touh fix" style="padding-bottom: 50px; padding-top: 50px;">
+    <section class="customer-touch fix" style="padding-bottom: 50px; padding-top: 50px;">
         <div class="container">
             <div class="customer-touch-wrap">
                 <div class="section-title">
-                    <h2 class="wow fadeInUp white fw-bold mb-3 touchhh">
+                    <h2 class="wow fadeInUp white fw-bold mb-3 touchhh" data-wow-delay=".3s">
                         Build the Future of Cybersecurity and Governance
                     </h2>
-                    <p class="sub-badg white fs-seven d-block mb-3" style="max-width: 800px; margin: 0 auto;">
-                        The demand for cybersecurity, AI governance, risk management, compliance, and digital resilience continues to grow globally. Clarent360 Franchise Partners are positioned to meet this demand using proven frameworks, specialist knowledge, and a trusted operating model. If you are ready to build a high-value advisory and cybersecurity business with long-term growth potential, we invite you to explore the Clarent360 Franchise Partner Program.
+                    <p class="sub-badge white fs-seven d-block mb-3 wow fadeInUp" data-wow-delay=".4s"
+                        style="max-width: 800px; margin: 0 auto;">
+                        The demand for cybersecurity, AI governance, risk management, compliance, and digital resilience
+                        continues to grow globally. Clarent360 Franchise Partners are positioned to meet this demand
+                        using proven frameworks, specialist knowledge, and a trusted operating model. If you are ready
+                        to build a high-value advisory and cybersecurity business with long-term growth potential, we
+                        invite you to explore the Clarent360 Franchise Partner Program.
                     </p>
                 </div>
                 <a href="contact.html?subject=Franchise%20Partner%20Program"
-                    class="common-btn text-nowrap heading-font box-style d-inline-flex justify-content-center align-items-center gap-2 fs18 fw-semibold black overflow-hidden bg-white rounded100">
+                    class="common-btn text-nowrap heading-font box-style d-inline-flex justify-content-center align-items-center gap-2 fs18 fw-semibold black overflow-hidden bg-white rounded100 wow fadeInUp"
+                    data-wow-delay=".5s">
                     Apply for Franchise Program
                 </a>
             </div>

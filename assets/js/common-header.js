@@ -605,7 +605,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const psychometricBtn = document.getElementById('psychometricBtn');
         if (psychometricBtn) {
             psychometricBtn.addEventListener('click', () => {
-                window.location.href = 'about.html';
+                window.location.href = 'clarent-psychometrics.html';
             });
         }
 
