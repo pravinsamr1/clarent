@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Clarent Five Psychometric Analysis and Workforce Intelligence Solutions — scientifically validated assessments and AI-powered analytics for construction, real estate, education, healthcare, and government.">
+<title>Clarent Five — Psychometric Analysis & Workforce Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ─── TOKENS ─────────────────────────────────────────── */
+:root {
+  --ink:      #080D1A;
+  --deep:     #0C1526;
+  --surface:  #111D34;
+  --card:     #162038;
+  --border:   rgba(255,255,255,0.07);
+  --glow:     rgba(0,198,255,0.12);
+
+  --cyan:     #00C6FF;
+  --cyan-dim: rgba(0,198,255,0.15);
+  --gold:     #F0A500;
+  --gold-dim: rgba(240,165,0,0.12);
+  --violet:   #7B61FF;
+  --violet-dim:rgba(123,97,255,0.15);
+  --green:    #00D68F;
+  --green-dim:rgba(0,214,143,0.12);
+
+  --text:     #E2E8F4;
+  --muted:    #8897B5;
+  --small:    #5D6E8A;
+
+  --r:        6px;
+  --r-lg:     12px;
+  --max:      1180px;
+}
+
+/* ─── RESET ──────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  background:var(--ink);
+  color:var(--text);
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ─── TYPOGRAPHY ─────────────────────────────────────── */
+.display{
+  font-family:'Syne',sans-serif;
+  font-weight:800;
+  line-height:1.05;
+}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--cyan);
+}
+h2{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(24px,3vw,36px);line-height:1.15}
+h3{font-family:'Syne',sans-serif;font-weight:600;font-size:18px;line-height:1.3}
+h4{font-family:'Inter',sans-serif;font-weight:600;font-size:14px}
+
+/* ─── LAYOUT ─────────────────────────────────────────── */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+section{padding:96px 0}
+.section-head{text-align:center;margin-bottom:64px}
+.section-head p{max-width:600px;margin:16px auto 0;color:var(--muted);font-size:15px}
+
+/* ─── NAV ────────────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;height:72px;
+  background:rgba(8,13,26,0.82);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:20px;
+  letter-spacing:.04em;color:#fff;
+  display:flex;align-items:center;gap:10px;
+}
+.nav-logo span{color:var(--cyan)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:13px;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{
+  background:var(--cyan);color:var(--ink);
+  font-size:13px;font-weight:600;
+  padding:9px 22px;border-radius:var(--r);
+  transition:opacity .2s;
+}
+.nav-cta:hover{opacity:.85}
+
+/* ─── HERO ───────────────────────────────────────────── */
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:120px 0 80px;
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,var(--ink) 0%,#0A1830 60%,var(--ink) 100%);
+}
+/* animated grid */
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(0,198,255,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,198,255,0.04) 1px,transparent 1px);
+  background-size:60px 60px;
+  animation:drift 25s linear infinite;
+}
+@keyframes drift{from{transform:translateY(0)}to{transform:translateY(60px)}}
+.hero-glow{
+  position:absolute;
+  width:700px;height:700px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(0,198,255,0.07) 0%,transparent 70%);
+  top:-100px;right:-200px;
+  pointer-events:none;
+}
+.hero-glow2{
+  position:absolute;
+  width:500px;height:500px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(123,97,255,0.06) 0%,transparent 70%);
+  bottom:-100px;left:-150px;
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;
+  display:grid;grid-template-columns:1fr 420px;
+  gap:64px;align-items:center;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(0,198,255,0.1);border:1px solid rgba(0,198,255,0.2);
+  border-radius:100px;padding:6px 16px;
+  font-size:11px;font-family:'JetBrains Mono',monospace;
+  color:var(--cyan);letter-spacing:.12em;text-transform:uppercase;
+  margin-bottom:24px;
+}
+.hero-tag::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--cyan);animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+.hero-title{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:clamp(38px,5vw,62px);line-height:1.0;
+  color:#fff;margin-bottom:24px;
+}
+.hero-title em{
+  font-style:normal;
+  background:linear-gradient(135deg,var(--cyan) 0%,var(--violet) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-sub{color:var(--muted);font-size:16px;line-height:1.7;max-width:520px;margin-bottom:40px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--cyan);color:var(--ink);
+  font-weight:600;font-size:14px;
+  padding:13px 28px;border-radius:var(--r);
+  transition:box-shadow .2s,transform .1s;
+}
+.btn-primary:hover{box-shadow:0 0 28px rgba(0,198,255,0.35);transform:translateY(-1px)}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(255,255,255,0.15);color:#fff;
+  font-weight:500;font-size:14px;
+  padding:13px 28px;border-radius:var(--r);
+  transition:border-color .2s,background .2s;
+}
+.btn-outline:hover{border-color:var(--cyan);background:rgba(0,198,255,0.05)}
+
+/* hero stats panel */
+.hero-panel{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  overflow:hidden;
+}
+.hero-panel-head{
+  padding:20px 24px;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.hero-panel-head span{font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.dots{display:flex;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.12)}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)}
+.stat-cell{
+  background:var(--card);padding:20px;
+}
+.stat-cell .val{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:28px;color:#fff;margin-bottom:2px;
+}
+.stat-cell .val span{color:var(--cyan)}
+.stat-cell .lbl{font-size:11px;color:var(--muted)}
+.hero-bar-block{padding:20px 24px;border-top:1px solid var(--border)}
+.bar-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.bar-row:last-child{margin-bottom:0}
+.bar-lbl{font-size:11px;color:var(--muted);width:110px;flex-shrink:0}
+.bar-track{flex:1;height:4px;background:rgba(255,255,255,0.07);border-radius:2px;overflow:hidden}
+.bar-fill{height:100%;border-radius:2px;transition:width 1.5s ease}
+.bar-pct{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--cyan);width:30px;text-align:right}
+
+/* ─── TRUST STRIP ────────────────────────────────────── */
+.trust-strip{
+  padding:36px 0;
+  background:var(--deep);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+.trust-strip .wrap{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-item{
+  display:flex;align-items:center;gap:10px;
+  font-size:12px;color:var(--muted);
+  font-family:'JetBrains Mono',monospace;letter-spacing:.06em;
+}
+.trust-icon{font-size:18px}
+
+/* ─── FRAMEWORK ──────────────────────────────────────── */
+.framework{background:var(--deep)}
+.fw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:2px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden}
+.fw-card{
+  background:var(--card);padding:28px 24px;
+  transition:background .2s;
+  cursor:default;
+}
+.fw-card:hover{background:var(--surface)}
+.fw-icon{
+  width:44px;height:44px;border-radius:var(--r);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;margin-bottom:16px;
+}
+.fw-card h3{font-size:15px;margin-bottom:8px;color:#fff}
+.fw-card p{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* ─── SEXTANT PREDICTIVE FRAMEWORKS ─────────────────── */
+.sextant{background:var(--ink)}
+.sextant-intro{
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
+  margin-bottom:56px;padding:36px;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+}
+.sextant-intro-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(123,97,255,0.1);border:1px solid rgba(123,97,255,0.2);
+  border-radius:100px;padding:5px 14px;
+  font-size:10px;font-family:'JetBrains Mono',monospace;
+  color:var(--violet);letter-spacing:.12em;text-transform:uppercase;
+  margin-bottom:16px;
+}
+.sextant-intro h3{font-size:22px;color:#fff;margin-bottom:12px;font-family:'Syne',sans-serif;font-weight:700}
+.sextant-intro p{font-size:13px;color:var(--muted);line-height:1.7}
+.sextant-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sextant-stat{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+  padding:20px 16px;text-align:center;
+}
+.sextant-stat .s-val{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;color:#fff;margin-bottom:4px}
+.sextant-stat .s-val span{color:var(--violet)}
+.sextant-stat .s-lbl{font-size:11px;color:var(--muted);font-family:'JetBrains Mono',monospace}
+
+/* framework accordion cards */
+.sx-cards{display:flex;flex-direction:column;gap:2px}
+.sx-card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);
+  overflow:hidden;transition:border-color .2s;
+}
+.sx-card.open{border-color:rgba(255,255,255,0.14)}
+.sx-header{
+  display:flex;align-items:center;gap:16px;
+  padding:22px 24px;cursor:pointer;
+  transition:background .15s;
+  user-select:none;
+}
+.sx-header:hover{background:var(--surface)}
+.sx-badge{
+  font-size:9px;font-family:'JetBrains Mono',monospace;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:3px 10px;border-radius:100px;flex-shrink:0;
+  white-space:nowrap;
+}
+.sx-ico{font-size:22px;flex-shrink:0}
+.sx-meta{flex:1;min-width:0}
+.sx-meta h3{font-size:16px;color:#fff;margin-bottom:3px;font-family:'Syne',sans-serif;font-weight:600}
+.sx-meta p{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sx-pills{display:flex;gap:6px;flex-shrink:0}
+.sx-pill{font-size:10px;font-family:'JetBrains Mono',monospace;padding:3px 8px;border-radius:100px;border:1px solid var(--border);color:var(--small)}
+.sx-chevron{color:var(--muted);font-size:18px;transition:transform .25s;flex-shrink:0}
+.sx-card.open .sx-chevron{transform:rotate(90deg)}
+
+.sx-body{display:none;border-top:1px solid var(--border)}
+.sx-card.open .sx-body{display:block}
+.sx-body-inner{padding:24px}
+.sx-body-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.sx-domain-label{
+  font-size:10px;font-family:'JetBrains Mono',monospace;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:12px;margin-top:20px;
+  display:flex;align-items:center;gap:8px;
+}
+.sx-domain-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.sx-domain-label:first-of-type{margin-top:0}
+.sx-assess-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sx-assess-item{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:14px 16px;
+  display:flex;gap:12px;align-items:flex-start;
+  transition:border-color .15s;
+}
+.sx-assess-item:hover{border-color:rgba(255,255,255,0.12)}
+.sx-num{
+  font-size:10px;font-family:'JetBrains Mono',monospace;
+  padding:2px 7px;border-radius:4px;flex-shrink:0;margin-top:1px;
+}
+.sx-assess-item h4{font-size:12px;color:#fff;margin-bottom:3px;font-weight:500;line-height:1.4}
+.sx-assess-item p{font-size:11px;color:var(--muted);line-height:1.5}
+.sx-map{
+  margin-top:20px;padding:12px 16px;
+  border-top:1px solid var(--border);
+  font-size:11px;color:var(--muted);
+  display:flex;align-items:center;gap:8px;
+  font-family:'JetBrains Mono',monospace;letter-spacing:.04em;
+}
+.sx-map::before{content:'↳';font-size:13px}
+.sx-alert{
+  background:rgba(255,77,109,0.08);border:1px solid rgba(255,77,109,0.18);
+  border-radius:var(--r);padding:12px 14px;margin-bottom:16px;
+  font-size:12px;color:#ff9aaa;line-height:1.6;
+  display:flex;gap:8px;
+}
+
+/* colour variants per framework */
+.sx-lm .sx-badge{background:rgba(0,214,143,0.12);color:var(--green)}
+.sx-lm .sx-header:hover{background:rgba(0,214,143,0.04)}
+.sx-lm.open{border-color:rgba(0,214,143,0.2)}
+.sx-lm .sx-num{background:rgba(0,214,143,0.12);color:var(--green)}
+
+.sx-md .sx-badge{background:rgba(240,165,0,0.12);color:var(--gold)}
+.sx-md .sx-header:hover{background:rgba(240,165,0,0.04)}
+.sx-md.open{border-color:rgba(240,165,0,0.2)}
+.sx-md .sx-num{background:rgba(240,165,0,0.12);color:var(--gold)}
+
+.sx-tr .sx-badge{background:var(--cyan-dim);color:var(--cyan)}
+.sx-tr .sx-header:hover{background:rgba(0,198,255,0.04)}
+.sx-tr.open{border-color:rgba(0,198,255,0.2)}
+.sx-tr .sx-num{background:var(--cyan-dim);color:var(--cyan)}
+
+.sx-an .sx-badge{background:var(--violet-dim);color:var(--violet)}
+.sx-an .sx-header:hover{background:rgba(123,97,255,0.04)}
+.sx-an.open{border-color:rgba(123,97,255,0.2)}
+.sx-an .sx-num{background:var(--violet-dim);color:var(--violet)}
+
+/* ─── INDUSTRIES ─────────────────────────────────────── */
+.industries{background:var(--ink)}
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ind-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  padding:28px;
+  transition:border-color .25s,transform .2s,box-shadow .25s;
+  position:relative;overflow:hidden;
+}
+.ind-card::before{
+  content:'';
+  position:absolute;top:0;left:0;right:0;height:2px;
+  opacity:0;transition:opacity .25s;
+}
+.ind-card:hover{border-color:rgba(0,198,255,0.25);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,0.3)}
+.ind-card:hover::before{opacity:1}
+.ind-card.c-cyan::before{background:linear-gradient(90deg,var(--cyan),var(--violet))}
+.ind-card.c-gold::before{background:linear-gradient(90deg,var(--gold),#ff8c00)}
+.ind-card.c-violet::before{background:linear-gradient(90deg,var(--violet),var(--cyan))}
+.ind-card.c-green::before{background:linear-gradient(90deg,var(--green),var(--cyan))}
+.ind-card.c-red::before{background:linear-gradient(90deg,#FF4D6D,var(--violet))}
+.ind-card.c-orange::before{background:linear-gradient(90deg,#FF7849,var(--gold))}
+.ind-icon{font-size:28px;margin-bottom:12px}
+.ind-card h3{font-size:16px;color:#fff;margin-bottom:8px}
+.ind-card p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px}
+.ind-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag-chip{
+  font-size:10px;font-family:'JetBrains Mono',monospace;
+  padding:3px 9px;border-radius:100px;
+  border:1px solid var(--border);color:var(--small);
+}
+
+/* ─── PORTFOLIO ──────────────────────────────────────── */
+.portfolio{background:var(--deep)}
+.port-tabs{display:flex;gap:4px;margin-bottom:40px;background:var(--card);padding:4px;border-radius:var(--r);width:fit-content;flex-wrap:wrap}
+.port-tab{
+  font-size:12px;font-weight:500;padding:9px 18px;border-radius:4px;
+  cursor:pointer;color:var(--muted);transition:all .2s;border:none;background:none;
+}
+.port-tab.active{background:var(--cyan);color:var(--ink);}
+.port-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.port-item{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--r);padding:18px 20px;
+  display:flex;align-items:flex-start;gap:14px;
+  transition:border-color .2s,background .2s;
+}
+.port-item:hover{border-color:rgba(0,198,255,0.2);background:var(--surface)}
+.port-num{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  color:var(--cyan);background:var(--cyan-dim);
+  padding:3px 8px;border-radius:4px;flex-shrink:0;margin-top:2px;
+}
+.port-item h4{font-size:13px;color:#fff;margin-bottom:4px;font-weight:500}
+.port-item p{font-size:12px;color:var(--muted)}
+
+/* ─── CUSTOM ASSESSMENTS ─────────────────────────────── */
+.custom{background:var(--ink)}
+.custom-inner{
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+}
+.custom-steps{display:flex;flex-direction:column;gap:0}
+.custom-step{
+  display:flex;gap:20px;padding:24px 0;
+  border-bottom:1px solid var(--border);
+}
+.custom-step:last-child{border-bottom:none}
+.step-num{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  color:var(--cyan);background:var(--cyan-dim);
+  min-width:36px;height:36px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:2px;font-weight:500;
+}
+.custom-step h4{font-size:15px;color:#fff;margin-bottom:6px}
+.custom-step p{font-size:13px;color:var(--muted)}
+.custom-visual{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:32px;
+}
+.cv-head{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  color:var(--muted);letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:20px;
+  padding-bottom:16px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.cv-status{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:10px;background:var(--green-dim);
+  border:1px solid rgba(0,214,143,0.2);color:var(--green);
+  padding:3px 10px;border-radius:100px;
+}
+.cv-status::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+.cv-sector{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 0;border-bottom:1px solid var(--border);
+}
+.cv-sector:last-child{border-bottom:none}
+.cv-sector .name{font-size:13px;color:var(--text)}
+.cv-sector .pct{font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--cyan)}
+.cv-note{
+  margin-top:20px;
+  background:var(--gold-dim);border:1px solid rgba(240,165,0,0.2);
+  border-radius:var(--r);padding:14px 16px;
+  font-size:13px;color:var(--gold);
+}
+.cv-note strong{display:block;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+
+/* ─── OUTCOMES ───────────────────────────────────────── */
+.outcomes{background:var(--deep)}
+.out-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden}
+.out-cell{
+  background:var(--card);padding:28px 24px;
+  transition:background .2s;
+}
+.out-cell:hover{background:var(--surface)}
+.out-icon{font-size:22px;margin-bottom:14px}
+.out-cell h3{font-size:14px;color:#fff;margin-bottom:8px}
+.out-cell p{font-size:12px;color:var(--muted);line-height:1.6}
+
+/* ─── AI CAPABILITIES ────────────────────────────────── */
+.ai-section{background:var(--ink)}
+.ai-inner{
+  display:grid;grid-template-columns:480px 1fr;gap:72px;align-items:start;
+}
+.ai-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.ai-badge{
+  display:flex;align-items:center;gap:8px;
+  background:var(--card);border:1px solid var(--border);
+  padding:10px 16px;border-radius:var(--r);
+  font-size:13px;color:var(--text);
+  transition:border-color .2s;
+}
+.ai-badge:hover{border-color:rgba(123,97,255,0.3)}
+.ai-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--violet);flex-shrink:0}
+.ai-visual{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;
+  padding-top:8px;
+}
+.ai-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:20px;
+  transition:transform .2s,box-shadow .2s;
+}
+.ai-card:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,0.4)}
+.ai-card-ico{font-size:22px;margin-bottom:10px}
+.ai-card h4{font-size:13px;color:#fff;margin-bottom:6px}
+.ai-card p{font-size:12px;color:var(--muted);line-height:1.5}
+
+/* ─── CTA ────────────────────────────────────────────── */
+.cta-section{
+  background:linear-gradient(135deg,var(--deep) 0%,#0D1F3C 50%,var(--deep) 100%);
+  padding:100px 0;
+  position:relative;overflow:hidden;
+}
+.cta-glow{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:800px;height:400px;
+  background:radial-gradient(ellipse,rgba(0,198,255,0.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+.cta-inner{text-align:center;position:relative;max-width:640px;margin:0 auto}
+.cta-inner h2{font-size:clamp(28px,4vw,46px);color:#fff;margin-bottom:16px}
+.cta-inner p{color:var(--muted);font-size:16px;margin-bottom:40px}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.form-popup{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:40px;margin-top:48px;text-align:left;
+  display:none;
+}
+.form-popup.open{display:block}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.form-group label{font-size:12px;font-weight:500;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.form-group input,.form-group select,.form-group textarea{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--r);padding:11px 14px;
+  font-size:14px;color:var(--text);font-family:'Inter',sans-serif;
+  outline:none;transition:border-color .2s;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--cyan)}
+.form-group select option{background:var(--card)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-submit{
+  background:var(--cyan);color:var(--ink);
+  font-weight:600;font-size:14px;
+  padding:13px 32px;border-radius:var(--r);
+  border:none;cursor:pointer;width:100%;
+  transition:opacity .2s;
+}
+.form-submit:hover{opacity:.88}
+
+/* ─── FOOTER ─────────────────────────────────────────── */
+footer{
+  background:var(--ink);
+  border-top:1px solid var(--border);
+  padding:48px 0 32px;
+}
+.footer-inner{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;
+  margin-bottom:40px;
+}
+.footer-brand .logo{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:18px;
+  color:#fff;margin-bottom:12px;
+}
+.footer-brand .logo span{color:var(--cyan)}
+.footer-brand p{font-size:13px;color:var(--muted);max-width:260px;line-height:1.7}
+.footer-col h5{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+.footer-col a{display:block;font-size:13px;color:var(--small);margin-bottom:10px;transition:color .2s}
+.footer-col a:hover{color:var(--cyan)}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:28px;border-top:1px solid var(--border);
+  font-size:12px;color:var(--small);flex-wrap:wrap;gap:12px;
+}
+.footer-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--green-dim);border:1px solid rgba(0,214,143,0.2);
+  color:var(--green);font-size:11px;font-family:'JetBrains Mono',monospace;
+  padding:4px 10px;border-radius:100px;
+}
+
+/* ─── SCROLL REVEAL ──────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ─── RESPONSIVE ─────────────────────────────────────── */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-panel{display:none}
+  .ind-grid{grid-template-columns:1fr 1fr}
+  .out-grid{grid-template-columns:1fr 1fr}
+  .ai-inner{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .custom-inner{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .ind-grid{grid-template-columns:1fr}
+  .out-grid{grid-template-columns:1fr}
+  .ai-visual{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  nav .nav-links{display:none}
+  .port-tabs{width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">CLARENT<span>FIVE</span></div>
+  <div class="nav-links">
+    <a href="#framework">Framework</a>
+    <a href="#sextant">SEXTANT</a>
+    <a href="#industries">Industries</a>
+    <a href="#portfolio">Assessments</a>
+    <a href="#custom">Custom</a>
+    <a href="#contact" class="nav-cta">Talk to Us</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-content reveal">
+        <div class="hero-tag">Psychometric Analysis & Workforce Intelligence</div>
+        <h1 class="hero-title display">Unlock<br><em>Human Potential</em><br>Through Science</h1>
+        <p class="hero-sub">Scientifically validated assessments and AI-powered analytics that help organisations make smarter decisions about recruitment, leadership, safety, and workforce risk — across every industry sector.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Get Started →</a>
+          <a href="#portfolio" class="btn-outline">View Assessments</a>
+        </div>
+      </div>
+      <div class="hero-panel reveal">
+        <div class="hero-panel-head">
+          <span>WORKFORCE INTELLIGENCE SCORE</span>
+          <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-cell"><div class="val">94<span>%</span></div><div class="lbl">Predictive Accuracy</div></div>
+          <div class="stat-cell"><div class="val">3<span>×</span></div><div class="lbl">Retention Improvement</div></div>
+          <div class="stat-cell"><div class="val">28<span>+</span></div><div class="lbl">Validated Assessments</div></div>
+          <div class="stat-cell"><div class="val">10<span>+</span></div><div class="lbl">Industry Sectors</div></div>
+        </div>
+        <div class="hero-bar-block">
+          <div class="bar-row">
+            <div class="bar-lbl">Cognitive</div>
+            <div class="bar-track"><div class="bar-fill" style="width:92%;background:linear-gradient(90deg,var(--cyan),var(--violet))"></div></div>
+            <div class="bar-pct">92</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-lbl">Behavioural</div>
+            <div class="bar-track"><div class="bar-fill" style="width:88%;background:linear-gradient(90deg,var(--gold),#ff8c00)"></div></div>
+            <div class="bar-pct">88</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-lbl">Leadership</div>
+            <div class="bar-track"><div class="bar-fill" style="width:85%;background:linear-gradient(90deg,var(--violet),#a084ff)"></div></div>
+            <div class="bar-pct">85</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-lbl">Human Risk</div>
+            <div class="bar-track"><div class="bar-fill" style="width:96%;background:linear-gradient(90deg,var(--green),#00e5a5)"></div></div>
+            <div class="bar-pct">96</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="wrap">
+    <div class="trust-item"><span class="trust-icon">🧬</span>Scientifically Validated</div>
+    <div class="trust-item"><span class="trust-icon">🤖</span>AI-Powered Analytics</div>
+    <div class="trust-item"><span class="trust-icon">🏗️</span>Industry-Specific Norms</div>
+    <div class="trust-item"><span class="trust-icon">🔒</span>Privacy Act Compliant</div>
+    <div class="trust-item"><span class="trust-icon">📊</span>Real-Time Dashboards</div>
+    <div class="trust-item"><span class="trust-icon">🎯</span>Custom Assessments Available</div>
+  </div>
+</div>
+
+<!-- FRAMEWORK -->
+<section class="framework" id="framework">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Our Methodology</div>
+      <h2>The Workforce Intelligence Framework</h2>
+      <p>Five integrated intelligence layers — each grounded in psychometric science, each delivering actionable data for better people decisions.</p>
+    </div>
+    <div class="fw-grid reveal">
+      <div class="fw-card">
+        <div class="fw-icon" style="background:var(--cyan-dim)">🧠</div>
+        <h3>Behavioural Intelligence</h3>
+        <p>Understand how individuals interact, communicate, collaborate, and respond under workplace pressure across diverse team environments.</p>
+      </div>
+      <div class="fw-card">
+        <div class="fw-icon" style="background:var(--violet-dim)">⚡</div>
+        <h3>Cognitive Intelligence</h3>
+        <p>Measure reasoning ability, learning agility, critical thinking, decision-making quality, and real-world problem-solving capability.</p>
+      </div>
+      <div class="fw-card">
+        <div class="fw-icon" style="background:var(--gold-dim)">👑</div>
+        <h3>Leadership Intelligence</h3>
+        <p>Identify leadership potential, management capability, succession readiness, executive effectiveness, and team influence dynamics.</p>
+      </div>
+      <div class="fw-card">
+        <div class="fw-icon" style="background:var(--green-dim)">🛡️</div>
+        <h3>Human Reliability Intelligence</h3>
+        <p>Assess risk tolerance, compliance behaviour, resilience, integrity, safety culture alignment, and organisational trustworthiness.</p>
+      </div>
+      <div class="fw-card">
+        <div class="fw-icon" style="background:rgba(255,77,109,0.12)">📈</div>
+        <h3>Predictive Workforce Analytics</h3>
+        <p>AI-driven insights to identify patterns linked to performance, retention, leadership success, and emerging workforce risk factors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEXTANT PREDICTIVE FRAMEWORKS -->
+<section class="sextant" id="sextant">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Predictive Intelligence Suite</div>
+      <h2>The SEXTANT Frameworks</h2>
+      <p>Four specialised predictive intelligence frameworks — from early childhood through career entry — designed for education providers, student welfare teams, and organisations investing in human potential at every life stage.</p>
+    </div>
+
+    <div class="sextant-intro reveal">
+      <div>
+        <div class="sextant-intro-tag">Clarent Five · SEXTANT Suite</div>
+        <h3>Beyond the Workforce —<br>Intelligence Across the Entire Human Journey</h3>
+        <p>Where the Workforce Intelligence Framework serves organisations hiring and developing adults, the SEXTANT frameworks extend that science earlier and wider — into schools, vocational pathways, graduate transitions, and youth mental health. Each framework is a standalone intelligence system with its own validated assessment library, Australian norm groups, and practitioner protocols.</p>
+      </div>
+      <div>
+        <div class="sextant-stat-row">
+          <div class="sextant-stat"><div class="s-val">4<span> fw</span></div><div class="s-lbl">Predictive frameworks</div></div>
+          <div class="sextant-stat"><div class="s-val">48<span>+</span></div><div class="s-lbl">Specialist assessments</div></div>
+          <div class="sextant-stat"><div class="s-val">6<span>–</span>26</div><div class="s-lbl">Age range covered</div></div>
+        </div>
+        <div style="margin-top:16px;padding:14px 16px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);font-size:12px;color:var(--muted);line-height:1.7">
+          Click any framework below to expand its full assessment library, domain mapping, and deployment context.
+        </div>
+      </div>
+    </div>
+
+    <div class="sx-cards reveal">
+
+      <!-- ── LUMINARY ── -->
+      <div class="sx-card sx-lm" id="sx-luminary">
+        <div class="sx-header" onclick="toggleSX('sx-luminary')">
+          <span class="sx-ico">✦</span>
+          <div class="sx-meta">
+            <h3>Luminary Intelligence Framework</h3>
+            <p>Predictive intelligence for junior school students — ages 6 to 12</p>
+          </div>
+          <div class="sx-pills">
+            <span class="sx-pill">Ages 6–12</span>
+            <span class="sx-pill">Primary school</span>
+            <span class="sx-pill">12 assessments</span>
+          </div>
+          <span class="sx-badge">SEXTANT · LUMINARY</span>
+          <span class="sx-chevron">›</span>
+        </div>
+        <div class="sx-body">
+          <div class="sx-body-inner">
+            <p class="sx-body-desc">Early-stage cognitive, behavioural and pathway intelligence for primary school students aged 6–12. Assessments are age-normed, gamified where appropriate, and designed for combined teacher, caregiver, and student input. All reports require qualified educator or psychologist review before sharing with families.</p>
+
+            <div class="sx-domain-label">Domain A — Cognitive &amp; Learning Intelligence · LM-01 to LM-04</div>
+            <div class="sx-assess-grid">
+              <div class="sx-assess-item">
+                <div class="sx-num">LM-01</div>
+                <div><h4>Foundational Reasoning Ability</h4><p>Age-appropriate numerical, verbal and spatial reasoning benchmarked against Australian primary school norms.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">LM-02</div>
+                <div><h4>Learning Style Preference Profile</h4><p>Visual, auditory, kinaesthetic and reading-writing modality mapping to inform classroom strategy and support.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">LM-03</div>
+                <div><h4>Working Memory &amp; Attention Span</h4><p>Short-term retention, sustained focus and task-switching capacity — key indicator for learning difficulty screening.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">LM-04</div>
+                <div><h4>Early Academic Potential Index</h4><p>Composite predictor for long-term academic trajectory across literacy, numeracy and reasoning domains.</p></div>
+              </div>
+            </div>
+
+            <div class="sx-domain-label">Domain B — Behavioural &amp; Social Intelligence · LM-05 to LM-08</div>
+            <div class="sx-assess-grid">
+              <div class="sx-assess-item">
+                <div class="sx-num">LM-05</div>
+                <div><h4>Social-Emotional Learning Readiness</h4><p>Empathy, cooperation, conflict navigation and relationship-forming capability against developmental milestones.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">LM-06</div>
+                <div><h4>Classroom Behaviour Profile</h4><p>Impulse control, peer interaction and instructional compliance — educator and caregiver observed multi-rater model.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">LM-07</div>
+                <div><h4>Curiosity &amp; Intrinsic Motivation</h4><p>Natural drive to explore, question and persist — a foundational predictor of lifelong learning engagement.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">LM-08</div>
+                <div><h4>Early Creative Thinking Profile</h4><p>Divergent thinking, imaginative problem-solving and flexible ideation applicable to STEAM learning contexts.</p></div>
+              </div>
+            </div>
+
+            <div class="sx-domain-label">Domain C — Pathway &amp; Potential Indicators · LM-09 to LM-12</div>
+            <div class="sx-assess-grid">
+              <div class="sx-assess-item">
+                <div class="sx-num">LM-09</div>
+                <div><h4>Gifted &amp; Talented Early Identifier</h4><p>High-potential composite screening for enrichment programme eligibility and selective school preparation.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">LM-10</div>
+                <div><h4>Learning Difficulty Risk Screening</h4><p>Early signal detection for dyslexia, dyscalculia and processing challenges — flags for educational psychologist referral.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">LM-11</div>
+                <div><h4>Parent-Teacher Alignment Report</h4><p>Multi-source input model combining educator observation and caregiver responses for a complete developmental picture.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">LM-12</div>
+                <div><h4>Interest &amp; Strength Discovery Map</h4><p>Age-appropriate gamified exploration of natural strengths and interest clusters for children aged 6–12.</p></div>
+              </div>
+            </div>
+            <div class="sx-map">Maps to: enrichment streaming · learning support referral · parent-teacher planning · Meridian Intelligence Framework transition</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── MERIDIAN ── -->
+      <div class="sx-card sx-md" id="sx-meridian">
+        <div class="sx-header" onclick="toggleSX('sx-meridian')">
+          <span class="sx-ico">◈</span>
+          <div class="sx-meta">
+            <h3>Meridian Intelligence Framework</h3>
+            <p>Predictive intelligence for high school students — ages 13 to 17</p>
+          </div>
+          <div class="sx-pills">
+            <span class="sx-pill">Ages 13–17</span>
+            <span class="sx-pill">Secondary school</span>
+            <span class="sx-pill">12 assessments</span>
+          </div>
+          <span class="sx-badge">SEXTANT · MERIDIAN</span>
+          <span class="sx-chevron">›</span>
+        </div>
+        <div class="sx-body">
+          <div class="sx-body-inner">
+            <p class="sx-body-desc">Pathway, cognitive and identity intelligence for secondary school students aged 13–17 — the critical crossroads where academic, vocational and personal trajectories form. Designed for career counsellors, year advisors, TAFE pathway coordinators and student wellbeing leads. Integrates with ATAR, VET and direct-to-work planning frameworks.</p>
+
+            <div class="sx-domain-label">Domain A — Pathway &amp; Career Prediction · MD-01 to MD-04</div>
+            <div class="sx-assess-grid">
+              <div class="sx-assess-item">
+                <div class="sx-num">MD-01</div>
+                <div><h4>Academic vs. Vocational Pathway Predictor</h4><p>Data-driven recommendation across tertiary, TAFE/VET and direct-to-work pathways — replaces guesswork with evidence.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">MD-02</div>
+                <div><h4>Subject Strength &amp; Interest Alignment</h4><p>Map cognitive strengths and subject performance to career cluster compatibility and HSC subject selection.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">MD-03</div>
+                <div><h4>Post-School Readiness Assessment</h4><p>Practical, psychological and skills readiness for the transition beyond secondary school across all pathway types.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">MD-04</div>
+                <div><h4>University Aptitude Profile</h4><p>Predicts university readiness, course fit probability and completion likelihood — beyond ATAR score alone.</p></div>
+              </div>
+            </div>
+
+            <div class="sx-domain-label">Domain B — Cognitive &amp; Leadership Potential · MD-05 to MD-08</div>
+            <div class="sx-assess-grid">
+              <div class="sx-assess-item">
+                <div class="sx-num">MD-05</div>
+                <div><h4>Advanced Reasoning &amp; Critical Thinking</h4><p>Higher-order analysis, evaluation and evidence-based reasoning — predictive of academic performance and leadership trajectory.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">MD-06</div>
+                <div><h4>Leadership Potential Emergence</h4><p>Early signal identification for school leadership, student representative roles and future workplace leadership.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">MD-07</div>
+                <div><h4>Decision-Making Style Assessment</h4><p>Risk orientation, deliberativeness, peer-influence resistance and ethical reasoning — critical predictors for high school and beyond.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">MD-08</div>
+                <div><h4>Future-Readiness &amp; Adaptability</h4><p>Capacity to thrive in ambiguous, fast-changing career and life environments — resilience, openness and change tolerance.</p></div>
+              </div>
+            </div>
+
+            <div class="sx-domain-label">Domain C — Identity &amp; Behavioural Readiness · MD-09 to MD-12</div>
+            <div class="sx-assess-grid">
+              <div class="sx-assess-item">
+                <div class="sx-num">MD-09</div>
+                <div><h4>Values &amp; Ethical Orientation Profile</h4><p>Emerging personal values, fairness reasoning and integrity indicators — foundational for character education and career guidance.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">MD-10</div>
+                <div><h4>Social Influence &amp; Peer Dynamics</h4><p>Prosocial leadership vs. risk-driven peer alignment — identifies students who lead positively vs. those vulnerable to negative group influence.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">MD-11</div>
+                <div><h4>Self-Regulation &amp; Study Behaviour</h4><p>Planning, persistence, distraction management and independent work capability — predictors of ATAR performance and tertiary success.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">MD-12</div>
+                <div><h4>STEM Potential Predictor</h4><p>Composite predictor for science, technology, engineering and mathematics career success — spatial reasoning, logic and interest alignment.</p></div>
+              </div>
+            </div>
+            <div class="sx-map">Maps to: career counselling · HSC subject selection · TAFE enrolment · gifted extension programmes · Traverse Intelligence Framework transition</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── TRAVERSE ── -->
+      <div class="sx-card sx-tr" id="sx-traverse">
+        <div class="sx-header" onclick="toggleSX('sx-traverse')">
+          <span class="sx-ico">⟳</span>
+          <div class="sx-meta">
+            <h3>Traverse Intelligence Framework</h3>
+            <p>Education-to-career predictive intelligence — graduates, TAFE completers and interns</p>
+          </div>
+          <div class="sx-pills">
+            <span class="sx-pill">Ages 18–26</span>
+            <span class="sx-pill">Graduates &amp; interns</span>
+            <span class="sx-pill">12 assessments</span>
+          </div>
+          <span class="sx-badge">SEXTANT · TRAVERSE</span>
+          <span class="sx-chevron">›</span>
+        </div>
+        <div class="sx-body">
+          <div class="sx-body-inner">
+            <p class="sx-body-desc">Predictive career-readiness and intern intelligence — linking education outcomes to workplace performance. Designed for universities, TAFE providers, graduate employers, and internship programmes. Traverse assessments bridge the gap between study and career, providing employers with early-career talent intelligence and institutions with placement outcome predictors.</p>
+
+            <div class="sx-domain-label">Domain A — Career Readiness · TV-01 to TV-04</div>
+            <div class="sx-assess-grid">
+              <div class="sx-assess-item">
+                <div class="sx-num">TV-01</div>
+                <div><h4>Career Readiness Index</h4><p>Holistic readiness for workplace entry across skills, behaviours, professional expectations and self-management.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">TV-02</div>
+                <div><h4>Vocational Pathway Alignment</h4><p>Match graduate profile to optimal career pathways using trait, interest and cognitive capability mapping.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">TV-03</div>
+                <div><h4>Employability Behaviour Profile</h4><p>Workplace communication, initiative, resilience and professional conduct indicators validated against employer expectations.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">TV-04</div>
+                <div><h4>Graduate Learning Agility</h4><p>Speed and quality of skill acquisition in novel workplace environments — predictive of early-career progression rate.</p></div>
+              </div>
+            </div>
+
+            <div class="sx-domain-label">Domain B — Intern Intelligence · TV-05 to TV-08</div>
+            <div class="sx-assess-grid">
+              <div class="sx-assess-item">
+                <div class="sx-num">TV-05</div>
+                <div><h4>Intern Potential Predictor</h4><p>Predict intern-to-hire conversion likelihood and performance ceiling before placement begins.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">TV-06</div>
+                <div><h4>Intern Adaptability &amp; Cultural Fit</h4><p>Values alignment, team integration readiness and organisational culture compatibility scoring.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">TV-07</div>
+                <div><h4>Intern Self-Direction Assessment</h4><p>Autonomy, task ownership and proactive behaviour in low-supervision early-career settings.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">TV-08</div>
+                <div><h4>Intern Feedback Receptivity</h4><p>Openness to coaching, criticism and rapid behavioural adjustment — essential for high-velocity early-career development.</p></div>
+              </div>
+            </div>
+
+            <div class="sx-domain-label">Domain C — Transition &amp; Development · TV-09 to TV-12</div>
+            <div class="sx-assess-grid">
+              <div class="sx-assess-item">
+                <div class="sx-num">TV-09</div>
+                <div><h4>Study-to-Work Transition Readiness</h4><p>Psychological and practical preparedness for the shift from education to employment — identity, expectations and structure adaptation.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">TV-10</div>
+                <div><h4>Entrepreneurial Intent &amp; Capability</h4><p>Risk orientation, creative thinking and self-starting capability for non-linear and portfolio career trajectories.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">TV-11</div>
+                <div><h4>Digital Workplace Readiness</h4><p>Comfort, competence and behaviour in AI-assisted, hybrid and remote work environments — the modern baseline.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">TV-12</div>
+                <div><h4>Graduate Leadership Emergence</h4><p>Early leadership signal identification for fast-track programme targeting and talent pipeline building.</p></div>
+              </div>
+            </div>
+            <div class="sx-map">Maps to: graduate employer hiring · internship programme selection · university career services · TAFE placement outcomes · Workforce Intelligence Framework onboarding</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── ANCHOR ── -->
+      <div class="sx-card sx-an" id="sx-anchor">
+        <div class="sx-header" onclick="toggleSX('sx-anchor')">
+          <span class="sx-ico">⚓</span>
+          <div class="sx-meta">
+            <h3>Anchor Intelligence Framework</h3>
+            <p>Mental health &amp; wellbeing screening for young people — under 18</p>
+          </div>
+          <div class="sx-pills">
+            <span class="sx-pill">Under 18</span>
+            <span class="sx-pill">Clinical oversight required</span>
+            <span class="sx-pill">12 assessments</span>
+          </div>
+          <span class="sx-badge">SEXTANT · ANCHOR</span>
+          <span class="sx-chevron">›</span>
+        </div>
+        <div class="sx-body">
+          <div class="sx-body-inner">
+            <div class="sx-alert">⚠ All Anchor assessments require delivery by, or under direct supervision of, a qualified school counsellor, psychologist or child welfare practitioner. Assessments ANC-05 and ANC-07 carry mandatory immediate escalation protocols and must only be administered where a clinician can respond in real time.</div>
+            <p class="sx-body-desc">A trauma-informed, clinically aligned wellbeing and risk screening framework for young people under 18. Designed for school counsellors, educational psychologists, child welfare services, and youth health organisations. Anchor is a screening tool, not a diagnostic instrument — it flags for qualified professionals to act on, not conclude from.</p>
+
+            <div class="sx-domain-label">Domain A — Wellbeing &amp; Distress Screening · ANC-01 to ANC-04</div>
+            <div class="sx-assess-grid">
+              <div class="sx-assess-item">
+                <div class="sx-num">ANC-01</div>
+                <div><h4>Psychological Wellbeing Index</h4><p>Baseline emotional and psychological health screening using an age-appropriate youth variant of validated wellbeing instruments.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">ANC-02</div>
+                <div><h4>Anxiety &amp; Worry Pattern Assessment</h4><p>Generalised anxiety indicators, worry frequency, physical symptom correlation and avoidance behaviour screening.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">ANC-03</div>
+                <div><h4>Low Mood &amp; Depressive Indicator</h4><p>Early-stage depressive symptom detection — persistent low mood, anhedonia and withdrawal — with structured clinician follow-up protocol.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">ANC-04</div>
+                <div><h4>Stress &amp; Coping Style Profile</h4><p>How young people currently manage pressure — adaptive vs. maladaptive coping strategy mapping across academic, social and family stressors.</p></div>
+              </div>
+            </div>
+
+            <div class="sx-domain-label">Domain B — Risk &amp; Safety Screening · ANC-05 to ANC-08 ⚠ Mandatory escalation</div>
+            <div class="sx-assess-grid">
+              <div class="sx-assess-item">
+                <div class="sx-num">ANC-05</div>
+                <div><h4>Self-Harm Risk Indicator</h4><p>Non-clinical early-warning screen for non-suicidal self-injury with mandatory immediate clinical escalation and safeguarding notification.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">ANC-06</div>
+                <div><h4>Trauma Exposure &amp; Impact Screening</h4><p>Adverse childhood experience indicators and psychological impact assessment identifying trauma affecting current functioning.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">ANC-07</div>
+                <div><h4>Suicidal Ideation Flag Protocol</h4><p>Safe messaging-compliant early detection with mandatory immediate practitioner escalation, parent notification and crisis service referral.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">ANC-08</div>
+                <div><h4>Substance Risk Behaviour Screen</h4><p>Alcohol and substance experimentation indicators linked to emotional regulation deficits, trauma responses and peer pressure vulnerability.</p></div>
+              </div>
+            </div>
+
+            <div class="sx-domain-label">Domain C — Social &amp; Relational Health · ANC-09 to ANC-12</div>
+            <div class="sx-assess-grid">
+              <div class="sx-assess-item">
+                <div class="sx-num">ANC-09</div>
+                <div><h4>Peer Connection &amp; Loneliness Index</h4><p>Social isolation indicators and quality of peer and family relational bonds — predictors of mental health vulnerability and school engagement.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">ANC-10</div>
+                <div><h4>Cyberbullying &amp; Online Safety Screen</h4><p>Digital harm exposure, social media distress patterns and online identity pressure impact on mental health and sleep.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">ANC-11</div>
+                <div><h4>Family &amp; Home Environment Profile</h4><p>Protective factor and risk factor assessment for the home context — parental support, household stress, stability and attachment quality.</p></div>
+              </div>
+              <div class="sx-assess-item">
+                <div class="sx-num">ANC-12</div>
+                <div><h4>Resilience &amp; Protective Strength Map</h4><p>Identify existing internal and external resilience assets to anchor intervention — strengths-based, never deficit-led.</p></div>
+              </div>
+            </div>
+            <div class="sx-map">Maps to: school counselling referral · crisis response · child protection notification · Kids Helpline / headspace · anti-bullying programmes · family support services</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end sx-cards -->
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Industry Focus</div>
+      <h2>Built for Your Sector — Not Off the Shelf</h2>
+      <p>Unlike generic personality tests, Clarent Five develops industry-specific assessment frameworks aligned to your operational realities, workforce requirements, and regulatory context.</p>
+    </div>
+    <div class="ind-grid reveal">
+      <div class="ind-card c-gold">
+        <div class="ind-icon">🏗️</div>
+        <h3>Construction & Infrastructure</h3>
+        <p>Improve workforce safety, site leadership capability, and operational performance through role-specific psychometric frameworks built for trade environments.</p>
+        <div class="ind-tags">
+          <span class="tag-chip">Safety Culture Fit</span>
+          <span class="tag-chip">Site Leadership</span>
+          <span class="tag-chip">Apprentice Selection</span>
+          <span class="tag-chip">Human Reliability</span>
+        </div>
+      </div>
+      <div class="ind-card c-cyan">
+        <div class="ind-icon">🏠</div>
+        <h3>Real Estate & Property Services</h3>
+        <p>Identify high-performing agents before you hire them. Reduce attrition, strengthen ethical behaviour, and optimise client engagement outcomes.</p>
+        <div class="ind-tags">
+          <span class="tag-chip">Agent Success Predictor</span>
+          <span class="tag-chip">Negotiation Style</span>
+          <span class="tag-chip">Ethical Selling</span>
+          <span class="tag-chip">Client Empathy</span>
+        </div>
+      </div>
+      <div class="ind-card c-violet">
+        <div class="ind-icon">🎓</div>
+        <h3>Education, TAFE & Vocational</h3>
+        <p>Support student success through vocational pathway alignment, apprenticeship suitability scoring, and workforce readiness measurement at intake.</p>
+        <div class="ind-tags">
+          <span class="tag-chip">Course Fit Matching</span>
+          <span class="tag-chip">Pathway Assessment</span>
+          <span class="tag-chip">Career Readiness</span>
+          <span class="tag-chip">Apprentice Suitability</span>
+        </div>
+      </div>
+      <div class="ind-card c-red">
+        <div class="ind-icon">🏥</div>
+        <h3>Healthcare & Aged Care</h3>
+        <p>Address clinical burnout before it happens. Build resilient, cohesive healthcare teams with compassion fatigue indicators and leadership profiling.</p>
+        <div class="ind-tags">
+          <span class="tag-chip">Burnout Prediction</span>
+          <span class="tag-chip">Compassion Fatigue</span>
+          <span class="tag-chip">Team Cohesion</span>
+          <span class="tag-chip">Clinical Leadership</span>
+        </div>
+      </div>
+      <div class="ind-card c-green">
+        <div class="ind-icon">🛡️</div>
+        <h3>Government, Defence & Critical Infrastructure</h3>
+        <p>Support high-trust workforce selection, integrity assessment, mission-critical resilience measurement, and national security personnel programmes.</p>
+        <div class="ind-tags">
+          <span class="tag-chip">Integrity Assessment</span>
+          <span class="tag-chip">Mission Readiness</span>
+          <span class="tag-chip">Insider Risk</span>
+          <span class="tag-chip">Resilience Scoring</span>
+        </div>
+      </div>
+      <div class="ind-card c-orange">
+        <div class="ind-icon">💼</div>
+        <h3>Corporate & Professional Services</h3>
+        <p>Enhance recruitment outcomes, accelerate leadership development, strengthen succession pipelines, and reduce executive derailment risk.</p>
+        <div class="ind-tags">
+          <span class="tag-chip">Succession Planning</span>
+          <span class="tag-chip">Executive Assessment</span>
+          <span class="tag-chip">Fraud Risk</span>
+          <span class="tag-chip">Team Dynamics</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Assessment Portfolio</div>
+      <h2>Validated Assessments, Ready to Deploy</h2>
+      <p>Our existing library of scientifically validated assessments can be deployed immediately — or combined into a bespoke battery tailored to your organisation.</p>
+    </div>
+    <div class="reveal">
+      <div class="port-tabs">
+        <button class="port-tab active" onclick="filterPort('workforce',this)">Workforce Intelligence</button>
+        <button class="port-tab" onclick="filterPort('industry',this)">Industry Focus</button>
+        <button class="port-tab" onclick="filterPort('luminary',this)">Luminary</button>
+        <button class="port-tab" onclick="filterPort('meridian',this)">Meridian</button>
+        <button class="port-tab" onclick="filterPort('traverse',this)">Traverse</button>
+        <button class="port-tab" onclick="filterPort('anchor',this)">Anchor</button>
+      </div>
+    </div>
+    <div class="port-grid reveal" id="port-grid">
+
+      <!-- WORKFORCE INTELLIGENCE -->
+      <div class="port-item" data-cat="workforce">
+        <div class="port-num">WI-01</div>
+        <div><h4>Construction Safety Culture Fit</h4><p>Behavioural and values alignment for site-based roles. Reduces incident risk from day one.</p></div>
+      </div>
+      <div class="port-item" data-cat="workforce">
+        <div class="port-num">WI-02</div>
+        <div><h4>Site Supervisor Leadership Assessment</h4><p>Leadership capability for frontline site management — decision-making under pressure, team accountability.</p></div>
+      </div>
+      <div class="port-item" data-cat="workforce">
+        <div class="port-num">WI-03</div>
+        <div><h4>Real Estate Agent Success Predictor</h4><p>Predict agent performance, retention, and ethical conduct before hiring. Industry-specific AU norms.</p></div>
+      </div>
+      <div class="port-item" data-cat="workforce">
+        <div class="port-num">WI-04</div>
+        <div><h4>Negotiation &amp; Ethical Selling Assessment</h4><p>Client empathy, ethical decision-making and influence style for client-facing sales professionals.</p></div>
+      </div>
+      <div class="port-item" data-cat="workforce">
+        <div class="port-num">WI-05</div>
+        <div><h4>Healthcare Burnout &amp; Compassion Fatigue</h4><p>Early-warning indicators for clinical workforce resilience and team cohesion in health settings.</p></div>
+      </div>
+      <div class="port-item" data-cat="workforce">
+        <div class="port-num">WI-06</div>
+        <div><h4>Cybersecurity Behaviour &amp; Insider Threat</h4><p>Identify risk-prone behaviours in high-access digital and operational technology roles.</p></div>
+      </div>
+      <div class="port-item" data-cat="workforce">
+        <div class="port-num">WI-07</div>
+        <div><h4>AI-Powered Video Interview Psychometrics</h4><p>Behavioural and trait analysis from structured video assessments. Real-time scoring and flagging.</p></div>
+      </div>
+      <div class="port-item" data-cat="workforce">
+        <div class="port-num">WI-08</div>
+        <div><h4>Human Reliability Index</h4><p>Combined psychometric and behavioural scoring for high-trust, high-consequence roles across all sectors.</p></div>
+      </div>
+      <div class="port-item" data-cat="workforce">
+        <div class="port-num">WI-09</div>
+        <div><h4>Workforce Retention Predictor</h4><p>Identify behavioural drivers of turnover before they activate — reduce avoidable attrition costs.</p></div>
+      </div>
+      <div class="port-item" data-cat="workforce">
+        <div class="port-num">WI-10</div>
+        <div><h4>Frontline Leadership Potential Assessment</h4><p>Surface emerging leaders from within your existing workforce for pipeline and succession planning.</p></div>
+      </div>
+
+      <!-- INDUSTRY FOCUS -->
+      <div class="port-item" data-cat="industry">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">IF-01</div>
+        <div><h4>Apprentice Suitability Assessment</h4><p>Predict trade pathway success and completion likelihood. Built for TAFE, GTOs and construction onboarding.</p></div>
+      </div>
+      <div class="port-item" data-cat="industry">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">IF-02</div>
+        <div><h4>Safety Incident Propensity Assessment</h4><p>Predict safety risk-taking behaviours in high-hazard operational environments and trades.</p></div>
+      </div>
+      <div class="port-item" data-cat="industry">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">IF-03</div>
+        <div><h4>Fraud &amp; Financial Misconduct Risk</h4><p>Integrity and risk indicators for finance-adjacent, fiduciary and high-value asset management roles.</p></div>
+      </div>
+      <div class="port-item" data-cat="industry">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">IF-04</div>
+        <div><h4>Customer Service Excellence Predictor</h4><p>Trait and EQ profiling for client-facing, service delivery and hospitality roles across sectors.</p></div>
+      </div>
+      <div class="port-item" data-cat="industry">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">IF-05</div>
+        <div><h4>High-Stress Occupation Suitability</h4><p>Resilience, stress tolerance and recovery profiling for emergency services, clinical and operational roles.</p></div>
+      </div>
+      <div class="port-item" data-cat="industry">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">IF-06</div>
+        <div><h4>Remote &amp; Hybrid Work Readiness</h4><p>Self-direction, communication and accountability profiling for distributed and asynchronous teams.</p></div>
+      </div>
+      <div class="port-item" data-cat="industry">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">IF-07</div>
+        <div><h4>AI Trustworthiness &amp; Responsible AI Behaviour</h4><p>Attitudes and behaviours around AI usage, data ethics and automation trust in the modern workplace.</p></div>
+      </div>
+      <div class="port-item" data-cat="industry">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">IF-08</div>
+        <div><h4>Workforce Cyber Resilience Assessment</h4><p>Human-layer cyber risk indicators across all staff cohorts — the behavioural firewall.</p></div>
+      </div>
+      <div class="port-item" data-cat="industry">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">IF-09</div>
+        <div><h4>Executive Derailment Risk Assessment</h4><p>Dark-side personality indicators and leadership failure risk profiling for C-suite and senior roles.</p></div>
+      </div>
+      <div class="port-item" data-cat="industry">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">IF-10</div>
+        <div><h4>High-Trust Security Personnel Assessment</h4><p>Integrity, resilience and mission-readiness profiling for defence, government and critical infrastructure roles.</p></div>
+      </div>
+
+      <!-- LUMINARY -->
+      <div class="port-item" data-cat="luminary">
+        <div class="port-num" style="background:var(--green-dim);color:var(--green)">LM-01</div>
+        <div><h4>Foundational Reasoning Ability</h4><p>Age-appropriate numerical, verbal and spatial reasoning benchmarked against Australian primary school norms.</p></div>
+      </div>
+      <div class="port-item" data-cat="luminary">
+        <div class="port-num" style="background:var(--green-dim);color:var(--green)">LM-02</div>
+        <div><h4>Learning Style Preference Profile</h4><p>VARK modality mapping to inform classroom strategy, teaching approach and learning support.</p></div>
+      </div>
+      <div class="port-item" data-cat="luminary">
+        <div class="port-num" style="background:var(--green-dim);color:var(--green)">LM-03</div>
+        <div><h4>Working Memory &amp; Attention Span</h4><p>Short-term retention, sustained focus and task-switching capacity — key indicator for learning difficulty screening.</p></div>
+      </div>
+      <div class="port-item" data-cat="luminary">
+        <div class="port-num" style="background:var(--green-dim);color:var(--green)">LM-04</div>
+        <div><h4>Early Academic Potential Index</h4><p>Composite predictor for long-term academic trajectory across literacy, numeracy and reasoning.</p></div>
+      </div>
+      <div class="port-item" data-cat="luminary">
+        <div class="port-num" style="background:var(--green-dim);color:var(--green)">LM-05</div>
+        <div><h4>Social-Emotional Learning Readiness</h4><p>Empathy, cooperation, conflict navigation and relationship-forming capability against developmental milestones.</p></div>
+      </div>
+      <div class="port-item" data-cat="luminary">
+        <div class="port-num" style="background:var(--green-dim);color:var(--green)">LM-06</div>
+        <div><h4>Classroom Behaviour Profile</h4><p>Impulse control, peer interaction and instructional compliance — multi-rater educator and caregiver model.</p></div>
+      </div>
+      <div class="port-item" data-cat="luminary">
+        <div class="port-num" style="background:var(--green-dim);color:var(--green)">LM-07</div>
+        <div><h4>Curiosity &amp; Intrinsic Motivation</h4><p>Natural drive to explore, question and persist — a foundational predictor of lifelong learning engagement.</p></div>
+      </div>
+      <div class="port-item" data-cat="luminary">
+        <div class="port-num" style="background:var(--green-dim);color:var(--green)">LM-08</div>
+        <div><h4>Early Creative Thinking Profile</h4><p>Divergent thinking, imaginative problem-solving and flexible ideation applicable to STEAM learning contexts.</p></div>
+      </div>
+      <div class="port-item" data-cat="luminary">
+        <div class="port-num" style="background:var(--green-dim);color:var(--green)">LM-09</div>
+        <div><h4>Gifted &amp; Talented Early Identifier</h4><p>High-potential composite screening for enrichment programme eligibility and selective school preparation.</p></div>
+      </div>
+      <div class="port-item" data-cat="luminary">
+        <div class="port-num" style="background:var(--green-dim);color:var(--green)">LM-10</div>
+        <div><h4>Learning Difficulty Risk Screening</h4><p>Early signal detection for dyslexia, dyscalculia and processing challenges — flags for psychologist referral.</p></div>
+      </div>
+      <div class="port-item" data-cat="luminary">
+        <div class="port-num" style="background:var(--green-dim);color:var(--green)">LM-11</div>
+        <div><h4>Parent-Teacher Alignment Report</h4><p>Multi-source input model combining educator observation and caregiver responses for a complete developmental picture.</p></div>
+      </div>
+      <div class="port-item" data-cat="luminary">
+        <div class="port-num" style="background:var(--green-dim);color:var(--green)">LM-12</div>
+        <div><h4>Interest &amp; Strength Discovery Map</h4><p>Age-appropriate gamified exploration of natural strengths and interest clusters for children aged 6–12.</p></div>
+      </div>
+
+      <!-- MERIDIAN -->
+      <div class="port-item" data-cat="meridian">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">MD-01</div>
+        <div><h4>Academic vs. Vocational Pathway Predictor</h4><p>Data-driven recommendation across tertiary, TAFE/VET and direct-to-work pathways — replaces guesswork.</p></div>
+      </div>
+      <div class="port-item" data-cat="meridian">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">MD-02</div>
+        <div><h4>Subject Strength &amp; Interest Alignment</h4><p>Map cognitive strengths and subject performance to career cluster compatibility and HSC subject selection.</p></div>
+      </div>
+      <div class="port-item" data-cat="meridian">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">MD-03</div>
+        <div><h4>Post-School Readiness Assessment</h4><p>Practical, psychological and skills readiness for the transition beyond secondary school across all pathway types.</p></div>
+      </div>
+      <div class="port-item" data-cat="meridian">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">MD-04</div>
+        <div><h4>University Aptitude Profile</h4><p>Predicts university readiness, course fit probability and completion likelihood — beyond ATAR score alone.</p></div>
+      </div>
+      <div class="port-item" data-cat="meridian">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">MD-05</div>
+        <div><h4>Advanced Reasoning &amp; Critical Thinking</h4><p>Higher-order analysis, evaluation and evidence-based reasoning predictive of academic and leadership trajectory.</p></div>
+      </div>
+      <div class="port-item" data-cat="meridian">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">MD-06</div>
+        <div><h4>Leadership Potential Emergence</h4><p>Early signal identification for school leadership, student representative roles and future workplace leadership.</p></div>
+      </div>
+      <div class="port-item" data-cat="meridian">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">MD-07</div>
+        <div><h4>Decision-Making Style Assessment</h4><p>Risk orientation, deliberativeness, peer-influence resistance and ethical reasoning for adolescents.</p></div>
+      </div>
+      <div class="port-item" data-cat="meridian">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">MD-08</div>
+        <div><h4>Future-Readiness &amp; Adaptability</h4><p>Capacity to thrive in ambiguous, fast-changing career and life environments — resilience and openness.</p></div>
+      </div>
+      <div class="port-item" data-cat="meridian">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">MD-09</div>
+        <div><h4>Values &amp; Ethical Orientation Profile</h4><p>Emerging personal values, fairness reasoning and integrity indicators for character education and career guidance.</p></div>
+      </div>
+      <div class="port-item" data-cat="meridian">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">MD-10</div>
+        <div><h4>Social Influence &amp; Peer Dynamics</h4><p>Prosocial leadership vs. risk-driven peer alignment — identifies positive leaders and vulnerability indicators.</p></div>
+      </div>
+      <div class="port-item" data-cat="meridian">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">MD-11</div>
+        <div><h4>Self-Regulation &amp; Study Behaviour</h4><p>Planning, persistence and distraction management — predictors of ATAR performance and tertiary success.</p></div>
+      </div>
+      <div class="port-item" data-cat="meridian">
+        <div class="port-num" style="background:var(--gold-dim);color:var(--gold)">MD-12</div>
+        <div><h4>STEM Potential Predictor</h4><p>Composite predictor for science, technology, engineering and mathematics career success and pathway fit.</p></div>
+      </div>
+
+      <!-- TRAVERSE -->
+      <div class="port-item" data-cat="traverse">
+        <div class="port-num" style="background:var(--cyan-dim);color:var(--cyan)">TV-01</div>
+        <div><h4>Career Readiness Index</h4><p>Holistic readiness for workplace entry across skills, behaviours, professional expectations and self-management.</p></div>
+      </div>
+      <div class="port-item" data-cat="traverse">
+        <div class="port-num" style="background:var(--cyan-dim);color:var(--cyan)">TV-02</div>
+        <div><h4>Vocational Pathway Alignment</h4><p>Match graduate profile to optimal career pathways using trait, interest and cognitive capability mapping.</p></div>
+      </div>
+      <div class="port-item" data-cat="traverse">
+        <div class="port-num" style="background:var(--cyan-dim);color:var(--cyan)">TV-03</div>
+        <div><h4>Employability Behaviour Profile</h4><p>Workplace communication, initiative, resilience and professional conduct validated against employer expectations.</p></div>
+      </div>
+      <div class="port-item" data-cat="traverse">
+        <div class="port-num" style="background:var(--cyan-dim);color:var(--cyan)">TV-04</div>
+        <div><h4>Graduate Learning Agility</h4><p>Speed and quality of skill acquisition in novel workplace environments — predictive of early-career progression.</p></div>
+      </div>
+      <div class="port-item" data-cat="traverse">
+        <div class="port-num" style="background:var(--cyan-dim);color:var(--cyan)">TV-05</div>
+        <div><h4>Intern Potential Predictor</h4><p>Predict intern-to-hire conversion likelihood and performance ceiling before placement begins.</p></div>
+      </div>
+      <div class="port-item" data-cat="traverse">
+        <div class="port-num" style="background:var(--cyan-dim);color:var(--cyan)">TV-06</div>
+        <div><h4>Intern Adaptability &amp; Cultural Fit</h4><p>Values alignment, team integration readiness and organisational culture compatibility scoring.</p></div>
+      </div>
+      <div class="port-item" data-cat="traverse">
+        <div class="port-num" style="background:var(--cyan-dim);color:var(--cyan)">TV-07</div>
+        <div><h4>Intern Self-Direction Assessment</h4><p>Autonomy, task ownership and proactive behaviour in low-supervision early-career settings.</p></div>
+      </div>
+      <div class="port-item" data-cat="traverse">
+        <div class="port-num" style="background:var(--cyan-dim);color:var(--cyan)">TV-08</div>
+        <div><h4>Intern Feedback Receptivity</h4><p>Openness to coaching, criticism and rapid behavioural adjustment in high-velocity early-career environments.</p></div>
+      </div>
+      <div class="port-item" data-cat="traverse">
+        <div class="port-num" style="background:var(--cyan-dim);color:var(--cyan)">TV-09</div>
+        <div><h4>Study-to-Work Transition Readiness</h4><p>Psychological and practical preparedness for the shift from education to employment — identity and expectations.</p></div>
+      </div>
+      <div class="port-item" data-cat="traverse">
+        <div class="port-num" style="background:var(--cyan-dim);color:var(--cyan)">TV-10</div>
+        <div><h4>Entrepreneurial Intent &amp; Capability</h4><p>Risk orientation, creative thinking and self-starting capability for non-linear and portfolio career trajectories.</p></div>
+      </div>
+      <div class="port-item" data-cat="traverse">
+        <div class="port-num" style="background:var(--cyan-dim);color:var(--cyan)">TV-11</div>
+        <div><h4>Digital Workplace Readiness</h4><p>Comfort, competence and behaviour in AI-assisted, hybrid and remote work environments.</p></div>
+      </div>
+      <div class="port-item" data-cat="traverse">
+        <div class="port-num" style="background:var(--cyan-dim);color:var(--cyan)">TV-12</div>
+        <div><h4>Graduate Leadership Emergence</h4><p>Early leadership signal identification for fast-track programme targeting and talent pipeline building.</p></div>
+      </div>
+
+      <!-- ANCHOR -->
+      <div class="port-item" data-cat="anchor">
+        <div class="port-num" style="background:var(--violet-dim);color:var(--violet)">ANC-01</div>
+        <div><h4>Psychological Wellbeing Index</h4><p>Baseline emotional and psychological health screening using age-appropriate youth wellbeing instruments.</p></div>
+      </div>
+      <div class="port-item" data-cat="anchor">
+        <div class="port-num" style="background:var(--violet-dim);color:var(--violet)">ANC-02</div>
+        <div><h4>Anxiety &amp; Worry Pattern Assessment</h4><p>Generalised anxiety indicators, worry frequency and avoidance behaviour screening across school and home contexts.</p></div>
+      </div>
+      <div class="port-item" data-cat="anchor">
+        <div class="port-num" style="background:var(--violet-dim);color:var(--violet)">ANC-03</div>
+        <div><h4>Low Mood &amp; Depressive Indicator</h4><p>Early-stage depressive symptom detection with structured clinician follow-up protocol. Professional oversight required.</p></div>
+      </div>
+      <div class="port-item" data-cat="anchor">
+        <div class="port-num" style="background:var(--violet-dim);color:var(--violet)">ANC-04</div>
+        <div><h4>Stress &amp; Coping Style Profile</h4><p>Adaptive vs. maladaptive coping strategy mapping across academic, social and family stressors.</p></div>
+      </div>
+      <div class="port-item" data-cat="anchor">
+        <div class="port-num" style="background:rgba(255,77,109,0.12);color:#FF4D6D">ANC-05 ⚠</div>
+        <div><h4>Self-Harm Risk Indicator</h4><p>Non-clinical early-warning screen with mandatory immediate clinical escalation and safeguarding notification protocol.</p></div>
+      </div>
+      <div class="port-item" data-cat="anchor">
+        <div class="port-num" style="background:var(--violet-dim);color:var(--violet)">ANC-06</div>
+        <div><h4>Trauma Exposure &amp; Impact Screening</h4><p>Adverse childhood experience indicators and psychological impact assessment. Trauma-informed delivery required.</p></div>
+      </div>
+      <div class="port-item" data-cat="anchor">
+        <div class="port-num" style="background:rgba(255,77,109,0.12);color:#FF4D6D">ANC-07 ⚠</div>
+        <div><h4>Suicidal Ideation Flag Protocol</h4><p>Safe messaging-compliant detection with mandatory immediate practitioner escalation, parent notification and crisis referral.</p></div>
+      </div>
+      <div class="port-item" data-cat="anchor">
+        <div class="port-num" style="background:var(--violet-dim);color:var(--violet)">ANC-08</div>
+        <div><h4>Substance Risk Behaviour Screen</h4><p>Alcohol and substance experimentation indicators linked to emotional regulation deficits and peer pressure vulnerability.</p></div>
+      </div>
+      <div class="port-item" data-cat="anchor">
+        <div class="port-num" style="background:var(--violet-dim);color:var(--violet)">ANC-09</div>
+        <div><h4>Peer Connection &amp; Loneliness Index</h4><p>Social isolation indicators and quality of peer and family relational bonds — mental health vulnerability predictors.</p></div>
+      </div>
+      <div class="port-item" data-cat="anchor">
+        <div class="port-num" style="background:var(--violet-dim);color:var(--violet)">ANC-10</div>
+        <div><h4>Cyberbullying &amp; Online Safety Screen</h4><p>Digital harm exposure, social media distress patterns and online identity pressure impact on mental health.</p></div>
+      </div>
+      <div class="port-item" data-cat="anchor">
+        <div class="port-num" style="background:var(--violet-dim);color:var(--violet)">ANC-11</div>
+        <div><h4>Family &amp; Home Environment Profile</h4><p>Protective factor and risk factor assessment for home context — parental support, stability and attachment quality.</p></div>
+      </div>
+      <div class="port-item" data-cat="anchor">
+        <div class="port-num" style="background:var(--violet-dim);color:var(--violet)">ANC-12</div>
+        <div><h4>Resilience &amp; Protective Strength Map</h4><p>Identify internal and external resilience assets to anchor intervention — strengths-based, never deficit-led.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM ASSESSMENTS -->
+<section class="custom" id="custom">
+  <div class="wrap">
+    <div class="custom-inner">
+      <div class="reveal">
+        <div class="eyebrow" style="margin-bottom:16px">Bespoke Design</div>
+        <h2 style="margin-bottom:20px">Can't Find What You Need?<br>We Build It.</h2>
+        <p style="color:var(--muted);margin-bottom:12px">Every organisation operates differently. Off-the-shelf assessments often miss the nuance that matters most in your environment, your culture, and your role requirements.</p>
+        <p style="color:var(--muted);margin-bottom:32px">Clarent Five designs and validates fully bespoke psychometric assessment batteries from the ground up — mapped to your specific operational context, norm groups, and workforce objectives.</p>
+        <div class="custom-steps">
+          <div class="custom-step">
+            <div class="step-num">01</div>
+            <div>
+              <h4>Discovery & Role Mapping</h4>
+              <p>We analyse your role profiles, performance data, industry context, and workforce challenges to define what the assessment needs to measure.</p>
+            </div>
+          </div>
+          <div class="custom-step">
+            <div class="step-num">02</div>
+            <div>
+              <h4>Assessment Design & Validation</h4>
+              <p>Our applied psychologists design a validated item battery using IRT methodology and pilot testing against real candidate populations.</p>
+            </div>
+          </div>
+          <div class="custom-step">
+            <div class="step-num">03</div>
+            <div>
+              <h4>Norm Group Development</h4>
+              <p>We build industry and role-specific Australian norm groups — so your results reflect real-world performance benchmarks, not generic global data.</p>
+            </div>
+          </div>
+          <div class="custom-step">
+            <div class="step-num">04</div>
+            <div>
+              <h4>Integration & Continuous Improvement</h4>
+              <p>Assessments integrate into your existing ATS/HRIS workflows and are continuously refined against post-hire performance data.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-visual reveal">
+        <div class="cv-head">
+          Custom Assessment Builder
+          <div class="cv-status">Active</div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:16px;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase">Industry Coverage — Bespoke Requests</div>
+        <div class="cv-sector"><span class="name">Construction & Trades</span><span class="pct">100% Coverage</span></div>
+        <div class="cv-sector"><span class="name">Real Estate & Property</span><span class="pct">100% Coverage</span></div>
+        <div class="cv-sector"><span class="name">TAFE / RTOs / Vocational</span><span class="pct">100% Coverage</span></div>
+        <div class="cv-sector"><span class="name">Healthcare & Aged Care</span><span class="pct">100% Coverage</span></div>
+        <div class="cv-sector"><span class="name">Government / Defence</span><span class="pct">100% Coverage</span></div>
+        <div class="cv-sector"><span class="name">Financial Services</span><span class="pct">100% Coverage</span></div>
+        <div class="cv-sector"><span class="name">Technology Companies</span><span class="pct">100% Coverage</span></div>
+        <div class="cv-sector"><span class="name">Any Other Sector</span><span class="pct">On Request</span></div>
+        <div class="cv-note">
+          <strong>Custom Assessment Delivery</strong>
+          No sector is out of scope. If your industry, role, or challenge isn't covered by our existing portfolio, our team will design and validate a bespoke assessment specifically for your organisation. Contact us to discuss your requirements.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI CAPABILITIES -->
+<section class="ai-section" id="ai">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Technology Platform</div>
+      <h2>AI-Powered Assessment Intelligence</h2>
+      <p>Beyond traditional psychometric reporting — our next-generation workforce intelligence platform transforms human data into strategic organisational insight.</p>
+    </div>
+    <div class="ai-inner reveal">
+      <div>
+        <p style="color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:20px">Most assessment providers deliver reports. Clarent Five delivers workforce intelligence. Our AI-powered platform combines behavioural science, psychometric analysis, machine learning, and predictive risk modelling into a single, actionable intelligence layer.</p>
+        <p style="color:var(--muted);font-size:15px;line-height:1.8">Every organisation gets a real-time view of candidate suitability, team dynamics, leadership potential, and human risk — mapped against role-specific Australian benchmarks.</p>
+        <div class="ai-badges">
+          <div class="ai-badge"><div class="ai-badge-dot"></div>Behavioural Analytics</div>
+          <div class="ai-badge"><div class="ai-badge-dot"></div>AI Assessment Interpretation</div>
+          <div class="ai-badge"><div class="ai-badge-dot"></div>Workforce Risk Profiling</div>
+          <div class="ai-badge"><div class="ai-badge-dot"></div>Human Reliability Scoring</div>
+          <div class="ai-badge"><div class="ai-badge-dot"></div>Leadership Potential Mapping</div>
+          <div class="ai-badge"><div class="ai-badge-dot"></div>Team Dynamics Analysis</div>
+          <div class="ai-badge"><div class="ai-badge-dot"></div>Candidate Success Prediction</div>
+          <div class="ai-badge"><div class="ai-badge-dot"></div>Organisational Benchmarking</div>
+          <div class="ai-badge"><div class="ai-badge-dot"></div>Predictive Talent Insights</div>
+          <div class="ai-badge"><div class="ai-badge-dot"></div>Resilience Indicators</div>
+        </div>
+      </div>
+      <div class="ai-visual">
+        <div class="ai-card">
+          <div class="ai-card-ico">📊</div>
+          <h4>Real-Time Dashboards</h4>
+          <p>Live personality trait mapping and candidate score visualisation as assessments are completed.</p>
+        </div>
+        <div class="ai-card">
+          <div class="ai-card-ico">🎯</div>
+          <h4>Role-Fit Scoring</h4>
+          <p>Automatically compare candidate profiles against validated success benchmarks for each role.</p>
+        </div>
+        <div class="ai-card">
+          <div class="ai-card-ico">🤖</div>
+          <h4>Video Psychometrics</h4>
+          <p>AI analysis of structured video interviews — behavioural signals, language patterns, and trait indicators.</p>
+        </div>
+        <div class="ai-card">
+          <div class="ai-card-ico">⚠️</div>
+          <h4>Workforce Risk Alerts</h4>
+          <p>Automated flagging of high-risk indicators across safety, integrity, and human reliability dimensions.</p>
+        </div>
+        <div class="ai-card">
+          <div class="ai-card-ico">📈</div>
+          <h4>Predictive Performance</h4>
+          <p>Machine learning models trained on post-hire outcome data to continuously sharpen prediction accuracy.</p>
+        </div>
+        <div class="ai-card">
+          <div class="ai-card-ico">🔗</div>
+          <h4>ATS / HRIS Integration</h4>
+          <p>Plug into Workday, Employment Hero, PageUp and other platforms your team already uses.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Business Impact</div>
+      <h2>What Workforce Intelligence Delivers</h2>
+    </div>
+    <div class="out-grid reveal">
+      <div class="out-cell">
+        <div class="out-icon">🎯</div>
+        <h3>Improve Hiring Accuracy</h3>
+        <p>Reduce costly mistakes by identifying candidates with the highest probability of success — before they start.</p>
+      </div>
+      <div class="out-cell">
+        <div class="out-icon">🔄</div>
+        <h3>Increase Retention</h3>
+        <p>Understand the behavioural drivers of long-term workforce stability and reduce avoidable turnover costs.</p>
+      </div>
+      <div class="out-cell">
+        <div class="out-icon">🏆</div>
+        <h3>Strengthen Leadership</h3>
+        <p>Identify emerging leaders, support succession planning, and reduce executive derailment risk before it costs you.</p>
+      </div>
+      <div class="out-cell">
+        <div class="out-icon">🦺</div>
+        <h3>Enhance Safety Performance</h3>
+        <p>Reduce workplace incidents through predictive behavioural and human reliability assessments.</p>
+      </div>
+      <div class="out-cell">
+        <div class="out-icon">🛡️</div>
+        <h3>Reduce Human Risk</h3>
+        <p>Identify behaviours linked to compliance failures, insider threats, fraud, and operational risk before they materialise.</p>
+      </div>
+      <div class="out-cell">
+        <div class="out-icon">🤝</div>
+        <h3>Improve Team Performance</h3>
+        <p>Build balanced, high-performing teams with complementary strengths, communication styles, and shared values.</p>
+      </div>
+      <div class="out-cell">
+        <div class="out-icon">🚀</div>
+        <h3>Support Transformation</h3>
+        <p>Align workforce capability with organisational growth, innovation, and digital transformation objectives.</p>
+      </div>
+      <div class="out-cell">
+        <div class="out-icon">📐</div>
+        <h3>Evidence-Based Decisions</h3>
+        <p>Move from subjective gut feel to objective, data-driven people decisions backed by validated science.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-glow"></div>
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <div class="eyebrow" style="justify-content:center;display:flex;margin-bottom:16px">Get Started</div>
+      <h2 class="display">Transform Workforce Decisions<br>into Strategic Advantage</h2>
+      <p>Whether you need an off-the-shelf assessment deployed this week, or a fully bespoke battery built for your organisation — our team is ready to help.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn-primary" onclick="toggleForm(event)">Request a Consultation →</a>
+        <a href="mailto:info@clarentfive.com.au" class="btn-outline">Email Us Directly</a>
+      </div>
+      <div class="form-popup" id="form-popup">
+        <h3 style="color:#fff;margin-bottom:8px;font-family:'Syne',sans-serif">How Can We Help You?</h3>
+        <p style="color:var(--muted);font-size:13px;margin-bottom:28px">Tell us about your organisation and assessment needs. Our team will be in touch within one business day.</p>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Organisation</label><input type="text" placeholder="Company name"></div>
+          <div class="form-group"><label>Email</label><input type="email" placeholder="jane@company.com.au"></div>
+        </div>
+        <div class="form-group">
+          <label>Your Industry Sector</label>
+          <select>
+            <option value="">Select your sector</option>
+            <option>Construction & Infrastructure</option>
+            <option>Real Estate & Property Services</option>
+            <option>Education / TAFE / Vocational</option>
+            <option>Healthcare & Aged Care</option>
+            <option>Government & Defence</option>
+            <option>Corporate & Professional Services</option>
+            <option>Financial Services</option>
+            <option>Technology</option>
+            <option>Retail & Hospitality</option>
+            <option>Other — I'll describe below</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>What Are You Looking to Achieve?</label>
+          <select>
+            <option value="">Select primary need</option>
+            <option>Pre-employment screening</option>
+            <option>Leadership development & succession</option>
+            <option>Safety behaviour & human reliability</option>
+            <option>Workforce retention improvement</option>
+            <option>Team performance & dynamics</option>
+            <option>Custom bespoke assessment design</option>
+            <option>Workforce risk management</option>
+            <option>Education / vocational pathway matching</option>
+            <option>Not sure — I'd like to explore options</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tell Us More (Optional)</label>
+          <textarea placeholder="Describe your organisation's specific challenge or assessment need. The more detail you share, the better we can prepare for our conversation."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm(event)">Send Request →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">CLARENT<span>FIVE</span></div>
+        <p>Psychometric Analysis & Workforce Intelligence Solutions. Turning human data into strategic advantage for Australian organisations.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Solutions</h5>
+        <a href="#framework">Workforce Framework</a>
+        <a href="#sextant">SEXTANT Frameworks</a>
+        <a href="#industries">Industry Solutions</a>
+        <a href="#portfolio">Assessment Portfolio</a>
+        <a href="#custom">Custom Assessments</a>
+        <a href="#ai">AI Platform</a>
+      </div>
+      <div class="footer-col">
+        <h5>Frameworks</h5>
+        <a href="#sextant">Luminary Intelligence</a>
+        <a href="#sextant">Meridian Intelligence</a>
+        <a href="#sextant">Traverse Intelligence</a>
+        <a href="#sextant">Anchor Intelligence</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="https://clarent-five.vercel.app/index.html">Clarent360</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#contact">Request Assessment</a>
+        <a href="#contact">Custom Design</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Clarent Five. All rights reserved. Part of the Clarent Group.</div>
+      <div class="footer-badge">✓ APS Aligned · Privacy Act Compliant · Australian Owned</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── SCROLL REVEAL
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+},{threshold:0.1});
+revealEls.forEach(el => io.observe(el));
+
+// ── PORTFOLIO FILTER — 6 tabs
+function filterPort(cat, btn) {
+  document.querySelectorAll('.port-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.port-item').forEach(item => {
+    item.style.display = (item.dataset.cat === cat) ? '' : 'none';
+  });
+}
+// init: show workforce intelligence only
+document.querySelectorAll('.port-item').forEach(i => {
+  i.style.display = (i.dataset.cat === 'workforce') ? '' : 'none';
+});
+
+// ── SEXTANT ACCORDION
+function toggleSX(id) {
+  const card = document.getElementById(id);
+  const isOpen = card.classList.contains('open');
+  // close all first
+  document.querySelectorAll('.sx-card').forEach(c => c.classList.remove('open'));
+  // open clicked if it was closed
+  if (!isOpen) card.classList.add('open');
+}
+
+// ── FORM TOGGLE
+function toggleForm(e){
+  e.preventDefault();
+  const fp = document.getElementById('form-popup');
+  fp.classList.toggle('open');
+  if(fp.classList.contains('open')) fp.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function submitForm(e){
+  e.preventDefault();
+  const fp = document.getElementById('form-popup');
+  fp.innerHTML = '<div style="text-align:center;padding:32px 0"><div style="font-size:40px;margin-bottom:16px">✓</div><h3 style="color:#fff;margin-bottom:8px;font-family:Syne,sans-serif">Thank you!</h3><p style="color:var(--muted)">Your enquiry has been received. Our team will be in touch within one business day.</p></div>';
+}
+
+// ── NAVBAR SCROLL STYLE
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').style.boxShadow = window.scrollY > 40 ? '0 2px 32px rgba(0,0,0,0.4)' : '';
+});
+</script>
+</body>
+</html>

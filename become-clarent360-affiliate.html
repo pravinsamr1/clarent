@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<< Header Area >>-->
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Clarent360">
+    <meta name="description"
+        content="Join the Clarent360 Affiliate Partner Program. Expand your network, create new opportunities, and grow together by introducing organizations to our specialist cybersecurity and governance services.">
+    <!-- ======== Page title ============ -->
+    <title>Become a Clarent360 Affiliate Partner | Clarent360</title>
+    <!--<< Favcion >>-->
+    <link rel="shortcut icon" href="assets/img/logo/favs.png">
+    <!--<< Bootstrap min.css >>-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--<< All Min Css >>-->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!--<< Animate.css >>-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!--<< Magnific Popup.css >>-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!--<< MeanMenu.css >>-->
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <!--<< Swiper Bundle.css >>-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--<< Nice Select.css >>-->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!--<< Main.css >>-->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--<< Custom.css >>-->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!--<< Font Awesome >>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
+    <style>
+        /* Specific page enhancements for Affiliate page */
+        .step-timeline-wrapper {
+            position: relative;
+            padding: 30px 0;
+        }
+        .step-timeline-card {
+            background: #ffffff;
+            border: 1px solid #E3E3E3;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            z-index: 2;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+        }
+        .step-timeline-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.1);
+            border-color: var(--p1-clr);
+        }
+        .step-badge-num {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 48px;
+            font-weight: 800;
+            color: rgba(81, 53, 255, 0.08);
+            line-height: 1;
+            font-family: 'Poppins', sans-serif;
+            transition: color 0.3s ease;
+        }
+        .step-timeline-card:hover .step-badge-num {
+            color: rgba(81, 53, 255, 0.18);
+        }
+        .benefit-icon-box {
+            font-size: 28px;
+            color: var(--p3-clr);
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            background: rgba(255, 84, 85, 0.06);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .benefit-grid-card:hover .benefit-icon-box {
+            background: var(--p3-clr);
+            color: #ffffff;
+        }
+        .domain-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border-radius: 50px;
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 6px;
+            transition: all 0.3s ease;
+        }
+        .domain-pill:hover {
+            background: var(--p1-clr);
+            border-color: var(--p1-clr);
+            transform: translateY(-2px);
+        }
+        .tag-cloud-item {
+            background: #ffffff;
+            border: 1px solid rgba(81, 53, 255, 0.08);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+        }
+        .tag-cloud-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--p1-clr);
+            box-shadow: 0 10px 25px rgba(81, 53, 255, 0.08);
+        }
+        .tag-icon {
+            font-size: 26px;
+            color: var(--p1-clr);
+            margin-bottom: 12px;
+            display: block;
+        }
+        .why-clarent-grid {
+            background: #090f1f;
+            border-radius: 24px;
+            padding: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        .why-clarent-grid::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(81, 53, 255, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .works-dark-section {
+            background: #090f1f;
+            padding: 80px 0 100px;
+        }
+        .works-dark-card {
+            background: #131929;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            height: 100%;
+        }
+        .works-dark-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(81, 53, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(81, 53, 255, 0.15);
+        }
+        .works-dark-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .works-dark-content {
+            padding: 28px 24px;
+        }
+        .works-dark-step {
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            background: linear-gradient(93deg, #5135FF 10.65%, #FF5455 89.35%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        .works-dark-title {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .works-dark-desc {
+            color: #a0aec0;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        .who-join-card {
+            background: #ffffff;
+            border: 1px solid rgba(81, 53, 255, 0.08);
+            border-radius: 12px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+        }
+        .who-join-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--p1-clr);
+            box-shadow: 0 8px 20px rgba(81, 53, 255, 0.08);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner"></div>
+            <div class="txt-loading">
+                <span data-text-preloader="C" class="letters-loading">C</span>
+                <span data-text-preloader="L" class="letters-loading">L</span>
+                <span data-text-preloader="A" class="letters-loading">A</span>
+                <span data-text-preloader="R" class="letters-loading">R</span>
+                <span data-text-preloader="E" class="letters-loading">E</span>
+                <span data-text-preloader="N" class="letters-loading">N</span>
+                <span data-text-preloader="T" class="letters-loading">T</span>
+                <span data-text-preloader="3" class="letters-loading">3</span>
+                <span data-text-preloader="6" class="letters-loading">6</span>
+                <span data-text-preloader="0" class="letters-loading">0</span>
+            </div>
+            <p class="text-center">Loading Secure Workspace</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Cursor Pointer -->
+    <div class="mouse-follower">
+        <span class="cursor-outline"></span>
+    </div>
+    <!-- End Cursor Pointer -->
+
+    <div id="header"></div>
+
+    <!-- Banner Section Start -->
+    <section class="breadcrumb-section position-relative fix">
+        <div class="container">
+            <div class="bread-content text-center">
+                <ul class="d-flex align-items-center gap-3 justify-content-center">
+                    <li>
+                        <a href="index.html" class="p3-clr">Home</a>
+                    </li>
+                    <li class="p3-clr">/</li>
+                    <li>
+                        <span class="p3-clr">Join Our Partnership</span>
+                    </li>
+                    <li class="p3-clr">/</li>
+                    <li class="white">Become an Affiliate Partner</li>
+                </ul>
+                <h1 class="white visible-from-right">Become a Clarent360 Affiliate Partner</h1>
+            </div>
+        </div>
+        <img src="assets/img/element/bread-ele.png" alt="img" class="bread-ele">
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- Section 1: Overview Start -->
+    <section class="services-development-section fix section-padding whitebg" id="overview-section">
+        <div class="container">
+            <div class="row align-items-start g-5">
+                <!-- Main Content Area (Left) -->
+                <div class="col-lg-7">
+                    <div class="service-details-content">
+                        <div class="mb-4">
+                            <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-inline-block mb-2">
+                                PARTNERSHIP OPPORTUNITY
+                            </span>
+                            <h2 class="black mb-4 wow fadeInUp" data-wow-delay=".3s">
+                                Expand Your Network. Create New Opportunities. Grow Together.
+                            </h2>
+                            <p class="pra fs-seven mb-3 wow fadeInUp" data-wow-delay=".4s">
+                                Clarent360’s Affiliate Partner Program is designed for professionals and organisations who regularly engage with businesses seeking cybersecurity, governance, risk management, compliance, cloud security, AI governance, digital transformation, and workforce capability solutions.
+                            </p>
+                            <p class="pra fs-seven mb-3 wow fadeInUp" data-wow-delay=".5s">
+                                As an Affiliate Partner, you introduce organisations to Clarent360’s specialist services while maintaining your own business independence. We handle the delivery, project execution, and client engagement, allowing you to focus on creating valuable connections and expanding your professional ecosystem.
+                            </p>
+                            <p class="pra fs-seven mb-4 wow fadeInUp" data-wow-delay=".6s">
+                                Whether you are an IT consultant, MSP, business advisor, legal practice, compliance consultant, HR firm, technology reseller, or industry specialist, the Affiliate Program provides a structured pathway to collaborate with an experienced cybersecurity and governance partner.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Floating Side Widget (Right) -->
+                <div class="col-lg-5">
+                    <div class="position-sticky" style="top: 100px;">
+                        <div class="thumb rounded-3 mb-4 wow fadeInUp" data-wow-delay=".4s">
+                            <img src="assets/webimages/about.webp" alt="Clarent360 team collaborating on cybersecurity services" class="w-100 rounded-3 border"
+                                style="max-height: 300px; object-fit: cover; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);">
+                        </div>
+
+                        <!-- Sidebar Interactive Card -->
+                        <div class="sidebar-consult-card text-center wow fadeInUp" data-wow-delay=".4s">
+                            <h4 class="white mb-3">
+                                Ready to Partner with Us?
+                            </h4>
+                            <p class="white65 fs-eight mb-4">
+                                Join our network today and connect your clients with industry-leading cybersecurity advisory and compliance solutions.
+                            </p>
+                            <a href="contact.html?subject=Affiliate%20Partner%20Program"
+                                class="common-btn box-style cmn-style1 d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 fs18 fw-semibold white overflow-hidden rounded-3 p3-bg mb-4 w-100">
+                                Apply for the Program <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 1: Overview End -->
+
+    <!-- Section 2: Why Partner with Clarent360? -->
+    <section class="pillars-interactive-section fix section-padding bg-light" id="why-partner-section"
+        style="border-top: 1px solid rgba(81, 53, 255, 0.05); border-bottom: 1px solid rgba(81, 53, 255, 0.05);">
+        <div class="container">
+            <div class="row mb-5 justify-content-center text-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-2">
+                            PROGRAM ADVANTAGES
+                        </span>
+                        <h2 class="wow fadeInUp black fw-bold" data-wow-delay=".3s">
+                            Why Partner with Clarent360?
+                        </h2>
+                        <p class="pra fs-seven mt-3">
+                            Collaborate with an experienced cybersecurity and governance partner to deliver high-value, structured services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Advantage 1 -->
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="step-timeline-card h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="portfolio-icon" style="background: rgba(81, 53, 255, 0.08); color: var(--p1-clr);">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h5 class="black fw-bold mb-3" style="font-size: 19px;">Trusted Expertise</h5>
+                                <p class="pra fs-seven mb-0">Our consultants bring extensive experience across cybersecurity, governance, risk, compliance, cloud security, digital transformation, and workforce capability development.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="step-timeline-card h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="portfolio-icon" style="background: rgba(81, 53, 255, 0.08); color: var(--p1-clr);">
+                                <i class="fa-solid fa-handshake-angle"></i>
+                            </div>
+                            <div>
+                                <h5 class="black fw-bold mb-3" style="font-size: 19px;">Strengthen Client Relationships</h5>
+                                <p class="pra fs-seven mb-0">By connecting clients with specialist expertise, you increase the value you provide while remaining their trusted advisor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="step-timeline-card h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="portfolio-icon" style="background: rgba(81, 53, 255, 0.08); color: var(--p1-clr);">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                            <div>
+                                <h5 class="black fw-bold mb-3" style="font-size: 19px;">Minimal Administrative Burden</h5>
+                                <p class="pra fs-seven mb-0">Clarent360 manages project scoping, delivery, reporting, quality assurance, and client engagement throughout the engagement lifecycle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advantage 4 -->
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="step-timeline-card h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="portfolio-icon" style="background: rgba(81, 53, 255, 0.08); color: var(--p1-clr);">
+                                <i class="fa-solid fa-folder-open"></i>
+                            </div>
+                            <div>
+                                <h5 class="black fw-bold mb-3" style="font-size: 19px;">Access to Partner Resources</h5>
+                                <p class="pra fs-seven mb-0">Affiliate Partners receive access to approved marketing collateral, service overviews, capability statements, and partner support resources.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Who Should Join Section Start -->
+    <section class="about-section fix" id="who-should-join-section">
+        <div class="about-wrapper section-padding">
+            <div class="container">
+                <div class="row flex-row-reverse justify-content-lg-between justify-content-center g-4 align-items-center">
+                    <!-- Right Column: Content -->
+                    <div class="col-xl-6 col-lg-7">
+                        <div class="about-content">
+                            <div class="section-title text-lg-start text-center mb-4">
+                                <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-3">
+                                    IDEAL PARTNERS
+                                </span>
+                                <h2 class="mb-xxl-4 mb-3 wow fadeInUp black fw-bold visible-slowly-right"
+                                    data-wow-delay=".3s">
+                                    Who Should Join?
+                                </h2>
+                                <p class="pra fs-seven">
+                                    Clarent360’s Cyber Affiliate Program is ideal for:
+                                </p>
+                            </div>
+                            
+                            <div class="row g-2 mb-4">
+                                <div class="col-md-6">
+                                    <ul class="about-list d-grid gap-2 mb-0">
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span class="icon d-center"><i class="fa-solid fa-server p1-clr fs-eight"></i></span>
+                                            <p class="fw-semibold black mb-0">Managed Service Providers (MSPs)</p>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span class="icon d-center"><i class="fa-solid fa-user-gear p1-clr fs-eight"></i></span>
+                                            <p class="fw-semibold black mb-0">IT Consultants</p>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span class="icon d-center"><i class="fa-solid fa-lightbulb p1-clr fs-eight"></i></span>
+                                            <p class="fw-semibold black mb-0">Technology Advisors</p>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span class="icon d-center"><i class="fa-solid fa-briefcase p1-clr fs-eight"></i></span>
+                                            <p class="fw-semibold black mb-0">Business Consultants</p>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span class="icon d-center"><i class="fa-solid fa-scale-balanced p1-clr fs-eight"></i></span>
+                                            <p class="fw-semibold black mb-0">Legal & Compliance Firms</p>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span class="icon d-center"><i class="fa-solid fa-users p1-clr fs-eight"></i></span>
+                                            <p class="fw-semibold black mb-0">HR & Recruitment Agencies</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="about-list d-grid gap-2 mb-0">
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span class="icon d-center"><i class="fa-solid fa-calculator p1-clr fs-eight"></i></span>
+                                            <p class="fw-semibold black mb-0">Accounting & Advisory Practices</p>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span class="icon d-center"><i class="fa-solid fa-rocket p1-clr fs-eight"></i></span>
+                                            <p class="fw-semibold black mb-0">Digital Transformation Consultants</p>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span class="icon d-center"><i class="fa-solid fa-sitemap p1-clr fs-eight"></i></span>
+                                            <p class="fw-semibold black mb-0">Industry Associations</p>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span class="icon d-center"><i class="fa-solid fa-graduation-cap p1-clr fs-eight"></i></span>
+                                            <p class="fw-semibold black mb-0">Training Providers</p>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-2">
+                                            <span class="icon d-center"><i class="fa-solid fa-handshake p1-clr fs-eight"></i></span>
+                                            <p class="fw-semibold black mb-0">Independent Business Development Professionals</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Left Column: Image -->
+                    <div class="col-xl-6 col-lg-5">
+                        <div class="about-thumb position-relative reveal-left w-100">
+                            <img src="assets/webimages/why.jpg" alt="Clarent360 team collaborating on cybersecurity services" class="w-100 rounded-4 border">
+                            <!-- Ele -->
+                            <img src="assets/img/element/dot-grp1.png" alt="decorative dots grid" class="about-ele">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Who Should Join Section End -->
+
+
+
+    <!-- Broad Service Portfolio Section -->
+    <section class="services-development-section fix section-padding bg-light" id="portfolio-section">
+        <div class="container">
+            <div class="row mb-5 justify-content-center text-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-2">
+                            BROAD SERVICE PORTFOLIO
+                        </span>
+                        <h2 class="wow fadeInUp black fw-bold" data-wow-delay=".3s">
+                            Affiliate Partners can introduce opportunities across:
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-lg-6 col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                    <div class="capability-card-new h-100">
+                        <div class="capability-header mb-0">
+                            <i class="fa-solid fa-shield-halved capability-icon"></i>
+                            <h5 class="capability-title">Cybersecurity Advisory</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-lg-6 col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="capability-card-new h-100">
+                        <div class="capability-header mb-0">
+                            <i class="fa-solid fa-gavel capability-icon"></i>
+                            <h5 class="capability-title">Governance, Risk & Compliance (GRC)</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-lg-6 col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="capability-card-new h-100">
+                        <div class="capability-header mb-0">
+                            <i class="fa-solid fa-file-contract capability-icon"></i>
+                            <h5 class="capability-title">ISO 27001 & ISO 42001 Readiness</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="col-lg-6 col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="capability-card-new h-100">
+                        <div class="capability-header mb-0">
+                            <i class="fa-solid fa-magnifying-glass-chart capability-icon"></i>
+                            <h5 class="capability-title">Risk Assessments & Audits</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="col-lg-6 col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="capability-card-new h-100">
+                        <div class="capability-header mb-0">
+                            <i class="fa-solid fa-bug-slash capability-icon"></i>
+                            <h5 class="capability-title">Penetration Testing & Security Reviews</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="col-lg-6 col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                    <div class="capability-card-new h-100">
+                        <div class="capability-header mb-0">
+                            <i class="fa-brands fa-microsoft capability-icon"></i>
+                            <h5 class="capability-title">Microsoft Security & Cloud Assessments</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 7 -->
+                <div class="col-lg-6 col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="capability-card-new h-100">
+                        <div class="capability-header mb-0">
+                            <i class="fa-solid fa-robot capability-icon"></i>
+                            <h5 class="capability-title">AI Governance & Responsible AI Programs</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 8 -->
+                <div class="col-lg-6 col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                    <div class="capability-card-new h-100">
+                        <div class="capability-header mb-0">
+                            <i class="fa-solid fa-users-gear capability-icon"></i>
+                            <h5 class="capability-title">Cybersecurity Awareness & Workforce Training</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 9 -->
+                <div class="col-lg-6 col-xl-4 col-md-6 wow fadeInUp" data-wow-delay=".9s">
+                    <div class="capability-card-new h-100">
+                        <div class="capability-header mb-0">
+                            <i class="fa-solid fa-laptop-code capability-icon"></i>
+                            <h5 class="capability-title">Digital Transformation Consulting</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 10 -->
+                <div class="col-lg-6 col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="1.0s">
+                    <div class="capability-card-new h-100">
+                        <div class="capability-header mb-0">
+                            <i class="fa-solid fa-user-tie capability-icon"></i>
+                            <h5 class="capability-title">Executive Advisory Services</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- How the Program Works Section -->
+    <section class="works-dark-section fix" id="how-it-works-section">
+        <div class="container">
+            <div class="row mb-5 justify-content-center text-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-2" style="color: #ffffff !important; border-color: rgba(255, 255, 255, 0.1);">
+                            ONBOARDING WORKFLOW
+                        </span>
+                        <h2 class="wow fadeInUp white fw-bold" data-wow-delay=".3s">
+                            How the Program Works
+                        </h2>
+                        <p class="white65 fs-seven mt-3">
+                            Five simple steps to start introducing opportunities and scaling your revenue with Clarent360.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Step 1 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                    <div class="works-dark-card">
+                        <img src="assets/webimages/step_1_apply.png" alt="Apply for the Clarent360 Affiliate Partner Program" class="works-dark-img">
+                        <div class="works-dark-content">
+                            <span class="works-dark-step">STEP 01</span>
+                            <h4 class="works-dark-title">Step 1 – Apply</h4>
+                            <p class="works-dark-desc">Submit your partnership application and tell us about your business, network, and industry focus.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="works-dark-card">
+                        <img src="assets/webimages/step_2_onboarding.png" alt="Partner Onboarding with Clarent360" class="works-dark-img">
+                        <div class="works-dark-content">
+                            <span class="works-dark-step">STEP 02</span>
+                            <h4 class="works-dark-title">Step 2 – Partner Onboarding</h4>
+                            <p class="works-dark-desc">Meet the Clarent360 team, understand our services, and gain access to approved partner resources.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="works-dark-card">
+                        <img src="assets/webimages/step_3_introduce.png" alt="Introduce Opportunities to Clarent360" class="works-dark-img">
+                        <div class="works-dark-content">
+                            <span class="works-dark-step">STEP 03</span>
+                            <h4 class="works-dark-title">Step 3 – Introduce Opportunities</h4>
+                            <p class="works-dark-desc">Connect organisations that may benefit from Clarent360’s expertise.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="works-dark-card">
+                        <img src="assets/webimages/step_4_deliver.png" alt="Clarent360 Delivery and Project Execution" class="works-dark-img">
+                        <div class="works-dark-content">
+                            <span class="works-dark-step">STEP 04</span>
+                            <h4 class="works-dark-title">Step 4 – We Deliver</h4>
+                            <p class="works-dark-desc">Our specialists manage discovery, project delivery, quality assurance, and client success.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 5 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="works-dark-card">
+                        <img src="assets/webimages/step_5_grow.png" alt="Grow Together with Clarent360" class="works-dark-img">
+                        <div class="works-dark-content">
+                            <span class="works-dark-step">STEP 05</span>
+                            <h4 class="works-dark-title">Step 5 – Grow Together</h4>
+                            <p class="works-dark-desc">Build long-term relationships while helping organisations strengthen their security, compliance, governance, and digital resilience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Benefits & Why Clarent360 Section -->
+    <section class="pillars-interactive-section fix section-padding" id="benefits-section">
+        <div class="container">
+            <div class="row mb-5 justify-content-center text-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <span class="sub-badge p1-clr fw-semibold fs-seven text-uppercase d-block mb-2">
+                            EXCLUSIVE PRIVILEGES
+                        </span>
+                        <h2 class="wow fadeInUp black fw-bold" data-wow-delay=".3s">
+                            Partner Benefits
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5 justify-content-center">
+                <!-- Benefit 1 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                    <div class="step-timeline-card benefit-grid-card text-center h-100">
+                        <div class="benefit-icon-box"><i class="fa-solid fa-headset"></i></div>
+                        <h5 class="black fw-bold mb-0" style="font-size: 16px;">Dedicated Partner Support</h5>
+                    </div>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="step-timeline-card benefit-grid-card text-center h-100">
+                        <div class="benefit-icon-box"><i class="fa-solid fa-user-shield"></i></div>
+                        <h5 class="black fw-bold mb-0" style="font-size: 16px;">Access to Service Specialists</h5>
+                    </div>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="step-timeline-card benefit-grid-card text-center h-100">
+                        <div class="benefit-icon-box"><i class="fa-solid fa-arrows-spin"></i></div>
+                        <h5 class="black fw-bold mb-0" style="font-size: 16px;">Co-Branded Opportunity Support</h5>
+                    </div>
+                </div>
+                <!-- Benefit 4 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="step-timeline-card benefit-grid-card text-center h-100">
+                        <div class="benefit-icon-box"><i class="fa-solid fa-book-open-reader"></i></div>
+                        <h5 class="black fw-bold mb-0" style="font-size: 16px;">Industry-Focused Resources</h5>
+                    </div>
+                </div>
+                <!-- Benefit 5 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="step-timeline-card benefit-grid-card text-center h-100">
+                        <div class="benefit-icon-box"><i class="fa-solid fa-clipboard-list"></i></div>
+                        <h5 class="black fw-bold mb-0" style="font-size: 16px;">Structured Lead Registration Process</h5>
+                    </div>
+                </div>
+                <!-- Benefit 6 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                    <div class="step-timeline-card benefit-grid-card text-center h-100">
+                        <div class="benefit-icon-box"><i class="fa-solid fa-arrows-rotate"></i></div>
+                        <h5 class="black fw-bold mb-0" style="font-size: 16px;">Ongoing Program Updates</h5>
+                    </div>
+                </div>
+                <!-- Benefit 7 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="step-timeline-card benefit-grid-card text-center h-100">
+                        <div class="benefit-icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                        <h5 class="black fw-bold mb-0" style="font-size: 16px;">Business Networking Opportunities</h5>
+                    </div>
+                </div>
+                <!-- Benefit 8 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                    <div class="step-timeline-card benefit-grid-card text-center h-100">
+                        <div class="benefit-icon-box"><i class="fa-solid fa-rocket"></i></div>
+                        <h5 class="black fw-bold mb-0" style="font-size: 16px;">Priority Access to New Service Launches</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="techgon-section fix position-relative">
+        <div class="container">
+            <div class="row g-6 align-items-xxl-center">
+                <div class="col-xxl-8 col-xl-6 col-lg-6">
+                    <div class="techgon-thumb">
+                        <img src="assets/webimages/why-clarent.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-6 col-lg-6">
+                    <div class="techgon-content techgon-contentt">
+                        <div class="mb-lg-5 mb-4">
+                            <h3 class="black mb-lg-3 mb-2 wow fadeInUp" data-wow-delay=".3s">
+                                 Why Clarent360?
+                            </h3>
+                            <p class="fs-seven pra wow fadeInUp" data-wow-delay=".4s">
+                                We combine strategic advisory, technical expertise, and practical implementation capabilities across multiple domains. Our focus is not simply identifying problems—we help organisations build sustainable, secure, and cyber-ready operating environments.
+                            </p>
+                        </div>
+                        <ul class="d-grid gap-3">
+    <li class="d-flex align-items-center gap-2 fs-six fw_500 black wow fadeInUp"
+        data-wow-delay=".5s">
+        <span class="d-center"><i class="fa-solid fa-shield-halved"></i></span>
+        Cybersecurity
+    </li>
+
+    <li class="d-flex align-items-center gap-2 fs-six fw_500 black wow fadeInUp"
+        data-wow-delay=".5s">
+        <span class="d-center"><i class="fa-solid fa-scale-balanced"></i></span>
+        Governance & Risk
+    </li>
+
+    <li class="d-flex align-items-center gap-2 fs-six fw_500 black wow fadeInUp"
+        data-wow-delay=".5s">
+        <span class="d-center"><i class="fa-solid fa-robot"></i></span>
+        AI Governance
+    </li>
+
+    <li class="d-flex align-items-center gap-2 fs-six fw_500 black wow fadeInUp"
+        data-wow-delay=".5s">
+        <span class="d-center"><i class="fa-solid fa-cloud"></i></span>
+        Cloud Security
+    </li>
+
+    <li class="d-flex align-items-center gap-2 fs-six fw_500 black wow fadeInUp"
+        data-wow-delay=".5s">
+        <span class="d-center"><i class="fa-solid fa-arrows-rotate"></i></span>
+        Digital Transformation
+    </li>
+
+    <li class="d-flex align-items-center gap-2 fs-six fw_500 black wow fadeInUp"
+        data-wow-delay=".5s">
+        <span class="d-center"><i class="fa-solid fa-file-shield"></i></span>
+        Compliance Programs
+    </li>
+</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ele -->
+        <img src="assets/img/services/techgon-ele.png" alt="img" class="techgon-ele">
+    </section>
+
+    <!-- Let's Build Stronger Businesses Together CTA Section -->
+    <section class="customer-touh fix" style="padding-bottom: 40px; padding-top: 40px;">
+        <div class="container">
+            <div class="customer-touch-wrap">
+                <div class="section-title">
+                    <h2 class="wow fadeInUp white fw-bold mb-2 touchhh">
+                        Let’s Build Stronger Businesses Together
+                    </h2>
+                    <p class="sub-badg white fs-seven d-block mb-2">
+                        Join a growing ecosystem of professionals and organisations helping businesses improve security, governance, compliance, resilience, and operational maturity. Become a Clarent360 Affiliate Partner and help shape the future of secure digital business.
+                    </p>
+                </div>
+                <a href="contact.html?subject=Affiliate%20Partner%20Program"
+                    class="common-btn text-nowrap heading-font box-style d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 fs18 fw-semibold black overflow-hidden bg-white rounded100">
+                    Apply for Affiliate Program
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--<< Footer Section Start >>-->
+    <div id="footer"></div>
+
+    <!-- Search Area Start -->
+    <div class="search-wrap">
+        <div class="search-inner">
+            <i class="fas fa-times search-close" id="search-close"></i>
+            <div class="search-cell">
+                <form method="get">
+                    <div class="search-field-holder">
+                        <input type="search" class="main-search-input" placeholder="Search...">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--<< All JS Plugins >>-->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!--<< Viewport Js >>-->
+    <script src="assets/js/viewport.jquery.js"></script>
+    <!--<< Bootstrap Js >>-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--<< Nice Select Js >>-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!--<< Waypoints Js >>-->
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <!--<< Counterup Js >>-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!--<< Swiper Slider Js >>-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!--<< MeanMenu Js >>-->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!--<< Magnific Popup Js >>-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--<< Wow Animation Js >>-->
+    <script src="assets/js/wow.min.js"></script>
+    <!--<< Gsap Js >>-->
+    <script src="assets/js/gsap.min.js"></script>
+    <!--<< Lenis Js >>-->
+    <script src="assets/js/lenis.min.js"></script>
+    <!--<< ScrollSmoother Js >>-->
+    <script src="assets/js/scrollSmoother.js"></script>
+    <!--<< ScrollTrigger Js >>-->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!--<< Spalit Text Js >>-->
+    <script src="assets/js/spilitext-gsap.js"></script>
+    <!--<< Valina Tilt Js >>-->
+    <script src="assets/js/vanilla-tilt.min.js"></script>
+    <!--<< Main.js >>-->
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/common-header.js"></script>
+
+</body>
+
+</html>

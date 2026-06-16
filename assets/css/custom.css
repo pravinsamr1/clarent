@@ -2049,3 +2049,11 @@
     text-transform: none !important;
     letter-spacing: 0 !important;
 }
+
+.subbumenu{
+    width: 350px !important;
+}
+
+.techgon-contentt{
+    top: 50% !important;
+}

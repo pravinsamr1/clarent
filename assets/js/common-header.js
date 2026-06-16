@@ -304,12 +304,30 @@ document.addEventListener("DOMContentLoaded", () => {
                                                     <div class="services-mega__panel" data-services-panel="training">
                                                         <h3 class="services-mega__panel-heading">Training solutions</h3>
                                                         <ul class="services-mega__list">
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Cyber Security Essentialss</a></li>
                                                             
                                                             <li class="services-mega__item"><a href="ethical-hacking.html"
                                                                     class="services-mega__link services-mega__link--main">Ethical
                                                                     Hacker</a></li>
+
+                                                            <li class="services-mega__item"><a href="hacking-forensics-investigator.html"
+                                                                    class="services-mega__link services-mega__link--main">Certified Hacking Forensics Investigator</a></li>
+
+
+                                                            <li class="services-mega__item"><a href="incident-handler.html"
+                                                                    class="services-mega__link services-mega__link--main">Incident Handler</a></li>
+
+
+                                                            <li class="services-mega__item"><a href="malware-analysis-reverse-engineering.html"
+                                                                    class="services-mega__link services-mega__link--main">Malware Analysis & Reverse Engineering</a></li>
+
+
+                                                            <li class="services-mega__item"><a href="iso-27001-2022-lead-auditor-practical-approach.html"
+                                                                    class="services-mega__link services-mega__link--main">ISO 27001:2022 Lead Auditor – Practical Approach</a></li>
+
+                                                            <li class="services-mega__item"><a href="iso-31000-risk-management.html"
+                                                                    class="services-mega__link services-mega__link--main">ISO 31000 Risk Management</a></li>
+                                                            <li class="services-mega__item"><a href="cybersecurity-risk-assessment-workshop.html"
+                                                                    class="services-mega__link services-mega__link--main">Cybersecurity Risk Assessment Workshop</a></li>
                                                         </ul>
                                                     </div>
 
@@ -328,14 +346,14 @@ document.addEventListener("DOMContentLoaded", () => {
                                         </li>
 
                                         <li>
-                                            <a href="services.html">
-                                                Our Expertise
-                                                <!-- <i class="fas fa-angle-down"></i> -->
+                                            <a href="#0">
+                                                Join Our Partnership
+                                                <i class="fas fa-angle-down"></i>
                                             </a>
-                                            <!-- <ul class="submenu">
-                                                <li><a href="services.html">Service</a></li>
-                                                <li><a href="services-details.html">Service Details</a></li>
-                                            </ul> -->
+                                            <ul class="submenu subbumenu">
+                                                <li><a href="become-clarent360-affiliate.html">Become a Clarent 360 Affiliate Partner</a></li>
+                                                <li><a href="clarent360-franchise.html">Own and Operate with Clarent360 Franchise</a></li>
+                                            </ul>
                                         </li>
 
                                         <li>
