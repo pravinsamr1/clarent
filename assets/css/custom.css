@@ -2065,6 +2065,10 @@
     p{
         text-align: justify !important;
     }
+    .ffdfd{
+        display: flex !important;
+        flex-direction: column !important;
+    }
 }
 
 /* Preloader space span & delay animations support */
