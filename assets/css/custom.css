@@ -2066,3 +2066,19 @@
         text-align: justify !important;
     }
 }
+
+/* Preloader space span & delay animations support */
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(9):before {
+  animation-delay: 1.6s;
+}
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(10):before {
+  animation-delay: 1.8s;
+}
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(11):before {
+  animation-delay: 2.0s;
+}
+
+/* Eliminate subpixel gaps on preloader sliding panels */
+.preloader .loader .loader-section .bg {
+  width: 101%;
+}

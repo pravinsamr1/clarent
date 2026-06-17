@@ -111,6 +111,22 @@ CSS TABLE OF CONTENTS
 						$newSubmenu.append($catLi);
 					});
 					
+					// Append any other buttons/links inside the mega menu rail that are not category tabs
+					$megaMenu.find('.services-mega__rail button, .services-mega__rail a').each(function() {
+						const $btn = $(this);
+						if (!$btn.attr('data-services-tab')) {
+							const name = $btn.text().trim();
+							let href = "#";
+							if ($btn.attr('id') === 'psychometricBtn') {
+								href = 'clarent-psychometrics.html';
+							}
+							const $li = $('<li></li>');
+							const $link = $('<a></a>').attr('href', href).text(name);
+							$li.append($link);
+							$newSubmenu.append($li);
+						}
+					});
+
 					$megaMenu.replaceWith($newSubmenu);
 				}
 				
