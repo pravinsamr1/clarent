@@ -2057,3 +2057,12 @@
 .techgon-contentt{
     top: 50% !important;
 }
+
+@media(max-width:767px){
+    .bread-content ul li{
+        display: none;
+    }
+    p{
+        text-align: justify !important;
+    }
+}

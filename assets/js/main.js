@@ -573,6 +573,40 @@ CSS TABLE OF CONTENTS
 			},
 		});
 
+		//>> Team Slider Start <<//
+		if ($(".team-slider").length > 0) {
+			const teamSlider = new Swiper(".team-slider", {
+				spaceBetween: 30,
+				speed: 1500,
+				loop: true,
+				autoplay: {
+					delay: 3500,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: ".team-slider-pagination",
+					clickable: true,
+				},
+				breakpoints: {
+					1199: {
+						slidesPerView: 3,
+					},
+					991: {
+						slidesPerView: 3,
+					},
+					767: {
+						slidesPerView: 2,
+					},
+					575: {
+						slidesPerView: 1,
+					},
+					0: {
+						slidesPerView: 1,
+					},
+				},
+			});
+		}
+
 		//>> Search Popup Start <<//
 		const $searchWrap = $(".search-wrap");
 		const $navSearch = $(".nav-search");
