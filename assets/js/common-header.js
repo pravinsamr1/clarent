@@ -68,9 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <div class="social-icon d-flex align-items-center">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
                         </div>
                     </div>
                 </div>
@@ -347,7 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                                         <li>
                                             <a href="#0">
-                                                Join Our Partnership
+                                                Partner with us?
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
                                             <ul class="submenu subbumenu">
@@ -357,14 +356,17 @@ document.addEventListener("DOMContentLoaded", () => {
                                         </li>
 
                                         <li>
-                                            <a href="blog.html">
-                                                Insights
+                                            <a href="hire-consultant.html">
+                                                Consultations
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">Security Insights</a></li>
-                                                <li><a href="blog-sidebar.html">GRC Updates</a></li>
-                                                <li><a href="blog-details.html">PenTest Notes</a></li>
+                                                <li><a href="consulting-roles.html?tab=panel-security-advisor">Security Advisor</a></li>
+                                                <li><a href="consulting-roles.html?tab=panel-grc-consultant">GRC Consultant</a></li>
+                                                <li><a href="consulting-roles.html?tab=panel-security-architect">Cyber Security Architect</a></li>
+                                                <li><a href="consulting-roles.html?tab=panel-servicenow-consultant">ServiceNow Consultant</a></li>
+                                                <li><a href="consulting-roles.html?tab=panel-microsoft-solutions">Microsoft Solutions Consultant</a></li>
+                                                <li><a href="consulting-roles.html?tab=panel-rsa-archer">RSA Archer Consultant</a></li>
                                             </ul>
                                         </li>
                                         <li class="has-dropdown">
@@ -373,8 +375,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
                                             <ul class="submenu">
-                                                <li><a href="services-details.html">Cyber Security Essentials</a></li>
-                                                <li><a href="ethical-hacking.html">Ethical hackers</a></li>
+                                                <li><a href="ethical-hacking.html">Ethical Hacker</a></li>
+                                                <li><a href="hacking-forensics-investigator.html">Certified Hacking Forensics Investigator</a></li>
+                                                <li><a href="incident-handler.html">Incident Handler</a></li>
+                                                <li><a href="malware-analysis-reverse-engineering.html">Malware Analysis & Reverse Engineering</a></li>
+                                                <li><a href="iso-27001-2022-lead-auditor-practical-approach.html">ISO 27001:2022 Lead Auditor</a></li>
+                                                <li><a href="iso-31000-risk-management.html">ISO 31000 Risk Management</a></li>
+                                                <li><a href="cybersecurity-risk-assessment-workshop.html">Cybersecurity Risk Assessment Workshop</a></li>
                                             </ul>
                                         </li>
                                     </ul>
