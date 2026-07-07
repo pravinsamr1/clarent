@@ -1500,7 +1500,7 @@
                 if (!section) return;
 
                 const headerLeft = section.querySelector('.clause-card-header-left span');
-                const clauseTitle = headerLeft ? headerLeft.textContent.trim() : clause.id;
+                const clauseTitle = headerLeft ? headerLeft.textContent.replace(/\s+/g, ' ').trim() : clause.id;
 
                 let clauseCheckedCount = 0;
                 const items = [];
@@ -1517,8 +1517,8 @@
                         items.push({
                             id: i,
                             checked: cb.checked,
-                            title: titleEl ? titleEl.textContent.trim() : `Item ${i}`,
-                            desc: descEl ? descEl.textContent.trim() : ''
+                            title: titleEl ? titleEl.textContent.replace(/\s+/g, ' ').trim() : `Item ${i}`,
+                            desc: descEl ? descEl.textContent.replace(/\s+/g, ' ').trim() : ''
                         });
                     }
                 }
@@ -1634,11 +1634,11 @@
             if (activeAdvisoryEl) {
                 const titleEl = activeAdvisoryEl.querySelector('h4');
                 if (titleEl) {
-                    advisoryTitle = titleEl.textContent.trim();
+                    advisoryTitle = titleEl.textContent.replace(/\s+/g, ' ').trim();
                 }
                 const pElements = activeAdvisoryEl.querySelectorAll('p');
                 const pTexts = [];
-                pElements.forEach(p => pTexts.push(p.textContent.trim()));
+                pElements.forEach(p => pTexts.push(p.textContent.replace(/\s+/g, ' ').trim()));
                 advisoryDesc = pTexts.join(" ");
             }
 
