@@ -437,15 +437,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <!-- Social -->
                         <div class="social-custom d-flex align-items-center gap-3 mt-4">
-                            <a href="#" class="black">
-                                <i class="fab fa-facebook-f white65"></i>
-                            </a>
 
-                            <a href="#" class="black">
-                                <i class="fa-brands fa-x-twitter white65"></i>
-                            </a>
-
-                            <a href="#" class="black">
+                            <a href="https://www.linkedin.com/in/clarent-solutions-472a16407/" target="_blank" class="black">
                                 <i class="fab fa-linkedin-in white65"></i>
                             </a>
                         </div>
@@ -582,7 +575,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <div class="row align-items-center gy-3">
 
-                    <div class="col-lg-6 text-center text-lg-start">
+                    <div class="col-lg-12 text-center text-lg-center">
                         <p class="white65 mb-0">
                             © 2026
                             <a href="index.html" class="white fw-semibold">
@@ -590,10 +583,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             </a>.
                             All Rights Reserved.
                         </p>
-                    </div>
-
-                    <div class="col-lg-6 text-end">
-                        <p class="white65">Designed by <a href="https://impinfo.in" class="white fw-semibold">Imperial Info Systems</a></p>
                     </div>
 
                 </div>
