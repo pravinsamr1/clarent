@@ -522,23 +522,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <div class="d-flex flex-column gap-4">
 
-                            <div>
-                                <span class="fs-eight white65 d-block mb-1">
-                                    Call Us
-                                </span>
-
-                                <a href="tel:+112246767430" class="white fw-semibold">
-                                    +(1) 224 676 7430
-                                </a>
-                            </div>
+                            
 
                             <div>
                                 <span class="fs-eight white65 d-block mb-1">
                                     Email Address
                                 </span>
 
-                                <a href="mailto:security@example.com" class="white fw-semibold">
-                                    security@example.com
+                                <a href="mailto:info@clarent360.com.au" class="white fw-semibold">
+                                    info@clarent360.com.au
                                 </a>
                             </div>
                             <div>
@@ -655,6 +647,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.dispatchEvent(new CustomEvent("footerLoaded"));
     }
 
-    
-    
+
+
 });

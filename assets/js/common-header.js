@@ -103,6 +103,9 @@ document.addEventListener("DOMContentLoaded", () => {
                                             <a href="about.html">About Us</a>
                                         </li>
                                         <li>
+                                            <a href="program.html">Programs</a>
+                                        </li>
+                                        <li>
                                             <a>
                                                 Services
                                                 <i class="fas fa-angle-down"></i>
@@ -131,6 +134,18 @@ document.addEventListener("DOMContentLoaded", () => {
                                                     </button>
                                                     <button type="button" class="services-mega__tab" id="psychometricBtn">
                                                         Pyschometric Analysis <i class="fa-solid fa-arrow-right"></i>
+                                                    </button>
+
+                                                    <button type="button" class="services-mega__tab" id="programsBtn">
+                                                        Programs <i class="fa-solid fa-arrow-right"></i>
+                                                    </button>
+
+                                                    <button type="button" class="services-mega__tab" id="checklistBtn">
+                                                        Checklist <i class="fa-solid fa-arrow-right"></i>
+                                                    </button>
+
+                                                    <button type="button" class="services-mega__tab" id="frameworksBtn">
+                                                        Framework <i class="fa-solid fa-arrow-right"></i>
                                                     </button>
                                                 </li>
 
@@ -426,7 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="footer-widget pe-lg-5">
 
                         <a href="index.html" class="footer-logo d-inline-block mb-4">
-                            <img src="assets/webimages/log.png" width="270px" alt="logo" class="white-logoo">
+                            <img src="assets/webimages/log-footer.png" width="270px" alt="logo" class="white-logoo">
                         </a>
 
                         <p class="white65 mb-4">
@@ -536,21 +551,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                             <div>
                                 <span class="fs-eight white65 d-block mb-1">
-                                    Call Us
-                                </span>
-
-                                <a href="tel:+112246767430" class="white fw-semibold">
-                                    +(1) 224 676 7430
-                                </a>
-                            </div>
-
-                            <div>
-                                <span class="fs-eight white65 d-block mb-1">
                                     Email Address
                                 </span>
 
-                                <a href="mailto:security@example.com" class="white fw-semibold">
-                                    security@example.com
+                                <a href="mailto:info@clarent360.com.au" class="white fw-semibold">
+                                    info@clarent360.com.au
                                 </a>
                             </div>
                             <div>
@@ -559,7 +564,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 </span>
 
                                 <p class="white mb-0">
-                                    Chennai, India
+                                    Sydney, Australia
                                 </p>
                             </div>
 
@@ -602,6 +607,27 @@ document.addEventListener("DOMContentLoaded", () => {
         if (psychometricBtn) {
             psychometricBtn.addEventListener('click', () => {
                 window.location.href = 'clarent-psychometrics.html';
+            });
+        }
+
+        const programsBtn = document.getElementById('programsBtn');
+        if (programsBtn) {
+            programsBtn.addEventListener('click', () => {
+                window.location.href = 'program.html';
+            });
+        }
+
+        const checklistBtn = document.getElementById('checklistBtn');
+        if (checklistBtn) {
+            checklistBtn.addEventListener('click', () => {
+                window.location.href = 'checklist.html';
+            });
+        }
+
+        const frameworksBtn = document.getElementById('frameworksBtn');
+        if (frameworksBtn) {
+            frameworksBtn.addEventListener('click', () => {
+                window.location.href = 'framework.html';
             });
         }
 
@@ -670,6 +696,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.dispatchEvent(new CustomEvent("footerLoaded"));
     }
 
-    
-    
+
+
 });

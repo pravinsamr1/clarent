@@ -172,11 +172,9 @@
                             <span class="gradient-text-glow" style="font-size: inherit;">&amp; Transform</span>
                         </h1>
 
-                        <p class="pra fs-six mb-5 white-color modern-hero-dsc"
-                            style="text-align: center; max-width: 720px; margin: 0 auto;">
-                            Practical cybersecurity services for cloud, data protection, Zero Trust,
-                            ServiceNow, GRC, penetration testing, virtualization and hands-on security training.
-                        </p>
+                        <div class="animateddd-contentt mb-5">
+                            <h1 class="cyber-ticker-text white-text" style="font-size: 20px !important; font-weight: 600; max-width: 880px; margin: 0 auto; text-align: center;">Empowering organizations with end-to-end cybersecurity solutions—from governance, risk, and compliance to security architecture, penetration testing, audit assurance, bespoke training, and strategic cyber advisory.</h1>
+                        </div>
 
                         <div class="d-flex flex-sm-row flex-column justify-content-center align-items-sm-center gap-3">
                             <a href="#discover" class="modern-action-btn btn-primary-glow">
@@ -192,6 +190,26 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cyber-ticker-section">
+        <div class="container">
+            <div class="cyber-ticker-wrapper">
+                <div class="cyber-ticker-badge">
+                    <span class="cyber-badge-dot"></span>
+                    <span class="cyber-badge-text">CLARENT ADVISORY</span>
+                </div>
+                <div class="animateddd-contentt">
+                    <h1 class="cyber-ticker-text">Empowering organizations with end-to-end cybersecurity solutions—from governance, risk, and compliance to security architecture, penetration testing, audit assurance, bespoke training, and strategic cyber advisory.</h1>
+                </div>
+                <div class="cyber-ticker-deco">
+                    <span class="deco-line"></span>
+                    <span class="cyber-badge-dot"></span>
+                    <span class="deco-line"></span>
                 </div>
             </div>
         </div>
@@ -587,8 +605,7 @@
                             Got Questions? We’ve Got Answers
                         </h6>
                         <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
-                            Common questions about
-                            our security services
+                            Common questions about our security services
                         </h2>
                     </div>
                     <a href="faqs.html"
@@ -876,7 +893,7 @@
     <!-- Clarent Floating Trigger Badge -->
     <div class="clarent-popup-trigger-badge" id="clarentPopupBadge" aria-label="Open contact form">
         <i class="fa-solid fa-comment-dots"></i>
-        <p class="badge-tooltip">Get in Touch!</p>
+        <!-- <p class="badge-tooltip">Get in Touch!</p> -->
     </div>
 
     <!-- Clarent Contact Popup Markup -->
@@ -1391,6 +1408,23 @@
             } else {
                 initPopup();
             }
+        })();
+    </script>
+
+    <!-- Cyber Ticker Jitter-style sliding text reveal animation script -->
+    <script>
+        (function() {
+            const textEls = document.querySelectorAll('.cyber-ticker-text');
+            textEls.forEach(textEl => {
+                const rawText = textEl.textContent.trim();
+                const chars = rawText.split('');
+                textEl.innerHTML = chars.map((char, idx) => {
+                    if (char === ' ') {
+                        return `<span class="char-space" style="--char-index: ${idx}"> </span>`;
+                    }
+                    return `<span class="char-mask"><span class="char-inner" style="--char-index: ${idx}">${char}</span></span>`;
+                }).join('');
+            });
         })();
     </script>
 
