@@ -441,7 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="footer-widget pe-lg-5">
 
                         <a href="index.html" class="footer-logo d-inline-block mb-4">
-                            <img src="assets/webimages/log-footer.png" width="270px" alt="logo" class="white-logoo">
+                            <img src="assets/webimages/log-footer.png" width="200px" alt="logo" class="white-logoo">
                         </a>
 
                         <p class="white65 mb-4">
