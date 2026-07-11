@@ -385,7 +385,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                             </ul>
                                         </li>
                                         <li class="has-dropdown">
-                                            <a href="#0">
+                                            <a href="training-solutions.html">
                                                 Training Solutions
                                                 <i class="fas fa-angle-down"></i>
                                             </a>

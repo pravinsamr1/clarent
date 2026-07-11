@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 <style>
   :root{
     --bg-base:#0b0f14;
@@ -155,8 +156,35 @@
     padding:16px 20px; cursor:pointer; transition:background .2s, color .2s;
   }
   .tabbtn .code{display:block; font-size:10px; color:var(--text-dim); margin-bottom:5px;}
-  .tabbtn.active{background:var(--bg-panel-alt); color:var(--text-primary); box-shadow:inset 0 -2px 0 var(--cyan);}
-  .tabbtn.active .code{color:var(--cyan);}
+  .tabbtn.active{background:var(--bg-panel-alt); color:var(--text-primary);}
+  .tabbtn[data-tab="m365"].active {
+    color: var(--cyan);
+    box-shadow: inset 0 -3px 0 var(--cyan);
+  }
+  .tabbtn[data-tab="m365"].active .code {
+    color: var(--cyan);
+  }
+  .tabbtn[data-tab="intune"].active {
+    color: #00a896;
+    box-shadow: inset 0 -3px 0 #00a896;
+  }
+  .tabbtn[data-tab="intune"].active .code {
+    color: #00a896;
+  }
+  .tabbtn[data-tab="defender"].active {
+    color: var(--red);
+    box-shadow: inset 0 -3px 0 var(--red);
+  }
+  .tabbtn[data-tab="defender"].active .code {
+    color: var(--red);
+  }
+  .tabbtn[data-tab="purview"].active {
+    color: #8250df;
+    box-shadow: inset 0 -3px 0 #8250df;
+  }
+  .tabbtn[data-tab="purview"].active .code {
+    color: #8250df;
+  }
   .tabbtn:hover:not(.active){color:var(--text-primary);}
 
   .panel{border:1px solid var(--line); border-top:none; background:var(--bg-panel-alt); padding:44px 40px;}
@@ -186,7 +214,31 @@
   @media (max-width:560px){ .case-grid{grid-template-columns:1fr;} }
 
   .pillar-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:44px;}
-  .pillar{background:var(--bg-panel); padding:20px 18px;}
+  .card-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(73, 194, 232, 0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--cyan);
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+  }
+  .pillar{background:var(--bg-panel); padding:20px 18px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);}
+  .pillar:hover {
+    background: var(--bg-panel-alt);
+    box-shadow: inset 0 0 0 1px rgba(73, 194, 232, 0.2);
+    transform: translateY(-2px);
+  }
+  .pillar:hover .card-icon-box {
+    background: linear-gradient(93deg, var(--cyan) 10.65%, var(--amber) 89.35%);
+    color: var(--bg-base);
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0px 8px 20px rgba(73, 194, 232, 0.2);
+  }
   .pillar h5{font-family:var(--display); font-size:14px; margin:0 0 6px; font-weight:600; color:var(--text-primary);}
   .pillar p{font-size:12.5px; color:var(--text-muted); margin:0;}
   @media (max-width:820px){ .pillar-grid{grid-template-columns:repeat(2,1fr);} }
@@ -382,12 +434,12 @@ const data = {
       { tag: "Audit & Monitoring", title: "Logging & alerting completeness", body: "Unified audit log configuration, alert policies, sign-in log retention, and SIEM integration." }
     ],
     pillars: [
-      { title: "Identity & Authentication", body: "Authentication methods, MFA coverage, conditional access, and privileged identity configuration." },
-      { title: "Email & Communication", body: "Anti-phishing, spoofing protection, mail flow rules, and connector configurations against current threats." },
-      { title: "Collaboration & Sharing", body: "External sharing, guest access, Teams permissions, and OneDrive sync policies." },
-      { title: "Data Protection Controls", body: "Purview sensitivity labels, DLP policies, and information barriers across M365 workloads." },
-      { title: "Audit & Visibility", body: "Audit log coverage, alert policy completeness, and SIEM integration for detection capability." },
-      { title: "Remediation & Hardening", body: "Prioritised remediation register with configuration guidance, effort estimates, and compliance mapping." }
+      { title: "Identity & Authentication", body: "Authentication methods, MFA coverage, conditional access, and privileged identity configuration.", icon: "fa-solid fa-user-shield" },
+      { title: "Email & Communication", body: "Anti-phishing, spoofing protection, mail flow rules, and connector configurations against current threats.", icon: "fa-solid fa-envelope-open-text" },
+      { title: "Collaboration & Sharing", body: "External sharing, guest access, Teams permissions, and OneDrive sync policies.", icon: "fa-solid fa-users" },
+      { title: "Data Protection Controls", body: "Purview sensitivity labels, DLP policies, and information barriers across M365 workloads.", icon: "fa-solid fa-file-shield" },
+      { title: "Audit & Visibility", body: "Audit log coverage, alert policy completeness, and SIEM integration for detection capability.", icon: "fa-solid fa-eye" },
+      { title: "Remediation & Hardening", body: "Prioritised remediation register with configuration guidance, effort estimates, and compliance mapping.", icon: "fa-solid fa-sliders" }
     ],
     quote: "A well-configured M365 tenant is one of the most effective security controls available to an organisation. We review it with the rigour it deserves.",
     deliver: [
@@ -420,12 +472,12 @@ const data = {
       { tag: "Conditional Access", title: "Intune–Entra ID integration review", body: "Confirms non-compliant devices are actually blocked from corporate resources, not just flagged." }
     ],
     pillars: [
-      { title: "Enrolment Coverage", body: "Device enrolment completeness across platforms, identifying unmanaged or improperly enrolled devices." },
-      { title: "Compliance Policy Accuracy", body: "Policy rules for accuracy, platform completeness, grace periods, and enforcement mode." },
-      { title: "Configuration Hardening", body: "Security baseline adoption and configuration profile completeness against CIS Benchmark requirements." },
-      { title: "Application Governance", body: "MAM policies, app protection rules, and conditional launch settings for managed and BYOD devices." },
-      { title: "Conditional Access Integration", body: "Validates Intune compliance signals are correctly consumed by Entra ID conditional access." },
-      { title: "Remediation & Hardening", body: "Prioritised remediation register with platform-specific guidance and compliance milestones." }
+      { title: "Enrolment Coverage", body: "Device enrolment completeness across platforms, identifying unmanaged or improperly enrolled devices.", icon: "fa-solid fa-mobile-screen-button" },
+      { title: "Compliance Policy Accuracy", body: "Policy rules for accuracy, platform completeness, grace periods, and enforcement mode.", icon: "fa-solid fa-check-double" },
+      { title: "Configuration Hardening", body: "Security baseline adoption and configuration profile completeness against CIS Benchmark requirements.", icon: "fa-solid fa-shield-halved" },
+      { title: "Application Governance", body: "MAM policies, app protection rules, and conditional launch settings for managed and BYOD devices.", icon: "fa-solid fa-cubes" },
+      { title: "Conditional Access Integration", body: "Validates Intune compliance signals are correctly consumed by Entra ID conditional access.", icon: "fa-solid fa-link" },
+      { title: "Remediation & Hardening", body: "Prioritised remediation register with platform-specific guidance and compliance milestones.", icon: "fa-solid fa-screwdriver-wrench" }
     ],
     quote: "Intune policies that are deployed but not enforced provide no protection. Our reviews validate every layer, from rule logic to conditional access integration.",
     deliver: [
@@ -458,12 +510,12 @@ const data = {
       { tag: "Defender for Cloud Apps", title: "SaaS application visibility", body: "Connected application coverage, session policy configuration, anomaly detection, and shadow IT discovery." }
     ],
     pillars: [
-      { title: "Endpoint Protection", body: "Onboarding coverage, ASR rules, behavioural blocking, and tamper protection across the managed device fleet." },
-      { title: "Identity Protection", body: "Sensor deployment, monitored scope, and alert configuration for privileged identity and lateral movement detection." },
-      { title: "Email & Collaboration", body: "Anti-phishing, Safe Links, and Safe Attachments — including preset policy adoption and simulation maturity." },
-      { title: "Cloud App Security", body: "Connected application coverage, session controls, anomaly detection, and shadow IT discovery configuration." },
-      { title: "XDR Integration", body: "Correlation rules, incident configuration, automated investigation and response, and Sentinel integration." },
-      { title: "Remediation & Hardening", body: "Prioritised hardening register with configuration guidance and security score improvement projections." }
+      { title: "Endpoint Protection", body: "Onboarding coverage, ASR rules, behavioural blocking, and tamper protection across the managed device fleet.", icon: "fa-solid fa-shield-halved" },
+      { title: "Identity Protection", body: "Sensor deployment, monitored scope, and alert configuration for privileged identity and lateral movement detection.", icon: "fa-solid fa-user-lock" },
+      { title: "Email & Collaboration", body: "Anti-phishing, Safe Links, and Safe Attachments — including preset policy adoption and simulation maturity.", icon: "fa-solid fa-envelope-open-text" },
+      { title: "Cloud App Security", body: "Connected application coverage, session controls, anomaly detection, and shadow IT discovery configuration.", icon: "fa-solid fa-cloud-shield" },
+      { title: "XDR Integration", body: "Correlation rules, incident configuration, automated investigation and response, and Sentinel integration.", icon: "fa-solid fa-network-wired" },
+      { title: "Remediation & Hardening", body: "Prioritised remediation register with configuration guidance and security score improvement projections.", icon: "fa-solid fa-screwdriver-wrench" }
     ],
     quote: "Licensing Defender is not the same as being protected by Defender. Our reviews find the configuration gaps and give teams a clear path to close them.",
     deliver: [
@@ -496,12 +548,12 @@ const data = {
       { tag: "Compliance Manager", title: "Control assessment coverage", body: "Improvement actions, assessment completeness, and alignment to active regulatory frameworks in scope." }
     ],
     pillars: [
-      { title: "Information Protection", body: "Sensitivity label taxonomy, scoping, and protection settings for accurate, consistent classification." },
-      { title: "Data Loss Prevention", body: "DLP policy coverage, rule logic, and enforcement mode — including policies stuck in audit-only mode." },
-      { title: "Data Lifecycle Management", body: "Retention and disposal policies, record management, and disposition review workflows." },
-      { title: "Communication Compliance", body: "Policy scope accuracy, reviewer assignment, and alert volume for operational viability." },
-      { title: "eDiscovery & Audit", body: "Case management, audit log configuration, and search capability for legal holds and investigations." },
-      { title: "Compliance Manager", body: "Active assessments, improvement action completion rates, and evidence documentation." }
+      { title: "Information Protection", body: "Sensitivity label taxonomy, scoping, and protection settings for accurate, consistent classification.", icon: "fa-solid fa-file-shield" },
+      { title: "Data Loss Prevention", body: "DLP policy coverage, rule logic, and enforcement mode — including policies stuck in audit-only mode.", icon: "fa-solid fa-user-shield" },
+      { title: "Data Lifecycle Management", body: "Retention and disposal policies, record management, and disposition review workflows.", icon: "fa-solid fa-arrows-rotate" },
+      { title: "Communication Compliance", body: "Policy scope accuracy, reviewer assignment, and alert volume for operational viability.", icon: "fa-solid fa-comments" },
+      { title: "eDiscovery & Audit", body: "Case management, audit log configuration, and search capability for legal holds and investigations.", icon: "fa-solid fa-magnifying-glass" },
+      { title: "Compliance Manager", body: "Active assessments, improvement action completion rates, and evidence documentation.", icon: "fa-solid fa-list-check" }
     ],
     quote: "Purview is configured once and rarely revisited — but the data landscape it governs changes constantly. Our reviews find the configuration debt that has accumulated.",
     deliver: [
@@ -568,6 +620,7 @@ function renderPanel(key){
     <div class="pillar-grid">
       ${d.pillars.map(p => `
         <div class="pillar">
+          ${p.icon ? `<div class="card-icon-box"><i class="${p.icon}"></i></div>` : ''}
           <h5>${p.title}</h5>
           <p>${p.body}</p>
         </div>`).join('')}

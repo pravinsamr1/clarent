@@ -3165,15 +3165,16 @@ body:has(.main-menu > nav > ul > li:hover .services-mega) .services-mega-backdro
     font-size: 15px !important;
     font-weight: 500;
     line-height: 1.8;
-    color: #031740;
+    color: #5135ff !important;
     margin: 0;
     letter-spacing: -0.01em;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'IBM Plex Mono', monospace !important;
 }
 
 .cyber-ticker-text .char-inner {
-    font-size: 17px !important;
-    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    color: #5135ff !important;
 }
 
 .cyber-ticker-text.white-text,
