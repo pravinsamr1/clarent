@@ -287,33 +287,58 @@ document.addEventListener("DOMContentLoaded", () => {
                                                     </div>
 
                                                     <div class="services-mega__panel" data-services-panel="testing">
-                                                        <h3 class="services-mega__panel-heading">Pentest Services</h3>
-                                                        <ul class="services-mega__list">
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Red teaming</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Web application pentesting</a></li>
-                                                            
-                                                        </ul>
-                                                    </div>
+                                                         <h3 class="services-mega__panel-heading"><a href="pentest-services.html">Pentest Services <i class="fa-solid fa-arrow-right-long fs-seven ms-1"></i></a></h3>
+                                                         <ul class="services-mega__list">
+                                                             <li class="services-mega__item"><a href="network-penetration-testing.html"
+                                                                     class="services-mega__link services-mega__link--main">Network Penetration Testing</a></li>
+                                                             <li class="services-mega__item"><a href="cloud-security-penetration-testing.html"
+                                                                     class="services-mega__link services-mega__link--main">Cloud Security Penetration Testing</a></li>
+                                                             <li class="services-mega__item"><a href="infrastructure-security-testing.html"
+                                                                     class="services-mega__link services-mega__link--main">Infrastructure Security Testing</a></li>
+                                                             <li class="services-mega__item"><a href="wireless-remote-access-testing.html"
+                                                                     class="services-mega__link services-mega__link--main">Wireless & Remote Access Testing</a></li>
+                                                             <li class="services-mega__item"><a href="active-directory-identity-testing.html"
+                                                                     class="services-mega__link services-mega__link--main">Active Directory & Identity Testing</a></li>
+                                                             <li class="services-mega__item"><a href="social-engineering-services.html"
+                                                                     class="services-mega__link services-mega__link--main">Social Engineering Services</a></li>
+                                                             <li class="services-mega__item"><a href="specialized-readiness-assessment.html"
+                                                                     class="services-mega__link services-mega__link--main">Specialized Readiness Assessment</a></li>
+                                                             <li class="services-mega__item"><a href="continuous-security-testing.html"
+                                                                     class="services-mega__link services-mega__link--main">Continuous Security Testing</a></li>
+                                                             <li class="services-mega__item"><a href="post-assessment-services.html"
+                                                                     class="services-mega__link services-mega__link--main">Post-Assessment Services</a></li>
+                                                         </ul>
+                                                     </div>
 
                                                     <div class="services-mega__panel" data-services-panel="governance">
-                                                        <h3 class="services-mega__panel-heading">GRC services
-                                                        </h3>
-                                                        <ul class="services-mega__list">
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Security baseline assessment (Essentials 8 or ISO 27001 dependent)</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Compliance
-                                                                    Audits</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Risk
-                                                                    Management Audits</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">OT Audit
-                                                                    </a></li>
-                                                        </ul>
-                                                    </div>
+                                                         <h3 class="services-mega__panel-heading"><a href="grc.html">GRC Services <i class="fa-solid fa-arrow-right-long fs-seven ms-1"></i></a></h3>
+                                                         <ul class="services-mega__list">
+                                                             <li class="services-mega__item"><a href="governance-services.html"
+                                                                     class="services-mega__link services-mega__link--main">Governance Services</a></li>
+                                                             <li class="services-mega__item"><a href="risk-management-services.html"
+                                                                     class="services-mega__link services-mega__link--main">Risk Management Services</a></li>
+                                                             <li class="services-mega__item"><a href="compliance-services.html"
+                                                                     class="services-mega__link services-mega__link--main">Compliance Services</a></li>
+                                                             <li class="services-mega__item"><a href="isms-standards-implementation.html"
+                                                                     class="services-mega__link services-mega__link--main">ISMS & Standards Implementation</a></li>
+                                                             <li class="services-mega__item"><a href="audit-assurance-services.html"
+                                                                     class="services-mega__link services-mega__link--main">Audit & Assurance Services</a></li>
+                                                             <li class="services-mega__item"><a href="third-party-vendor-services.html"
+                                                                     class="services-mega__link services-mega__link--main">Third-Party & Vendor Services</a></li>
+                                                             <li class="services-mega__item"><a href="privacy-data-protection-services.html"
+                                                                     class="services-mega__link services-mega__link--main">Privacy & Data Protection Services</a></li>
+                                                             <li class="services-mega__item"><a href="business-resilience-services.html"
+                                                                     class="services-mega__link services-mega__link--main">Business Resilience Services</a></li>
+                                                             <li class="services-mega__item"><a href="security-governance-operations.html"
+                                                                     class="services-mega__link services-mega__link--main">Security Governance Operations</a></li>
+                                                             <li class="services-mega__item"><a href="identity-access-governance.html"
+                                                                     class="services-mega__link services-mega__link--main">Identity & Access Governance</a></li>
+                                                             <li class="services-mega__item"><a href="ai-emerging-technology-governance.html"
+                                                                     class="services-mega__link services-mega__link--main">AI & Emerging Technology Governance</a></li>
+                                                             <li class="services-mega__item"><a href="security-advisory-services.html"
+                                                                     class="services-mega__link services-mega__link--main">Security Advisory Services</a></li>
+                                                         </ul>
+                                                     </div>
 
                                                     <div class="services-mega__panel" data-services-panel="training">
                                                         <h3 class="services-mega__panel-heading">Training solutions</h3>
@@ -346,15 +371,22 @@ document.addEventListener("DOMContentLoaded", () => {
                                                     </div>
 
                                                     <div class="services-mega__panel" data-services-panel="platforms">
-                                                        <h3 class="services-mega__panel-heading">Consultation services</h3>
-                                                        <ul class="services-mega__list">
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Bespoke policies and procedures</a></li>
-                                                            <li class="services-mega__item"><a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">GRC outsourcing 
-                                                                    </a></li>
-                                                        </ul>
-                                                    </div>
+                                                         <h3 class="services-mega__panel-heading">Consultation</h3>
+                                                         <ul class="services-mega__list">
+                                                             <li class="services-mega__item"><a href="consulting-roles.html?tab=panel-security-advisor"
+                                                                     class="services-mega__link services-mega__link--main">Security Advisor</a></li>
+                                                             <li class="services-mega__item"><a href="consulting-roles.html?tab=panel-grc-consultant"
+                                                                     class="services-mega__link services-mega__link--main">GRC Consultant</a></li>
+                                                             <li class="services-mega__item"><a href="consulting-roles.html?tab=panel-security-architect"
+                                                                     class="services-mega__link services-mega__link--main">Cyber Security Architect</a></li>
+                                                             <li class="services-mega__item"><a href="consulting-roles.html?tab=panel-servicenow-consultant"
+                                                                     class="services-mega__link services-mega__link--main">ServiceNow Consultant</a></li>
+                                                             <li class="services-mega__item"><a href="consulting-roles.html?tab=panel-microsoft-solutions"
+                                                                     class="services-mega__link services-mega__link--main">Microsoft Solutions Consultant</a></li>
+                                                             <li class="services-mega__item"><a href="consulting-roles.html?tab=panel-rsa-archer"
+                                                                     class="services-mega__link services-mega__link--main">RSA Archer Consultant</a></li>
+                                                         </ul>
+                                                     </div>
                                                 </li>
                                             </ul>
                                         </li>

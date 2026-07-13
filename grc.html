@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<< Header Area >>-->
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Clarent360">
+    <meta name="description"
+        content="One register. Twelve practice areas. Every control accounted for. Clarent360's governance, risk & compliance practice runs 12 disciplines as one connected register.">
+    <!-- ======== Page title ============ -->
+    <title>Governance, Risk & Compliance (GRC) Services | Clarent360</title>
+    <!--<< Favcion >>-->
+    <link rel="shortcut icon" href="assets/img/logo/favs.png">
+    <!--<< Bootstrap min.css >>-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--<< All Min Css >>-->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!--<< Animate.css >>-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!--<< Magnific Popup.css >>-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!--<< MeanMenu.css >>-->
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <!--<< Swiper Bundle.css >>-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--<< Nice Select.css >>-->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!--<< Main.css >>-->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--<< Custom.css >>-->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- Page Specific Premium GRC Styling -->
+    <style>
+        :root {
+            --ink: #ffffff;
+            --panel: #f8f9fd;
+            --panel-2: #f0f2f5;
+            --line: rgba(81, 53, 255, 0.1);
+            --line-bright: #5135FF;
+            --paper: #17111f;
+            --slate: #5e6282;
+            --radius: 16px;
+        }
+
+        .grc-register-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0px 10px 30px rgba(81, 53, 255, 0.02);
+        }
+
+        .grc-row {
+            display: grid;
+            grid-template-columns: 80px 1.5fr 2fr 150px;
+            gap: 24px;
+            align-items: center;
+            padding: 26px 34px;
+            border-bottom: 1px solid var(--line);
+            text-decoration: none;
+            color: var(--paper);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #ffffff;
+        }
+
+        .grc-row:last-child {
+            border-bottom: none;
+        }
+
+        .grc-row:hover {
+            background: rgba(81, 53, 255, 0.02);
+            transform: translateX(4px);
+            border-color: rgba(81, 53, 255, 0.15);
+        }
+
+        .grc-row .rnum {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--p1-clr);
+            opacity: 0.85;
+        }
+
+        .grc-row .rtitle h3 {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 19px;
+            font-weight: 700;
+            margin: 0 0 6px;
+            color: var(--paper);
+            transition: color 0.3s ease;
+        }
+
+        .grc-row:hover .rtitle h3 {
+            color: var(--p1-clr);
+        }
+
+        .grc-row .rtitle span {
+            font-family: "Inter", sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--slate);
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+        .grc-row .rdesc {
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            color: var(--slate);
+            line-height: 1.6;
+        }
+
+        .grc-row .rcount {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--p1-clr);
+            text-align: right;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .grc-row:hover .rcount {
+            transform: translateX(5px);
+        }
+
+        /* Pillars cards styling */
+        .pillar-card {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 34px 28px;
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.01);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.06);
+            border-color: rgba(81, 53, 255, 0.15);
+        }
+
+        .pillar-card .idx {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--p1-clr);
+            opacity: 0.2;
+            line-height: 1;
+            margin-bottom: 16px;
+            transition: opacity 0.3s ease;
+        }
+
+        .pillar-card:hover .idx {
+            opacity: 0.85;
+        }
+
+        .pillar-card h4 {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 10px;
+            color: var(--paper);
+        }
+
+        .pillar-card p {
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            color: var(--slate);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Extra text size adjustments */
+        .touchhh {
+            font-size: 40px;
+        }
+
+        @media (max-width: 991px) {
+            .grc-row {
+                grid-template-columns: 60px 1.5fr 2fr;
+                padding: 20px 24px;
+            }
+            .grc-row .rcount {
+                grid-column: 2 / -1;
+                justify-content: flex-start;
+                text-align: left;
+                margin-top: 8px;
+            }
+            .touchhh {
+                font-size: 32px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .grc-row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                padding: 20px;
+            }
+            .grc-row .rcount {
+                grid-column: 1;
+                justify-content: flex-start;
+                margin-top: 4px;
+            }
+            .touchhh {
+                font-size: 26px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">
+            </div>
+            <div class="txt-loading">
+                <span data-text-preloader="C" class="letters-loading">
+                    C
+                </span>
+                <span data-text-preloader="L" class="letters-loading">
+                    L
+                </span>
+                <span data-text-preloader="A" class="letters-loading">
+                    A
+                </span>
+                <span data-text-preloader="R" class="letters-loading">
+                    R
+                </span>
+                <span data-text-preloader="E" class="letters-loading">
+                    E
+                </span>
+                <span data-text-preloader="N" class="letters-loading">
+                    N
+                </span>
+                <span data-text-preloader="T" class="letters-loading">
+                    T
+                </span>
+
+                <span data-text-preloader=" " class="letters-loading">
+                    &nbsp;
+                </span>
+
+                <span data-text-preloader="3" class="letters-loading">
+                    3
+                </span>
+
+                <span data-text-preloader="6" class="letters-loading">
+                    6
+                </span>
+
+                <span data-text-preloader="0" class="letters-loading">
+                    0
+                </span>
+            </div>
+            <p class="text-center">Loading</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Cursor Pointer -->
+    <div class="mouse-follower">
+        <span class="cursor-outline"></span>
+    </div>
+    <!-- End Cursor Pointer -->
+
+    <div id="header"></div>
+
+    <!-- Banner Section Start -->
+    <section class="breadcrumb-section position-relative fix">
+        <div class="container">
+            <div class="bread-content text-center">
+                <ul class="d-flex align-items-center gap-3 justify-content-center">
+                    <li>
+                        <a href="index.html" class="p3-clr">Home</a>
+                    </li>
+                    <li class="p3-clr">/</li>
+                    <li>
+                        <a href="services.html" class="p3-clr">Services</a>
+                    </li>
+                    <li class="p3-clr">/</li>
+                    <li class="white">Governance, Risk & Compliance</li>
+                </ul>
+                <h1 class="white visible-from-right">Governance, Risk & Compliance</h1>
+            </div>
+        </div>
+        <!-- bread Element -->
+        <img src="assets/img/element/bread-ele.png" alt="img" class="bread-ele">
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- Core Service Dev Layout Start -->
+    <section class="services-development-section fix section-padding whitebg" id="service-overview-section">
+        <div class="container">
+            <div class="row align-items-start g-5">
+                <div class="col-lg-12">
+                    <div class="service-details-content text-center max-width-lg mx-auto">
+                        <div class="mb-4">
+                            <h2 class="black mb-4 wow fadeInUp" data-wow-delay=".3s">
+                                One Register. Twelve Practice Areas. Every Control Accounted For.
+                            </h2>
+                            <p class="pra fs-seven mb-4 wow fadeInUp" data-wow-delay=".4s" style="max-width: 860px; margin: 0 auto;">
+                                Clarent360's governance, risk &amp; compliance practice runs 12 disciplines as one connected register — from board-level governance and enterprise risk through to ISMS certification, audit, third-party risk, privacy, resilience and AI governance. Every service below is something we deliver, not a capability slide.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Strip -->
+            <div class="row g-4 justify-content-center mt-2">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="p-4 bg-white rounded-4 border text-center shadow-sm h-100" style="border-color: rgba(81, 53, 255, 0.08) !important;">
+                        <h2 class="fw-bold p1-clr mb-2" style="font-size: 42px;">12</h2>
+                        <span class="pra fs-eight text-uppercase d-block fw-bold" style="letter-spacing: .08em;">Practice areas</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="p-4 bg-white rounded-4 border text-center shadow-sm h-100" style="border-color: rgba(81, 53, 255, 0.08) !important;">
+                        <h2 class="fw-bold p1-clr mb-2" style="font-size: 42px;">140</h2>
+                        <span class="pra fs-eight text-uppercase d-block fw-bold" style="letter-spacing: .08em;">Named services</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="p-4 bg-white rounded-4 border text-center shadow-sm h-100" style="border-color: rgba(81, 53, 255, 0.08) !important;">
+                        <h2 class="fw-bold p1-clr mb-2" style="font-size: 42px;">20+</h2>
+                        <span class="pra fs-eight text-uppercase d-block fw-bold" style="letter-spacing: .08em;">Frameworks &amp; standards</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="p-4 bg-white rounded-4 border text-center shadow-sm h-100" style="border-color: rgba(81, 53, 255, 0.08) !important;">
+                        <h2 class="fw-bold p1-clr mb-2" style="font-size: 42px;">01</h2>
+                        <span class="pra fs-eight text-uppercase d-block fw-bold" style="letter-spacing: .08em;">Register, no silos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register List Section -->
+    <section class="section-padding bg-light" id="register">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <span class="d-block p1-clr fw-bold fs-eight text-uppercase mb-2">THE REGISTER</span>
+                        <h2 class="wow fadeInUp black fw-bold" data-wow-delay=".3s">
+                            Twelve Practice Areas, In Full
+                        </h2>
+                        <p class="pra fs-seven mt-3">
+                            Each entry below links to a dedicated checklist or program scope showing how we map controls and verify compliance under that discipline.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grc-register-container wow fadeInUp" data-wow-delay=".4s">
+                <!-- Row 1 -->
+                <a class="grc-row" href="governance-services.html">
+                    <div class="rnum">01</div>
+                    <div class="rtitle">
+                        <h3>Governance Services</h3>
+                        <span>GOV &middot; Direction, structure and accountability</span>
+                    </div>
+                    <div class="rdesc">Information Security Governance, IT Governance, Cybersecurity Governance Framework Development, and more.</div>
+                    <div class="rcount">18 services <i class="fa-solid fa-arrow-right-long ms-1"></i></div>
+                </a>
+                <!-- Row 2 -->
+                <a class="grc-row" href="risk-management-services.html">
+                    <div class="rnum">02</div>
+                    <div class="rtitle">
+                        <h3>Risk Management Services</h3>
+                        <span>RSK &middot; Identifying, quantifying and treating exposure</span>
+                    </div>
+                    <div class="rdesc">Enterprise Risk Assessment, Cyber Risk Assessment, Information Security Risk Assessment, and more.</div>
+                    <div class="rcount">20 services <i class="fa-solid fa-arrow-right-long ms-1"></i></div>
+                </a>
+                <!-- Row 3 -->
+                <a class="grc-row" href="compliance-services.html">
+                    <div class="rnum">03</div>
+                    <div class="rtitle">
+                        <h3>Compliance Services</h3>
+                        <span>CMP &middot; Proving the controls actually operate</span>
+                    </div>
+                    <div class="rdesc">Regulatory Compliance Assessment, Compliance Gap Assessment, Compliance Program Development, and more.</div>
+                    <div class="rcount">12 services <i class="fa-solid fa-arrow-right-long ms-1"></i></div>
+                </a>
+                <!-- Row 4 -->
+                <a class="grc-row" href="isms-standards-implementation.html">
+                    <div class="rnum">04</div>
+                    <div class="rtitle">
+                        <h3>ISMS & Standards Implementation</h3>
+                        <span>ISMS &middot; Building to a named standard, properly</span>
+                    </div>
+                    <div class="rdesc">ISO/IEC 27001 Implementation, ISO/IEC 27002 Controls Implementation, ISO/IEC 27701 Privacy Information Management, and more.</div>
+                    <div class="rcount">21 services <i class="fa-solid fa-arrow-right-long ms-1"></i></div>
+                </a>
+                <!-- Row 5 -->
+                <a class="grc-row" href="audit-assurance-services.html">
+                    <div class="rnum">05</div>
+                    <div class="rtitle">
+                        <h3>Audit & Assurance Services</h3>
+                        <span>AUD &middot; Independent verification, not self-assessment</span>
+                    </div>
+                    <div class="rdesc">Information Security Audit, ISMS Internal Audit, Technical Control Assessment, and more.</div>
+                    <div class="rcount">14 services <i class="fa-solid fa-arrow-right-long ms-1"></i></div>
+                </a>
+                <!-- Row 6 -->
+                <a class="grc-row" href="third-party-vendor-services.html">
+                    <div class="rnum">06</div>
+                    <div class="rtitle">
+                        <h3>Third-Party & Vendor Services</h3>
+                        <span>TPR &middot; Extending assurance beyond your perimeter</span>
+                    </div>
+                    <div class="rdesc">Vendor Security Assessment, Third-Party Security Reviews, Supplier Risk Assessment, and more.</div>
+                    <div class="rcount">7 services <i class="fa-solid fa-arrow-right-long ms-1"></i></div>
+                </a>
+                <!-- Row 7 -->
+                <a class="grc-row" href="privacy-data-protection-services.html">
+                    <div class="rnum">07</div>
+                    <div class="rtitle">
+                        <h3>Privacy & Data Protection Services</h3>
+                        <span>PRV &middot; Knowing what data you hold, and protecting it</span>
+                    </div>
+                    <div class="rdesc">Privacy Impact Assessment (PIA), Data Protection Impact Assessment (DPIA), Data Classification Framework, and more.</div>
+                    <div class="rcount">8 services <i class="fa-solid fa-arrow-right-long ms-1"></i></div>
+                </a>
+                <!-- Row 8 -->
+                <a class="grc-row" href="business-resilience-services.html">
+                    <div class="rnum">08</div>
+                    <div class="rtitle">
+                        <h3>Business Resilience Services</h3>
+                        <span>RES &middot; Staying operational when things go wrong</span>
+                    </div>
+                    <div class="rdesc">Business Continuity Planning (BCP), Disaster Recovery Planning (DRP), Cyber Incident Response Planning, and more.</div>
+                    <div class="rcount">7 services <i class="fa-solid fa-arrow-right-long ms-1"></i></div>
+                </a>
+                <!-- Row 9 -->
+                <a class="grc-row" href="security-governance-operations.html">
+                    <div class="rnum">09</div>
+                    <div class="rtitle">
+                        <h3>Security Governance Operations</h3>
+                        <span>OPS &middot; Where governance becomes daily practice</span>
+                    </div>
+                    <div class="rdesc">Security Control Framework Development, Risk & Compliance Dashboard Development, GRC Platform Implementation, and more.</div>
+                    <div class="rcount">12 services <i class="fa-solid fa-arrow-right-long ms-1"></i></div>
+                </a>
+                <!-- Row 10 -->
+                <a class="grc-row" href="identity-access-governance.html">
+                    <div class="rnum">10</div>
+                    <div class="rtitle">
+                        <h3>Identity & Access Governance</h3>
+                        <span>IAG &middot; Who has access, and why</span>
+                    </div>
+                    <div class="rdesc">Identity Governance & Administration (IGA), Role-Based Access Control (RBAC) Review, Segregation of Duties (SoD) Assessment, and more.</div>
+                    <div class="rcount">6 services <i class="fa-solid fa-arrow-right-long ms-1"></i></div>
+                </a>
+                <!-- Row 11 -->
+                <a class="grc-row" href="ai-emerging-technology-governance.html">
+                    <div class="rnum">11</div>
+                    <div class="rtitle">
+                        <h3>AI & Emerging Technology Governance</h3>
+                        <span>AIG &middot; Governing what the frameworks haven't caught up to</span>
+                    </div>
+                    <div class="rdesc">AI Governance Framework, AI Compliance Assessment, AI Risk Management, and more.</div>
+                    <div class="rcount">7 services <i class="fa-solid fa-arrow-right-long ms-1"></i></div>
+                </a>
+                <!-- Row 12 -->
+                <a class="grc-row" href="security-advisory-services.html">
+                    <div class="rnum">12</div>
+                    <div class="rtitle">
+                        <h3>Security Advisory Services</h3>
+                        <span>ADV &middot; Senior counsel, on demand</span>
+                    </div>
+                    <div class="rdesc">Security Program Advisory, Cybersecurity Transformation Consulting, Security Investment Advisory, and more.</div>
+                    <div class="rcount">8 services <i class="fa-solid fa-arrow-right-long ms-1"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars / Approach Section -->
+    <section class="section-padding white-bg">
+        <div class="container">
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <span class="d-block p1-clr fw-bold fs-eight text-uppercase mb-2">HOW WE WORK</span>
+                        <h2 class="wow fadeInUp black fw-bold" data-wow-delay=".3s">
+                            GRC As One Connected Discipline, Not Twelve Silos
+                        </h2>
+                        <p class="pra fs-seven mt-3">
+                            Governance, risk, and compliance are usually run as separate workstreams that don't talk to each other. We run them as one register so a control gap found in an audit immediately informs the risk register, and regulatory updates align directly against the policies they affect.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="pillar-card">
+                        <div class="idx">01</div>
+                        <h4>One Register</h4>
+                        <p>Governance, risk, compliance and audit findings live in a single connected view for maximum visibility.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="pillar-card">
+                        <div class="idx">02</div>
+                        <h4>Named Specialists</h4>
+                        <p>Each practice area is delivered by industry consultants who work in that specific compliance discipline daily.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="pillar-card">
+                        <div class="idx">03</div>
+                        <h4>Standards-Mapped</h4>
+                        <p>Findings and controls map directly to the framework clauses and regulatory requirements that mandate them.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="pillar-card">
+                        <div class="idx">04</div>
+                        <h4>Built To Hand Over</h4>
+                        <p>Every advisory engagement ends with something your team fully owns, understands, and can operate independently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<< Customer Touch Section Start >>-->
+    <section class="customer-touh fix" style="padding-bottom: 40px;" id="contact">
+        <div class="container">
+            <div class="customer-touch-wrap">
+                <div class="section-title text-center text-lg-start">
+                    <h2 class="wow fadeInUp white fw-bold mb-2 touchhh">
+                        Not sure which GRC practice area to start with?
+                    </h2>
+                    <p class="sub-badg white fs-seven d-block mb-4" style="max-width: 600px;">
+                        Tell us your current security maturity and compliance obligations — we'll scope a custom program across one practice area or the full connected register.
+                    </p>
+                </div>
+                <a href="mailto:grc@clarent360.com?subject=GRC%20programme%20enquiry"
+                    class="common-btn text-nowrap heading-font box-style d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 fs18 fw-semibold black overflow-hidden bg-white rounded100">
+                    Request a Scoping Call <i class="fa-solid fa-arrow-right text-dark"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <!--<< All JS Plugins >>-->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!--<< Viewport Js >>-->
+    <script src="assets/js/viewport.jquery.js"></script>
+    <!--<< Bootstrap Js >>-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--<< Nice Select Js >>-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!--<< Waypoints Js >>-->
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <!--<< Counterup Js >>-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!--<< Swiper Slider Js >>-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!--<< MeanMenu Js >>-->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!--<< Magnific Popup Js >>-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--<< Wow Animation Js >>-->
+    <script src="assets/js/wow.min.js"></script>
+    <!--<< Gsap Js >>-->
+    <script src="assets/js/gsap.min.js"></script>
+    <!--<< Lenis Js >>-->
+    <script src="assets/js/lenis.min.js"></script>
+    <!--<< ScrollSmoother Js >>-->
+    <script src="assets/js/scrollSmoother.js"></script>
+    <!--<< ScrollTrigger Js >>-->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!--<< Spalit Text Js >>-->
+    <script src="assets/js/spilitext-gsap.js"></script>
+    <!--<< Valina Tilt Js >>-->
+    <script src="assets/js/vanilla-tilt.min.js"></script>
+    <!--<< Main.js >>-->
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/common-header.js"></script>
+</body>
+
+</html>
