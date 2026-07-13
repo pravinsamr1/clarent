@@ -49,6 +49,7 @@
 
 #header-sticky {
     z-index: 1002 !important;
+    background: #ffffff !important;
 }
 
 #header-sticky:not(.position-absolute):not(.sticky) {
