@@ -42,19 +42,27 @@ CSS TABLE OF CONTENTS
 					const $tabs = $megaMenu.find('[data-services-tab]');
 					const $panels = $megaMenu.find('[data-services-panel]');
 
-					$tabs.off('click').on('click', function (event) {
-						event.preventDefault();
-						const $tab = $(this);
+					function activateTab($tab) {
 						const target = $tab.attr('data-services-tab');
-
 						$tabs.each(function () {
 							$(this).toggleClass('active', this === $tab[0]);
 						});
-
 						$panels.each(function () {
 							const $panel = $(this);
 							$panel.toggleClass('active', $panel.attr('data-services-panel') === target);
 						});
+					}
+
+					$tabs.off('click mouseenter').on('mouseenter', function () {
+						// On hover: always switch the visible panel
+						activateTab($(this));
+					}).on('click', function (event) {
+						// On click: navigate to the tab's landing page
+						const href = $(this).attr('data-href');
+						if (href && href !== '#') {
+							event.preventDefault();
+							window.location.href = href;
+						}
 					});
 				});
 

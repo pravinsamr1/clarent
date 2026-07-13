@@ -113,278 +113,511 @@ document.addEventListener("DOMContentLoaded", () => {
                                             <ul class="submenu services-mega">
                                                 <li class="services-mega__rail">
                                                     <button type="button" class="services-mega__tab active"
-                                                        data-services-tab="security">
+                                                        data-services-tab="security"
+                                                        >
                                                         Security<i class="fa-solid fa-arrow-right"></i>
                                                     </button>
                                                     <button type="button" class="services-mega__tab"
-                                                        data-services-tab="testing">
+                                                        data-services-tab="testing"
+                                                        data-href="pentest-services.html">
                                                         Pentest <i class="fa-solid fa-arrow-right"></i>
                                                     </button>
                                                     <button type="button" class="services-mega__tab"
-                                                        data-services-tab="governance">
+                                                        data-services-tab="governance"
+                                                        data-href="grc.html">
                                                         GRC Services <i class="fa-solid fa-arrow-right"></i>
                                                     </button>
                                                     <button type="button" class="services-mega__tab"
-                                                        data-services-tab="training">
+                                                        data-services-tab="training"
+                                                        data-href="training-solutions.html">
                                                         Training <i class="fa-solid fa-arrow-right"></i>
                                                     </button>
                                                     <button type="button" class="services-mega__tab"
-                                                        data-services-tab="platforms">
+                                                        data-services-tab="platforms"
+                                                        data-href="hire-consultant.html">
                                                         Consultation <i class="fa-solid fa-arrow-right"></i>
                                                     </button>
-                                                    <button type="button" class="services-mega__tab" id="psychometricBtn">
+                                                    <button type="button" class="services-mega__tab" id="psychometricBtn" data-href="clarent-psychometrics.html">
                                                         Pyschometric Analysis <i class="fa-solid fa-arrow-right"></i>
                                                     </button>
 
-                                                    <button type="button" class="services-mega__tab" id="programsBtn">
+                                                    <button type="button" class="services-mega__tab" id="programsBtn" data-href="programs.html">
                                                         Programs <i class="fa-solid fa-arrow-right"></i>
                                                     </button>
 
-                                                    <button type="button" class="services-mega__tab" id="checklistBtn">
+                                                    <button type="button" class="services-mega__tab" id="checklistBtn" data-href="checklist.html">
                                                         Checklist <i class="fa-solid fa-arrow-right"></i>
                                                     </button>
 
-                                                    <button type="button" class="services-mega__tab" id="frameworksBtn">
+                                                    <button type="button" class="services-mega__tab" id="frameworksBtn" data-href="framework.html">
                                                         Framework <i class="fa-solid fa-arrow-right"></i>
                                                     </button>
                                                 </li>
 
                                                 <li class="services-mega__panels">
-                                                    <div class="services-mega__panel active"
-                                                        data-services-panel="security">
-                                                        <div class="security-headding">
-                                                            <h3>Security Engineering Services</h3>
-                                                        </div>
-                                                        <ul class="services-mega__list">
-
-                                                            <li class="services-mega__item">
-                                                                <a href="dlp-solutions.html"
-                                                                    class="services-mega__link services-mega__link--main">DLP
-                                                                    solutions</a>
-                                                            </li>
-
-                                                            <li class="services-mega__item">
-                                                                <a href="threat-hunting.html"
-                                                                    class="services-mega__link services-mega__link--main">Threat
-                                                                    hunting</a>
-                                                            </li>
-
-                                                            <li class="services-mega__item">
-                                                                <a href="cloud-solutions.html"
-                                                                    class="services-mega__link services-mega__link--main">Cloud
-                                                                    solutions</a>
-                                                                <ul class="services-mega__sublist">
-                                                                    <li
-                                                                        class="services-mega__item services-mega__item--full">
-                                                                        <a
-                                                                            class="services-mega__link services-mega__link--child">Microsoft</a>
-                                                                        <ul class="services-mega__sublist">
-                                                                            <li class="services-mega__item">
-                                                                                <a href="microsoft-365-security-review.html"
-                                                                                    class="services-mega__link services-mega__link--child">Microsoft
-                                                                                    365 security reviews</a>
-                                                                            </li>
-                                                                            <li class="services-mega__item">
-                                                                                <a href="microsoft-purview-review.html"
-                                                                                    class="services-mega__link services-mega__link--child">Microsoft
-                                                                                    Purview review</a>
-                                                                            </li>
-                                                                            <li class="services-mega__item">
-                                                                                <a href="microsoft-defender-security-review.html"
-                                                                                    class="services-mega__link services-mega__link--child">Microsoft
-                                                                                    Defender security reviews</a>
-                                                                            </li>
-                                                                            <li class="services-mega__item">
-                                                                                <a href="microsoft-intune-compliance-review.html"
-                                                                                    class="services-mega__link services-mega__link--child">Microsoft
-                                                                                    Intune compliance reviews</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </li>
-
-                                                                    <li class="services-mega__item">
-                                                                        <a href="amazon-aws-security.html"
-                                                                            class="services-mega__link services-mega__link--child">Amazon
-                                                                            AWS</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-
-                                                            <li class="services-mega__item">
-                                                                <a href="services-details.html"
-                                                                    class="services-mega__link services-mega__link--main">Service
-                                                                    now solutions</a>
-                                                                <ul class="services-mega__sublist">
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">ServiceNow
-                                                                            implementations</a>
-                                                                    </li>
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">ServiceNow
-                                                                            Managed services</a>
-                                                                    </li>
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">ServiceNow
-                                                                            Training services</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-
-                                                            <li class="services-mega__item">
-                                                                <a href="security-design-architecture.html"
-                                                                    class="services-mega__link services-mega__link--main">Security
-                                                                    design and architecture</a>
-                                                                <ul class="services-mega__sublist">
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">Zero
-                                                                            Trust</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-
-                                                            <li class="services-mega__item">
-                                                                <a href="rsa-archer-solutions.html"
-                                                                    class="services-mega__link services-mega__link--main">RSA
-                                                                    Archer solutions</a>
-                                                            </li>
-                                                            <li class="services-mega__item">
-                                                                <a href="zero-trust-implementations.html"
-                                                                    class="services-mega__link services-mega__link--main">Zero
-                                                                    Trust implementations</a>
-                                                            </li>
-                                                            <li class="services-mega__item">
-                                                                <a href="passwordless-mfa-solutions-sdo.html"
-                                                                    class="services-mega__link services-mega__link--main">Passwordless
-                                                                    MFA solutions - SDO</a>
-                                                            </li>
-                                                            <li class="services-mega__item">
-                                                                <a href="data-centric-security-solutions.html"
-                                                                    class="services-mega__link services-mega__link--main">Data
-                                                                    centric security solutions - Seclore</a>
-                                                            </li>
-
-                                                            <li class="services-mega__item">
-                                                                <a href="virtualization-services.html"
-                                                                    class="services-mega__link services-mega__link--main">Virtualization
-                                                                    services</a>
-                                                                <ul class="services-mega__sublist">
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">Small
-                                                                            Office (SMB)</a>
-                                                                    </li>
-                                                                    <li class="services-mega__item">
-                                                                        <a href="services-details.html"
-                                                                            class="services-mega__link services-mega__link--child">Enterprise</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-
-                                                    <div class="services-mega__panel" data-services-panel="testing">
-                                                         <h3 class="services-mega__panel-heading"><a href="pentest-services.html">Pentest Services <i class="fa-solid fa-arrow-right-long fs-seven ms-1"></i></a></h3>
+                                                                                                         <div class="services-mega__panel active" data-services-panel="security">
                                                          <ul class="services-mega__list">
-                                                             <li class="services-mega__item"><a href="network-penetration-testing.html"
-                                                                     class="services-mega__link services-mega__link--main">Network Penetration Testing</a></li>
-                                                             <li class="services-mega__item"><a href="cloud-security-penetration-testing.html"
-                                                                     class="services-mega__link services-mega__link--main">Cloud Security Penetration Testing</a></li>
-                                                             <li class="services-mega__item"><a href="infrastructure-security-testing.html"
-                                                                     class="services-mega__link services-mega__link--main">Infrastructure Security Testing</a></li>
-                                                             <li class="services-mega__item"><a href="wireless-remote-access-testing.html"
-                                                                     class="services-mega__link services-mega__link--main">Wireless & Remote Access Testing</a></li>
-                                                             <li class="services-mega__item"><a href="active-directory-identity-testing.html"
-                                                                     class="services-mega__link services-mega__link--main">Active Directory & Identity Testing</a></li>
-                                                             <li class="services-mega__item"><a href="social-engineering-services.html"
-                                                                     class="services-mega__link services-mega__link--main">Social Engineering Services</a></li>
-                                                             <li class="services-mega__item"><a href="specialized-readiness-assessment.html"
-                                                                     class="services-mega__link services-mega__link--main">Specialized Readiness Assessment</a></li>
-                                                             <li class="services-mega__item"><a href="continuous-security-testing.html"
-                                                                     class="services-mega__link services-mega__link--main">Continuous Security Testing</a></li>
-                                                             <li class="services-mega__item"><a href="post-assessment-services.html"
-                                                                     class="services-mega__link services-mega__link--main">Post-Assessment Services</a></li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="dlp-solutions.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-user-lock"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">DLP Solutions</span>
+                                                                         <span class="mdesc">Data Loss Prevention strategy, tool configuration and enforcement.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="threat-hunting.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-crosshairs"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Threat Hunting</span>
+                                                                         <span class="mdesc">Proactive threat hunting, compromise assessments and SOC support.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="microsoft-365-security.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-brands fa-microsoft"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Microsoft 365 Security Reviews</span>
+                                                                         <span class="mdesc">Security reviews for M365 tenants, apps and email.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="microsoft-purview.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Microsoft Purview Review</span>
+                                                                         <span class="mdesc">Data governance, compliance, and information protection.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="microsoft-defender.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-bug-slash"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Microsoft Defender Security Reviews</span>
+                                                                         <span class="mdesc">Endpoint, identity and cloud workload protection.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="microsoft-intune.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Microsoft Intune Compliance Reviews</span>
+                                                                         <span class="mdesc">Device compliance, MDM policy and endpoint management.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="amazon-aws-security.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-brands fa-aws"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Amazon AWS Security</span>
+                                                                         <span class="mdesc">AWS cloud security assessments, guardrails and configurations.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="servicenow-implementations.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-briefcase"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">ServiceNow Implementations</span>
+                                                                         <span class="mdesc">End-to-end ServiceNow GRC and SecOps deployment.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="servicenow-managed-services.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-headset"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">ServiceNow Managed Services</span>
+                                                                         <span class="mdesc">Ongoing platform administration, upgrades and support.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="servicenow-training.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-chalkboard-user"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">ServiceNow Training Services</span>
+                                                                         <span class="mdesc">Hands-on training programs for teams using ServiceNow.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="security-design-architecture.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-compass-drafting"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Security Design & Zero Trust</span>
+                                                                         <span class="mdesc">Zero Trust architecture, design validation and secure configurations.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="rsa-archer-solutions.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-cube"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">RSA Archer Solutions</span>
+                                                                         <span class="mdesc">RSA Archer platform configuration, reporting, and support.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="passwordless-mfa-solutions-sdo.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-key"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Passwordless MFA Solutions</span>
+                                                                         <span class="mdesc">SDO integrations, passwordless authentication and access.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="data-centric-security-solutions.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-database"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Data Centric Security (Seclore)</span>
+                                                                         <span class="mdesc">Enterprise digital rights management (EDRM) and Seclore.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="virtualization-services.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-network-wired"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Virtualization Security</span>
+                                                                         <span class="mdesc">Hypervisor hardening and virtual isolation for SMB & Enterprise.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
                                                          </ul>
                                                      </div>
 
-                                                    <div class="services-mega__panel" data-services-panel="governance">
-                                                         <h3 class="services-mega__panel-heading"><a href="grc.html">GRC Services <i class="fa-solid fa-arrow-right-long fs-seven ms-1"></i></a></h3>
+                                                                                                        <div class="services-mega__panel" data-services-panel="testing">
                                                          <ul class="services-mega__list">
-                                                             <li class="services-mega__item"><a href="governance-services.html"
-                                                                     class="services-mega__link services-mega__link--main">Governance Services</a></li>
-                                                             <li class="services-mega__item"><a href="risk-management-services.html"
-                                                                     class="services-mega__link services-mega__link--main">Risk Management Services</a></li>
-                                                             <li class="services-mega__item"><a href="compliance-services.html"
-                                                                     class="services-mega__link services-mega__link--main">Compliance Services</a></li>
-                                                             <li class="services-mega__item"><a href="isms-standards-implementation.html"
-                                                                     class="services-mega__link services-mega__link--main">ISMS & Standards Implementation</a></li>
-                                                             <li class="services-mega__item"><a href="audit-assurance-services.html"
-                                                                     class="services-mega__link services-mega__link--main">Audit & Assurance Services</a></li>
-                                                             <li class="services-mega__item"><a href="third-party-vendor-services.html"
-                                                                     class="services-mega__link services-mega__link--main">Third-Party & Vendor Services</a></li>
-                                                             <li class="services-mega__item"><a href="privacy-data-protection-services.html"
-                                                                     class="services-mega__link services-mega__link--main">Privacy & Data Protection Services</a></li>
-                                                             <li class="services-mega__item"><a href="business-resilience-services.html"
-                                                                     class="services-mega__link services-mega__link--main">Business Resilience Services</a></li>
-                                                             <li class="services-mega__item"><a href="security-governance-operations.html"
-                                                                     class="services-mega__link services-mega__link--main">Security Governance Operations</a></li>
-                                                             <li class="services-mega__item"><a href="identity-access-governance.html"
-                                                                     class="services-mega__link services-mega__link--main">Identity & Access Governance</a></li>
-                                                             <li class="services-mega__item"><a href="ai-emerging-technology-governance.html"
-                                                                     class="services-mega__link services-mega__link--main">AI & Emerging Technology Governance</a></li>
-                                                             <li class="services-mega__item"><a href="security-advisory-services.html"
-                                                                     class="services-mega__link services-mega__link--main">Security Advisory Services</a></li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="network-penetration-testing.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-network-wired"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Network Penetration Testing</span>
+                                                                         <span class="mdesc">External, internal, and segments validation.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="cloud-security-penetration-testing.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-cloud"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Cloud Security Penetration Testing</span>
+                                                                         <span class="mdesc">Azure, M365, and Entra ID cloud validation.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="infrastructure-security-testing.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-server"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Infrastructure Security Testing</span>
+                                                                         <span class="mdesc">Server, database, and virtualization layer validation.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="wireless-remote-access-testing.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-wifi"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Wireless & Remote Access Testing</span>
+                                                                         <span class="mdesc">Wi-Fi, Bluetooth, and remote access testing.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="active-directory-identity-testing.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-id-card"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Active Directory & Identity Testing</span>
+                                                                         <span class="mdesc">Domain privilege and Entra ID path analysis.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="social-engineering-services.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-user-group"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Social Engineering Services</span>
+                                                                         <span class="mdesc">Consent-based phishing and voice simulation.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="specialized-readiness-assessment.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-circle-exclamation"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Specialized Readiness Assessment</span>
+                                                                         <span class="mdesc">Ransomware replication and insider threat readiness.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="continuous-security-testing.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-arrows-spin"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Continuous Security Testing</span>
+                                                                         <span class="mdesc">Attack surface mapping and EASM monitoring.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="post-assessment-services.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-file-shield"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Post-Assessment Services</span>
+                                                                         <span class="mdesc">Remediation guidance, retesting, and validation.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
                                                          </ul>
                                                      </div>
 
-                                                    <div class="services-mega__panel" data-services-panel="training">
-                                                        <h3 class="services-mega__panel-heading">Training solutions</h3>
-                                                        <ul class="services-mega__list">
-                                                            
-                                                            <li class="services-mega__item"><a href="ethical-hacking.html"
-                                                                    class="services-mega__link services-mega__link--main">Ethical
-                                                                    Hacker</a></li>
+                                                                                                        <div class="services-mega__panel" data-services-panel="governance">
+                                                          <ul class="services-mega__list">
+                                                              <li class="services-mega__item">
+                                                                  <a href="governance-services.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Governance Services</span>
+                                                                          <span class="mdesc">Build the foundation of your cybersecurity posture.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="risk-management-services.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Risk Management Services</span>
+                                                                          <span class="mdesc">Identify, assess, and mitigate operational risks.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="compliance-services.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-clipboard-check"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Compliance Services</span>
+                                                                          <span class="mdesc">Meet regulatory and industry compliance requirements.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="isms-standards-implementation.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">ISMS & Standards Implementation</span>
+                                                                          <span class="mdesc">Implement ISO 27001, NIST, and security frameworks.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="audit-assurance-services.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-chart-line"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Audit & Assurance Services</span>
+                                                                          <span class="mdesc">Independent audits and digital assurance reviews.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="third-party-vendor-services.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-handshake"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Third-Party & Vendor Services</span>
+                                                                          <span class="mdesc">Monitor vendor security risks and supply chain.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="privacy-data-protection-services.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-user-lock"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Privacy & Data Protection Services</span>
+                                                                          <span class="mdesc">Govern sensitive data and ensure privacy compliance.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="business-resilience-services.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-building-shield"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Business Resilience Services</span>
+                                                                          <span class="mdesc">Maintain business continuity and disaster recovery plans.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="security-governance-operations.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-gears"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Security Governance Operations</span>
+                                                                          <span class="mdesc">Operational security governance and KPI reporting.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="identity-access-governance.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-user-gear"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Identity & Access Governance</span>
+                                                                          <span class="mdesc">Manage user permissions, roles, and identity audits.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="ai-emerging-technology-governance.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-brain"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">AI & Emerging Technology Governance</span>
+                                                                          <span class="mdesc">Ensure compliance for AI and emerging tech.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="security-advisory-services.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-comments"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Security Advisory Services</span>
+                                                                          <span class="mdesc">Direct consulting and strategic investment advice.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                          </ul>
+                                                      </div>
 
-                                                            <li class="services-mega__item"><a href="hacking-forensics-investigator.html"
-                                                                    class="services-mega__link services-mega__link--main">Certified Hacking Forensics Investigator</a></li>
+                                                                                                        <div class="services-mega__panel" data-services-panel="training">
+                                                          <ul class="services-mega__list">
+                                                              <li class="services-mega__item">
+                                                                  <a href="ethical-hacking.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-user-ninja"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Ethical Hacker</span>
+                                                                          <span class="mdesc">Master advanced hacking tools and methodology.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="hacking-forensics-investigator.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-magnifying-glass-location"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Certified Hacking Forensics Investigator</span>
+                                                                          <span class="mdesc">Digital evidence analysis and forensics tools.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="incident-handler.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-life-ring"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Incident Handler</span>
+                                                                          <span class="mdesc">Structured incident response and containment strategies.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="malware-analysis-reverse-engineering.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-bug"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Malware Analysis & Reverse Engineering</span>
+                                                                          <span class="mdesc">Deconstruct malicious binaries and trace threat code.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="iso-27001-2022-lead-auditor-practical-approach.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-file-contract"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">ISO 27001:2022 Lead Auditor</span>
+                                                                          <span class="mdesc">Practical audit approaches for ISO implementation.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="iso-31000-risk-management.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-shield-heart"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">ISO 31000 Risk Management</span>
+                                                                          <span class="mdesc">Standard risk identification and lifecycle management.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="cybersecurity-risk-assessment-workshop.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-chalkboard-user"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">Cybersecurity Risk Assessment Workshop</span>
+                                                                          <span class="mdesc">Interactive scoping, threat mapping, and risk reports.</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
+                                                          </ul>
+                                                      </div>
 
-
-                                                            <li class="services-mega__item"><a href="incident-handler.html"
-                                                                    class="services-mega__link services-mega__link--main">Incident Handler</a></li>
-
-
-                                                            <li class="services-mega__item"><a href="malware-analysis-reverse-engineering.html"
-                                                                    class="services-mega__link services-mega__link--main">Malware Analysis & Reverse Engineering</a></li>
-
-
-                                                            <li class="services-mega__item"><a href="iso-27001-2022-lead-auditor-practical-approach.html"
-                                                                    class="services-mega__link services-mega__link--main">ISO 27001:2022 Lead Auditor – Practical Approach</a></li>
-
-                                                            <li class="services-mega__item"><a href="iso-31000-risk-management.html"
-                                                                    class="services-mega__link services-mega__link--main">ISO 31000 Risk Management</a></li>
-                                                            <li class="services-mega__item"><a href="cybersecurity-risk-assessment-workshop.html"
-                                                                    class="services-mega__link services-mega__link--main">Cybersecurity Risk Assessment Workshop</a></li>
-                                                        </ul>
-                                                    </div>
-
-                                                    <div class="services-mega__panel" data-services-panel="platforms">
-                                                         <h3 class="services-mega__panel-heading">Consultation</h3>
+                                                                                                         <div class="services-mega__panel" data-services-panel="platforms">
                                                          <ul class="services-mega__list">
-                                                             <li class="services-mega__item"><a href="consulting-roles.html?tab=panel-security-advisor"
-                                                                     class="services-mega__link services-mega__link--main">Security Advisor</a></li>
-                                                             <li class="services-mega__item"><a href="consulting-roles.html?tab=panel-grc-consultant"
-                                                                     class="services-mega__link services-mega__link--main">GRC Consultant</a></li>
-                                                             <li class="services-mega__item"><a href="consulting-roles.html?tab=panel-security-architect"
-                                                                     class="services-mega__link services-mega__link--main">Cyber Security Architect</a></li>
-                                                             <li class="services-mega__item"><a href="consulting-roles.html?tab=panel-servicenow-consultant"
-                                                                     class="services-mega__link services-mega__link--main">ServiceNow Consultant</a></li>
-                                                             <li class="services-mega__item"><a href="consulting-roles.html?tab=panel-microsoft-solutions"
-                                                                     class="services-mega__link services-mega__link--main">Microsoft Solutions Consultant</a></li>
-                                                             <li class="services-mega__item"><a href="consulting-roles.html?tab=panel-rsa-archer"
-                                                                     class="services-mega__link services-mega__link--main">RSA Archer Consultant</a></li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="consulting-roles.html?tab=panel-security-advisor" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-user-shield"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Security Advisor</span>
+                                                                         <span class="mdesc">Strategic cybersecurity oversight and uplift plans.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="consulting-roles.html?tab=panel-grc-consultant" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-file-invoice"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">GRC Consultant</span>
+                                                                         <span class="mdesc">Practical frameworks compliance and control alignment.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="consulting-roles.html?tab=panel-security-architect" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-compass-drafting"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Cyber Security Architect</span>
+                                                                         <span class="mdesc">Secure system blueprint design and architecture controls.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="consulting-roles.html?tab=panel-servicenow-consultant" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-briefcase"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">ServiceNow Consultant</span>
+                                                                         <span class="mdesc">ServiceNow GRC, SecOps, and ITSM implementation.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="consulting-roles.html?tab=panel-microsoft-solutions" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-windows"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Microsoft Solutions Consultant</span>
+                                                                         <span class="mdesc">Microsoft E5 integration and compliance reviews.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="consulting-roles.html?tab=panel-rsa-archer" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-cube"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">RSA Archer Consultant</span>
+                                                                         <span class="mdesc">RSA Archer platform configuration and managed services.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
                                                          </ul>
                                                      </div>
                                                 </li>
@@ -675,24 +908,52 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Dynamic Submenu Click Handler for Services Tab Switching
+        // Dynamic Submenu Hover/Click Handler for Services Tab Switching
         const megaMenu = document.querySelector('.services-mega');
         if (megaMenu) {
             const tabs = megaMenu.querySelectorAll('[data-services-tab]');
             const panels = megaMenu.querySelectorAll('[data-services-panel]');
             tabs.forEach(tab => {
-                tab.addEventListener('click', event => {
-                    event.preventDefault();
+                // Hover: switch panel
+                tab.addEventListener('mouseenter', () => {
                     const target = tab.getAttribute('data-services-tab');
                     tabs.forEach(item => item.classList.toggle('active', item === tab));
                     panels.forEach(panel => {
                         panel.classList.toggle('active', panel.getAttribute('data-services-panel') === target);
                     });
                 });
+                // Click: navigate to landing page
+                tab.addEventListener('click', event => {
+                    const href = tab.getAttribute('data-href');
+                    if (href && href !== '#') {
+                        event.preventDefault();
+                        window.location.href = href;
+                    }
+                });
             });
         }
 
-        // Sidebar Offcanvas Navigation Toggle Trigger Bound Safely
+        // Inject page content overlay div (appears below sticky header only)
+        if (!document.querySelector('.mega-page-overlay')) {
+            const overlayEl = document.createElement('div');
+            overlayEl.className = 'mega-page-overlay';
+            document.body.appendChild(overlayEl);
+        }
+
+        // Measure sticky header height and expose as CSS variable for overlay positioning
+        function updateHeaderHeight() {
+            const stickyHeader = document.querySelector('#header-sticky');
+            if (stickyHeader) {
+                const h = stickyHeader.getBoundingClientRect().height;
+                document.documentElement.style.setProperty('--header-h', h + 'px');
+            }
+        }
+        updateHeaderHeight();
+        window.addEventListener('resize', updateHeaderHeight);
+        window.addEventListener('scroll', updateHeaderHeight, { passive: true });
+
+
+
         const toggleBtn = document.querySelector('.sidebar__toggle');
         const closeBtn = document.querySelector('.offcanvas__close button');
         const overlay = document.querySelector('.offcanvas__overlay');
