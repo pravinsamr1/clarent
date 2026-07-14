@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 /* Remove relative context from parent menus down to the mega menu li wrapper */
 .header-main .main-menu > nav > ul > li:has(.services-mega) {
@@ -134,8 +135,9 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
     margin-bottom: 8px;
     border-radius: 8px;
     background: transparent;
-    color: #374151;
+    color: #000000 !important;
     cursor: pointer;
+    font-family: 'Lato', sans-serif !important;
     font-size: 15px;
     font-weight: 700;
     line-height: 1.2;
@@ -152,7 +154,7 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
 .header-main .main-menu ul li .submenu.services-mega .services-mega__tab:not(.active):hover,
 .header-main .main-menu ul li .submenu.services-mega .services-mega__tab:not(.active):focus {
     background: rgba(81, 53, 255, 0.05);
-    color: #5135FF;
+    color: #5135FF !important;
 }
 
 .header-main .main-menu ul li .submenu.services-mega .services-mega__tab .tab-badge {
@@ -174,12 +176,14 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
 
 .header-main .main-menu ul li .submenu.services-mega .services-mega__tab i {
     font-size: 10px;
-    opacity: 0.4;
+    color: #000000 !important;
+    opacity: 1 !important;
     transition: all 0.25s ease;
 }
 
 .header-main .main-menu ul li .submenu.services-mega .services-mega__tab.active i {
-    opacity: 1;
+    color: #ffffff !important;
+    opacity: 1 !important;
     transform: translateX(2px);
 }
 
