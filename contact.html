@@ -206,31 +206,270 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-input-wrapper">
-                                        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number"
-                                            required>
+                                        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-input-wrapper">
-                                        <input type="email" name="email" id="email" placeholder="Your Email Address"
-                                            required>
+                                        <input type="email" name="email" id="email" placeholder="Your Email Address" required>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                 <div class="col-md-6">
+                                    <div class="contact-ms-wrapper-outer contact-country-wrapper" id="contactCountryWrapper">
+                                        <div class="contact-ms-trigger" id="contactCountryTrigger" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                            <span class="contact-ms-placeholder" id="contactCountryPlaceholder">Select Country</span>
+                                            <i class="fa-solid fa-chevron-down contact-ms-arrow"></i>
+                                        </div>
+                                        <div class="contact-ms-dropdown contact-country-dropdown" id="contactCountryDropdown">
+                                            <div class="contact-country-search-wrap">
+                                                <input type="text" class="contact-country-search" id="contactCountrySearch" placeholder="Search country...">
+                                            </div>
+                                            <div class="contact-country-list" id="contactCountryList">
+                                                <div class="contact-ms-option" data-value="Afghanistan">Afghanistan</div>
+                                                <div class="contact-ms-option" data-value="Albania">Albania</div>
+                                                <div class="contact-ms-option" data-value="Algeria">Algeria</div>
+                                                <div class="contact-ms-option" data-value="Andorra">Andorra</div>
+                                                <div class="contact-ms-option" data-value="Angola">Angola</div>
+                                                <div class="contact-ms-option" data-value="Antigua and Barbuda">Antigua and Barbuda</div>
+                                                <div class="contact-ms-option" data-value="Argentina">Argentina</div>
+                                                <div class="contact-ms-option" data-value="Armenia">Armenia</div>
+                                                <div class="contact-ms-option" data-value="Australia">Australia</div>
+                                                <div class="contact-ms-option" data-value="Austria">Austria</div>
+                                                <div class="contact-ms-option" data-value="Azerbaijan">Azerbaijan</div>
+                                                <div class="contact-ms-option" data-value="Bahamas">Bahamas</div>
+                                                <div class="contact-ms-option" data-value="Bahrain">Bahrain</div>
+                                                <div class="contact-ms-option" data-value="Bangladesh">Bangladesh</div>
+                                                <div class="contact-ms-option" data-value="Barbados">Barbados</div>
+                                                <div class="contact-ms-option" data-value="Belarus">Belarus</div>
+                                                <div class="contact-ms-option" data-value="Belgium">Belgium</div>
+                                                <div class="contact-ms-option" data-value="Belize">Belize</div>
+                                                <div class="contact-ms-option" data-value="Benin">Benin</div>
+                                                <div class="contact-ms-option" data-value="Bhutan">Bhutan</div>
+                                                <div class="contact-ms-option" data-value="Bolivia">Bolivia</div>
+                                                <div class="contact-ms-option" data-value="Bosnia and Herzegovina">Bosnia and Herzegovina</div>
+                                                <div class="contact-ms-option" data-value="Botswana">Botswana</div>
+                                                <div class="contact-ms-option" data-value="Brazil">Brazil</div>
+                                                <div class="contact-ms-option" data-value="Brunei">Brunei</div>
+                                                <div class="contact-ms-option" data-value="Bulgaria">Bulgaria</div>
+                                                <div class="contact-ms-option" data-value="Burkina Faso">Burkina Faso</div>
+                                                <div class="contact-ms-option" data-value="Burundi">Burundi</div>
+                                                <div class="contact-ms-option" data-value="Cabo Verde">Cabo Verde</div>
+                                                <div class="contact-ms-option" data-value="Cambodia">Cambodia</div>
+                                                <div class="contact-ms-option" data-value="Cameroon">Cameroon</div>
+                                                <div class="contact-ms-option" data-value="Canada">Canada</div>
+                                                <div class="contact-ms-option" data-value="Central African Republic">Central African Republic</div>
+                                                <div class="contact-ms-option" data-value="Chad">Chad</div>
+                                                <div class="contact-ms-option" data-value="Chile">Chile</div>
+                                                <div class="contact-ms-option" data-value="China">China</div>
+                                                <div class="contact-ms-option" data-value="Colombia">Colombia</div>
+                                                <div class="contact-ms-option" data-value="Comoros">Comoros</div>
+                                                <div class="contact-ms-option" data-value="Congo (Brazzaville)">Congo (Brazzaville)</div>
+                                                <div class="contact-ms-option" data-value="Congo (Kinshasa)">Congo (Kinshasa)</div>
+                                                <div class="contact-ms-option" data-value="Costa Rica">Costa Rica</div>
+                                                <div class="contact-ms-option" data-value="Croatia">Croatia</div>
+                                                <div class="contact-ms-option" data-value="Cuba">Cuba</div>
+                                                <div class="contact-ms-option" data-value="Cyprus">Cyprus</div>
+                                                <div class="contact-ms-option" data-value="Czech Republic">Czech Republic</div>
+                                                <div class="contact-ms-option" data-value="Denmark">Denmark</div>
+                                                <div class="contact-ms-option" data-value="Djibouti">Djibouti</div>
+                                                <div class="contact-ms-option" data-value="Dominica">Dominica</div>
+                                                <div class="contact-ms-option" data-value="Dominican Republic">Dominican Republic</div>
+                                                <div class="contact-ms-option" data-value="Ecuador">Ecuador</div>
+                                                <div class="contact-ms-option" data-value="Egypt">Egypt</div>
+                                                <div class="contact-ms-option" data-value="El Salvador">El Salvador</div>
+                                                <div class="contact-ms-option" data-value="Equatorial Guinea">Equatorial Guinea</div>
+                                                <div class="contact-ms-option" data-value="Eritrea">Eritrea</div>
+                                                <div class="contact-ms-option" data-value="Estonia">Estonia</div>
+                                                <div class="contact-ms-option" data-value="Eswatini">Eswatini</div>
+                                                <div class="contact-ms-option" data-value="Ethiopia">Ethiopia</div>
+                                                <div class="contact-ms-option" data-value="Fiji">Fiji</div>
+                                                <div class="contact-ms-option" data-value="Finland">Finland</div>
+                                                <div class="contact-ms-option" data-value="France">France</div>
+                                                <div class="contact-ms-option" data-value="Gabon">Gabon</div>
+                                                <div class="contact-ms-option" data-value="Gambia">Gambia</div>
+                                                <div class="contact-ms-option" data-value="Georgia">Georgia</div>
+                                                <div class="contact-ms-option" data-value="Germany">Germany</div>
+                                                <div class="contact-ms-option" data-value="Ghana">Ghana</div>
+                                                <div class="contact-ms-option" data-value="Greece">Greece</div>
+                                                <div class="contact-ms-option" data-value="Grenada">Grenada</div>
+                                                <div class="contact-ms-option" data-value="Guatemala">Guatemala</div>
+                                                <div class="contact-ms-option" data-value="Guinea">Guinea</div>
+                                                <div class="contact-ms-option" data-value="Guinea-Bissau">Guinea-Bissau</div>
+                                                <div class="contact-ms-option" data-value="Guyana">Guyana</div>
+                                                <div class="contact-ms-option" data-value="Haiti">Haiti</div>
+                                                <div class="contact-ms-option" data-value="Honduras">Honduras</div>
+                                                <div class="contact-ms-option" data-value="Hungary">Hungary</div>
+                                                <div class="contact-ms-option" data-value="Iceland">Iceland</div>
+                                                <div class="contact-ms-option" data-value="India">India</div>
+                                                <div class="contact-ms-option" data-value="Indonesia">Indonesia</div>
+                                                <div class="contact-ms-option" data-value="Iran">Iran</div>
+                                                <div class="contact-ms-option" data-value="Iraq">Iraq</div>
+                                                <div class="contact-ms-option" data-value="Ireland">Ireland</div>
+                                                <div class="contact-ms-option" data-value="Israel">Israel</div>
+                                                <div class="contact-ms-option" data-value="Italy">Italy</div>
+                                                <div class="contact-ms-option" data-value="Jamaica">Jamaica</div>
+                                                <div class="contact-ms-option" data-value="Japan">Japan</div>
+                                                <div class="contact-ms-option" data-value="Jordan">Jordan</div>
+                                                <div class="contact-ms-option" data-value="Kazakhstan">Kazakhstan</div>
+                                                <div class="contact-ms-option" data-value="Kenya">Kenya</div>
+                                                <div class="contact-ms-option" data-value="Kiribati">Kiribati</div>
+                                                <div class="contact-ms-option" data-value="Korea, North">Korea, North</div>
+                                                <div class="contact-ms-option" data-value="Korea, South">Korea, South</div>
+                                                <div class="contact-ms-option" data-value="Kosovo">Kosovo</div>
+                                                <div class="contact-ms-option" data-value="Kuwait">Kuwait</div>
+                                                <div class="contact-ms-option" data-value="Kyrgyzstan">Kyrgyzstan</div>
+                                                <div class="contact-ms-option" data-value="Laos">Laos</div>
+                                                <div class="contact-ms-option" data-value="Latvia">Latvia</div>
+                                                <div class="contact-ms-option" data-value="Lebanon">Lebanon</div>
+                                                <div class="contact-ms-option" data-value="Lesotho">Lesotho</div>
+                                                <div class="contact-ms-option" data-value="Liberia">Liberia</div>
+                                                <div class="contact-ms-option" data-value="Libya">Libya</div>
+                                                <div class="contact-ms-option" data-value="Liechtenstein">Liechtenstein</div>
+                                                <div class="contact-ms-option" data-value="Lithuania">Lithuania</div>
+                                                <div class="contact-ms-option" data-value="Luxembourg">Luxembourg</div>
+                                                <div class="contact-ms-option" data-value="Madagascar">Madagascar</div>
+                                                <div class="contact-ms-option" data-value="Malawi">Malawi</div>
+                                                <div class="contact-ms-option" data-value="Malaysia">Malaysia</div>
+                                                <div class="contact-ms-option" data-value="Maldives">Maldives</div>
+                                                <div class="contact-ms-option" data-value="Mali">Mali</div>
+                                                <div class="contact-ms-option" data-value="Malta">Malta</div>
+                                                <div class="contact-ms-option" data-value="Marshall Islands">Marshall Islands</div>
+                                                <div class="contact-ms-option" data-value="Mauritania">Mauritania</div>
+                                                <div class="contact-ms-option" data-value="Mauritius">Mauritius</div>
+                                                <div class="contact-ms-option" data-value="Mexico">Mexico</div>
+                                                <div class="contact-ms-option" data-value="Micronesia">Micronesia</div>
+                                                <div class="contact-ms-option" data-value="Moldova">Moldova</div>
+                                                <div class="contact-ms-option" data-value="Monaco">Monaco</div>
+                                                <div class="contact-ms-option" data-value="Mongolia">Mongolia</div>
+                                                <div class="contact-ms-option" data-value="Montenegro">Montenegro</div>
+                                                <div class="contact-ms-option" data-value="Morocco">Morocco</div>
+                                                <div class="contact-ms-option" data-value="Mozambique">Mozambique</div>
+                                                <div class="contact-ms-option" data-value="Myanmar">Myanmar</div>
+                                                <div class="contact-ms-option" data-value="Namibia">Namibia</div>
+                                                <div class="contact-ms-option" data-value="Nauru">Nauru</div>
+                                                <div class="contact-ms-option" data-value="Nepal">Nepal</div>
+                                                <div class="contact-ms-option" data-value="Netherlands">Netherlands</div>
+                                                <div class="contact-ms-option" data-value="New Zealand">New Zealand</div>
+                                                <div class="contact-ms-option" data-value="Nicaragua">Nicaragua</div>
+                                                <div class="contact-ms-option" data-value="Niger">Niger</div>
+                                                <div class="contact-ms-option" data-value="Nigeria">Nigeria</div>
+                                                <div class="contact-ms-option" data-value="North Macedonia">North Macedonia</div>
+                                                <div class="contact-ms-option" data-value="Norway">Norway</div>
+                                                <div class="contact-ms-option" data-value="Oman">Oman</div>
+                                                <div class="contact-ms-option" data-value="Pakistan">Pakistan</div>
+                                                <div class="contact-ms-option" data-value="Palau">Palau</div>
+                                                <div class="contact-ms-option" data-value="Palestine">Palestine</div>
+                                                <div class="contact-ms-option" data-value="Panama">Panama</div>
+                                                <div class="contact-ms-option" data-value="Papua New Guinea">Papua New Guinea</div>
+                                                <div class="contact-ms-option" data-value="Paraguay">Paraguay</div>
+                                                <div class="contact-ms-option" data-value="Peru">Peru</div>
+                                                <div class="contact-ms-option" data-value="Philippines">Philippines</div>
+                                                <div class="contact-ms-option" data-value="Poland">Poland</div>
+                                                <div class="contact-ms-option" data-value="Portugal">Portugal</div>
+                                                <div class="contact-ms-option" data-value="Qatar">Qatar</div>
+                                                <div class="contact-ms-option" data-value="Romania">Romania</div>
+                                                <div class="contact-ms-option" data-value="Russia">Russia</div>
+                                                <div class="contact-ms-option" data-value="Rwanda">Rwanda</div>
+                                                <div class="contact-ms-option" data-value="Saint Kitts and Nevis">Saint Kitts and Nevis</div>
+                                                <div class="contact-ms-option" data-value="Saint Lucia">Saint Lucia</div>
+                                                <div class="contact-ms-option" data-value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</div>
+                                                <div class="contact-ms-option" data-value="Samoa">Samoa</div>
+                                                <div class="contact-ms-option" data-value="San Marino">San Marino</div>
+                                                <div class="contact-ms-option" data-value="Sao Tome and Principe">Sao Tome and Principe</div>
+                                                <div class="contact-ms-option" data-value="Saudi Arabia">Saudi Arabia</div>
+                                                <div class="contact-ms-option" data-value="Senegal">Senegal</div>
+                                                <div class="contact-ms-option" data-value="Serbia">Serbia</div>
+                                                <div class="contact-ms-option" data-value="Seychelles">Seychelles</div>
+                                                <div class="contact-ms-option" data-value="Sierra Leone">Sierra Leone</div>
+                                                <div class="contact-ms-option" data-value="Singapore">Singapore</div>
+                                                <div class="contact-ms-option" data-value="Slovakia">Slovakia</div>
+                                                <div class="contact-ms-option" data-value="Slovenia">Slovenia</div>
+                                                <div class="contact-ms-option" data-value="Solomon Islands">Solomon Islands</div>
+                                                <div class="contact-ms-option" data-value="Somalia">Somalia</div>
+                                                <div class="contact-ms-option" data-value="South Africa">South Africa</div>
+                                                <div class="contact-ms-option" data-value="South Sudan">South Sudan</div>
+                                                <div class="contact-ms-option" data-value="Spain">Spain</div>
+                                                <div class="contact-ms-option" data-value="Sri Lanka">Sri Lanka</div>
+                                                <div class="contact-ms-option" data-value="Sudan">Sudan</div>
+                                                <div class="contact-ms-option" data-value="Suriname">Suriname</div>
+                                                <div class="contact-ms-option" data-value="Sweden">Sweden</div>
+                                                <div class="contact-ms-option" data-value="Switzerland">Switzerland</div>
+                                                <div class="contact-ms-option" data-value="Syria">Syria</div>
+                                                <div class="contact-ms-option" data-value="Taiwan">Taiwan</div>
+                                                <div class="contact-ms-option" data-value="Tajikistan">Tajikistan</div>
+                                                <div class="contact-ms-option" data-value="Tanzania">Tanzania</div>
+                                                <div class="contact-ms-option" data-value="Thailand">Thailand</div>
+                                                <div class="contact-ms-option" data-value="Timor-Leste">Timor-Leste</div>
+                                                <div class="contact-ms-option" data-value="Togo">Togo</div>
+                                                <div class="contact-ms-option" data-value="Tonga">Tonga</div>
+                                                <div class="contact-ms-option" data-value="Trinidad and Tobago">Trinidad and Tobago</div>
+                                                <div class="contact-ms-option" data-value="Tunisia">Tunisia</div>
+                                                <div class="contact-ms-option" data-value="Turkey">Turkey</div>
+                                                <div class="contact-ms-option" data-value="Turkmenistan">Turkmenistan</div>
+                                                <div class="contact-ms-option" data-value="Tuvalu">Tuvalu</div>
+                                                <div class="contact-ms-option" data-value="Uganda">Uganda</div>
+                                                <div class="contact-ms-option" data-value="Ukraine">Ukraine</div>
+                                                <div class="contact-ms-option" data-value="United Arab Emirates">United Arab Emirates</div>
+                                                <div class="contact-ms-option" data-value="United Kingdom">United Kingdom</div>
+                                                <div class="contact-ms-option" data-value="United States">United States</div>
+                                                <div class="contact-ms-option" data-value="Uruguay">Uruguay</div>
+                                                <div class="contact-ms-option" data-value="Uzbekistan">Uzbekistan</div>
+                                                <div class="contact-ms-option" data-value="Vanuatu">Vanuatu</div>
+                                                <div class="contact-ms-option" data-value="Vatican City">Vatican City</div>
+                                                <div class="contact-ms-option" data-value="Venezuela">Venezuela</div>
+                                                <div class="contact-ms-option" data-value="Vietnam">Vietnam</div>
+                                                <div class="contact-ms-option" data-value="Yemen">Yemen</div>
+                                                <div class="contact-ms-option" data-value="Zambia">Zambia</div>
+                                                <div class="contact-ms-option" data-value="Zimbabwe">Zimbabwe</div>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="country" id="contact-country-hidden">
+                                    </div>
+                                </div>
+
+                                <!-- Multi-select Services -->
+                                <div class="col-12">
+                                    <div class="form-input-wrapper contact-ms-wrapper-outer" id="contactMsWrapperOuter">
+                                        <div class="contact-ms-trigger" id="contactMsTrigger" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false">
+                                            <span class="contact-ms-placeholder" id="contactMsPlaceholder">Select Required Services</span>
+                                            <i class="fa-solid fa-chevron-down contact-ms-arrow" id="contactMsArrow"></i>
+                                        </div>
+                                        <div class="contact-ms-dropdown" id="contactMsDropdown" role="listbox" aria-multiselectable="true">
+                                            <div class="contact-ms-group-label">GRC Services</div>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="GRC services - Risk Assessment"><span>Risk Assessment</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="GRC services - Internal Audit"><span>Internal Audit</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="GRC services - Security posture uplift"><span>Security Posture Uplift</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="GRC services - Cyber Security Programs"><span>Cyber Security Programs</span></label>
+
+                                            <div class="contact-ms-group-label">Security Architecture</div>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="Security Architecture - Zero Trust"><span>Zero Trust</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="Security Architecture - Microsoft"><span>Microsoft</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="Security Architecture - AWS"><span>AWS</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="Security Architecture - Other"><span>Other</span></label>
+
+                                            <div class="contact-ms-group-label">Other Services</div>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="Security Engineering solutions"><span>Security Engineering Solutions</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="Security Consultations"><span>Security Consultations</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="Psychometric Analysis"><span>Psychometric Analysis</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="Penetration Testing services"><span>Penetration Testing Services</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="Training & Awareness solutions"><span>Training &amp; Awareness Solutions</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="RSA Archer solutions"><span>RSA Archer Solutions</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="ServiceNow solutions"><span>ServiceNow Solutions</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="Virtualization solutions"><span>Virtualization Solutions</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="Become a Partner"><span>Become a Partner</span></label>
+                                            <label class="contact-ms-option"><input type="checkbox" name="services[]" value="Other services"><span>Other Services</span></label>
+                                        </div>
+                                        <input type="hidden" id="contactServiceHidden" name="services">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
                                     <div class="form-input-wrapper">
-                                        <input type="text" name="subject" id="subject" placeholder="Your Subject"
-                                            required>
+                                        <textarea name="message" id="message" rows="5" placeholder="Write Your Message Here..." required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-input-wrapper">
-                                        <textarea name="message" id="message" rows="5"
-                                            placeholder="Write Your Message Here..." required></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div
-                                        class="d-flex flex-lg-nowrap flex-wrap justify-content-lg-between justify-content-center align-items-center gap-4 mt-3">
+                                    <div class="d-flex flex-lg-nowrap flex-wrap justify-content-lg-between justify-content-center align-items-center gap-4 mt-3">
                                         <button type="submit"
                                             class="common-btn box-style cmn-style1 d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 fs18 fw-semibold white overflow-hidden rounded-5 p3-bg"
                                             style="border: none; white-space: nowrap;">
@@ -245,16 +484,148 @@
                                 </div>
                             </div>
                         </form>
+
+                        <!-- Contact Form Dropdowns JS -->
+                        <script>
+                        (function() {
+                            // --- SERVICES MULTI-SELECT ---
+                            var msOuter = document.getElementById('contactMsWrapperOuter');
+                            var msTrigger = document.getElementById('contactMsTrigger');
+                            var msDropdown = document.getElementById('contactMsDropdown');
+                            var msPlaceholder = document.getElementById('contactMsPlaceholder');
+                            var msHidden = document.getElementById('contactServiceHidden');
+
+                            if (msTrigger && msDropdown) {
+                                function updateDisplay() {
+                                    var checked = msDropdown.querySelectorAll('input[type="checkbox"]:checked');
+                                    if (checked.length === 0) {
+                                        msPlaceholder.textContent = 'Select Required Services';
+                                        msPlaceholder.classList.remove('has-val');
+                                    } else if (checked.length === 1) {
+                                        msPlaceholder.textContent = checked[0].value;
+                                        msPlaceholder.classList.add('has-val');
+                                    } else {
+                                        msPlaceholder.textContent = checked.length + ' services selected';
+                                        msPlaceholder.classList.add('has-val');
+                                    }
+                                    if (msHidden) msHidden.value = Array.from(checked).map(function(c){ return c.value; }).join(', ');
+                                }
+
+                                function openDrop() { msOuter.classList.add('open'); msTrigger.setAttribute('aria-expanded','true'); }
+                                function closeDrop() { msOuter.classList.remove('open'); msTrigger.setAttribute('aria-expanded','false'); }
+
+                                msTrigger.addEventListener('click', function(e) {
+                                    e.stopPropagation();
+                                    msOuter.classList.contains('open') ? closeDrop() : openDrop();
+                                    // Close country dropdown if open
+                                    var countryOuter = document.getElementById('contactCountryWrapper');
+                                    if (countryOuter) countryOuter.classList.remove('open');
+                                });
+                                msTrigger.addEventListener('keydown', function(e) {
+                                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); msOuter.classList.contains('open') ? closeDrop() : openDrop(); }
+                                    if (e.key === 'Escape') closeDrop();
+                                });
+                                msDropdown.querySelectorAll('input[type="checkbox"]').forEach(function(cb) {
+                                    cb.addEventListener('change', updateDisplay);
+                                });
+                            }
+
+                            // --- COUNTRY SINGLE-SELECT (SEARCHABLE) ---
+                            var countryOuter = document.getElementById('contactCountryWrapper');
+                            var countryTrigger = document.getElementById('contactCountryTrigger');
+                            var countryDropdown = document.getElementById('contactCountryDropdown');
+                            var countryPlaceholder = document.getElementById('contactCountryPlaceholder');
+                            var countrySearch = document.getElementById('contactCountrySearch');
+                            var countryList = document.getElementById('contactCountryList');
+                            var countryHidden = document.getElementById('contact-country-hidden');
+
+                            if (countryTrigger && countryDropdown) {
+                                function openCountry() {
+                                    countryOuter.classList.add('open');
+                                    countryTrigger.setAttribute('aria-expanded', 'true');
+                                    if (countrySearch) {
+                                        countrySearch.value = '';
+                                        filterCountries('');
+                                        countrySearch.focus();
+                                    }
+                                }
+                                function closeCountry() {
+                                    countryOuter.classList.remove('open');
+                                    countryTrigger.setAttribute('aria-expanded', 'false');
+                                }
+
+                                countryTrigger.addEventListener('click', function(e) {
+                                    e.stopPropagation();
+                                    countryOuter.classList.contains('open') ? closeCountry() : openCountry();
+                                    // Close services dropdown if open
+                                    if (msOuter) msOuter.classList.remove('open');
+                                });
+
+                                countryTrigger.addEventListener('keydown', function(e) {
+                                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); countryOuter.classList.contains('open') ? closeCountry() : openCountry(); }
+                                    if (e.key === 'Escape') closeCountry();
+                                });
+
+                                // Prevent dropdown closure when clicking inside the search box or search wrap
+                                if (countrySearch) {
+                                    countrySearch.addEventListener('click', function(e) {
+                                        e.stopPropagation();
+                                    });
+                                    countrySearch.addEventListener('input', function(e) {
+                                        filterCountries(e.target.value.toLowerCase());
+                                    });
+                                }
+
+                                function filterCountries(query) {
+                                    var options = countryList.querySelectorAll('.contact-ms-option');
+                                    options.forEach(function(opt) {
+                                        var text = opt.textContent.toLowerCase();
+                                        if (text.indexOf(query) > -1) {
+                                            opt.style.display = '';
+                                        } else {
+                                            opt.style.display = 'none';
+                                        }
+                                    });
+                                }
+
+                                // Option selection
+                                countryList.querySelectorAll('.contact-ms-option').forEach(function(opt) {
+                                    opt.addEventListener('click', function(e) {
+                                        e.stopPropagation();
+                                        var val = opt.getAttribute('data-value');
+                                        
+                                        // Remove selected class from others
+                                        countryList.querySelectorAll('.contact-ms-option').forEach(function(o) {
+                                            o.classList.remove('selected');
+                                        });
+                                        opt.classList.add('selected');
+
+                                        countryPlaceholder.textContent = val;
+                                        countryPlaceholder.classList.add('has-val');
+                                        if (countryHidden) countryHidden.value = val;
+                                        closeCountry();
+                                    });
+                                });
+                            }
+
+                            // --- GLOBAL OUTSIDE CLICK CLOSE ---
+                            document.addEventListener('click', function(e) {
+                                if (msOuter && !msOuter.contains(e.target)) {
+                                    msOuter.classList.remove('open');
+                                }
+                                if (countryOuter && !countryOuter.contains(e.target)) {
+                                    countryOuter.classList.remove('open');
+                                }
+                            });
+                        })();
+                        </script>
                     </div>
                 </div>
 
                 <!-- Right Column: Premium Location Map Card -->
                 <div class="col-lg-5">
                     <div class="contact-map-card">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52808140.21705447!2d-161.46429918210544!3d36.11412792251988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sbd!4v1740418796595!5m2!1sen!2sbd"
-                            style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164858.73143089624!2d151.0922233073067!3d-33.92311957318952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129838f39a743f%3A0x3017d681632a850!2sSydney%20NSW%2C%20Australia!5e1!3m2!1sen!2sin!4v1784024268449!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </div>
             </div>
