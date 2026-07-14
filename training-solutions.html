@@ -125,9 +125,9 @@
         }
 
         .card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(81, 53, 255, 0.2);
-            box-shadow: 0 12px 30px rgba(81, 53, 255, 0.08);
+            transform: translateY(-5px);
+            border-color: #5135FF;
+            box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.1);
         }
 
         .card-tab {
@@ -426,7 +426,6 @@
         <div class="container">
             <div class="row align-items-center justify-content-between g-5">
                 <div class="col-lg-8">
-                    <span class="d-block p1-clr fw-bold fs-eight text-uppercase mb-2">Clarent360 Training Division</span>
                     <div class="type-line" id="typeline" style="font-family: monospace; font-size: 16px; color: #5135FF; margin-bottom: 18px; min-height: 24px; font-weight: bold;">
                         <span id="typeline-text"></span><span class="cursor" style="display:inline-block; width:8px; height:16px; background:#5135FF; margin-left:2px; vertical-align:middle; animation:blink 1s step-end infinite;"></span>
                     </div>
@@ -491,7 +490,6 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-8">
-                    <span class="d-block p1-clr fw-bold fs-eight text-uppercase mb-2">Every programme, same discipline</span>
                     <h2 class="black fw-bold mb-3">What's built into every course</h2>
                     <p class="pra fs-seven mb-0">Regardless of the discipline — offensive, defensive, forensic or governance — each programme is engineered around the same operating principles.</p>
                 </div>
@@ -581,7 +579,6 @@
         // ---------- Course data ----------
         const courses = [
             {
-                code: "CL-EH",
                 level: "Advanced",
                 title: "Ethical Hacking",
                 overview: "Advanced hands-on penetration testing programme aligned with the methodology used by security consultants, red teams and ethical hackers.",
@@ -600,7 +597,6 @@
                 ]
             },
             {
-                code: "CL-CHFI",
                 level: "Advanced",
                 title: "Certified Hacking Forensics Investigator (CHFI) — Practical Programme",
                 overview: "Comprehensive digital forensics and incident investigation training covering evidence acquisition, analysis and reporting.",
@@ -620,7 +616,6 @@
                 ]
             },
             {
-                code: "CL-IH",
                 level: "Intermediate",
                 title: "Incident Handler",
                 overview: "Practical incident response programme for intermediate professionals responsible for detecting, containing and recovering from security incidents.",
@@ -639,7 +634,6 @@
                 ]
             },
             {
-                code: "CL-MA",
                 level: "Advanced",
                 title: "Malware Analysis & Reverse Engineering",
                 overview: "Advanced malware research programme focused on static analysis, dynamic analysis and reverse engineering.",
@@ -658,7 +652,6 @@
                 ]
             },
             {
-                code: "CL-27K",
                 level: "Governance",
                 title: "ISO 27001:2022 Lead Auditor — Practical Approach",
                 overview: "Practical auditing programme focused on conducting effective ISMS audits and evaluating Annex A controls.",
@@ -677,7 +670,6 @@
                 ]
             },
             {
-                code: "CL-31K",
                 level: "Governance",
                 title: "ISO 31000 Risk Management",
                 overview: "Enterprise risk management programme based on the ISO 31000 principles and framework.",
@@ -696,7 +688,6 @@
                 ]
             },
             {
-                code: "CL-RA",
                 level: "Governance",
                 title: "Cybersecurity Risk Assessment Workshop",
                 overview: "Hands-on risk assessment programme focused on identifying, analysing and treating cyber risk across the enterprise.",
@@ -729,10 +720,11 @@
             }
 
             card.innerHTML = `
-                <div class="card-tab">${c.code}</div>
                 <div class="card-body">
-                    <span class="level-tag ${levelClass}">${c.level}</span>
-                    <h3>${c.title}</h3>
+                    <div style="display:flex; align-items:center; gap:10px; justify-content:space-between;">
+                        <h3>${c.title}</h3>
+                        <span class="level-tag ${levelClass}">${c.level}</span>
+                        </div>
                     <p class="overview">${c.overview}</p>
                     <p class="audience"><b>For:</b> ${c.audience}</p>
                     <button class="toggle-modules" aria-expanded="false">

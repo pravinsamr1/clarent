@@ -1608,7 +1608,7 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
 .video-overlay {
     position: absolute;
     inset: 0;
-    /* background: rgba(0, 0, 0, 0.5); */
+    /* background: rgba(0, 0, 0, 0.2); */
     z-index: 2;
     pointer-events: none;
 }
@@ -3420,4 +3420,29 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
     height: auto;
     object-fit: contain;
     border-radius: 12px;
+}
+
+/* How we secure your business circle hover rotation and pointer mark to heading */
+.work-learn-item .thumb-author {
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s ease, background 0.4s ease;
+}
+
+.work-learn-item .thumb-author .thumb {
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.work-learn-item .thumb-author .serial {
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s ease, background 0.4s ease, color 0.4s ease;
+}
+
+.work-learn-item:hover .thumb-author {
+    transform: rotate(90deg);
+}
+
+.work-learn-item:hover .thumb-author .thumb {
+    transform: rotate(-90deg);
+}
+
+.work-learn-item:hover .thumb-author .serial {
+    transform: translateY(-50%) rotate(-90deg);
 }

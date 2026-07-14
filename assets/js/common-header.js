@@ -113,8 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                             <ul class="submenu services-mega">
                                                                                                 <li class="services-mega__rail">
                                                     <button type="button" class="services-mega__tab active"
-                                                        data-services-tab="security"
-                                                        data-href="services-details.html">
+                                                        data-services-tab="security">
                                                         Security<i class="fa-solid fa-arrow-right"></i>
                                                     </button>
                                                     <button type="button" class="services-mega__tab"
@@ -1109,6 +1108,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                                 <p class="white mb-0">
                                     Sydney, Australia
+                                </p>
+                                <p class="white mb-0">
+                                    Dubai, UAE
+
                                 </p>
                             </div>
 
