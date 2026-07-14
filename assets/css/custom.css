@@ -3446,3 +3446,72 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
 .work-learn-item:hover .thumb-author .serial {
     transform: translateY(-50%) rotate(-90deg);
 }
+
+/* Custom FAQ Section Buttons with hover gradient shifts */
+.faq-btn-more {
+    background: linear-gradient(135deg, #5135FF 0%, #00C6FF 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(81, 53, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-btn-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00C6FF 0%, #5135FF 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    border-radius: 100px;
+}
+
+.faq-btn-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(81, 53, 255, 0.35);
+    color: #ffffff !important;
+}
+
+.faq-btn-more:hover::before {
+    opacity: 1;
+}
+
+.faq-btn-chk {
+    background: linear-gradient(135deg, #FF5455 0%, #FFA800 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(255, 84, 85, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-btn-chk::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FFA800 0%, #FF5455 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    border-radius: 100px;
+}
+
+.faq-btn-chk:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 84, 85, 0.35);
+    color: #ffffff !important;
+}
+
+.faq-btn-chk:hover::before {
+    opacity: 1;
+}
