@@ -311,21 +311,70 @@
         }
 
         .btn-primary-glow {
-            background: #ffffff;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            background: linear-gradient(180deg, #ffffff 0%, #f4f5f8 100%);
             color: #030611 !important;
-            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 8px 20px rgba(81, 53, 255, 0.12), 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-primary-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(93deg, #5135ff 10.65%, #ff5455 89.35%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-primary-glow::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.4) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-25deg);
+            z-index: 2;
+            pointer-events: none;
         }
 
         .btn-primary-glow:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(81, 53, 255, 0.4);
-            background: linear-gradient(93deg, #5135ff 10.65%, #ff5455 89.35%);
             color: #ffffff !important;
-            z-index: 10;
+            border-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(81, 53, 255, 0.35), 0 0 20px rgba(255, 84, 85, 0.2);
+        }
+
+        .btn-primary-glow:hover::before {
+            opacity: 1;
+        }
+
+        .btn-primary-glow:hover::after {
+            left: 160%;
+            transition: left 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-primary-glow span,
+        .btn-primary-glow svg {
+            position: relative;
+            z-index: 3;
         }
 
         .btn-primary-glow:hover .arrow-icon {
-            transform: translateX(4px);
+            transform: translateX(6px);
         }
 
         .arrow-icon {
