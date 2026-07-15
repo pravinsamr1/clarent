@@ -1,0 +1,14 @@
+# Initialize Mod_Headers
+<IfModule mod_headers.c>
+    # 1. Never cache HTML files (so browsers always check for updated HTML structure)
+    <FilesMatch "\.(html|htm|php)$">
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "Jan 01 1970 00:00:00 GMT"
+    </FilesMatch>
+
+    # 2. Tell browsers to check if CSS and JS files have changed before loading from cache
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=0, must-revalidate"
+    </FilesMatch>
+</IfModule>
