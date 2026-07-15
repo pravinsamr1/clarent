@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <i class="fal fa-map-marker-alt"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a target="_blank" href="#">3517 W. Gray St. Utica, Pennsylvania</a>
+                                    <a target="_blank" href="https://maps.google.com/?q=Sydney,+NSW,+Australia">Sydney, NSW, Australia</a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <i class="fal fa-envelope"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a href="mailto:info@example.com"><span
-                                            class="mailto:info@example.com">alma.lawson@example.com</span></a>
+                                    <a href="mailto:info@clarent360.com.au"><span
+                                            class="mailto:info@clarent360.com.au">info@clarent360.com.au</span></a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
@@ -44,17 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <i class="fal fa-clock"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a target="_blank" href="#">Sun-friday, 02am -09pm</a>
+                                    <a target="_blank" href="#">Mon-Friday, 09am - 06pm</a>
                                 </div>
                             </li>
-                            <li class="d-flex align-items-center">
-                                <div class="offcanvas__contact-icon mr-15">
-                                    <i class="far fa-phone"></i>
-                                </div>
-                                <div class="offcanvas__contact-text">
-                                    <a href="tel:+11002345909">(219) 555-0114</a>
-                                </div>
-                            </li>
+
                         </ul>
                         <div class="header-button mt-4">
                             <a href="contact.html" class="theme-btn p2-bg text-center">
@@ -67,10 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             </a>
                         </div>
                         <div class="social-icon d-flex align-items-center">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                            <a href="https://www.linkedin.com/in/clarent-solutions-472a16407/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>

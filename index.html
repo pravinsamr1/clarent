@@ -36,7 +36,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/custom.css?v=1.0.2">
+    <link rel="stylesheet" href="assets/css/custom.css?v=1.0.6">
 
     
 </head>
@@ -152,8 +152,7 @@
 
    <section class="modern-cyber-hero" id="cyber-banner-mount">
         <!-- Background Video (Muted, Autoplay, Loop, Playinline, Pointer-Events None, No Context Menu) -->
-        <video autoplay loop muted playsinline preload="auto" class="video-background" oncontextmenu="return false;"
-            style="pointer-events: none;">
+        <video autoplay loop muted playsinline preload="auto" class="video-background" oncontextmenu="return false;">
             <source src="videos/vii.mp4" type="video/mp4">
         </video>
 
@@ -165,25 +164,24 @@
         <div class="cyber-glow-orb orb-secondary"></div>
         <div class="cyber-glow-orb orb-tertiary"></div>
 
-        <div class="container position-relative" style="z-index: 3;">
+        <div class="container position-relative modern-hero-container">
             <div class="row align-items-center justify-content-center text-center">
                 <!-- Centered Column: Premium Typography & Actions -->
                 <div class="col-lg-10 col-xl-12">
                     <div class="banner-content modern-content-layout">
-                        <h1 class="modern-hero-title white mb-4" style="text-align: center;">
+                        <h1 class="modern-hero-title white mb-4">
                             Secure, Govern
-                            <span class="gradient-text-glow" style="font-size: inherit;">&amp; Transform</span>
+                            <span class="gradient-text-glow">&amp; Transform</span>
                         </h1>
 
-                        <p class="pra fs-six mb-5 white-color modern-hero-dsc"
-                            style="text-align: center; max-width: 720px; margin: 0 auto;">
+                        <p class="pra fs-six mb-5 white-color modern-hero-desc">
                             Practical cybersecurity services for cloud, data protection, Zero Trust,
                             ServiceNow, GRC, penetration testing, virtualization and hands-on security training.
                         </p>
 
                         <div class="d-flex flex-row justify-content-center align-items-center gap-2 gap-sm-3">
                             <a href="#discover" class="modern-action-btn btn-primary-glow">
-                                <span>Discover More</span>
+                                <span class="banner-btnnn">Discover More</span>
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="arrow-icon">
                                     <path d="M3.33334 8H12.6667M12.6667 8L8.00001 3.33334M12.6667 8L8.00001 12.6667"
                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -191,7 +189,7 @@
                                 </svg>
                             </a>
                             <a href="contact.html" class="modern-action-btn btn-secondary-outline">
-                                <span>Contact Us</span>
+                                <span class="banner-btnnn">Contact Us</span>
                             </a>
                         </div>
                     </div>
@@ -360,7 +358,7 @@
                                     <div class="item_value p1-clr fw-semibold">90%</div>
                                 </div>
                                 <div class="item_bar">
-                                    <div class="progress" data-progress="90" style="width: 90%;"></div>
+                                    <div class="progress w-pct-90" data-progress="90"></div>
                                 </div>
                             </div>
                             <div class="progress_bar_item">
@@ -369,7 +367,7 @@
                                     <div class="item_value p1-clr fw-semibold">95%</div>
                                 </div>
                                 <div class="item_bar">
-                                    <div class="progress" data-progress="95" style="width: 95%;"></div>
+                                    <div class="progress w-pct-95" data-progress="95"></div>
                                 </div>
                             </div>
 
@@ -379,7 +377,7 @@
                                     <div class="item_value p1-clr fw-semibold">99%</div>
                                 </div>
                                 <div class="item_bar">
-                                    <div class="progress" data-progress="99" style="width: 99%;"></div>
+                                    <div class="progress w-pct-99" data-progress="99"></div>
                                 </div>
                             </div>
                         </div>
@@ -451,15 +449,15 @@
     </section>
 
     <!-- Business  -->
-    <section class="business-section space-bottom fix section-padding">
+    <section class="business-section space-bottom fix section-padding position-relative">
         <div class="container">
-            <div class="section-title text-lg-start text-center mb-lg-5 mb-0 pb-lg-2">
+            <div class="section-title text-lg-start text-center mb-lg-5 mb-0 pb-lg-2 why-headdding">
                 <h2 class="wow fadeInUp black fw-bold visible-slowly-right" data-wow-delay=".3s">
                     Why Clarent360?
                 </h2>
             </div>
             <div class="row g-4 justify-content-between">
-                <div class="col-lg-5 order-lg-0 order-1">
+                <div class="col-lg-6 ">
                     <div class="business-thumbnail position-relative">
                         <img src="assets/webimages/why.jpg" alt="img" class="mimg">
                         <!-- Business -->
@@ -469,7 +467,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="business-content text-lg-start text-center">
-                        <p class="pra border-bottom pb-xxl-5 pb-4 mb-xxl-5 mb-4">
+                        <p class="pra border-bottom pb-xxl-5 pb-4 mb-xxl-5 mb-4 why-padding-bottom">
                             We focus on security outcomes that can be implemented, audited and operated. Every
                             engagement is mapped to the client's risk profile, platform stack and compliance priorities.
                         </p>
@@ -525,6 +523,8 @@
                 </div>
             </div>
         </div>
+        <!-- Pink/Purple Mesh Overlay -->
+        <img src="assets/img/banner/overlays.png" alt="overlay" class="business-overlay" style="position: absolute; top: 0; left: 0; z-index: -1; pointer-events: none;">
     </section>
 
 

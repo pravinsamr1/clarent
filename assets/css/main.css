@@ -2387,8 +2387,8 @@ footer {
 
 @media (max-width: 1199px) {
   .accordion-item .accordion-header .accordion-button {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 500;
   }
 
   .accordion-item .accordion-header .accordion-button::after {
@@ -7206,7 +7206,7 @@ input.main-search-input::placeholder {
 }
 
 .project-section .project-items04 {
-  height: 600px;
+  height: 450px;
 }
 
 @media (max-width: 1399px) {
@@ -8779,8 +8779,8 @@ input.main-search-input::placeholder {
 }
 
 .text-smalll {
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 29px;
+  line-height: 37px;
 }
 
 .white-logoo {
@@ -8863,4 +8863,10 @@ input.main-search-input::placeholder {
 
 .infra-padd{
   padding: 70px 0px !important;
+}
+
+.why-headdding{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
