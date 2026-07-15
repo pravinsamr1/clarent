@@ -3991,9 +3991,16 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
 
 @media (max-width:767px){
     .modern-cyber-hero{
-        min-height: 50px !important;
+        min-height: 60vh !important;
+        height: auto !important;
+        padding: 80px 0 40px !important;
     }
     .modern-content-layout{
         padding: 0px !important;
+    }
+    .modern-action-btn {
+        padding: 12px 18px !important;
+        font-size: 13px !important;
+        gap: 6px !important;
     }
 }
