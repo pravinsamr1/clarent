@@ -127,9 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                         data-href="hire-consultant.html">
                                                         Consultation <i class="fa-solid fa-chevron-right"></i>
                                                     </button>
-                                                    <button type="button" class="services-mega__tab" id="psychometricBtn" data-href="clarent-psychometrics.html">
-                                                        Pyschometric Analysis <i class="fa-solid fa-chevron-right"></i>
-                                                    </button>
+                                                    
                                                     <button type="button" class="services-mega__tab"
                                                         data-services-tab="programs"
                                                         data-href="program.html">
@@ -144,6 +142,9 @@ document.addEventListener("DOMContentLoaded", () => {
                                                         data-services-tab="framework"
                                                         data-href="framework.html">
                                                         Framework <i class="fa-solid fa-chevron-right"></i>
+                                                    </button>
+                                                    <button type="button" class="services-mega__tab" id="psychometricBtn" data-href="clarent-psychometrics.html">
+                                                        Pyschometric Analysis <i class="fa-solid fa-chevron-right"></i>
                                                     </button>
                                                 </li>
 
@@ -622,7 +623,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                              </li>
                                                              <li class="services-mega__item">
                                                                  <a href="consulting-roles.html?tab=panel-microsoft-solutions" class="mega-card-item">
-                                                                     <div class="micon-box"><i class="fa-solid fa-windows"></i></div>
+                                                                     <div class="micon-box"><i class="fa-brands fa-microsoft"></i></div>
                                                                      <div class="mcontent-box">
                                                                          <span class="mtitle">Microsoft Solutions Consultant</span>
                                                                          <span class="mdesc">Microsoft E5 integration and compliance reviews.</span>
