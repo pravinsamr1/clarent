@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Clarent360">
+  <meta name="description"
+    content="Clarent360's full capability index: security engineering, penetration testing, GRC, frameworks, training, psychometric analysis, consultations, programs and checklists.">
+  <title>Services | Clarent360</title>
+  <!--<< Favcion >>-->
+  <link rel="shortcut icon" href="assets/img/logo/favs.png">
+  <!--<< Bootstrap min.css >>-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!--<< All Min Css >>-->
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <!--<< Animate.css >>-->
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <!--<< Magnific Popup.css >>-->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <!--<< MeanMenu.css >>-->
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <!--<< Swiper Bundle.css >>-->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!--<< Nice Select.css >>-->
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <!--<< Main.css >>-->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!--<< Custom.css >>-->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <!--<< Font Awesome >>-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    :root {
+      --navy: #0B1929;
+      --blue: #5135FF;
+      --accent: #5135FF;
+      --white: #FFFFFF;
+      --off-white: #f8f9fd;
+      --text: #17111f;
+      --text-muted: #5e6282;
+      --border: rgba(81, 53, 255, 0.14);
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    p {
+      font-size: 16px !important;
+    }
+
+    /* HERO OVERRIDES FOR WHITE FORMAT WITH PINK/BLUE GRADIENT */
+    .banner-section2 {
+      background: #F4F8FC !important;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 84, 85, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 90% 80%, rgba(81, 53, 255, 0.08) 0%, transparent 45%) !important;
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 100px !important;
+      border-bottom: 1px solid rgba(81, 53, 255, 0.06) !important;
+    }
+
+    .banner-section2 .banner-content h1 {
+      color: var(--navy) !important;
+      font-family: var(--font-display);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+
+    .banner-section2 .banner-content .white75 {
+      color: var(--text-muted) !important;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .banner-section2 .banner-content .hero-badge {
+      color: var(--blue) !important;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+    }
+
+    /* CAPABILITY STRIP */
+    .capability-strip {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .strip-item {
+      background: #FFFFFF !important;
+      border: 1px solid rgba(81, 53, 255, 0.08) !important;
+      border-radius: 16px !important;
+      padding: 14px 20px !important;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .strip-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(81, 53, 255, 0.06) !important;
+    }
+
+    .strip-num {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--blue);
+      background: rgba(81, 53, 255, 0.08) !important;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .strip-label {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    /* SECTION LAYOUTS */
+    .services-group {
+      padding: 88px 0;
+      border-top: 1px solid rgba(81, 53, 255, 0.06);
+    }
+
+    .services-group.section-alt {
+      background: var(--off-white);
+    }
+
+    .inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .clause-num {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 800;
+      color: rgba(81, 53, 255, 0.22);
+      line-height: 1;
+    }
+
+    .services-group h2 {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 2.8vw, 32px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .services-group .group-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* CARDS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .service-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(81, 53, 255, 0.08);
+      border-radius: 16px;
+      padding: 36px 32px;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      box-shadow: 0 4px 20px rgba(3, 23, 64, 0.02);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(81, 53, 255, 0.08);
+      border-color: rgba(81, 53, 255, 0.2);
+    }
+
+    .service-card .clause-ref {
+      font-family: var(--font-body);
+      font-size: 11px;
+      color: var(--blue);
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .service-card p.desc {
+      color: var(--text-muted);
+      font-size: 15px !important;
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+
+    .service-card a.link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--blue);
+      transition: all 0.2s ease;
+      width: fit-content;
+      border-bottom: 1.5px solid transparent;
+      padding-bottom: 2px;
+    }
+
+    .service-card a.link:hover {
+      border-color: var(--blue);
+      gap: 12px;
+    }
+
+    .service-card a.link::after {
+      content: '→';
+    }
+
+    .service-card a.link.enquire {
+      color: var(--text-muted);
+    }
+
+    .service-card a.link.enquire:hover {
+      color: var(--blue);
+      border-color: var(--blue);
+    }
+
+    /* CTA SECTION OVERRIDES - LIGHT FORMAT */
+    .cta-section {
+      padding: 80px 24px !important;
+      background: #F4F8FC !important;
+      background-image: radial-gradient(circle at 50% 50%, rgba(81, 53, 255, 0.08) 0%, transparent 60%) !important;
+      border-top: 1px solid rgba(81, 53, 255, 0.06) !important;
+      border-bottom: 1px solid rgba(81, 53, 255, 0.06) !important;
+    }
+
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 36px) !important;
+      font-weight: 800 !important;
+      color: var(--navy) !important;
+      line-height: 1.2 !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    .cta-section p {
+      font-size: 16px !important;
+      color: var(--text-muted) !important;
+      line-height: 1.75 !important;
+      margin-bottom: 0 !important;
+    }
+
+    .cta-section .common-btn.box-bg {
+      background: linear-gradient(90deg, #5135FF 0%, #FF5455 100%) !important;
+      border: none !important;
+      color: var(--white) !important;
+      font-family: var(--font-display);
+      font-weight: 700;
+      padding: 14px 28px;
+    }
+
+    .cta-section .common-btn.box-bg:hover {
+      opacity: 0.9 !important;
+      transform: translateY(-1px);
+    }
+
+    .banner-section h1 p{
+      color: #000;
+    }
+
+    @media (max-width: 767px) {
+      .services-group {
+        padding: 56px 0;
+      }
+      .clause-num {
+        font-size: 38px;
+        margin-bottom: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Preloader Start -->
+  <div id="preloader" class="preloader">
+    <div class="animation-preloader">
+      <div class="spinner"></div>
+      <div class="txt-loading">
+        <span data-text-preloader="C" class="letters-loading">C</span>
+        <span data-text-preloader="L" class="letters-loading">L</span>
+        <span data-text-preloader="A" class="letters-loading">A</span>
+        <span data-text-preloader="R" class="letters-loading">R</span>
+        <span data-text-preloader="E" class="letters-loading">E</span>
+        <span data-text-preloader="N" class="letters-loading">N</span>
+        <span data-text-preloader="T" class="letters-loading">T</span>
+        <span data-text-preloader=" " class="letters-loading">&nbsp;</span>
+        <span data-text-preloader="3" class="letters-loading">3</span>
+        <span data-text-preloader="6" class="letters-loading">6</span>
+        <span data-text-preloader="0" class="letters-loading">0</span>
+      </div>
+      <p class="text-center">Loading</p>
+    </div>
+    <div class="loader">
+      <div class="row">
+        <div class="col-3 loader-section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-right">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-right">
+          <div class="bg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start Cursor Pointer -->
+  <div class="mouse-follower">
+    <span class="cursor-outline"></span>
+  </div>
+  <!-- End Cursor Pointer -->
+
+  <!-- Dynamic Header Placement -->
+  <div id="header"></div>
+
+  <!-- Banner Section Start -->
+  <section class="breadcrumb-section position-relative fix">
+    <div class="container">
+      <div class="bread-content text-center">
+        <ul class="d-flex align-items-center gap-3 justify-content-center">
+          <li>
+            <a href="index.html" class="p3-clr">Home</a>
+          </li>
+          <li class="p3-clr">/</li>
+          <li class="white">Services</li>
+        </ul>
+        <h1 class="white visible-from-right">Our Services</h1>
+      </div>
+    </div>
+    <!-- bread Element -->
+    <img src="assets/img/element/bread-ele.png" alt="img" class="bread-ele">
+  </section>
+  <!-- Banner Section End -->
+
+  <!-- HERO -->
+  <section class="banner-section fix pt-4" id="overview">
+    <div class="container">
+      <div class="row g-4 justify-content-lg-between justify-content-center align-items-center">
+        <div class="col-lg-12">
+          <div class="banner-content text-lg-start text-center">
+            <h1 class="white mb-md-4 mb-3 pb-lg-2 d-block wow fadeInUp text-center " style="color: #000;" data-wow-delay=".5s">
+              Services
+            </h1>
+            <p class="white75 fs-seven mb-lg-5 mb-4 pb-lg-0 pb-sm-2 pb-1 wow fadeInUp text-center" style="color: #000;" data-wow-delay=".6s">
+              Nine capabilities, delivered as one connected practice — from hands-on security engineering and testing to governance, workforce readiness and the reference material that keeps it all auditable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 Engineering & Testing -->
+  <section class="services-group" id="engineering-testing">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-baseline mb-5">
+          <div class="col-md-2 col-12">
+            <div class="clause-num">01</div>
+          </div>
+          <div class="col-md-10 col-12 mt-2 mt-md-0">
+            <h2>Engineering &amp; Testing</h2>
+            <p class="group-desc mb-0">Hands-on delivery work — designing, hardening and stress-testing the systems that carry business risk.</p>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <!-- Security Engineering -->
+          <div class="service-card wow fadeInUp" data-wow-delay=".2s">
+            <div>
+              <div class="clause-ref">01.1 — SECURITY ENGINEERING</div>
+              <h3>Security Engineering</h3>
+              <p class="desc">Architecture, hardening and implementation across cloud, identity, Zero Trust and platform security — built to be operated and audited, not just deployed.</p>
+            </div>
+            <a class="link" href="infrastructure-cyber-security.html">View service</a>
+          </div>
+
+          <!-- Penetration Testing -->
+          <div class="service-card wow fadeInUp" data-wow-delay=".3s">
+            <div>
+              <div class="clause-ref">01.2 — PENETRATION TESTING</div>
+              <h3>Penetration Testing</h3>
+              <p class="desc">Red teaming and web application penetration testing that goes beyond a scan — clear findings, real risk context and practical remediation guidance.</p>
+            </div>
+            <a class="link" href="pentest-services.html">View service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Governance & Risk -->
+  <section class="services-group section-alt" id="governance-risk">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-baseline mb-5">
+          <div class="col-md-2 col-12">
+            <div class="clause-num">02</div>
+          </div>
+          <div class="col-md-10 col-12 mt-2 mt-md-0">
+            <h2>Governance &amp; Risk</h2>
+            <p class="group-desc mb-0">Structured oversight for organisations that need to prove their controls work, not just say they do.</p>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <!-- GRC Services -->
+          <div class="service-card wow fadeInUp" data-wow-delay=".2s">
+            <div>
+              <div class="clause-ref">02.1 — GRC SERVICES</div>
+              <h3>GRC Services</h3>
+              <p class="desc">Governance, risk and compliance advisory spanning risk assessments, audits, ISO 27001 and ISO 42001 readiness, and AI governance programs.</p>
+            </div>
+            <a class="link enquire" href="contact.html?subject=GRC%20Services">Talk to a specialist</a>
+          </div>
+
+          <!-- Frameworks -->
+          <div class="service-card wow fadeInUp" data-wow-delay=".3s">
+            <div>
+              <div class="clause-ref">02.2 — FRAMEWORKS</div>
+              <h3>Frameworks</h3>
+              <p class="desc">Delivery methodologies, assessment models and control frameworks — the operating structure behind every engagement, adaptable to your industry and maturity level.</p>
+            </div>
+            <a class="link enquire" href="contact.html?subject=Frameworks">Talk to a specialist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 People & Enablement -->
+  <section class="services-group" id="people-enablement">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-baseline mb-5">
+          <div class="col-md-2 col-12">
+            <div class="clause-num">03</div>
+          </div>
+          <div class="col-md-10 col-12 mt-2 mt-md-0">
+            <h2>People &amp; Enablement</h2>
+            <p class="group-desc mb-0">Cybersecurity is a people problem as much as a technical one — this cluster builds capability in the humans running the program.</p>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <!-- Training -->
+          <div class="service-card wow fadeInUp" data-wow-delay=".2s">
+            <div>
+              <div class="clause-ref">03.1 — TRAINING</div>
+              <h3>Training</h3>
+              <p class="desc">Cybersecurity essentials and ethical hacker training programs that build real internal capability, not just a completion certificate.</p>
+            </div>
+            <a class="link" href="training-solutions.html">View service</a>
+          </div>
+
+          <!-- Psychometric Analysis -->
+          <div class="service-card wow fadeInUp" data-wow-delay=".3s">
+            <div>
+              <div class="clause-ref">03.2 — PSYCHOMETRIC ANALYSIS</div>
+              <h3>Psychometric Analysis</h3>
+              <p class="desc">Aptitude and role-fit assessment for security and governance teams — used to guide hiring, team structure and workforce capability planning.</p>
+            </div>
+            <a class="link enquire" href="contact.html?subject=Psychometric%20Analysis">Talk to a specialist</a>
+          </div>
+
+          <!-- Consultations -->
+          <div class="service-card wow fadeInUp" data-wow-delay=".4s">
+            <div>
+              <div class="clause-ref">03.3 — CONSULTATIONS</div>
+              <h3>Consultations</h3>
+              <p class="desc">Senior expertise on your terms — bring in a consultant for a single engagement, a fixed-term project, or ongoing advisory support.</p>
+            </div>
+            <a class="link" href="hire-consultant.html">View service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Programs & Resources -->
+  <section class="services-group section-alt" id="programs-resources">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-baseline mb-5">
+          <div class="col-md-2 col-12">
+            <div class="clause-num">04</div>
+          </div>
+          <div class="col-md-10 col-12 mt-2 mt-md-0">
+            <h2>Programs &amp; Resources</h2>
+            <p class="group-desc mb-0">Structured, ongoing engagements and the reference material teams use day to day to stay audit-ready.</p>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <!-- Programs -->
+          <div class="service-card wow fadeInUp" data-wow-delay=".2s">
+            <div>
+              <div class="clause-ref">04.1 — PROGRAMS</div>
+              <h3>Programs</h3>
+              <p class="desc">Staged, multi-phase engagements — executive advisory, security uplift and capability-building programs designed around a long-term roadmap rather than a single deliverable.</p>
+            </div>
+            <a class="link enquire" href="contact.html?subject=Programs">Talk to a specialist</a>
+          </div>
+
+          <!-- Checklists -->
+          <div class="service-card wow fadeInUp" data-wow-delay=".3s">
+            <div>
+              <div class="clause-ref">04.2 — CHECKLISTS</div>
+              <h3>Checklists</h3>
+              <p class="desc">Practical, downloadable checklists that support baseline assessments, audits and day-to-day security operations.</p>
+            </div>
+            <a class="link" href="checklist.html">View checklists</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="row align-items-center text-lg-start text-center">
+        <div class="col-lg-8">
+          <h2 class="wow fadeInUp mb-3" data-wow-delay=".3s">Not sure where to start?</h2>
+          <p class="wow fadeInUp mb-0" data-wow-delay=".4s">Tell us what you're trying to protect, govern or build, and we'll point you to the right service — or a mix of them.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end text-center mt-4 mt-lg-0">
+          <a href="contact.html" class="common-btn box-style cmn-style1 box-bg white d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 overflow-hidden rounded-5 wow fadeInUp" data-wow-delay=".5s">
+            Contact Clarent360
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Placement -->
+  <div id="footer"></div>
+
+  <!--<< All JS Plugins >>-->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <!--<< Viewport Js >>-->
+  <script src="assets/js/viewport.jquery.js"></script>
+  <!--<< Bootstrap Js >>-->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!--<< Nice Select Js >>-->
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <!--<< Waypoints Js >>-->
+  <script src="assets/js/jquery.waypoints.js"></script>
+  <!--<< Counterup Js >>-->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <!--<< Swiper Slider Js >>-->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!--<< MeanMenu Js >>-->
+  <script src="assets/js/jquery.meanmenu.min.js"></script>
+  <!--<< Magnific Popup Js >>-->
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <!--<< Wow Animation Js >>-->
+  <script src="assets/js/wow.min.js"></script>
+  <!--<< Gsap Js >>-->
+  <script src="assets/js/gsap.min.js"></script>
+  <!--<< Lenis Js >>-->
+  <script src="assets/js/lenis.min.js"></script>
+  <!--<< ScrollSmoother Js >>-->
+  <script src="assets/js/scrollSmoother.js"></script>
+  <!--<< ScrollTrigger Js >>-->
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <!--<< Spalit Text Js >>-->
+  <script src="assets/js/spilitext-gsap.js"></script>
+  <!--<< Valina Tilt Js >>-->
+  <script src="assets/js/vanilla-tilt.min.js"></script>
+  <!--<< Main.js >>-->
+  <script src="assets/js/main.js"></script>
+  <!--<< Common Header & Footer Injection >>-->
+  <script src="assets/js/common-header.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Clarent360">
+  <meta name="description"
+    content="Two tracks to build a cybersecurity and governance business with Clarent360 — Affiliate Partner or Franchise Partner.">
+  <title>Partner With Us | Clarent360</title>
+  <!--<< Favcion >>-->
+  <link rel="shortcut icon" href="assets/img/logo/favs.png">
+  <!--<< Bootstrap min.css >>-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!--<< All Min Css >>-->
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <!--<< Animate.css >>-->
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <!--<< Magnific Popup.css >>-->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <!--<< MeanMenu.css >>-->
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <!--<< Swiper Bundle.css >>-->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!--<< Nice Select.css >>-->
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <!--<< Main.css >>-->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!--<< Custom.css >>-->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <!--<< Font Awesome >>-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    :root {
+      --navy: #0B1929;
+      --navy-mid: #142338;
+      --navy-card: #1A2E48;
+      --blue: #5135FF;
+      --blue-light: #7E66FF;
+      --accent: #5135FF;
+      --accent-dim: rgba(81, 53, 255, 0.10);
+      --accent-glow: rgba(81, 53, 255, 0.22);
+      --white: #FFFFFF;
+      --off-white: #f8f9fd;
+      --mist: #E4EDF7;
+      --text: #17111f;
+      --text-muted: #5e6282;
+      --border: rgba(81, 53, 255, 0.14);
+      --border-dark: rgba(255, 255, 255, 0.08);
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    p {
+      font-size: 16px !important;
+    }
+
+    /* HERO OVERRIDES FOR WHITE FORMAT WITH PINK/BLUE GRADIENT */
+    .banner-section2 {
+      background: #F4F8FC !important;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 84, 85, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 90% 80%, rgba(81, 53, 255, 0.08) 0%, transparent 45%) !important;
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 100px !important;
+      border-bottom: 1px solid rgba(81, 53, 255, 0.06) !important;
+    }
+
+    .banner-section2 .banner-content h1 {
+      color: var(--navy) !important;
+      font-family: var(--font-display);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+
+    .banner-section2 .banner-content h1 em {
+      font-style: normal;
+      color: var(--blue) !important;
+    }
+
+    .banner-section2 .banner-content .white75 {
+      color: var(--text-muted) !important;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .banner-section2 .banner-content .hero-badge {
+      color: var(--blue) !important;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+    }
+
+    /* PARTNER MARKS STACK */
+    .marks-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .mark-item {
+      background: #FFFFFF !important;
+      border: 1px solid rgba(81, 53, 255, 0.08) !important;
+      border-radius: 16px !important;
+      padding: 14px 20px !important;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .mark-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(81, 53, 255, 0.06) !important;
+    }
+
+    .mark-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(81, 53, 255, 0.08) !important;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(81, 53, 255, 0.15) !important;
+      flex-shrink: 0;
+    }
+
+    .mark-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--blue) !important;
+    }
+
+    .mark-label {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    /* SECTION LAYOUTS */
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-alt {
+      background: var(--off-white);
+    }
+
+    .inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--navy);
+      line-height: 1.12;
+      margin-bottom: 16px;
+    }
+
+    .section-title span {
+      color: var(--blue);
+    }
+
+    .section-body {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 640px;
+      line-height: 1.78;
+      margin-bottom: 52px;
+    }
+
+    /* DOSSIER CARDS (PARTNER TRACKS) */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .dossier {
+      background: #FFFFFF;
+      border: 1px solid rgba(81, 53, 255, 0.08);
+      border-radius: 16px;
+      padding: 40px 36px 36px;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      box-shadow: 0 4px 20px rgba(3, 23, 64, 0.02);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dossier:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(81, 53, 255, 0.08);
+      border-color: rgba(81, 53, 255, 0.2);
+    }
+
+    .dossier .ref {
+      font-family: var(--font-body);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .seal {
+      position: absolute;
+      top: 32px;
+      right: 32px;
+      width: 74px;
+      height: 74px;
+      opacity: 0.8;
+      transition: transform 0.4s ease;
+    }
+
+    .dossier:hover .seal {
+      transform: rotate(15deg);
+    }
+
+    .seal text {
+      fill: var(--blue);
+      font-family: var(--font-body);
+      font-size: 6.2px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .seal circle {
+      fill: none;
+      stroke: var(--blue);
+    }
+
+    .seal .core {
+      stroke-width: 1;
+    }
+
+    .seal .ring {
+      stroke-width: 0.6;
+    }
+
+    .dossier h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-top: 16px;
+      padding-right: 80px;
+    }
+
+    .dossier .tagline {
+      color: #FF5455;
+      font-size: 13px;
+      font-family: var(--font-display);
+      margin-top: 6px;
+      letter-spacing: 0.03em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .dossier p.desc {
+      color: var(--text-muted);
+      margin-top: 18px;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .dossier ul {
+      list-style: none;
+      margin: 24px 0 0;
+      padding: 20px 0 0;
+      border-top: 1px solid rgba(81, 53, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .dossier li {
+      display: flex;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .dossier li::before {
+      content: '✓';
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      background: rgba(81, 53, 255, 0.08);
+      border: 1.5px solid rgba(81, 53, 255, 0.2);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .dossier .common-btn.box-bg {
+      background: linear-gradient(90deg, #5135FF 0%, #FF5455 100%) !important;
+      border: none !important;
+      color: var(--white) !important;
+      margin-top: 30px;
+      width: fit-content;
+      font-family: var(--font-display);
+      font-weight: 700;
+    }
+
+    .dossier .common-btn.box-bg:hover {
+      opacity: 0.9 !important;
+      transform: translateY(-1px);
+    }
+
+    /* COMPARISON MATRIX */
+    .compare-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(81, 53, 255, 0.08);
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04);
+      background: #FFFFFF;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .compare-table thead tr th {
+      padding: 16px 20px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .compare-table thead tr th:first-child {
+      background: var(--navy);
+      color: var(--white);
+      width: 30%;
+    }
+
+    .compare-table thead tr th:nth-child(2) {
+      background: #4A5568;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .compare-table thead tr th:nth-child(3) {
+      background: var(--blue);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .compare-table tbody tr {
+      border-bottom: 1px solid rgba(81, 53, 255, 0.08);
+    }
+
+    .compare-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .compare-table tbody td {
+      padding: 18px 20px;
+      color: var(--text-muted);
+      vertical-align: top;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .compare-table tbody td:first-child {
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .compare-table tbody td:nth-child(2) {
+      background: rgba(74, 85, 104, 0.03);
+    }
+
+    .compare-table tbody td:nth-child(3) {
+      background: rgba(81, 53, 255, 0.03);
+      color: var(--blue);
+    }
+
+    .col-label {
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--blue);
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    /* CTA SECTION OVERRIDES - LIGHT FORMAT */
+    .cta-section {
+      padding: 80px 24px !important;
+      background: #F4F8FC !important;
+      background-image: radial-gradient(circle at 50% 50%, rgba(81, 53, 255, 0.08) 0%, transparent 60%) !important;
+      border-top: 1px solid rgba(81, 53, 255, 0.06) !important;
+      border-bottom: 1px solid rgba(81, 53, 255, 0.06) !important;
+    }
+
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 36px) !important;
+      font-weight: 800 !important;
+      color: var(--navy) !important;
+      line-height: 1.2 !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    .cta-section p {
+      font-size: 16px !important;
+      color: var(--text-muted) !important;
+      line-height: 1.75 !important;
+      margin-bottom: 0 !important;
+    }
+
+    .cta-section .common-btn.box-bg {
+      background: linear-gradient(90deg, #5135FF 0%, #FF5455 100%) !important;
+      border: none !important;
+      color: var(--white) !important;
+      font-family: var(--font-display);
+      font-weight: 700;
+      padding: 14px 28px;
+    }
+
+    .cta-section .common-btn.box-bg:hover {
+      opacity: 0.9 !important;
+      transform: translateY(-1px);
+    }
+
+    .cta-section .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--blue) !important;
+      color: var(--blue) !important;
+      font-family: var(--font-display);
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .cta-section .btn-ghost:hover {
+      background: rgba(81, 53, 255, 0.05);
+      transform: translateY(-1px);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 991px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .compare-table thead {
+        display: none;
+      }
+
+      .compare-table tbody td {
+        display: block;
+        padding: 12px 20px;
+        border-bottom: none;
+      }
+
+      .compare-table tbody tr {
+        display: block;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(81, 53, 255, 0.08);
+      }
+
+      .compare-table tbody td:first-child {
+        padding-bottom: 4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Preloader Start -->
+  <div id="preloader" class="preloader">
+    <div class="animation-preloader">
+      <div class="spinner"></div>
+      <div class="txt-loading">
+        <span data-text-preloader="C" class="letters-loading">C</span>
+        <span data-text-preloader="L" class="letters-loading">L</span>
+        <span data-text-preloader="A" class="letters-loading">A</span>
+        <span data-text-preloader="R" class="letters-loading">R</span>
+        <span data-text-preloader="E" class="letters-loading">E</span>
+        <span data-text-preloader="N" class="letters-loading">N</span>
+        <span data-text-preloader="T" class="letters-loading">T</span>
+        <span data-text-preloader=" " class="letters-loading">&nbsp;</span>
+        <span data-text-preloader="3" class="letters-loading">3</span>
+        <span data-text-preloader="6" class="letters-loading">6</span>
+        <span data-text-preloader="0" class="letters-loading">0</span>
+      </div>
+      <p class="text-center">Loading</p>
+    </div>
+    <div class="loader">
+      <div class="row">
+        <div class="col-3 loader-section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-right">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-right">
+          <div class="bg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start Cursor Pointer -->
+  <div class="mouse-follower">
+    <span class="cursor-outline"></span>
+  </div>
+  <!-- End Cursor Pointer -->
+
+  <!-- Dynamic Header Placement -->
+  <div id="header"></div>
+
+  <!-- Banner Section Start -->
+  <section class="breadcrumb-section position-relative fix">
+    <div class="container">
+      <div class="bread-content text-center">
+        <ul class="d-flex align-items-center gap-3 justify-content-center">
+          <li>
+            <a href="index.html" class="p3-clr">Home</a>
+          </li>
+          <li class="p3-clr">/</li>
+          <li class="white">Partner With Us</li>
+        </ul>
+        <h1 class="white visible-from-right">Partner With Us</h1>
+      </div>
+    </div>
+    <!-- bread Element -->
+    <img src="assets/img/element/bread-ele.png" alt="img" class="bread-ele">
+  </section>
+  <!-- Banner Section End -->
+
+  <!-- HERO -->
+  <section class="banner-section2 fix" id="overview">
+    <div class="container">
+      <div class="row g-4 justify-content-lg-between justify-content-center align-items-center">
+        <div class="col-lg-7">
+          <div class="banner-content text-lg-start text-center">
+            <h1 class="white mb-md-4 mb-3 pb-lg-2 d-block wow fadeInUp" data-wow-delay=".5s">
+              Two ways to build a cybersecurity &amp; governance business with Clarent360.
+            </h1>
+            <p class="white75 fs-seven mb-lg-5 mb-4 pb-lg-0 pb-sm-2 pb-1 wow fadeInUp" data-wow-delay=".6s">
+              Whether you introduce opportunities or operate under our brand, both tracks give you a structured path to
+              work alongside an established cybersecurity, governance, risk and compliance advisory.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="banner-thumb2-wrap mt-lg-0 mt-3 wow fadeInUp" data-wow-delay=".5s">
+            <div class="thumb1" style="display:flex; align-items:center; justify-content:center;">
+              <img src="assets/webimages/ideal_partner_leader.png" alt="Ideal Partner Leader Visual" class="w-100"
+                style="border-radius: 30px; box-shadow: 0 15px 35px rgba(3, 23, 64, 0.08);">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACKS -->
+  <section class="section" id="tracks">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Choose Your Track.<br><span>Pick the model
+                that fits how you want to work.</span></h2>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-0">
+            <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
+              Whether you want to introduce opportunities or operate under our brand, pick the track that matches your
+              goals and capabilities.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <!-- Affiliate dossier -->
+          <div class="dossier wow fadeInUp" data-wow-delay=".2s">
+            <svg class="seal" viewBox="0 0 100 100">
+              <circle class="core" cx="50" cy="50" r="30" />
+              <circle class="ring" cx="50" cy="50" r="38" />
+              <path id="affPath" d="M 50 12 A 38 38 0 1 1 49.9 12" fill="none" />
+              <text>
+                <textPath href="#affPath" startOffset="2%">AUTHORIZED · AFFILIATE · NETWORK ·</textPath>
+              </text>
+            </svg>
+            <div class="ref">REF. CL360–AFF–01</div>
+            <h3>Affiliate Partner Track</h3>
+            <div class="tagline">Introduce clients. We deliver.</div>
+            <p class="desc">Built for consultants, MSPs and advisory firms who regularly meet organisations that need
+              cybersecurity, governance or compliance help — without taking on delivery themselves.</p>
+            <ul>
+              <li>Keep full independence — no territory or delivery obligations</li>
+              <li>Clarent360 manages scoping, delivery and client engagement</li>
+              <li>Access to approved marketing collateral and partner resources</li>
+              <li>Structured lead registration and dedicated partner support</li>
+            </ul>
+            <a class="common-btn box-style cmn-style1 box-bg white d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 overflow-hidden rounded-5"
+              href="become-clarent360-affiliate.html">Apply for Affiliate</a>
+          </div>
+
+          <!-- Franchise dossier -->
+          <div class="dossier wow fadeInUp" data-wow-delay=".3s">
+            <svg class="seal" viewBox="0 0 100 100">
+              <circle class="core" cx="50" cy="50" r="30" />
+              <circle class="ring" cx="50" cy="50" r="38" />
+              <path id="frnPath" d="M 50 12 A 38 38 0 1 1 49.9 12" fill="none" />
+              <text>
+                <textPath href="#frnPath" startOffset="2%">LICENSED · TERRITORY · OPERATOR ·</textPath>
+              </text>
+            </svg>
+            <div class="ref">REF. CL360–FRN–01</div>
+            <h3>Franchise Partner Track</h3>
+            <div class="tagline">Operate under our brand.</div>
+            <p class="desc">Built for experienced cybersecurity professionals and firms ready to run their own advisory
+              business using Clarent360's methodologies, brand and delivery frameworks.</p>
+            <ul>
+              <li>Access to brand, IP, methodologies and delivery frameworks</li>
+              <li>Structured onboarding, training and certification</li>
+              <li>Operate services within an approved territory</li>
+              <li>Ongoing knowledge transfer and business growth resources</li>
+            </ul>
+            <a class="common-btn box-style cmn-style1 box-bg white d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 overflow-hidden rounded-5"
+              href="clarent360-franchise.html">Apply for Franchise</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATRIX -->
+  <section class="section section-alt" id="matrix">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Compare the two tracks<br><span>at a
+                glance.</span></h2>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-0">
+            <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
+              A short comparison to help you identify which model matches your business today.
+            </p>
+          </div>
+        </div>
+
+        <div class="compare-wrap wow fadeInUp" data-wow-delay=".3s">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Criteria</th>
+                <th>Affiliate Partner</th>
+                <th>Franchise Partner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Commitment</td>
+                <td><span class="col-label">Affiliate</span>Low — refer clients as opportunities arise</td>
+                <td><span class="col-label">Franchise</span>High — build and run a dedicated local business</td>
+              </tr>
+              <tr>
+                <td>Service delivery</td>
+                <td><span class="col-label">Affiliate</span>Handled entirely by Clarent360</td>
+                <td><span class="col-label">Franchise</span>Delivered by the franchise partner, under our frameworks
+                </td>
+              </tr>
+              <tr>
+                <td>Brand &amp; IP access</td>
+                <td><span class="col-label">Affiliate</span>Approved marketing collateral only</td>
+                <td><span class="col-label">Franchise</span>Full brand, methodology and IP licence</td>
+              </tr>
+              <tr>
+                <td>Territory rights</td>
+                <td><span class="col-label">Affiliate</span>None required</td>
+                <td><span class="col-label">Franchise</span>Approved territory allocated</td>
+              </tr>
+              <tr>
+                <td>Ideal for</td>
+                <td><span class="col-label">Affiliate</span>MSPs, IT consultants, advisors, industry specialists</td>
+                <td><span class="col-label">Franchise</span>Cybersecurity consultants, boutique firms, former CISOs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING (CTA) -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="row align-items-center text-lg-start text-center">
+        <div class="col-lg-7">
+          <h2 class="wow fadeInUp mb-3" data-wow-delay=".3s">Still deciding which track fits?</h2>
+          <p class="wow fadeInUp mb-0" data-wow-delay=".4s">Both paths lead to the same conversation. Apply to the
+            program that matches how you'd like to work with us, and our team will guide you from there.</p>
+        </div>
+        <div
+          class="col-lg-5 text-lg-end text-center mt-4 mt-lg-0 d-flex flex-sm-row flex-column justify-content-lg-end justify-content-center gap-3">
+          <a href="become-clarent360-affiliate.html"
+            class="common-btn box-style cmn-style1 box-bg white d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 overflow-hidden rounded-5 wow fadeInUp"
+            data-wow-delay=".5s">
+            Apply for Affiliate
+          </a>
+          <a href="clarent360-franchise.html" class="btn-ghost wow fadeInUp" data-wow-delay=".6s">
+            Apply for Franchise
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Placement -->
+  <div id="footer"></div>
+
+  <!--<< All JS Plugins >>-->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <!--<< Viewport Js >>-->
+  <script src="assets/js/viewport.jquery.js"></script>
+  <!--<< Bootstrap Js >>-->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!--<< Nice Select Js >>-->
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <!--<< Waypoints Js >>-->
+  <script src="assets/js/jquery.waypoints.js"></script>
+  <!--<< Counterup Js >>-->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <!--<< Swiper Slider Js >>-->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!--<< MeanMenu Js >>-->
+  <script src="assets/js/jquery.meanmenu.min.js"></script>
+  <!--<< Magnific Popup Js >>-->
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <!--<< Wow Animation Js >>-->
+  <script src="assets/js/wow.min.js"></script>
+  <!--<< Gsap Js >>-->
+  <script src="assets/js/gsap.min.js"></script>
+  <!--<< Lenis Js >>-->
+  <script src="assets/js/lenis.min.js"></script>
+  <!--<< ScrollSmoother Js >>-->
+  <script src="assets/js/scrollSmoother.js"></script>
+  <!--<< ScrollTrigger Js >>-->
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <!--<< Spalit Text Js >>-->
+  <script src="assets/js/spilitext-gsap.js"></script>
+  <!--<< Valina Tilt Js >>-->
+  <script src="assets/js/vanilla-tilt.min.js"></script>
+  <!--<< Main.js >>-->
+  <script src="assets/js/main.js"></script>
+  <!--<< Common Header & Footer Injection >>-->
+  <script src="assets/js/common-header.js"></script>
+
+</body>
+
+</html>

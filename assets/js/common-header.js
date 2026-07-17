@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                             <a href="program.html">Programs</a>
                                         </li>
                                         <li>
-                                            <a>
+                                            <a href="services.html">
                                                 Services
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
@@ -921,7 +921,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                         </li>
 
                                         <li>
-                                            <a href="#0">
+                                            <a href="partner-with-us.html">
                                                 Partner with us?
                                                 <i class="fas fa-angle-down"></i>
                                             </a>
