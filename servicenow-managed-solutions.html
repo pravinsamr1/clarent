@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Clarent360">
+  <meta name="description"
+    content="Ensure continuous performance, configuration governance, SecOps & GRC optimization, and structured reporting with Clarent360's ServiceNow Managed Solutions.">
+  <title>ServiceNow Managed Solutions | Clarent360</title>
+  <!--<< Favcion >>-->
+  <link rel="shortcut icon" href="assets/img/logo/favs.png">
+  <!--<< Bootstrap min.css >>-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!--<< All Min Css >>-->
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <!--<< Animate.css >>-->
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <!--<< Magnific Popup.css >>-->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <!--<< MeanMenu.css >>-->
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <!--<< Swiper Bundle.css >>-->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!--<< Nice Select.css >>-->
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <!--<< Main.css >>-->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!--<< Custom.css >>-->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <!--<< Font Awesome >>-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    :root {
+      --navy: #0B1929;
+      --navy-mid: #142338;
+      --navy-card: #1A2E48;
+      --blue: #5135FF;
+      --blue-light: #7E66FF;
+      --accent: #5135FF;
+      --accent-dim: rgba(81, 53, 255, 0.10);
+      --accent-glow: rgba(81, 53, 255, 0.22);
+      --white: #FFFFFF;
+      --off-white: #f8f9fd;
+      --mist: #E4EDF7;
+      --text: #17111f;
+      --text-muted: #5e6282;
+      --border: rgba(81, 53, 255, 0.14);
+      --border-dark: rgba(255, 255, 255, 0.08);
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    p {
+      font-size: 16px !important;
+    }
+
+    /* HERO OVERRIDES FOR WHITE FORMAT WITH PINK/BLUE GRADIENT */
+    .banner-section2 {
+      background: #F4F8FC !important;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 84, 85, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 90% 80%, rgba(81, 53, 255, 0.08) 0%, transparent 45%) !important;
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 100px !important;
+      border-bottom: 1px solid rgba(81, 53, 255, 0.06) !important;
+    }
+
+    .banner-section2 .banner-content h1 {
+      color: var(--navy) !important;
+      font-family: var(--font-display);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+
+    .banner-section2 .banner-content .white75 {
+      color: var(--text-muted) !important;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .banner-section2 .banner-content .hero-badge {
+      color: var(--blue) !important;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+    }
+
+    .banner-section2 .banner-content .common-btn.box-bg {
+      background: linear-gradient(90deg, #5135FF 0%, #FF5455 100%) !important;
+      border: none !important;
+      color: var(--white) !important;
+    }
+
+    .banner-section2 .banner-content .common-btn.box-bg:hover {
+      opacity: 0.9 !important;
+      transform: translateY(-1px);
+    }
+
+    /* STAT STACK IN HERO RIGHT */
+    .stat-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .stat-card {
+      background: #FFFFFF !important;
+      border: 1px solid rgba(81, 53, 255, 0.08) !important;
+      border-radius: 16px !important;
+      padding: 20px 24px !important;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(81, 53, 255, 0.06) !important;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 6px;
+    }
+
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .stat-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* SECTION LAYOUTS */
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-alt {
+      background: var(--off-white);
+    }
+
+    .section-dark {
+      background: var(--navy-mid);
+    }
+
+    .inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--navy);
+      line-height: 1.12;
+      margin-bottom: 16px;
+    }
+
+    .section-dark .section-title {
+      color: var(--white);
+    }
+
+    .section-title span {
+      color: var(--blue);
+    }
+
+    .section-body {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 640px;
+      line-height: 1.78;
+      margin-bottom: 52px;
+    }
+
+    .section-dark .section-body {
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    /* TIER TABLE */
+    .tier-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(81, 53, 255, 0.08);
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04);
+      background: #FFFFFF;
+    }
+
+    .tier-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .tier-table th {
+      padding: 18px 24px;
+      text-align: left;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 13px;
+      background: var(--navy);
+      color: var(--white);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .tier-table th.tier-head {
+      text-align: center;
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .tier-table td {
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(81, 53, 255, 0.08);
+      border-right: 1px solid rgba(81, 53, 255, 0.08);
+      color: var(--text);
+      font-weight: 500;
+      vertical-align: middle;
+    }
+
+    .tier-table td:last-child {
+      border-right: none;
+    }
+
+    .tier-table tr:nth-child(even) td {
+      background: var(--off-white);
+    }
+
+    .tier-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .tier-table td.check {
+      text-align: center;
+      color: var(--blue);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .tier-table td.dash {
+      text-align: center;
+      color: #C0C8D2;
+      font-weight: 400;
+    }
+
+    /* PILLARS */
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .pillar {
+      background: #FFFFFF;
+      border-radius: 16px !important;
+      border: 1px solid rgba(81, 53, 255, 0.08) !important;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+      padding: 32px 28px;
+      transition: box-shadow 0.3s, transform 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pillar:hover {
+      box-shadow: 0 10px 30px rgba(81, 53, 255, 0.08) !important;
+      transform: translateY(-4px);
+    }
+
+    .pillar-num {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .pillar h3 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .pillar p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* SERVICE CARDS */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(81, 53, 255, 0.08) !important;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+      border-radius: 16px !important;
+      padding: 32px 28px;
+      transition: box-shadow 0.3s, transform 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 10px 30px rgba(81, 53, 255, 0.08) !important;
+      transform: translateY(-4px);
+    }
+
+    .service-card-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(81, 53, 255, 0.08) !important;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border: 1px solid rgba(81, 53, 255, 0.15) !important;
+      transition: all 0.3s ease;
+    }
+
+    .service-card-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--blue) !important;
+    }
+
+    .service-card:hover .service-card-icon {
+      transform: scale(1.1);
+    }
+
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .service-list li {
+      font-size: 14px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .service-list li::before {
+      content: '✓';
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      background: rgba(81, 53, 255, 0.08);
+      border: 1.5px solid rgba(81, 53, 255, 0.2);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* GOVERNANCE & REPORTING (DARK INK) */
+    .report-grid {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -12px;
+      gap: 0;
+    }
+
+    .report-card-wrapper {
+      padding: 12px;
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+
+    .report-card {
+      background: rgba(255, 255, 255, 0.03) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 20px !important;
+      padding: 30px 24px !important;
+      height: 100%;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .report-card:hover {
+      transform: translateY(-6px) !important;
+      background: rgba(255, 255, 255, 0.06) !important;
+      border-color: var(--blue) !important;
+      box-shadow: 0 15px 30px rgba(81, 53, 255, 0.2) !important;
+    }
+
+    .report-freq {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(255, 84, 85, 0.3) !important;
+      border-radius: 4px;
+      padding: 3px 8px;
+      margin-bottom: 16px;
+      width: fit-content;
+      transition: all 0.3s ease;
+    }
+
+    .report-card:hover .report-freq {
+      border-color: var(--blue) !important;
+      color: var(--white) !important;
+      background: var(--blue) !important;
+    }
+
+    .report-card h4 {
+      font-family: var(--font-display);
+      font-size: 17px !important;
+      font-weight: 700;
+      color: var(--white) !important;
+      margin-bottom: 8px;
+    }
+
+    .report-card p {
+      font-size: 14px !important;
+      color: rgba(255, 255, 255, 0.65) !important;
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* DELIVERABLES */
+    .deliver-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .deliver-box {
+      border-radius: 16px;
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+    }
+
+    .deliver-box.left {
+      background: var(--off-white);
+      border-color: rgba(81, 53, 255, 0.08);
+    }
+
+    .deliver-box.right {
+      background: rgba(81, 53, 255, 0.03);
+      border-color: rgba(81, 53, 255, 0.12);
+    }
+
+    .deliver-box h4 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .deliver-box h4::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 16px;
+      background: var(--blue);
+      border-radius: 2px;
+    }
+
+    .deliver-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .deliver-list li {
+      font-size: 14px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .deliver-list li::before {
+      content: '✓';
+      color: #1A7A3A;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* WHY TABLE */
+    .why-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .why-table tr {
+      border-bottom: 1px solid rgba(81, 53, 255, 0.08);
+    }
+
+    .why-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .why-table td {
+      padding: 20px 24px;
+      font-size: 14px;
+      vertical-align: top;
+      transition: background 0.2s;
+    }
+
+    .why-table td:first-child {
+      font-weight: 700;
+      color: var(--navy);
+      width: 280px;
+      font-family: var(--font-display);
+    }
+
+    .why-table td:last-child {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .why-table tr:hover td {
+      background: var(--off-white);
+    }
+
+    /* QUOTE */
+    .quote-band {
+      background: linear-gradient(135deg, #0F2744 0%, #1A3A64 100%);
+      padding: 64px 24px;
+      text-align: center;
+    }
+
+    .quote-band blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: 700;
+      color: var(--white);
+      max-width: 840px;
+      margin: 0 auto 16px;
+      line-height: 1.5;
+      border: none;
+    }
+
+    .quote-band blockquote em {
+      color: #FF5455;
+      font-style: normal;
+    }
+
+    .quote-band cite {
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.5);
+      font-style: normal;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* CTA SECTION OVERRIDES */
+    .cta-section {
+      padding: 80px 24px !important;
+      background: #F4F8FC !important;
+      background-image: radial-gradient(circle at 50% 50%, rgba(81, 53, 255, 0.08) 0%, transparent 60%) !important;
+      border-top: 1px solid rgba(81, 53, 255, 0.06) !important;
+      border-bottom: 1px solid rgba(81, 53, 255, 0.06) !important;
+    }
+
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 36px) !important;
+      font-weight: 800 !important;
+      color: var(--navy) !important;
+      line-height: 1.2 !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    .cta-section p {
+      font-size: 16px !important;
+      color: var(--text-muted) !important;
+      line-height: 1.75 !important;
+      margin-bottom: 0 !important;
+    }
+
+    .cta-section .common-btn.box-bg {
+      background: linear-gradient(90deg, #5135FF 0%, #FF5455 100%) !important;
+      border: none !important;
+      color: var(--white) !important;
+      font-family: var(--font-display);
+      font-weight: 700;
+      padding: 14px 28px;
+    }
+
+    .cta-section .common-btn.box-bg:hover {
+      opacity: 0.9 !important;
+      transform: translateY(-1px);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 991px) {
+      .pillar-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .report-card-wrapper {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+
+      .deliver-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .pillar-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .report-card-wrapper {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .why-table td:first-child {
+        width: auto;
+        display: block;
+        padding-bottom: 4px;
+      }
+
+      .why-table td:last-child {
+        display: block;
+        padding-top: 4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Preloader Start -->
+  <div id="preloader" class="preloader">
+    <div class="animation-preloader">
+      <div class="spinner"></div>
+      <div class="txt-loading">
+        <span data-text-preloader="C" class="letters-loading">C</span>
+        <span data-text-preloader="L" class="letters-loading">L</span>
+        <span data-text-preloader="A" class="letters-loading">A</span>
+        <span data-text-preloader="R" class="letters-loading">R</span>
+        <span data-text-preloader="E" class="letters-loading">E</span>
+        <span data-text-preloader="N" class="letters-loading">N</span>
+        <span data-text-preloader="T" class="letters-loading">T</span>
+        <span data-text-preloader=" " class="letters-loading">&nbsp;</span>
+        <span data-text-preloader="3" class="letters-loading">3</span>
+        <span data-text-preloader="6" class="letters-loading">6</span>
+        <span data-text-preloader="0" class="letters-loading">0</span>
+      </div>
+      <p class="text-center">Loading</p>
+    </div>
+    <div class="loader">
+      <div class="row">
+        <div class="col-3 loader-section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-right">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-right">
+          <div class="bg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start Cursor Pointer -->
+  <div class="mouse-follower">
+    <span class="cursor-outline"></span>
+  </div>
+  <!-- End Cursor Pointer -->
+
+  <!-- Dynamic Header Placement -->
+  <div id="header"></div>
+
+  <!-- Banner Section Start -->
+  <section class="breadcrumb-section position-relative fix">
+    <div class="container">
+      <div class="bread-content text-center">
+        <ul class="d-flex align-items-center gap-3 justify-content-center">
+          <li>
+            <a href="index.html" class="p3-clr">Home</a>
+          </li>
+          <li class="p3-clr">/</li>
+          <li>
+            <a href="service-now-solutions.html" class="p3-clr">ServiceNow Solutions</a>
+          </li>
+          <li class="p3-clr">/</li>
+          <li class="white">Managed Solutions</li>
+        </ul>
+        <h1 class="white visible-from-right">ServiceNow Managed Solutions</h1>
+      </div>
+    </div>
+    <!-- bread Element -->
+    <img src="assets/img/element/bread-ele.png" alt="img" class="bread-ele">
+  </section>
+  <!-- Banner Section End -->
+
+  <!-- HERO -->
+  <section class="banner-section2 fix" id="overview">
+    <div class="container">
+      <div class="row g-4 justify-content-lg-between justify-content-center align-items-center">
+        <div class="col-lg-7">
+          <div class="banner-content text-lg-start text-center">
+            <h1 class="white mb-md-4 mb-3 pb-lg-2 d-block wow fadeInUp" data-wow-delay=".5s">
+              Your platform, continuously managed.
+            </h1>
+            <p class="white75 fs-seven mb-lg-5 mb-4 pb-lg-0 pb-sm-2 pb-1 wow fadeInUp" data-wow-delay=".6s">
+              A ServiceNow implementation is a starting point — not an endpoint. Clarent360 keeps your platform performing, current and aligned to your organisation as it evolves.
+            </p>
+            <div class="d-flex justify-content-lg-start justify-content-center align-items-center gap-sm-3 gap-1 wow fadeInUp" data-wow-delay=".7s">
+              <div>
+                <a href="#contact" class="common-btn box-style cmn-style1 box-bg w-100 white d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 overflow-hidden rounded-5">
+                  Discuss requirements
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="banner-thumb2-wrap mt-lg-0 mt-3 wow fadeInUp" data-wow-delay=".5s">
+            <div class="stat-stack">
+              <div class="stat-card">
+                <div class="stat-label">Platform Continuity</div>
+                <div class="stat-value">ITSM · SecOps · GRC</div>
+                <div class="stat-sub">All modules managed under one engagement</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Service Model</div>
+                <div class="stat-value">3 Flexible Tiers</div>
+                <div class="stat-sub">Foundation · Standard · Advanced</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Reporting Cadence</div>
+                <div class="stat-value">Monthly + Quarterly</div>
+                <div class="stat-sub">Health reports and strategic reviews included</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO (WHY MANAGED) -->
+  <section class="section ">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Platforms drift.<br><span>Managed ones don't.</span></h2>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-0">
+            <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
+              Without dedicated management, ServiceNow configurations become inconsistent, workflows break down, and the productivity gains of the initial implementation erode. Clarent360's managed service keeps every layer of your platform operating at full capability.
+            </p>
+          </div>
+        </div>
+
+        <div class="pillar-grid">
+          <div class="pillar wow fadeInUp" data-wow-delay=".2s">
+            <div class="pillar-num">01</div>
+            <h3>Health Monitoring</h3>
+            <p>Continuous visibility into platform performance, integration status and workflow behaviour — before issues affect users.</p>
+          </div>
+          <div class="pillar wow fadeInUp" data-wow-delay=".25s">
+            <div class="pillar-num">02</div>
+            <h3>Patch & Upgrade Management</h3>
+            <p>End-to-end patch lifecycle from non-production testing through to production deployment with rollback planning.</p>
+          </div>
+          <div class="pillar wow fadeInUp" data-wow-delay=".3s">
+            <div class="pillar-num">03</div>
+            <h3>Configuration Governance</h3>
+            <p>Every configuration change is tested, approved and documented — nothing changes without a record and a rationale.</p>
+          </div>
+          <div class="pillar wow fadeInUp" data-wow-delay=".35s">
+            <div class="pillar-num">04</div>
+            <h3>Integration Maintenance</h3>
+            <p>Active monitoring and maintenance of all integrations — responding to failures and evolving connections as tooling changes.</p>
+          </div>
+          <div class="pillar wow fadeInUp" data-wow-delay=".4s">
+            <div class="pillar-num">05</div>
+            <h3>SecOps & GRC Optimisation</h3>
+            <p>Playbooks, control frameworks and risk registers kept current as your obligations and environment evolve.</p>
+          </div>
+          <div class="pillar wow fadeInUp" data-wow-delay=".45s">
+            <div class="pillar-num">06</div>
+            <h3>Proactive Improvement</h3>
+            <p>Regular advisory on platform improvements, new capabilities and configuration optimisations — not just reactive support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIERS -->
+  <section class="section section-alt" id="tiers">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Choose the level of<br><span>management you need.</span></h2>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-0">
+            <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
+              Three structured tiers matched to your internal capability and platform complexity. All tiers include access to Clarent360's ServiceNow team, documented service standards and monthly reporting.
+            </p>
+          </div>
+        </div>
+
+        <div class="tier-wrap wow fadeInUp" data-wow-delay=".3s">
+          <table class="tier-table">
+            <thead>
+              <tr>
+                <th>Service Component</th>
+                <th class="tier-head">Foundation</th>
+                <th class="tier-head">Standard</th>
+                <th class="tier-head">Advanced</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Platform health monitoring</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+              <tr><td>Break-fix and incident support</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+              <tr><td>Patch and upgrade management</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+              <tr><td>Monthly reporting</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+              <tr><td>Configuration change management</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+              <tr><td>Workflow enhancements</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+              <tr><td>Integration support and maintenance</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+              <tr><td>Quarterly business review</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+              <tr><td>New module configuration</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+              <tr><td>GRC and SecOps optimisation</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+              <tr><td>Proactive improvement advisory</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+              <tr><td>Annual platform assessment</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVERAGE -->
+  <section class="section" id="coverage">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Managed across every<br><span>layer of your platform.</span></h2>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-0">
+            <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
+              Clarent360 manages the full ServiceNow stack — from core infrastructure health through to the security, risk and compliance modules that your organisation depends on.
+            </p>
+          </div>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-card wow fadeInUp" data-wow-delay=".2s">
+            <div class="service-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <h3>Platform Health & Monitoring</h3>
+            <p>Continuous visibility into your ServiceNow environment — catching issues before they reach users.</p>
+            <ul class="service-list">
+              <li>System health and performance monitoring</li>
+              <li>Integration status and sync error detection</li>
+              <li>Scheduled job and workflow monitoring</li>
+              <li>Critical event alerting and response</li>
+            </ul>
+          </div>
+          <div class="service-card wow fadeInUp" data-wow-delay=".25s">
+            <div class="service-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Patch & Upgrade Management</h3>
+            <p>ServiceNow releases frequent updates. We manage the full lifecycle so you stay current and secure.</p>
+            <ul class="service-list">
+              <li>Patch impact assessment before deployment</li>
+              <li>Non-production testing against your configuration</li>
+              <li>Production deployment with rollback planning</li>
+              <li>Post-upgrade workflow and integration validation</li>
+            </ul>
+          </div>
+          <div class="service-card wow fadeInUp" data-wow-delay=".3s">
+            <div class="service-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Configuration Management</h3>
+            <p>Governed change management for every platform update — tested, documented and auditable.</p>
+            <ul class="service-list">
+              <li>Workflow updates and process refinements</li>
+              <li>Service catalogue and portal maintenance</li>
+              <li>SLA, escalation and notification rule updates</li>
+              <li>User role and access management</li>
+            </ul>
+          </div>
+          <div class="service-card wow fadeInUp" data-wow-delay=".35s">
+            <div class="service-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            </div>
+            <h3>Integration Maintenance</h3>
+            <p>Keeping your integrations operational as third-party platforms evolve and requirements change.</p>
+            <ul class="service-list">
+              <li>Active integration monitoring and health checks</li>
+              <li>API and connector updates after platform changes</li>
+              <li>Integration failure troubleshooting and remediation</li>
+              <li>Documentation kept current with every change</li>
+            </ul>
+          </div>
+          <div class="service-card wow fadeInUp" data-wow-delay=".4s">
+            <div class="service-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>SecOps Optimisation</h3>
+            <p>Security workflows, playbooks and detection logic kept effective and aligned to the threat environment.</p>
+            <ul class="service-list">
+              <li>Security incident playbook review and refinement</li>
+              <li>Vulnerability response workflow optimisation</li>
+              <li>Threat intelligence integration maintenance</li>
+              <li>SOAR automation rule updates</li>
+            </ul>
+          </div>
+          <div class="service-card wow fadeInUp" data-wow-delay=".45s">
+            <div class="service-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
+            </div>
+            <h3>GRC Optimisation</h3>
+            <p>Risk registers, control frameworks and audit workflows kept current as obligations evolve.</p>
+            <ul class="service-list">
+              <li>Control framework updates for regulatory changes</li>
+              <li>Risk register and scoring methodology review</li>
+              <li>Compliance evidence collection workflow maintenance</li>
+              <li>Policy lifecycle and attestation workflow management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORTING -->
+  <section class="section section-dark" id="reporting">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Visibility at every level<br><span>of your organisation.</span></h2>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-0">
+            <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
+              Every managed service engagement includes structured reporting and regular reviews — keeping stakeholders informed and ensuring the service is delivering measurable outcomes.
+            </p>
+          </div>
+        </div>
+
+        <div class="report-grid">
+          <div class="report-card-wrapper wow fadeInUp" data-wow-delay=".2s">
+            <div class="report-card">
+              <div class="report-freq">Monthly</div>
+              <h4>Platform Health Report</h4>
+              <p>Platform health summary, incident log, change activity, integration status, patch currency and open improvement items.</p>
+            </div>
+          </div>
+          <div class="report-card-wrapper wow fadeInUp" data-wow-delay=".25s">
+            <div class="report-card">
+              <div class="report-freq">Quarterly</div>
+              <h4>Business Review</h4>
+              <p>Service performance review, roadmap discussion, upcoming platform changes and strategic improvement recommendations.</p>
+            </div>
+          </div>
+          <div class="report-card-wrapper wow fadeInUp" data-wow-delay=".3s">
+            <div class="report-card">
+              <div class="report-freq">Annual</div>
+              <h4>Platform Assessment</h4>
+              <p>Comprehensive review of configuration health, utilisation, integration status and alignment to current organisational needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="section">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Operational outcomes and<br><span>documented evidence.</span></h2>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-0">
+            <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
+              Every managed service engagement produces both an operationally healthy platform and the documentation that gives your team, auditors and leadership confidence in how it is managed.
+            </p>
+          </div>
+        </div>
+
+        <div class="deliver-grid">
+          <div class="deliver-box left wow fadeInUp" data-wow-delay=".2s">
+            <h4>Operational Deliverables</h4>
+            <ul class="deliver-list">
+              <li>Continuously monitored and maintained ServiceNow environment</li>
+              <li>Patches and upgrades managed end-to-end</li>
+              <li>Configuration changes governed, tested and documented</li>
+              <li>Integrations maintained and kept operational</li>
+              <li>SecOps playbooks and GRC workflows current and effective</li>
+            </ul>
+          </div>
+          <div class="deliver-box right wow fadeInUp" data-wow-delay=".3s">
+            <h4>Reporting Deliverables</h4>
+            <ul class="deliver-list">
+              <li>Monthly platform health and activity report</li>
+              <li>Quarterly business review with strategic recommendations</li>
+              <li>Change log and configuration baseline maintained</li>
+              <li>Integration status and incident register</li>
+              <li>Annual platform assessment and improvement roadmap</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CLARENT360 -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Platform expertise,<br><span>not generic IT support.</span></h2>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-0">
+            <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
+              Our team understands ServiceNow across ITSM, SecOps and GRC — not just platform administration basics. Here is what that means for your managed service engagement.
+            </p>
+          </div>
+        </div>
+
+        <div class="tier-wrap wow fadeInUp" data-wow-delay=".3s">
+          <table class="why-table">
+            <tbody>
+              <tr>
+                <td>Platform expertise, not generic IT support</td>
+                <td>Our consultants have implemented and managed ServiceNow environments across security, risk and IT operations — not just basic administration.</td>
+              </tr>
+              <tr>
+                <td>Proactive, not reactive</td>
+                <td>We identify and resolve issues before they affect users — not after your team logs a support ticket.</td>
+              </tr>
+              <tr>
+                <td>Governed change management</td>
+                <td>Every configuration change is tested, approved and documented. Nothing changes without a record and a rationale.</td>
+              </tr>
+              <tr>
+                <td>Security and compliance alignment</td>
+                <td>We keep your ServiceNow GRC and SecOps modules aligned to your evolving regulatory obligations — not just the core platform.</td>
+              </tr>
+              <tr>
+                <td>Flexible engagement model</td>
+                <td>Three tiers to match your internal capability — from essential support through to full platform management and strategic advisory.</td>
+              </tr>
+              <tr>
+                <td>Connected to your implementation</td>
+                <td>If Clarent360 implemented your platform, managed services is a seamless continuation — with no knowledge transfer gap.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <div class="quote-band">
+    <blockquote>"Your ServiceNow environment should grow with your organisation. Clarent360 managed services ensure the platform keeps working at <em>full capability</em> — not just on the day it went live."</blockquote>
+    <cite>CLARENT360 — SERVICENOW PRACTICE</cite>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="row align-items-center text-lg-start text-center">
+        <div class="col-lg-8">
+          <h2 class="wow fadeInUp mb-3" data-wow-delay=".3s">Keep your ServiceNow platform performing.</h2>
+          <p class="wow fadeInUp mb-0" data-wow-delay=".4s">Contact the Clarent360 team to discuss your platform management requirements and identify which service tier is the right fit for your organisation.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end text-center mt-4 mt-lg-0">
+          <a href="https://clarent-five.vercel.app/contact.html" class="common-btn box-style cmn-style1 box-bg white d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 overflow-hidden rounded-5 wow fadeInUp" data-wow-delay=".5s">
+            Talk to our team
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Placement -->
+  <div id="footer"></div>
+
+  <!--<< All JS Plugins >>-->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <!--<< Viewport Js >>-->
+  <script src="assets/js/viewport.jquery.js"></script>
+  <!--<< Bootstrap Js >>-->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!--<< Nice Select Js >>-->
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <!--<< Waypoints Js >>-->
+  <script src="assets/js/jquery.waypoints.js"></script>
+  <!--<< Counterup Js >>-->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <!--<< Swiper Slider Js >>-->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!--<< MeanMenu Js >>-->
+  <script src="assets/js/jquery.meanmenu.min.js"></script>
+  <!--<< Magnific Popup Js >>-->
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <!--<< Wow Animation Js >>-->
+  <script src="assets/js/wow.min.js"></script>
+  <!--<< Gsap Js >>-->
+  <script src="assets/js/gsap.min.js"></script>
+  <!--<< Lenis Js >>-->
+  <script src="assets/js/lenis.min.js"></script>
+  <!--<< ScrollSmoother Js >>-->
+  <script src="assets/js/scrollSmoother.js"></script>
+  <!--<< ScrollTrigger Js >>-->
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <!--<< Spalit Text Js >>-->
+  <script src="assets/js/spilitext-gsap.js"></script>
+  <!--<< Valina Tilt Js >>-->
+  <script src="assets/js/vanilla-tilt.min.js"></script>
+  <!--<< Main.js >>-->
+  <script src="assets/js/main.js"></script>
+  <!--<< Common Header & Footer Injection >>-->
+  <script src="assets/js/common-header.js"></script>
+
+</body>
+
+</html>

@@ -169,7 +169,25 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                  </a>
                                                              </li>
                                                              <li class="services-mega__item">
-                                                                 <a href="microsoft-365-security.html" class="mega-card-item">
+                                                                 <a href="cloud-solutions.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-cloud"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Cloud Security</span>
+                                                                         <span class="mdesc">Secure cloud infrastructure with monitoring, identity, and compliance.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="microsoft-security-reviews.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-brands fa-microsoft"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Microsoft</span>
+                                                                         <span class="mdesc">Secure Microsoft 365, Azure, and enterprise environments.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                  <a href="microsoft-365-security-review.html" class="mega-card-item">
                                                                      <div class="micon-box"><i class="fa-brands fa-microsoft"></i></div>
                                                                      <div class="mcontent-box">
                                                                          <span class="mtitle">Microsoft 365 Security Reviews</span>
@@ -178,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                  </a>
                                                              </li>
                                                              <li class="services-mega__item">
-                                                                 <a href="microsoft-purview.html" class="mega-card-item">
+                                                                  <a href="microsoft-purview-review.html" class="mega-card-item">
                                                                      <div class="micon-box"><i class="fa-solid fa-shield-halved"></i></div>
                                                                      <div class="mcontent-box">
                                                                          <span class="mtitle">Microsoft Purview Review</span>
@@ -187,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                  </a>
                                                              </li>
                                                              <li class="services-mega__item">
-                                                                 <a href="microsoft-defender.html" class="mega-card-item">
+                                                                  <a href="microsoft-defender-security-review.html" class="mega-card-item">
                                                                      <div class="micon-box"><i class="fa-solid fa-bug-slash"></i></div>
                                                                      <div class="mcontent-box">
                                                                          <span class="mtitle">Microsoft Defender Security Reviews</span>
@@ -196,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                  </a>
                                                              </li>
                                                              <li class="services-mega__item">
-                                                                 <a href="microsoft-intune.html" class="mega-card-item">
+                                                                  <a href="microsoft-intune-compliance-review.html" class="mega-card-item">
                                                                      <div class="micon-box"><i class="fa-solid fa-mobile-screen-button"></i></div>
                                                                      <div class="mcontent-box">
                                                                          <span class="mtitle">Microsoft Intune Compliance Reviews</span>
@@ -214,16 +232,16 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                  </a>
                                                              </li>
                                                              <li class="services-mega__item">
-                                                                 <a href="servicenow-implementations.html" class="mega-card-item">
+                                                                  <a href="service-now-solutions.html" class="mega-card-item">
                                                                      <div class="micon-box"><i class="fa-solid fa-briefcase"></i></div>
                                                                      <div class="mcontent-box">
-                                                                         <span class="mtitle">ServiceNow Implementations</span>
+                                                                         <span class="mtitle">ServiceNow Solutions</span>
                                                                          <span class="mdesc">End-to-end ServiceNow GRC and SecOps deployment.</span>
                                                                      </div>
                                                                  </a>
                                                              </li>
                                                              <li class="services-mega__item">
-                                                                 <a href="servicenow-managed-services.html" class="mega-card-item">
+                                                                  <a href="servicenow-managed-solutions.html" class="mega-card-item">
                                                                      <div class="micon-box"><i class="fa-solid fa-headset"></i></div>
                                                                      <div class="mcontent-box">
                                                                          <span class="mtitle">ServiceNow Managed Services</span>
@@ -232,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                  </a>
                                                              </li>
                                                              <li class="services-mega__item">
-                                                                 <a href="servicenow-training.html" class="mega-card-item">
+                                                                  <a href="servicenow-training-solutions.html" class="mega-card-item">
                                                                      <div class="micon-box"><i class="fa-solid fa-chalkboard-user"></i></div>
                                                                      <div class="mcontent-box">
                                                                          <span class="mtitle">ServiceNow Training Services</span>
@@ -255,6 +273,15 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                      <div class="mcontent-box">
                                                                          <span class="mtitle">RSA Archer Solutions</span>
                                                                          <span class="mdesc">RSA Archer platform configuration, reporting, and support.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="zero-trust-implementations.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Zero Trust Implementations</span>
+                                                                         <span class="mdesc">Verify users, devices, and access continuously.</span>
                                                                      </div>
                                                                  </a>
                                                              </li>

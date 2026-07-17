@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Clarent360">
+  <meta name="description"
+    content="Role-based ServiceNow training built against your actual configuration, workflows, and naming conventions. Empower your administrators, analysts, and practitioners with Clarent360.">
+  <title>ServiceNow Training Solutions | Clarent360</title>
+  <!--<< Favcion >>-->
+  <link rel="shortcut icon" href="assets/img/logo/favs.png">
+  <!--<< Bootstrap min.css >>-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!--<< All Min Css >>-->
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <!--<< Animate.css >>-->
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <!--<< Magnific Popup.css >>-->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <!--<< MeanMenu.css >>-->
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <!--<< Swiper Bundle.css >>-->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!--<< Nice Select.css >>-->
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <!--<< Main.css >>-->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!--<< Custom.css >>-->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <!--<< Font Awesome >>-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    :root {
+      --navy: #0B1929;
+      --navy-mid: #142338;
+      --navy-card: #1A2E48;
+      --blue: #5135FF;
+      --blue-light: #7E66FF;
+      --accent: #5135FF;
+      --accent-dim: rgba(81, 53, 255, 0.10);
+      --accent-glow: rgba(81, 53, 255, 0.22);
+      --white: #FFFFFF;
+      --off-white: #f8f9fd;
+      --mist: #E4EDF7;
+      --text: #17111f;
+      --text-muted: #5e6282;
+      --border: rgba(81, 53, 255, 0.14);
+      --border-dark: rgba(255, 255, 255, 0.08);
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    p {
+      font-size: 16px !important;
+    }
+
+    /* HERO OVERRIDES FOR WHITE FORMAT WITH PINK/BLUE GRADIENT */
+    .banner-section2 {
+      background: #F4F8FC !important;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 84, 85, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 90% 80%, rgba(81, 53, 255, 0.08) 0%, transparent 45%) !important;
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 100px !important;
+      border-bottom: 1px solid rgba(81, 53, 255, 0.06) !important;
+    }
+
+    .banner-section2 .banner-content h1 {
+      color: var(--navy) !important;
+      font-family: var(--font-display);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+
+    .banner-section2 .banner-content h1 em {
+      font-style: normal;
+      color: var(--blue) !important;
+    }
+
+    .banner-section2 .banner-content .white75 {
+      color: var(--text-muted) !important;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .banner-section2 .banner-content .hero-badge {
+      color: var(--blue) !important;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+    }
+
+    .banner-section2 .banner-content .common-btn.box-bg {
+      background: linear-gradient(90deg, #5135FF 0%, #FF5455 100%) !important;
+      border: none !important;
+      color: var(--white) !important;
+    }
+
+    .banner-section2 .banner-content .common-btn.box-bg:hover {
+      opacity: 0.9 !important;
+      transform: translateY(-1px);
+    }
+
+    /* COMPACT BADGE CARD STACK */
+    .program-badges {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .badge-card {
+      background: #FFFFFF !important;
+      border: 1px solid rgba(81, 53, 255, 0.08) !important;
+      border-radius: 16px !important;
+      padding: 14px 20px !important;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .badge-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(81, 53, 255, 0.06) !important;
+    }
+
+    .badge-card-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(81, 53, 255, 0.08) !important;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(81, 53, 255, 0.15) !important;
+      flex-shrink: 0;
+    }
+
+    .badge-card-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--blue) !important;
+    }
+
+    .badge-card-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .badge-card-label {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .badge-card-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    /* SECTION LAYOUTS */
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-alt {
+      background: var(--off-white);
+    }
+
+    .section-dark {
+      background: var(--navy-mid);
+    }
+
+    .inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--navy);
+      line-height: 1.12;
+      margin-bottom: 16px;
+    }
+
+    .section-dark .section-title {
+      color: var(--white);
+    }
+
+    .section-title span {
+      color: var(--blue);
+    }
+
+    .section-body {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 640px;
+      line-height: 1.78;
+      margin-bottom: 52px;
+    }
+
+    .section-dark .section-body {
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    /* PROGRAM TABS */
+    .tab-bar {
+      display: flex;
+      gap: 16px;
+      border-bottom: 2px solid rgba(81, 53, 255, 0.1);
+      margin-bottom: 48px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+
+    .tab-btn {
+      padding: 12px 24px;
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      border-bottom: 2.5px solid transparent;
+      cursor: pointer;
+      margin-bottom: -2px;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .tab-btn.active {
+      color: var(--blue);
+      border-bottom-color: var(--blue);
+    }
+
+    .tab-btn:hover:not(.active) {
+      color: var(--navy);
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    /* Program detail layout */
+    .program-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .program-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .module-table-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(81, 53, 255, 0.08);
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04);
+      background: #FFFFFF;
+    }
+
+    .module-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+
+    .module-table th {
+      background: var(--navy);
+      color: var(--white);
+      padding: 14px 20px;
+      text-align: left;
+      font-family: var(--font-display);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .module-table td {
+      padding: 13px 20px;
+      border-bottom: 1px solid rgba(81, 53, 255, 0.08);
+      color: var(--text-muted);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    .module-table td:first-child {
+      font-weight: 700;
+      color: var(--navy);
+      width: 40%;
+    }
+
+    .module-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .module-table tr:nth-child(even) td {
+      background: var(--off-white);
+    }
+
+    .bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bullet-list li {
+      font-size: 14px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      line-height: 1.6;
+    }
+
+    .bullet-list li::before {
+      content: '✓';
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      background: rgba(81, 53, 255, 0.08);
+      border: 1.5px solid rgba(81, 53, 255, 0.2);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .role-tag {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(81, 53, 255, 0.08);
+      border: 1px solid rgba(81, 53, 255, 0.15);
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    /* DELIVERY MODELS */
+    .delivery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .delivery-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(81, 53, 255, 0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .delivery-card:hover {
+      box-shadow: 0 10px 30px rgba(81, 53, 255, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .delivery-card-head {
+      background: var(--navy);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .delivery-card-head svg {
+      width: 24px;
+      height: 24px;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .delivery-card-head h3 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 0;
+    }
+
+    .delivery-card-body {
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .delivery-card-body p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+
+    .delivery-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-top: auto;
+      line-height: 1.5;
+    }
+
+    /* MATERIALS */
+    .materials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .material-box {
+      border-radius: 16px;
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+    }
+
+    .material-box.left {
+      background: var(--off-white);
+      border-color: rgba(81, 53, 255, 0.08);
+    }
+
+    .material-box.right {
+      background: rgba(81, 53, 255, 0.03);
+      border-color: rgba(81, 53, 255, 0.12);
+    }
+
+    .material-box h4 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .material-box h4::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 16px;
+      background: var(--blue);
+      border-radius: 2px;
+    }
+
+    .material-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .material-list li {
+      font-size: 14px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .material-list li::before {
+      content: '✓';
+      color: #1A7A3A;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* COMPARISON TABLE */
+    .compare-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(81, 53, 255, 0.08);
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04);
+      background: #FFFFFF;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .compare-table thead tr th {
+      padding: 16px 20px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .compare-table thead tr th:first-child {
+      background: var(--navy);
+      color: var(--white);
+      width: 32%;
+    }
+
+    .compare-table thead tr th:nth-child(2) {
+      background: #4A5568;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .compare-table thead tr th:nth-child(3) {
+      background: var(--blue);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .compare-table tbody tr {
+      border-bottom: 1px solid rgba(81, 53, 255, 0.08);
+    }
+
+    .compare-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .compare-table tbody td {
+      padding: 15px 20px;
+      color: var(--text-muted);
+      vertical-align: middle;
+      font-weight: 500;
+    }
+
+    .compare-table tbody td:first-child {
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .compare-table tbody td:nth-child(2) {
+      text-align: center;
+      background: rgba(74, 85, 104, 0.03);
+    }
+
+    .compare-table tbody td:nth-child(3) {
+      text-align: center;
+      background: rgba(81, 53, 255, 0.03);
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    /* QUOTE */
+    .quote-band {
+      background: linear-gradient(135deg, #0F2744 0%, #1A3A64 100%);
+      padding: 64px 24px;
+      text-align: center;
+    }
+
+    .quote-band blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: 700;
+      color: var(--white);
+      max-width: 840px;
+      margin: 0 auto 16px;
+      line-height: 1.55;
+      border: none;
+    }
+
+    .quote-band cite {
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.5);
+      font-style: normal;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* CTA SECTION OVERRIDES - LIGHT FORMAT */
+    .cta-section {
+      padding: 80px 24px !important;
+      background: #F4F8FC !important;
+      background-image: radial-gradient(circle at 50% 50%, rgba(81, 53, 255, 0.08) 0%, transparent 60%) !important;
+      border-top: 1px solid rgba(81, 53, 255, 0.06) !important;
+      border-bottom: 1px solid rgba(81, 53, 255, 0.06) !important;
+    }
+
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 36px) !important;
+      font-weight: 800 !important;
+      color: var(--navy) !important;
+      line-height: 1.2 !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    .cta-section p {
+      font-size: 16px !important;
+      color: var(--text-muted) !important;
+      line-height: 1.75 !important;
+      margin-bottom: 0 !important;
+    }
+
+    .cta-section .common-btn.box-bg {
+      background: linear-gradient(90deg, #5135FF 0%, #FF5455 100%) !important;
+      border: none !important;
+      color: var(--white) !important;
+      font-family: var(--font-display);
+      font-weight: 700;
+      padding: 14px 28px;
+    }
+
+    .cta-section .common-btn.box-bg:hover {
+      opacity: 0.9 !important;
+      transform: translateY(-1px);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 991px) {
+      .program-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .delivery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .materials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .delivery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tab-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Preloader Start -->
+  <div id="preloader" class="preloader">
+    <div class="animation-preloader">
+      <div class="spinner"></div>
+      <div class="txt-loading">
+        <span data-text-preloader="C" class="letters-loading">C</span>
+        <span data-text-preloader="L" class="letters-loading">L</span>
+        <span data-text-preloader="A" class="letters-loading">A</span>
+        <span data-text-preloader="R" class="letters-loading">R</span>
+        <span data-text-preloader="E" class="letters-loading">E</span>
+        <span data-text-preloader="N" class="letters-loading">N</span>
+        <span data-text-preloader="T" class="letters-loading">T</span>
+        <span data-text-preloader=" " class="letters-loading">&nbsp;</span>
+        <span data-text-preloader="3" class="letters-loading">3</span>
+        <span data-text-preloader="6" class="letters-loading">6</span>
+        <span data-text-preloader="0" class="letters-loading">0</span>
+      </div>
+      <p class="text-center">Loading</p>
+    </div>
+    <div class="loader">
+      <div class="row">
+        <div class="col-3 loader-section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-right">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-right">
+          <div class="bg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start Cursor Pointer -->
+  <div class="mouse-follower">
+    <span class="cursor-outline"></span>
+  </div>
+  <!-- End Cursor Pointer -->
+
+  <!-- Dynamic Header Placement -->
+  <div id="header"></div>
+
+  <!-- Banner Section Start -->
+  <section class="breadcrumb-section position-relative fix">
+    <div class="container">
+      <div class="bread-content text-center">
+        <ul class="d-flex align-items-center gap-3 justify-content-center">
+          <li>
+            <a href="index.html" class="p3-clr">Home</a>
+          </li>
+          <li class="p3-clr">/</li>
+          <li>
+            <a href="service-now-solutions.html" class="p3-clr">ServiceNow Solutions</a>
+          </li>
+          <li class="p3-clr">/</li>
+          <li class="white">Training Solutions</li>
+        </ul>
+        <h1 class="white visible-from-right">ServiceNow Training Solutions</h1>
+      </div>
+    </div>
+    <!-- bread Element -->
+    <img src="assets/img/element/bread-ele.png" alt="img" class="bread-ele">
+  </section>
+  <!-- Banner Section End -->
+
+  <!-- HERO -->
+  <section class="banner-section2 fix" id="overview">
+    <div class="container">
+      <div class="row g-4 justify-content-lg-between justify-content-center align-items-center">
+        <div class="col-lg-7">
+          <div class="banner-content text-lg-start text-center">
+            <h1 class="white mb-md-4 mb-3 pb-lg-2 d-block wow fadeInUp" data-wow-delay=".5s">
+              Training built around your platform — not a demo lab.
+            </h1>
+            <p class="white75 fs-seven mb-lg-5 mb-4 pb-lg-0 pb-sm-2 pb-1 wow fadeInUp" data-wow-delay=".6s">
+              Clarent360 delivers role-based ServiceNow training built against your actual configuration, your workflows and your naming conventions. Your team learns the platform they will use — not a generic environment that looks nothing like Monday morning.
+            </p>
+            <div class="d-flex justify-content-lg-start justify-content-center align-items-center gap-sm-3 gap-1 wow fadeInUp" data-wow-delay=".7s">
+              <div>
+                <a href="#contact" class="common-btn box-style cmn-style1 box-bg w-100 white d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 overflow-hidden rounded-5">
+                  Discuss training needs
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="banner-thumb2-wrap mt-lg-0 mt-3 wow fadeInUp" data-wow-delay=".5s">
+            <div class="program-badges">
+              <div class="badge-card">
+                <div class="badge-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>
+                </div>
+                <div class="badge-card-info">
+                  <div class="badge-card-label">Administrator Training</div>
+                  <div class="badge-card-sub">Platform config · Workflows · Admin</div>
+                </div>
+              </div>
+              <div class="badge-card">
+                <div class="badge-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                </div>
+                <div class="badge-card-info">
+                  <div class="badge-card-label">Process Owner Training</div>
+                  <div class="badge-card-sub">ITSM · SecOps · GRC Owners</div>
+                </div>
+              </div>
+              <div class="badge-card">
+                <div class="badge-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="badge-card-info">
+                  <div class="badge-card-label">SecOps Analyst Training</div>
+                  <div class="badge-card-sub">Triage · Playbooks · Vulnerability</div>
+                </div>
+              </div>
+              <div class="badge-card">
+                <div class="badge-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                </div>
+                <div class="badge-card-info">
+                  <div class="badge-card-label">GRC Practitioner Training</div>
+                  <div class="badge-card-sub">Risk · Compliance · Audit</div>
+                </div>
+              </div>
+              <div class="badge-card">
+                <div class="badge-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                </div>
+                <div class="badge-card-info">
+                  <div class="badge-card-label">End User Training</div>
+                  <div class="badge-card-sub">Portal · Tasks · Approvals</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS (TABS) -->
+  <section class="section" id="programs">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Five programs.<br><span>Every role covered.</span></h2>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-0">
+            <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
+              Clarent360 delivers distinct training programs for each role that touches ServiceNow — from the administrators who configure it, to the analysts who use it in security operations, to the end users who raise requests every day.
+            </p>
+          </div>
+        </div>
+
+        <div class="tab-bar wow fadeInUp" data-wow-delay=".2s">
+          <button class="tab-btn active" onclick="switchTab('admin', this)">Administrator</button>
+          <button class="tab-btn" onclick="switchTab('process', this)">Process Owner</button>
+          <button class="tab-btn" onclick="switchTab('secops', this)">SecOps Analyst</button>
+          <button class="tab-btn" onclick="switchTab('grc', this)">GRC Practitioner</button>
+          <button class="tab-btn" onclick="switchTab('enduser', this)">End User</button>
+        </div>
+
+        <!-- ADMIN PANEL -->
+        <div class="tab-panel active" id="tab-admin">
+          <div class="program-layout">
+            <div class="wow fadeInUp" data-wow-delay=".25s">
+              <div class="role-tag">For: Platform Administrators</div>
+              <p class="program-desc">Builds the technical depth needed to manage, configure and maintain the ServiceNow platform confidently. Participants leave able to handle day-to-day administration, governed configuration changes and basic development tasks — without escalating to an external consultant for routine work.</p>
+              <ul class="bullet-list">
+                <li>Delivered against your actual ServiceNow instance — not a generic lab environment</li>
+                <li>Covers your specific configuration, naming conventions and workflow design</li>
+                <li>Includes hands-on exercises for each module covered</li>
+                <li>Runbooks and administrator guides provided as post-training reference</li>
+              </ul>
+            </div>
+            <div class="wow fadeInUp" data-wow-delay=".3s">
+              <div class="module-table-wrap">
+                <table class="module-table">
+                  <thead><tr><th>Module</th><th>What participants learn</th></tr></thead>
+                  <tbody>
+                    <tr><td>Platform Navigation & Architecture</td><td>How ServiceNow is structured, key tables, navigation patterns and system admin basics.</td></tr>
+                    <tr><td>User & Role Management</td><td>Creating users, groups and roles. ACL fundamentals and permission management.</td></tr>
+                    <tr><td>Form & List Configuration</td><td>Configuring forms, views, UI policies and display conditions.</td></tr>
+                    <tr><td>Workflow & Flow Designer</td><td>Building and modifying workflows and flows, triggers and approval steps.</td></tr>
+                    <tr><td>Service Catalogue Admin</td><td>Managing catalogue items, variables, approval workflows and fulfilment tasks.</td></tr>
+                    <tr><td>Reporting & Dashboards</td><td>Building reports, configuring dashboards and scheduled distribution.</td></tr>
+                    <tr><td>Update Sets</td><td>Managing configuration through update sets across environments safely.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROCESS OWNER PANEL -->
+        <div class="tab-panel" id="tab-process">
+          <div class="program-layout">
+            <div>
+              <div class="role-tag">For: ITSM, GRC & SecOps Process Owners</div>
+              <p class="program-desc">Designed for team members who own specific workflows within ServiceNow — incident managers, GRC leads, security operations managers and compliance officers. This program develops the skills to manage processes within the platform, review and improve workflows and report on performance — without needing to understand deep technical configuration.</p>
+              <ul class="bullet-list">
+                <li>Separate tracks for ITSM, GRC and SecOps process owners</li>
+                <li>Focused on process management, not platform administration</li>
+                <li>Includes executive and operational reporting from the platform</li>
+                <li>Exercises built from your actual ServiceNow workflows</li>
+              </ul>
+            </div>
+            <div>
+              <div class="module-table-wrap">
+                <table class="module-table">
+                  <thead><tr><th>Track</th><th>Coverage</th></tr></thead>
+                  <tbody>
+                    <tr><td>ITSM Process Owners</td><td>Incident, change and problem management workflow operation, SLA management, escalation paths and service catalogue oversight.</td></tr>
+                    <tr><td>SecOps Process Owners</td><td>Security incident response workflow operation, playbook oversight, vulnerability response management and threat intelligence triage.</td></tr>
+                    <tr><td>GRC Owners</td><td>Risk register management, control assessments, policy lifecycle management, audit program operation and compliance evidence collection.</td></tr>
+                    <tr><td>Reporting & Analytics</td><td>Building and maintaining process performance dashboards, KPI reporting and executive-level visibility views for all process types.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECOPS PANEL -->
+        <div class="tab-panel" id="tab-secops">
+          <div class="program-layout">
+            <div>
+              <div class="role-tag">For: Security Operations Analysts</div>
+              <p class="program-desc">Targeted training for security operations team members who work within the ServiceNow SecOps module during day-to-day operations and security events. This program develops the analytical and operational skills needed to triage incidents, manage vulnerability workflows and use the platform effectively under pressure.</p>
+              <ul class="bullet-list">
+                <li>Exercises built around real security event scenarios in your environment</li>
+                <li>Covers your specific playbooks, escalation thresholds and alert categories</li>
+                <li>Includes training on automated and manual playbook execution</li>
+                <li>Threat intelligence enrichment and decision-making covered in context</li>
+              </ul>
+            </div>
+            <div>
+              <div class="module-table-wrap">
+                <table class="module-table">
+                  <thead><tr><th>Topic</th><th>What analysts learn</th></tr></thead>
+                  <tbody>
+                    <tr><td>Security Incident Triage</td><td>Classification, prioritisation and initial response actions within the platform against defined categories.</td></tr>
+                    <tr><td>Playbook Execution</td><td>Following and completing automated and manual playbook steps — including escalation decision points.</td></tr>
+                    <tr><td>Vulnerability Response</td><td>Reviewing vulnerability findings, assigning owners, tracking remediation progress and managing SLAs.</td></tr>
+                    <tr><td>Threat Intelligence</td><td>Reviewing indicators, enriching incidents with threat context and applying intelligence in triage decisions.</td></tr>
+                    <tr><td>Reporting & Escalation</td><td>Producing analyst reports, escalating incidents within defined thresholds and communicating status.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GRC PANEL -->
+        <div class="tab-panel" id="tab-grc">
+          <div class="program-layout">
+            <div>
+              <div class="role-tag">For: Risk, Compliance & Audit Professionals</div>
+              <p class="program-desc">For risk, compliance and audit professionals who need to operate the ServiceNow GRC module as part of their daily role. This program builds the practical skills needed to manage risk registers, run compliance programs, administer audit workflows and produce governance reporting.</p>
+              <ul class="bullet-list">
+                <li>Built against your specific GRC configuration, control frameworks and risk taxonomy</li>
+                <li>Covers your regulatory obligations and compliance framework mappings</li>
+                <li>Includes practical audit evidence collection and reporting exercises</li>
+                <li>Policy lifecycle and attestation workflow management covered in detail</li>
+              </ul>
+            </div>
+            <div>
+              <div class="module-table-wrap">
+                <table class="module-table">
+                  <thead><tr><th>Topic</th><th>What practitioners learn</th></tr></thead>
+                  <tbody>
+                    <tr><td>Risk Register Operation</td><td>Adding risks, scoring, assigning treatments and managing the risk lifecycle from identification to closure.</td></tr>
+                    <tr><td>Control Framework Management</td><td>Maintaining controls, linking to regulatory obligations and updating assessment evidence.</td></tr>
+                    <tr><td>Compliance Program Operation</td><td>Managing assessments, tracking remediation and producing compliance status reports.</td></tr>
+                    <tr><td>Audit Management</td><td>Setting up audit programs, collecting evidence, managing findings and tracking remediation to closure.</td></tr>
+                    <tr><td>Policy Management</td><td>Managing the policy lifecycle, review cycles and attestation workflows across the organisation.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- END USER PANEL -->
+        <div class="tab-panel" id="tab-enduser">
+          <div class="program-layout">
+            <div>
+              <div class="role-tag">For: General Staff & Platform Users</div>
+              <p class="program-desc">Role-based training for the staff who interact with ServiceNow as part of their daily work — raising requests, logging incidents, completing tasks and approving workflows through the self-service portal. This program reduces support overhead, drives adoption and gives users confidence.</p>
+              <ul class="bullet-list">
+                <li>Focused on the self-service portal as your organisation has configured it</li>
+                <li>Uses your organisation's actual catalogue items and request types</li>
+                <li>Practical exercises for the most common user tasks</li>
+                <li>Quick reference cards provided for daily use after training</li>
+              </ul>
+            </div>
+            <div>
+              <div class="module-table-wrap">
+                <table class="module-table">
+                  <thead><tr><th>Topic</th><th>What users learn</th></tr></thead>
+                  <tbody>
+                    <tr><td>Self-Service Portal</td><td>How to raise service requests, log incidents, track request status and use the knowledge base.</td></tr>
+                    <tr><td>Task & Approval Management</td><td>Managing assigned tasks, completing approval requests and understanding workflow status.</td></tr>
+                    <tr><td>GRC Attestations</td><td>Completing control attestations, policy acknowledgement workflows and submitting compliance evidence.</td></tr>
+                    <tr><td>Incident Logging</td><td>Logging incidents correctly — categories, priorities, descriptions and attachments — to speed resolution.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERY MODELS -->
+  <section class="section section-alt" id="delivery">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Delivered the way<br><span>your team learns best.</span></h2>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-0">
+            <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
+              All training programs are available in three delivery formats — choose the model that fits your team's size, location and scheduling constraints, or combine formats across different role groups.
+            </p>
+          </div>
+        </div>
+
+        <div class="delivery-grid">
+          <div class="delivery-card wow fadeInUp" data-wow-delay=".2s">
+            <div class="delivery-card-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              <h3>Instructor-Led — In Person</h3>
+            </div>
+            <div class="delivery-card-body">
+              <p>On-site delivery at your location using your own ServiceNow environment. Hands-on sessions with direct facilitator interaction and real-time Q&A. Best for teams that benefit from focused group learning and collaborative exercises.</p>
+              <div class="delivery-tag">Best for: cohort training · team kick-offs · post-implementation enablement</div>
+            </div>
+          </div>
+          <div class="delivery-card wow fadeInUp" data-wow-delay=".25s">
+            <div class="delivery-card-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <h3>Instructor-Led — Virtual</h3>
+            </div>
+            <div class="delivery-card-body">
+              <p>Live virtual delivery via Microsoft Teams or Zoom. Structured sessions with hands-on exercises in your environment. Suitable for distributed teams, interstate participants or where travel is not practical.</p>
+              <div class="delivery-tag">Best for: distributed teams · flexible scheduling · regional organisations</div>
+            </div>
+          </div>
+          <div class="delivery-card wow fadeInUp" data-wow-delay=".3s">
+            <div class="delivery-card-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              <h3>Custom eLearning</h3>
+            </div>
+            <div class="delivery-card-body">
+              <p>Bespoke eLearning modules recorded against your specific platform configuration — for self-paced completion and ongoing onboarding of new staff who join after the initial training delivery.</p>
+              <div class="delivery-tag">Best for: self-paced learning · new staff onboarding · ongoing enablement</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS -->
+  <section class="section" id="materials">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Materials participants<br><span>actually use afterwards.</span></h2>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-0">
+            <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
+              Every Clarent360 training program includes professionally produced materials — not just slides used during the session. Participants leave with reference guides, runbooks and quick cards they can use on the job every day.
+            </p>
+          </div>
+        </div>
+
+        <div class="materials-grid">
+          <div class="material-box left wow fadeInUp" data-wow-delay=".2s">
+            <h4>Participant Materials</h4>
+            <ul class="material-list">
+              <li>Role-specific training workbooks with step-by-step exercises</li>
+              <li>Reference guides covering key workflows and platform navigation</li>
+              <li>Quick reference cards for the most common daily tasks</li>
+              <li>Recording of instructor-led sessions where requested</li>
+              <li>Post-training competency assessment where required</li>
+            </ul>
+          </div>
+          <div class="material-box right wow fadeInUp" data-wow-delay=".3s">
+            <h4>Organisational Materials</h4>
+            <ul class="material-list">
+              <li>Training completion register and attendance records</li>
+              <li>Administrator runbooks and configuration guides</li>
+              <li>Onboarding training pack for new staff joining the platform</li>
+              <li>Process documentation for each trained workflow</li>
+              <li>Knowledge transfer summary for internal L&D teams</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE (WHY CLARENT360) -->
+  <section class="section section-alt" id="compare">
+    <div class="container">
+      <div class="inner">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Generic training versus<br><span>training that sticks.</span></h2>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-0">
+            <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
+              The most important difference between Clarent360 training and standard ServiceNow vendor content is context. Every program is built around your instance — not a demonstration environment.
+            </p>
+          </div>
+        </div>
+
+        <div class="compare-wrap wow fadeInUp" data-wow-delay=".3s">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Training Aspect</th>
+                <th>Generic Training</th>
+                <th>Clarent360 Training</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Training environment</td><td>Generic demo instance</td><td>Your actual ServiceNow instance</td></tr>
+              <tr><td>Workflow examples</td><td>Standard out-of-box examples</td><td>Built from your real workflows and processes</td></tr>
+              <tr><td>Naming conventions</td><td>Default ServiceNow terminology</td><td>Your organisation's own naming and categories</td></tr>
+              <tr><td>Role specificity</td><td>One size fits all</td><td>Separate programs per role — admins, analysts, GRC, end users</td></tr>
+              <tr><td>Post-training materials</td><td>Session slides only</td><td>Runbooks, reference guides and quick cards included</td></tr>
+              <tr><td>GRC and SecOps depth</td><td>Surface-level or unavailable</td><td>Dedicated programs for GRC practitioners and SecOps analysts</td></tr>
+              <tr><td>Connection to implementation</td><td>None</td><td>If Clarent360 built your platform, training is a direct extension</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <div class="quote-band">
+    <blockquote>"Training is not an optional extra on a ServiceNow implementation — it is what determines whether the platform gets used, owned and evolved by your organisation, or gradually abandoned in favour of old habits."</blockquote>
+    <cite>CLARENT360 — SERVICENOW PRACTICE</cite>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="row align-items-center text-lg-start text-center">
+        <div class="col-lg-8">
+          <h2 class="wow fadeInUp mb-3" data-wow-delay=".3s">Build capability your platform investment deserves.</h2>
+          <p class="wow fadeInUp mb-0" data-wow-delay=".4s">Contact the Clarent360 team to discuss your training requirements, team structure and preferred delivery model. We will design a program that fits your platform, your people and your timeline.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end text-center mt-4 mt-lg-0">
+          <a href="https://clarent-five.vercel.app/contact.html" class="common-btn box-style cmn-style1 box-bg white d-inline-flex justify-content-center align-items-center gap-xxl-2 gap-2 overflow-hidden rounded-5 wow fadeInUp" data-wow-delay=".5s">
+            Talk to our team
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Placement -->
+  <div id="footer"></div>
+
+  <!--<< All JS Plugins >>-->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <!--<< Viewport Js >>-->
+  <script src="assets/js/viewport.jquery.js"></script>
+  <!--<< Bootstrap Js >>-->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!--<< Nice Select Js >>-->
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <!--<< Waypoints Js >>-->
+  <script src="assets/js/jquery.waypoints.js"></script>
+  <!--<< Counterup Js >>-->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <!--<< Swiper Slider Js >>-->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!--<< MeanMenu Js >>-->
+  <script src="assets/js/jquery.meanmenu.min.js"></script>
+  <!--<< Magnific Popup Js >>-->
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <!--<< Wow Animation Js >>-->
+  <script src="assets/js/wow.min.js"></script>
+  <!--<< Gsap Js >>-->
+  <script src="assets/js/gsap.min.js"></script>
+  <!--<< Lenis Js >>-->
+  <script src="assets/js/lenis.min.js"></script>
+  <!--<< ScrollSmoother Js >>-->
+  <script src="assets/js/scrollSmoother.js"></script>
+  <!--<< ScrollTrigger Js >>-->
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <!--<< Spalit Text Js >>-->
+  <script src="assets/js/spilitext-gsap.js"></script>
+  <!--<< Valina Tilt Js >>-->
+  <script src="assets/js/vanilla-tilt.min.js"></script>
+  <!--<< Main.js >>-->
+  <script src="assets/js/main.js"></script>
+  <!--<< Common Header & Footer Injection >>-->
+  <script src="assets/js/common-header.js"></script>
+
+  <script>
+    function switchTab(id, btn) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + id).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+
+</body>
+
+</html>

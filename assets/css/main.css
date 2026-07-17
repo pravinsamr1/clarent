@@ -4441,7 +4441,7 @@ footer {
   background-size: cover;
   position: relative;
   overflow: hidden;
-  padding: 230px 0 145px;
+  padding: 110px 0 130px;
   z-index: 1;
 }
 
@@ -4503,8 +4503,8 @@ footer {
 
 @media screen and (max-width: 1500px) {
   .banner-section2 .banner-content h1 {
-    font-size: 70px;
-    font-weight: 700;
+    font-size: 55px;
+    font-weight: 600;
     line-height: 80px;
     letter-spacing: -1.6px;
   }
