@@ -1171,7 +1171,7 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
 }
 
 .touchhh {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 @media (max-width: 767px) {
@@ -4050,4 +4050,18 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
 .why-padding-bottom{
     padding-bottom: 30px !important;
     margin-bottom: 30px !important;
+}
+
+/* Hide children menu icons and descriptions on mobile view */
+@media (max-width: 1199px) {
+    .mean-container .mean-nav .micon-box,
+    .mean-container .mean-nav .mdesc {
+        display: none !important;
+    }
+    .mean-container .mean-nav .mtitle {
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        font-family: inherit !important;
+        color: var(--header) !important;
+    }
 }

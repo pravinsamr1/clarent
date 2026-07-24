@@ -25,16 +25,26 @@
     <style>
         :root {
             /* Mapped to Clarent360 Light Corporate Theme */
-            --ink: #ffffff;        /* Pure white page background */
-            --panel: #f8f9fd;      /* Standard light panel background */
-            --panel-2: #f0f2f5;    /* Hover state panel background */
-            --line: rgba(81, 53, 255, 0.1); /* Soft purple border lines */
-            --line-bright: #5135FF; /* Corporate brand purple */
-            --paper: #17111f;      /* Dark navy body text */
-            --slate: #5e6282;      /* Muted paragraph text */
-            --amber: #FED500;      /* Corporate brand gold */
-            --amber-dim: rgba(254, 213, 0, 0.4); /* Gold accents */
-            --danger: #FF5455;     /* Corporate brand red */
+            --ink: #ffffff;
+            /* Pure white page background */
+            --panel: #f8f9fd;
+            /* Standard light panel background */
+            --panel-2: #f0f2f5;
+            /* Hover state panel background */
+            --line: rgba(81, 53, 255, 0.1);
+            /* Soft purple border lines */
+            --line-bright: #5135FF;
+            /* Corporate brand purple */
+            --paper: #17111f;
+            /* Dark navy body text */
+            --slate: #5e6282;
+            /* Muted paragraph text */
+            --amber: #FED500;
+            /* Corporate brand gold */
+            --amber-dim: rgba(254, 213, 0, 0.4);
+            /* Gold accents */
+            --danger: #FF5455;
+            /* Corporate brand red */
             --radius: 8px;
             --p1-clr: #5135FF;
             --p2-clr: #FED500;
@@ -99,7 +109,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1.05fr 0.95fr;
-            gap: 56px;
+            /* gap: 56px; */
             align-items: center;
         }
 
@@ -194,42 +204,239 @@
             font-family: "Inter", sans-serif;
         }
 
-        /* ---------- SCHEMATIC ---------- */
-        .schematic {
+        
+        
+        /* ---------- CORPORATE HUB ---------- */
+        .corporate-hub {
             position: relative;
-            aspect-ratio: 1/1;
-            max-width: 560px;
-            margin: 0 auto;
-        }
-
-        .schematic svg {
             width: 100%;
-            height: 100%;
-            overflow: visible;
+            max-width: 800px;
+            margin: 0 auto;
+            aspect-ratio: 1.1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .sch-label {
+        .hub-center {
+            width: 180px;
+            height: 180px;
+            background: #ffffff;
+            border: 3px solid var(--p1-clr);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            box-shadow: 0 10px 30px rgba(81, 53, 255, 0.15);
+            position: relative;
+        }
+
+        .hub-center::before {
+            content: '';
+            position: absolute;
+            top: -24px; left: -24px; right: -24px; bottom: -24px;
+            border: 1px dashed rgba(81, 53, 255, 0.25);
+            border-radius: 50%;
+            z-index: -1;
+            animation: rotateSlow 20s linear infinite;
+        }
+
+        @keyframes rotateSlow {
+            100% { transform: rotate(360deg); }
+        }
+
+        .hub-center h3 {
             font-family: "Plus Jakarta Sans", sans-serif;
-            font-size: 12px;
-            fill: var(--paper);
+            font-size: 18px;
+            font-weight: 800;
+            margin: 0;
+            line-height: 1.3;
+            text-align: center;
+            color: var(--paper);
             letter-spacing: 0.05em;
+        }
+
+        .hub-center .highlight {
+            color: var(--p2-clr);
+        }
+
+        .hub-nodes-container {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+        }
+        .hub-node {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: #ffffff;
+            border: 1px solid rgba(81, 53, 255, 0.08);
+            border-radius: 20px;
+            padding: 24px 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
+            min-width: 240px;
+            max-width: 260px;
+            pointer-events: auto;
+            text-align: center;
+        }
+
+        .hub-node:hover {
+            border-color: #5135FF;
+            box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.1);
+        }
+
+        .hub-node h4 {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--paper);
+            margin: 0 0 8px;
+            text-transform: capitalize;
+        }
+
+        .hub-node p {
+            font-family: "Inter", sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--slate);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .hub-node p strong {
+            color: var(--paper);
             font-weight: 700;
         }
 
-        .sch-sublabel {
-            font-family: "Inter", sans-serif;
-            font-size: 11px;
-            fill: #5135FF;
-            letter-spacing: 0.04em;
-            font-weight: 600;
+        /* Absolute positioning in a circle using translate */
+        .node-top {
+            transform: translate(calc(-50% + 0px), calc(-50% - 250px));
+            }
+
+        .node-right {
+            transform: translate(calc(-50% + 240px), calc(-50% - 70px));
+            }
+
+        .node-bottom-right {
+            transform: translate(calc(-50% + 150px), calc(-50% + 190px));
+            }
+
+        .node-bottom-left {
+            transform: translate(calc(-50% - 150px), calc(-50% + 190px));
+            }
+
+        .node-left {
+            transform: translate(calc(-50% - 240px), calc(-50% - 70px));
+            }
+        @keyframes spinHub {
+            0%, 15% { transform: rotate(0deg); }
+            20%, 35% { transform: rotate(72deg); }
+            40%, 55% { transform: rotate(144deg); }
+            60%, 75% { transform: rotate(216deg); }
+            80%, 95% { transform: rotate(288deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .hub-nodes-container {
+            animation: spinHub 25s infinite ease-in-out;
         }
 
-        .sch-dim {
-            stroke: rgba(81, 53, 255, 0.45);
-            stroke-width: 1.2;
+        @keyframes counterSpin_node-top {
+            0%, 15% { transform: translate(calc(-50% + 0px), calc(-50% - 250px)) rotate(0deg); }
+            20%, 35% { transform: translate(calc(-50% + 0px), calc(-50% - 250px)) rotate(-72deg); }
+            40%, 55% { transform: translate(calc(-50% + 0px), calc(-50% - 250px)) rotate(-144deg); }
+            60%, 75% { transform: translate(calc(-50% + 0px), calc(-50% - 250px)) rotate(-216deg); }
+            80%, 95% { transform: translate(calc(-50% + 0px), calc(-50% - 250px)) rotate(-288deg); }
+            100% { transform: translate(calc(-50% + 0px), calc(-50% - 250px)) rotate(-360deg); }
+        }
+        .node-top {
+            animation: counterSpin_node-top 25s infinite ease-in-out;
         }
 
-        .sch-core {
+        @keyframes counterSpin_node-right {
+            0%, 15% { transform: translate(calc(-50% + 240px), calc(-50% - 70px)) rotate(0deg); }
+            20%, 35% { transform: translate(calc(-50% + 240px), calc(-50% - 70px)) rotate(-72deg); }
+            40%, 55% { transform: translate(calc(-50% + 240px), calc(-50% - 70px)) rotate(-144deg); }
+            60%, 75% { transform: translate(calc(-50% + 240px), calc(-50% - 70px)) rotate(-216deg); }
+            80%, 95% { transform: translate(calc(-50% + 240px), calc(-50% - 70px)) rotate(-288deg); }
+            100% { transform: translate(calc(-50% + 240px), calc(-50% - 70px)) rotate(-360deg); }
+        }
+        .node-right {
+            animation: counterSpin_node-right 25s infinite ease-in-out;
+        }
+
+        @keyframes counterSpin_node-bottom-right {
+            0%, 15% { transform: translate(calc(-50% + 150px), calc(-50% + 190px)) rotate(0deg); }
+            20%, 35% { transform: translate(calc(-50% + 150px), calc(-50% + 190px)) rotate(-72deg); }
+            40%, 55% { transform: translate(calc(-50% + 150px), calc(-50% + 190px)) rotate(-144deg); }
+            60%, 75% { transform: translate(calc(-50% + 150px), calc(-50% + 190px)) rotate(-216deg); }
+            80%, 95% { transform: translate(calc(-50% + 150px), calc(-50% + 190px)) rotate(-288deg); }
+            100% { transform: translate(calc(-50% + 150px), calc(-50% + 190px)) rotate(-360deg); }
+        }
+        .node-bottom-right {
+            animation: counterSpin_node-bottom-right 25s infinite ease-in-out;
+        }
+
+        @keyframes counterSpin_node-bottom-left {
+            0%, 15% { transform: translate(calc(-50% - 150px), calc(-50% + 190px)) rotate(0deg); }
+            20%, 35% { transform: translate(calc(-50% - 150px), calc(-50% + 190px)) rotate(-72deg); }
+            40%, 55% { transform: translate(calc(-50% - 150px), calc(-50% + 190px)) rotate(-144deg); }
+            60%, 75% { transform: translate(calc(-50% - 150px), calc(-50% + 190px)) rotate(-216deg); }
+            80%, 95% { transform: translate(calc(-50% - 150px), calc(-50% + 190px)) rotate(-288deg); }
+            100% { transform: translate(calc(-50% - 150px), calc(-50% + 190px)) rotate(-360deg); }
+        }
+        .node-bottom-left {
+            animation: counterSpin_node-bottom-left 25s infinite ease-in-out;
+        }
+
+        @keyframes counterSpin_node-left {
+            0%, 15% { transform: translate(calc(-50% - 240px), calc(-50% - 70px)) rotate(0deg); }
+            20%, 35% { transform: translate(calc(-50% - 240px), calc(-50% - 70px)) rotate(-72deg); }
+            40%, 55% { transform: translate(calc(-50% - 240px), calc(-50% - 70px)) rotate(-144deg); }
+            60%, 75% { transform: translate(calc(-50% - 240px), calc(-50% - 70px)) rotate(-216deg); }
+            80%, 95% { transform: translate(calc(-50% - 240px), calc(-50% - 70px)) rotate(-288deg); }
+            100% { transform: translate(calc(-50% - 240px), calc(-50% - 70px)) rotate(-360deg); }
+        }
+        .node-left {
+            animation: counterSpin_node-left 25s infinite ease-in-out;
+        }
+
+        @media (max-width: 991px) {
+            .hub-nodes-container {
+                animation: none;
+            }
+            .hub-node {
+                animation: none !important;
+                transform: none !important;
+            }
+        }
+
+        
+        @media (max-width: 991px) {
+            .corporate-hub {
+                aspect-ratio: auto;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .hub-nodes-container {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+            .hub-node {
+                position: relative;
+                top: auto !important;
+                left: auto !important;
+                transform: none !important;
+                text-align: left !important;
+                width: 100%;
+                max-width: none;
+            }
+        }
+.sch-core {
             stroke: var(--p1-clr);
             stroke-width: 1.4;
             fill: none;
@@ -664,6 +871,7 @@
                 padding: 80px 0 50px !important;
             }
         }
+    
     </style>
 </head>
 
@@ -766,7 +974,8 @@
         <div class="hero-inner">
             <div class="reveal in">
                 <h1>Every framework is a coordinate, not a checkbox.</h1>
-                <p class="lede">Clarent360 maps your organization onto the standards that actually govern your industry, geography, and risk — then builds the evidence trail to prove it, not just implement it.</p>
+                <p class="lede">Clarent360 maps your organization onto the standards that actually govern your industry,
+                    geography, and risk — then builds the evidence trail to prove it, not just implement it.</p>
                 <div class="hero-ctas">
                     <a href="#frameworks"
                         class="common-btn box-style cmn-style1 d-inline-flex justify-content-center align-items-center gap-2 fs18 fw-semibold white overflow-hidden rounded-5 p3-bg"
@@ -789,49 +998,40 @@
                 </div>
             </div>
 
-            <div class="schematic reveal in">
-                <svg viewBox="0 0 440 440">
-                    <circle cx="220" cy="220" r="188" class="sch-ring" stroke-dasharray="2 5" />
-                    <circle cx="220" cy="220" r="140" class="sch-ring" />
-                    <circle cx="220" cy="220" r="56" class="sch-core" />
-                    <text x="220" y="216" text-anchor="middle" class="sch-label"
-                        style="fill:var(--paper); font-size:11px;">CLIENT</text>
-                    <text x="220" y="230" text-anchor="middle" class="sch-label"
-                        style="fill:var(--p2-clr); font-size:11px;">POSTURE</text>
-
-                    <line x1="220" y1="32" x2="220" y2="80" class="sch-dim" />
-                    <line x1="220" y1="80" x2="140" y2="80" class="sch-dim" />
-                    <circle cx="140" cy="80" r="3" class="sch-node-dot" />
-                    <text x="30" y="70" class="sch-label">INFO SEC &amp; RISK</text>
-                    <text x="30" y="84" class="sch-sublabel">ISO 27001 · NIST CSF/800-53</text>
-
-                    <line x1="360" y1="140" x2="392" y2="140" class="sch-dim" />
-                    <circle cx="300" cy="140" r="3" class="sch-node-dot" />
-                    <line x1="392" y1="140" x2="300" y2="140" class="sch-dim" />
-                    <text x="330" y="126" class="sch-label">PRIVACY</text>
-                    <text x="330" y="140" class="sch-sublabel">ISO 27701</text>
-                    <text x="330" y="154" class="sch-sublabel">GDPR · HIPAA</text>
-
-                    <line x1="360" y1="300" x2="392" y2="300" class="sch-dim" />
-                    <circle cx="300" cy="300" r="3" class="sch-node-dot" />
-                    <line x1="392" y1="300" x2="300" y2="300" class="sch-dim" />
-                    <text x="330" y="292" class="sch-label">AI GOVERNANCE</text>
-                    <text x="330" y="306" class="sch-sublabel">ISO 42001 · NIST AI RMF</text>
-
-                    <line x1="80" y1="300" x2="48" y2="300" class="sch-dim" />
-                    <circle cx="140" cy="300" r="3" class="sch-node-dot" />
-                    <line x1="48" y1="300" x2="140" y2="300" class="sch-dim" />
-                    <text x="16" y="286" class="sch-label">ASSURANCE</text>
-                    <text x="16" y="300" class="sch-sublabel">SOC 2 · ISO 20000-1</text>
-                    <text x="16" y="314" class="sch-sublabel">ISO 9001</text>
-
-                    <line x1="220" y1="360" x2="220" y2="408" class="sch-dim" />
-                    <circle cx="220" cy="360" r="3" class="sch-node-dot" />
-                    <text x="70" y="422" class="sch-label">SECTOR <tspan class="sch-sublabel">· CPS 234</tspan> — FOUNDATIONAL <tspan class="sch-sublabel">· CE / E8</tspan></text>
-
-                    <circle cx="220" cy="220" r="3" fill="var(--p2-clr)" />
-                </svg>
+            
+            <div class="corporate-hub reveal in">
+                <div class="hub-center">
+                    <h3>CLIENT<br><span class="highlight">POSTURE</span></h3>
+                </div>
+                
+                <div class="hub-nodes-container">
+                    <div class="hub-node node-top" style="background-color: rgba(81, 53, 255, 0.04);">
+                        <h4>Info Sec & Risk</h4>
+                        <p><strong>ISO 27001</strong><br>NIST CSF / 800-53</p>
+                    </div>
+                    
+                    <div class="hub-node node-left" style="background-color: rgba(46, 204, 113, 0.05);">
+                        <h4>Assurance</h4>
+                        <p><strong>SOC 2</strong> · ISO 20000-1<br>ISO 9001</p>
+                    </div>
+                    
+                    <div class="hub-node node-right" style="background-color: rgba(254, 213, 0, 0.08);">
+                        <h4>Privacy</h4>
+                        <p><strong>ISO 27701</strong><br>GDPR · HIPAA</p>
+                    </div>
+                    
+                    <div class="hub-node node-bottom-left" style="background-color: rgba(255, 84, 85, 0.04);">
+                        <h4>Sector</h4>
+                        <p><strong>CPS 234</strong><br>FOUNDATIONAL CE / E8</p>
+                    </div>
+                    
+                    <div class="hub-node node-bottom-right" style="background-color: rgba(0, 168, 255, 0.04);">
+                        <h4>AI Governance</h4>
+                        <p><strong>ISO 42001</strong><br>NIST AI RMF</p>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -846,7 +1046,8 @@
                             <div class="step-num">01</div>
                             <div class="step-content">
                                 <h4>Scope</h4>
-                                <p>Identify which frameworks your regulators, customers, and industry actually require.</p>
+                                <p>Identify which frameworks your regulators, customers, and industry actually require.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -856,7 +1057,8 @@
                             <div class="step-num">02</div>
                             <div class="step-content">
                                 <h4>Gap assess</h4>
-                                <p>Baseline current controls against the target framework's clauses, criteria, or maturity levels.</p>
+                                <p>Baseline current controls against the target framework's clauses, criteria, or
+                                    maturity levels.</p>
                             </div>
                         </div>
                     </div>
@@ -866,7 +1068,8 @@
                             <div class="step-num">03</div>
                             <div class="step-content">
                                 <h4>Implement</h4>
-                                <p>Build the policies, controls, and evidence trail needed to operate the framework, not just document it.</p>
+                                <p>Build the policies, controls, and evidence trail needed to operate the framework, not
+                                    just document it.</p>
                             </div>
                         </div>
                     </div>
@@ -876,7 +1079,8 @@
                             <div class="step-num">04</div>
                             <div class="step-content">
                                 <h4>Certify &amp; sustain</h4>
-                                <p>Support audits and attestations, then keep the program current as standards and threats evolve.</p>
+                                <p>Support audits and attestations, then keep the program current as standards and
+                                    threats evolve.</p>
                             </div>
                         </div>
                     </div>
@@ -892,7 +1096,8 @@
                 <div>
                     <h2>Fifteen frameworks, mapped to what your business actually needs.</h2>
                 </div>
-                <p>Filter by domain, or scroll the full set — each can be implemented standalone or combined into a single security operating model.</p>
+                <p>Filter by domain, or scroll the full set — each can be implemented standalone or combined into a
+                    single security operating model.</p>
             </div>
 
             <div class="filters">
@@ -908,7 +1113,8 @@
             <div class="fw-grid">
 
                 <div class="fw-card reveal" data-cat="infosec">
-                    <div class="card-top"><span class="card-code">ISO 27001</span><span class="card-region">GLOBAL</span></div>
+                    <div class="card-top"><span class="card-code">ISO 27001</span><span
+                            class="card-region">GLOBAL</span></div>
                     <div class="cat">Info Sec &amp; Risk Governance</div>
                     <h3>Information Security Management System</h3>
                     <p class="tag">The global benchmark for information security governance.</p>
@@ -921,7 +1127,8 @@
                 </div>
 
                 <div class="fw-card reveal" data-cat="infosec">
-                    <div class="card-top"><span class="card-code">NIST CSF</span><span class="card-region">US / GLOBAL</span></div>
+                    <div class="card-top"><span class="card-code">NIST CSF</span><span class="card-region">US /
+                            GLOBAL</span></div>
                     <div class="cat">Info Sec &amp; Risk Governance</div>
                     <h3>Cybersecurity Framework 2.0</h3>
                     <p class="tag">Identify, protect, detect, respond, recover.</p>
@@ -934,7 +1141,8 @@
                 </div>
 
                 <div class="fw-card reveal" data-cat="infosec">
-                    <div class="card-top"><span class="card-code">NIST SP 800-53</span><span class="card-region">US FEDERAL</span></div>
+                    <div class="card-top"><span class="card-code">NIST SP 800-53</span><span class="card-region">US
+                            FEDERAL</span></div>
                     <div class="cat">Info Sec &amp; Risk Governance</div>
                     <h3>Security &amp; Privacy Control Catalogue</h3>
                     <p class="tag">1,000+ controls, tailored to risk impact.</p>
@@ -947,7 +1155,8 @@
                 </div>
 
                 <div class="fw-card reveal" data-cat="infosec">
-                    <div class="card-top"><span class="card-code">ISO 31000</span><span class="card-region">GLOBAL</span></div>
+                    <div class="card-top"><span class="card-code">ISO 31000</span><span
+                            class="card-region">GLOBAL</span></div>
                     <div class="cat">Info Sec &amp; Risk Governance</div>
                     <h3>Risk Management Guidelines</h3>
                     <p class="tag">Turn uncertainty into informed decisions.</p>
@@ -960,7 +1169,8 @@
                 </div>
 
                 <div class="fw-card reveal" data-cat="privacy">
-                    <div class="card-top"><span class="card-code">ISO 27701</span><span class="card-region">GLOBAL</span></div>
+                    <div class="card-top"><span class="card-code">ISO 27701</span><span
+                            class="card-region">GLOBAL</span></div>
                     <div class="cat">Privacy &amp; Data Protection</div>
                     <h3>Privacy Information Management System</h3>
                     <p class="tag">Extend your ISMS into provable privacy governance.</p>
@@ -973,7 +1183,8 @@
                 </div>
 
                 <div class="fw-card reveal" data-cat="privacy">
-                    <div class="card-top"><span class="card-code">GDPR</span><span class="card-region">EU / EEA</span></div>
+                    <div class="card-top"><span class="card-code">GDPR</span><span class="card-region">EU / EEA</span>
+                    </div>
                     <div class="cat">Privacy &amp; Data Protection</div>
                     <h3>General Data Protection Regulation</h3>
                     <p class="tag">The world's toughest personal data law.</p>
@@ -999,7 +1210,8 @@
                 </div>
 
                 <div class="fw-card reveal" data-cat="ai">
-                    <div class="card-top"><span class="card-code">ISO 42001</span><span class="card-region">GLOBAL</span></div>
+                    <div class="card-top"><span class="card-code">ISO 42001</span><span
+                            class="card-region">GLOBAL</span></div>
                     <div class="cat">AI Governance</div>
                     <h3>Artificial Intelligence Management System</h3>
                     <p class="tag">Certifiable governance for trustworthy AI.</p>
@@ -1012,7 +1224,8 @@
                 </div>
 
                 <div class="fw-card reveal" data-cat="ai">
-                    <div class="card-top"><span class="card-code">NIST AI RMF</span><span class="card-region">US / GLOBAL</span></div>
+                    <div class="card-top"><span class="card-code">NIST AI RMF</span><span class="card-region">US /
+                            GLOBAL</span></div>
                     <div class="cat">AI Governance</div>
                     <h3>AI Risk Management Framework 1.0</h3>
                     <p class="tag">Govern. Map. Measure. Manage.</p>
@@ -1025,7 +1238,8 @@
                 </div>
 
                 <div class="fw-card reveal" data-cat="assurance">
-                    <div class="card-top"><span class="card-code">SOC 2</span><span class="card-region">US / GLOBAL</span></div>
+                    <div class="card-top"><span class="card-code">SOC 2</span><span class="card-region">US /
+                            GLOBAL</span></div>
                     <div class="cat">Assurance &amp; Service Management</div>
                     <h3>Service Organization Controls (Type II)</h3>
                     <p class="tag">Independent proof your controls work — not just exist.</p>
@@ -1038,7 +1252,8 @@
                 </div>
 
                 <div class="fw-card reveal" data-cat="assurance">
-                    <div class="card-top"><span class="card-code">ISO 20000-1</span><span class="card-region">GLOBAL</span></div>
+                    <div class="card-top"><span class="card-code">ISO 20000-1</span><span
+                            class="card-region">GLOBAL</span></div>
                     <div class="cat">Assurance &amp; Service Management</div>
                     <h3>IT Service Management System</h3>
                     <p class="tag">Deliver IT services your customers can rely on.</p>
@@ -1051,7 +1266,8 @@
                 </div>
 
                 <div class="fw-card reveal" data-cat="assurance">
-                    <div class="card-top"><span class="card-code">ISO 9001</span><span class="card-region">GLOBAL</span></div>
+                    <div class="card-top"><span class="card-code">ISO 9001</span><span class="card-region">GLOBAL</span>
+                    </div>
                     <div class="cat">Assurance &amp; Service Management</div>
                     <h3>Quality Management System</h3>
                     <p class="tag">Consistency your customers can measure.</p>
@@ -1064,7 +1280,8 @@
                 </div>
 
                 <div class="fw-card reveal" data-cat="sector">
-                    <div class="card-top"><span class="card-code">CPS 234</span><span class="card-region">AUSTRALIA</span></div>
+                    <div class="card-top"><span class="card-code">CPS 234</span><span
+                            class="card-region">AUSTRALIA</span></div>
                     <div class="cat">Sector &amp; Regulatory</div>
                     <h3>APRA Information Security Standard</h3>
                     <p class="tag">Mandatory security governance for regulated financial entities.</p>
@@ -1077,7 +1294,8 @@
                 </div>
 
                 <div class="fw-card reveal" data-cat="foundational">
-                    <div class="card-top"><span class="card-code">Cyber Essentials</span><span class="card-region">UK</span></div>
+                    <div class="card-top"><span class="card-code">Cyber Essentials</span><span
+                            class="card-region">UK</span></div>
                     <div class="cat">Foundational Controls</div>
                     <h3>UK Government-Backed Certification</h3>
                     <p class="tag">Five controls that stop most common attacks.</p>
@@ -1086,11 +1304,13 @@
                         <li>Required for many UK government contracts</li>
                         <li>Cyber Essentials Plus adds independent technical testing</li>
                     </ul>
-                    <a href="cyber-essentials.html" class="card-link">Discuss Cyber Essentials <span class="arrow">→</span></a>
+                    <a href="cyber-essentials.html" class="card-link">Discuss Cyber Essentials <span
+                            class="arrow">→</span></a>
                 </div>
 
                 <div class="fw-card reveal" data-cat="foundational">
-                    <div class="card-top"><span class="card-code">Essential Eight</span><span class="card-region">AUSTRALIA</span></div>
+                    <div class="card-top"><span class="card-code">Essential Eight</span><span
+                            class="card-region">AUSTRALIA</span></div>
                     <div class="cat">Foundational Controls</div>
                     <h3>ACSC Mitigation Strategies</h3>
                     <p class="tag">Australia's baseline for ransomware and intrusion resilience.</p>
@@ -1099,7 +1319,8 @@
                         <li>Maturity Levels 1–3 track implementation progress</li>
                         <li>Mandated for non-corporate Commonwealth entities</li>
                     </ul>
-                    <a href="essential-8.html" class="card-link">Discuss Essential Eight <span class="arrow">→</span></a>
+                    <a href="essential-8.html" class="card-link">Discuss Essential Eight <span
+                            class="arrow">→</span></a>
                 </div>
 
             </div>
@@ -1113,7 +1334,8 @@
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-8 col-md-12">
                         <h2>Let's find the frameworks that actually apply to you.</h2>
-                        <p>Tell us your industry, geography, and customer base — we'll map the minimum viable set of frameworks and the fastest path to demonstrable compliance.</p>
+                        <p>Tell us your industry, geography, and customer base — we'll map the minimum viable set of
+                            frameworks and the fastest path to demonstrable compliance.</p>
                     </div>
                     <div class="col-lg-4 col-md-12 text-lg-end text-center">
                         <a href="#contact" class="cta-btn">Book a framework fit review →</a>

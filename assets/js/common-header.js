@@ -1212,16 +1212,18 @@ document.addEventListener("DOMContentLoaded", () => {
         // Dynamic Submenu Hover/Click Handler for Services Tab Switching
         const megaMenu = document.querySelector('.services-mega');
         if (megaMenu) {
-            const tabs = megaMenu.querySelectorAll('[data-services-tab]');
+            const tabs = megaMenu.querySelectorAll('.services-mega__tab');
             const panels = megaMenu.querySelectorAll('[data-services-panel]');
             tabs.forEach(tab => {
                 // Hover: switch panel
                 tab.addEventListener('mouseenter', () => {
                     const target = tab.getAttribute('data-services-tab');
                     tabs.forEach(item => item.classList.toggle('active', item === tab));
-                    panels.forEach(panel => {
-                        panel.classList.toggle('active', panel.getAttribute('data-services-panel') === target);
-                    });
+                    if (target) {
+                        panels.forEach(panel => {
+                            panel.classList.toggle('active', panel.getAttribute('data-services-panel') === target);
+                        });
+                    }
                 });
                 // Click: navigate to landing page
                 tab.addEventListener('click', event => {

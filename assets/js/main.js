@@ -39,7 +39,7 @@ CSS TABLE OF CONTENTS
 				// 1. Initialize Services Mega Menu Tabs
 				$(".services-mega").each(function () {
 					const $megaMenu = $(this);
-					const $tabs = $megaMenu.find('[data-services-tab]');
+					const $tabs = $megaMenu.find('.services-mega__tab');
 					const $panels = $megaMenu.find('[data-services-panel]');
 
 					function activateTab($tab) {
@@ -47,10 +47,12 @@ CSS TABLE OF CONTENTS
 						$tabs.each(function () {
 							$(this).toggleClass('active', this === $tab[0]);
 						});
-						$panels.each(function () {
-							const $panel = $(this);
-							$panel.toggleClass('active', $panel.attr('data-services-panel') === target);
-						});
+						if (target) {
+							$panels.each(function () {
+								const $panel = $(this);
+								$panel.toggleClass('active', $panel.attr('data-services-panel') === target);
+							});
+						}
 					}
 
 					$tabs.off('click mouseenter').on('mouseenter', function () {
