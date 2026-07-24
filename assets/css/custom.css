@@ -4071,3 +4071,23 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
         display: none !important;
     }
 }
+
+/* Footer text hover effect */
+.footer-section a:hover,
+.footer-section .list-area li a:hover,
+.footer-section .white65:hover,
+.hover-white:hover {
+    color: #ffffff !important;
+}
+
+/* Don't apply hover color effect to the linkedin icon box */
+.footer-section .social-custom a:hover {
+    color: #0a66c2 !important; 
+    opacity: 0.9;
+}
+
+
+/* Footer headings font size */
+.footer-section .widget-head h5 {
+    font-size: 15px !important;
+}

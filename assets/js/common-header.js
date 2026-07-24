@@ -151,33 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                 <li class="services-mega__panels">
                                                                                                          <div class="services-mega__panel active" data-services-panel="security">
                                                          <ul class="services-mega__list">
-                                                             <li class="services-mega__item">
-                                                                 <a href="dlp-solutions.html" class="mega-card-item">
-                                                                     <div class="micon-box"><i class="fa-solid fa-user-lock"></i></div>
-                                                                     <div class="mcontent-box">
-                                                                         <span class="mtitle">DLP Solutions</span>
-                                                                         <span class="mdesc">Data Loss Prevention strategy, tool configuration and enforcement.</span>
-                                                                     </div>
-                                                                 </a>
-                                                             </li>
-                                                             <li class="services-mega__item">
-                                                                 <a href="threat-hunting.html" class="mega-card-item">
-                                                                     <div class="micon-box"><i class="fa-solid fa-crosshairs"></i></div>
-                                                                     <div class="mcontent-box">
-                                                                         <span class="mtitle">Threat Hunting</span>
-                                                                         <span class="mdesc">Proactive threat hunting, compromise assessments and SOC support.</span>
-                                                                     </div>
-                                                                 </a>
-                                                             </li>
-                                                             <li class="services-mega__item">
-                                                                 <a href="cloud-solutions.html" class="mega-card-item">
-                                                                     <div class="micon-box"><i class="fa-solid fa-cloud"></i></div>
-                                                                     <div class="mcontent-box">
-                                                                         <span class="mtitle">Cloud Security</span>
-                                                                         <span class="mdesc">Secure cloud infrastructure with monitoring, identity, and compliance.</span>
-                                                                     </div>
-                                                                 </a>
-                                                             </li>
+                                                             
                                                              <li class="services-mega__item">
                                                                  <a href="microsoft-security-reviews.html" class="mega-card-item">
                                                                      <div class="micon-box"><i class="fa-brands fa-microsoft"></i></div>
@@ -232,6 +206,37 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                      </div>
                                                                  </a>
                                                              </li>
+
+                                                             <li class="services-mega__item">
+                                                                 <a href="zero-trust-implementations.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Zero Trust Implementations</span>
+                                                                         <span class="mdesc">Verify users, devices, and access continuously.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             
+                                                             <li class="services-mega__item">
+                                                                 <a href="security-design-architecture.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-compass-drafting"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Security Design & Zero Trust</span>
+                                                                         <span class="mdesc">Zero Trust architecture, design validation and secure configurations.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="rsa-archer-solutions.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-cube"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">RSA Archer Solutions</span>
+                                                                         <span class="mdesc">RSA Archer platform configuration, reporting, and support.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             
+
                                                              <li class="services-mega__item">
                                                                   <a href="service-now-solutions.html" class="mega-card-item">
                                                                      <div class="micon-box"><i class="fa-solid fa-briefcase"></i></div>
@@ -260,33 +265,6 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                  </a>
                                                              </li>
                                                              <li class="services-mega__item">
-                                                                 <a href="security-design-architecture.html" class="mega-card-item">
-                                                                     <div class="micon-box"><i class="fa-solid fa-compass-drafting"></i></div>
-                                                                     <div class="mcontent-box">
-                                                                         <span class="mtitle">Security Design & Zero Trust</span>
-                                                                         <span class="mdesc">Zero Trust architecture, design validation and secure configurations.</span>
-                                                                     </div>
-                                                                 </a>
-                                                             </li>
-                                                             <li class="services-mega__item">
-                                                                 <a href="rsa-archer-solutions.html" class="mega-card-item">
-                                                                     <div class="micon-box"><i class="fa-solid fa-cube"></i></div>
-                                                                     <div class="mcontent-box">
-                                                                         <span class="mtitle">RSA Archer Solutions</span>
-                                                                         <span class="mdesc">RSA Archer platform configuration, reporting, and support.</span>
-                                                                     </div>
-                                                                 </a>
-                                                             </li>
-                                                             <li class="services-mega__item">
-                                                                 <a href="zero-trust-implementations.html" class="mega-card-item">
-                                                                     <div class="micon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                                                                     <div class="mcontent-box">
-                                                                         <span class="mtitle">Zero Trust Implementations</span>
-                                                                         <span class="mdesc">Verify users, devices, and access continuously.</span>
-                                                                     </div>
-                                                                 </a>
-                                                             </li>
-                                                             <li class="services-mega__item">
                                                                  <a href="passwordless-mfa-solutions-sdo.html" class="mega-card-item">
                                                                      <div class="micon-box"><i class="fa-solid fa-key"></i></div>
                                                                      <div class="mcontent-box">
@@ -310,6 +288,33 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                      <div class="mcontent-box">
                                                                          <span class="mtitle">Virtualization Security</span>
                                                                          <span class="mdesc">Hypervisor hardening and virtual isolation for SMB & Enterprise.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="dlp-solutions.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-user-lock"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">DLP Solutions</span>
+                                                                         <span class="mdesc">Data Loss Prevention strategy, tool configuration and enforcement.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="threat-hunting.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-crosshairs"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Threat Hunting</span>
+                                                                         <span class="mdesc">Proactive threat hunting, compromise assessments and SOC support.</span>
+                                                                     </div>
+                                                                 </a>
+                                                             </li>
+                                                             <li class="services-mega__item">
+                                                                 <a href="cloud-solutions.html" class="mega-card-item">
+                                                                     <div class="micon-box"><i class="fa-solid fa-cloud"></i></div>
+                                                                     <div class="mcontent-box">
+                                                                         <span class="mtitle">Cloud Security</span>
+                                                                         <span class="mdesc">Secure cloud infrastructure with monitoring, identity, and compliance.</span>
                                                                      </div>
                                                                  </a>
                                                              </li>
@@ -1067,10 +1072,43 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="row gy-5 pb-5 border-bottom border-secondary">
 
                 <!-- Company Info -->
-                
+                <div class="col-xl-3 col-lg-12 col-md-12 mb-xl-0 mb-lg-4">
+                    <div class="footer-widget">
+
+                        <a href="index.html" class="footer-logo d-inline-block mb-4">
+                            <img src="assets/webimages/log-footer.png" width="150px" alt="logo" class="white-logoo">
+                        </a>
+
+                        <p class="white65 mb-4">
+                            Delivering enterprise-grade cybersecurity, compliance,
+                            cloud security and governance solutions for modern businesses.
+                        </p>
+
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="fal fa-envelope white fs-5"></i>
+                                <a href="mailto:info@clarent360.com.au" class="white65 hover-white">info@clarent360.com.au</a>
+                            </div>
+                            <div class="d-flex align-items-start gap-3">
+                                <i class="fal fa-map-marker-alt white fs-5 mt-1"></i>
+                                <p class="white65 mb-0">
+                                    Sydney, Australia <br>
+                                    Dubai, UAE
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Social -->
+                        <div class="social-custom d-flex align-items-center gap-2">
+                            <a href="https://www.linkedin.com/in/clarent-solutions-472a16407/" target="_blank" style="background-color: #ffffff; color: #0a66c2; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-linkedin-in fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- GRC Services -->
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                <div class="col-xl col-lg-2 col-md-4 col-sm-6">
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
@@ -1096,7 +1134,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <!-- Programs -->
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                <div class="col-xl col-lg-2 col-md-4 col-sm-6">
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
@@ -1122,7 +1160,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <!-- Psychometric Analysis -->
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                <div class="col-xl col-lg-2 col-md-4 col-sm-6">
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
@@ -1143,7 +1181,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <!-- Frameworks -->
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                <div class="col-xl col-lg-2 col-md-4 col-sm-6">
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
@@ -1194,40 +1232,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                 </div>
 
-                <!-- Contact Details -->
-                <div class="col-xl-2 col-lg-3 col-md-6">
-                    <div class="footer-widget">
-
-                        <div class="widget-head mb-4">
-                            <h5 class="white">Contact</h5>
-                        </div>
-
-                        <div class="d-flex flex-column gap-4">
-
-                            <div>
-                                <span class="fs-eight white65 d-block mb-1">
-                                    Email Address
-                                </span>
-
-                                <a href="mailto:info@clarent360.com.au" class="white fw-semibold">
-                                    info@clarent360.com.au
-                                </a>
-                            </div>
-                            <div>
-                                <span class="fs-eight white65 d-block mb-1">
-                                    Location
-                                </span>
-
-                                <p class="white mb-0">
-                                    Sydney, Australia
-                                </p>
-                                <p class="white mb-0">
-                                    Dubai, UAE
-
-                                </p>
-                            </div>
-
-                        </div>
+                
 
                     </div>
                 </div>
@@ -1239,15 +1244,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <div class="row align-items-center gy-3">
 
-                    <!-- Logo on left -->
-                    <div class="col-lg-4 text-center text-lg-start">
-                        <a href="index.html" class="footer-logo d-inline-block">
-                            <img src="assets/webimages/log-footer.png" width="150px" alt="logo" class="white-logoo">
-                        </a>
-                    </div>
-
-                    <!-- Copyright in center -->
-                    <div class="col-lg-4 text-center">
+                    <div class="col-12 text-center">
                         <p class="white65 mb-0">
                             © 2026
                             <a href="index.html" class="white fw-semibold">
@@ -1255,15 +1252,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             </a>.
                             All Rights Reserved.
                         </p>
-                    </div>
-                    
-                    <!-- LinkedIn on right -->
-                    <div class="col-lg-4 text-center text-lg-end">
-                        <div class="social-custom d-flex justify-content-center justify-content-lg-end align-items-center gap-3">
-                            <a href="https://www.linkedin.com/in/clarent-solutions-472a16407/" target="_blank" style="background-color: #ffffff; color: #0a66c2; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
-                                <i class="fab fa-linkedin-in fs-5"></i>
-                            </a>
-                        </div>
                     </div>
 
                 </div>
