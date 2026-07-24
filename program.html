@@ -112,7 +112,7 @@
             display: grid;
             grid-template-columns: 1.05fr 0.95fr;
             gap: 56px;
-            /* align-items: center; */
+            align-items: center;
         }
 
         .eyebrow {
@@ -632,6 +632,395 @@
                 padding: 80px 0 50px !important;
             }
         }
+
+        /* ---------- CORPORATE HUB ---------- */
+        .corporate-hub {
+            position: relative;
+            width: 100%;
+            max-width: 580px;
+            margin: 0 auto;
+            aspect-ratio: 1.1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hub-center {
+            width: 150px;
+            height: 150px;
+            background: #ffffff;
+            border: 3px solid var(--p1-clr);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            box-shadow: 0 10px 30px rgba(81, 53, 255, 0.15);
+            position: relative;
+        }
+
+        .hub-center::before {
+            content: '';
+            position: absolute;
+            top: -24px;
+            left: -24px;
+            right: -24px;
+            bottom: -24px;
+            border: 1px dashed rgba(81, 53, 255, 0.25);
+            border-radius: 50%;
+            z-index: -1;
+            animation: rotateSlow 20s linear infinite;
+        }
+
+        @keyframes rotateSlow {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hub-center h3 {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            margin: 0;
+            line-height: 1.3;
+            text-align: center;
+            color: var(--paper);
+            letter-spacing: 0.05em;
+        }
+
+        .hub-center .highlight {
+            color: var(--p2-clr);
+        }
+
+        .hub-nodes-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .hub-node {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: #ffffff;
+            border: none;
+            border-radius: 20px;
+            padding: 14px 16px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
+            min-width: 160px;
+            max-width: 175px;
+            pointer-events: auto;
+            text-align: center;
+        }
+
+        .hub-node:hover {
+            border-color: #5135FF;
+            box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.1);
+        }
+
+        .hub-node h4 {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--paper);
+            margin: 0 0 8px;
+            text-transform: capitalize;
+            text-transform: uppercase;
+        }
+
+        .hub-node p {
+            font-family: "Inter", sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--slate);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .hub-node p strong {
+            color: var(--paper);
+            font-weight: 700;
+        }
+
+        /* Absolute positioning in a circle using translate */
+        .node-top {
+            transform: translate(calc(-50% + 0px), calc(-50% - 180px));
+        }
+
+        .node-right {
+            transform: translate(calc(-50% + 180px), calc(-50% - 50px));
+        }
+
+        .node-bottom-right {
+            transform: translate(calc(-50% + 110px), calc(-50% + 140px));
+        }
+
+        .node-bottom-left {
+            transform: translate(calc(-50% - 110px), calc(-50% + 140px));
+        }
+
+        .node-left {
+            transform: translate(calc(-50% - 180px), calc(-50% - 50px));
+        }
+
+        @keyframes spinHub {
+
+            0%,
+            15% {
+                transform: rotate(0deg);
+            }
+
+            20%,
+            35% {
+                transform: rotate(72deg);
+            }
+
+            40%,
+            55% {
+                transform: rotate(144deg);
+            }
+
+            60%,
+            75% {
+                transform: rotate(216deg);
+            }
+
+            80%,
+            95% {
+                transform: rotate(288deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hub-nodes-container {
+            animation: spinHub 25s infinite ease-in-out;
+        }
+
+        @keyframes counterSpin_node-top {
+
+            0%,
+            15% {
+                transform: translate(calc(-50% + 0px), calc(-50% - 180px)) rotate(0deg);
+            }
+
+            20%,
+            35% {
+                transform: translate(calc(-50% + 0px), calc(-50% - 180px)) rotate(-72deg);
+            }
+
+            40%,
+            55% {
+                transform: translate(calc(-50% + 0px), calc(-50% - 180px)) rotate(-144deg);
+            }
+
+            60%,
+            75% {
+                transform: translate(calc(-50% + 0px), calc(-50% - 180px)) rotate(-216deg);
+            }
+
+            80%,
+            95% {
+                transform: translate(calc(-50% + 0px), calc(-50% - 180px)) rotate(-288deg);
+            }
+
+            100% {
+                transform: translate(calc(-50% + 0px), calc(-50% - 180px)) rotate(-360deg);
+            }
+        }
+
+        .node-top {
+            animation: counterSpin_node-top 25s infinite ease-in-out;
+        }
+
+        @keyframes counterSpin_node-right {
+
+            0%,
+            15% {
+                transform: translate(calc(-50% + 180px), calc(-50% - 50px)) rotate(0deg);
+            }
+
+            20%,
+            35% {
+                transform: translate(calc(-50% + 180px), calc(-50% - 50px)) rotate(-72deg);
+            }
+
+            40%,
+            55% {
+                transform: translate(calc(-50% + 180px), calc(-50% - 50px)) rotate(-144deg);
+            }
+
+            60%,
+            75% {
+                transform: translate(calc(-50% + 180px), calc(-50% - 50px)) rotate(-216deg);
+            }
+
+            80%,
+            95% {
+                transform: translate(calc(-50% + 180px), calc(-50% - 50px)) rotate(-288deg);
+            }
+
+            100% {
+                transform: translate(calc(-50% + 180px), calc(-50% - 50px)) rotate(-360deg);
+            }
+        }
+
+        .node-right {
+            animation: counterSpin_node-right 25s infinite ease-in-out;
+        }
+
+        @keyframes counterSpin_node-bottom-right {
+
+            0%,
+            15% {
+                transform: translate(calc(-50% + 110px), calc(-50% + 140px)) rotate(0deg);
+            }
+
+            20%,
+            35% {
+                transform: translate(calc(-50% + 110px), calc(-50% + 140px)) rotate(-72deg);
+            }
+
+            40%,
+            55% {
+                transform: translate(calc(-50% + 110px), calc(-50% + 140px)) rotate(-144deg);
+            }
+
+            60%,
+            75% {
+                transform: translate(calc(-50% + 110px), calc(-50% + 140px)) rotate(-216deg);
+            }
+
+            80%,
+            95% {
+                transform: translate(calc(-50% + 110px), calc(-50% + 140px)) rotate(-288deg);
+            }
+
+            100% {
+                transform: translate(calc(-50% + 110px), calc(-50% + 140px)) rotate(-360deg);
+            }
+        }
+
+        .node-bottom-right {
+            animation: counterSpin_node-bottom-right 25s infinite ease-in-out;
+        }
+
+        @keyframes counterSpin_node-bottom-left {
+
+            0%,
+            15% {
+                transform: translate(calc(-50% - 110px), calc(-50% + 140px)) rotate(0deg);
+            }
+
+            20%,
+            35% {
+                transform: translate(calc(-50% - 110px), calc(-50% + 140px)) rotate(-72deg);
+            }
+
+            40%,
+            55% {
+                transform: translate(calc(-50% - 110px), calc(-50% + 140px)) rotate(-144deg);
+            }
+
+            60%,
+            75% {
+                transform: translate(calc(-50% - 110px), calc(-50% + 140px)) rotate(-216deg);
+            }
+
+            80%,
+            95% {
+                transform: translate(calc(-50% - 110px), calc(-50% + 140px)) rotate(-288deg);
+            }
+
+            100% {
+                transform: translate(calc(-50% - 110px), calc(-50% + 140px)) rotate(-360deg);
+            }
+        }
+
+        .node-bottom-left {
+            animation: counterSpin_node-bottom-left 25s infinite ease-in-out;
+        }
+
+        @keyframes counterSpin_node-left {
+
+            0%,
+            15% {
+                transform: translate(calc(-50% - 180px), calc(-50% - 50px)) rotate(0deg);
+            }
+
+            20%,
+            35% {
+                transform: translate(calc(-50% - 180px), calc(-50% - 50px)) rotate(-72deg);
+            }
+
+            40%,
+            55% {
+                transform: translate(calc(-50% - 180px), calc(-50% - 50px)) rotate(-144deg);
+            }
+
+            60%,
+            75% {
+                transform: translate(calc(-50% - 180px), calc(-50% - 50px)) rotate(-216deg);
+            }
+
+            80%,
+            95% {
+                transform: translate(calc(-50% - 180px), calc(-50% - 50px)) rotate(-288deg);
+            }
+
+            100% {
+                transform: translate(calc(-50% - 180px), calc(-50% - 50px)) rotate(-360deg);
+            }
+        }
+
+        .node-left {
+            animation: counterSpin_node-left 25s infinite ease-in-out;
+        }
+
+        @media (max-width: 991px) {
+            .corporate-hub {
+                aspect-ratio: auto !important;
+                flex-direction: column !important;
+                gap: 20px !important;
+                transform: none !important;
+                margin-top: 20px !important;
+                padding: 0 15px !important;
+            }
+
+            .hub-center {
+                margin: 0 auto 20px auto !important;
+                flex-shrink: 0 !important;
+            }
+
+            .hub-nodes-container {
+                position: relative !important;
+                inset: auto !important;
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 14px !important;
+                width: 100% !important;
+                animation: none !important;
+            }
+
+            .hub-node {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                transform: none !important;
+                animation: none !important;
+                text-align: left !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+            }
+        }
     </style>
 </head>
 
@@ -759,46 +1148,37 @@
                 </div>
             </div>
 
-            <div class="schematic reveal in">
-                <svg viewBox="0 0 440 440">
-                    <circle cx="220" cy="220" r="188" class="sch-ring" stroke-dasharray="2 5" />
-                    <circle cx="220" cy="220" r="140" class="sch-ring" />
-                    <circle cx="220" cy="220" r="56" class="sch-core" />
-                    <text x="220" y="216" text-anchor="middle" class="sch-label"
-                        style="fill:var(--paper); font-size:11px;">CLIENT</text>
-                    <text x="220" y="230" text-anchor="middle" class="sch-label"
-                        style="fill:var(--p2-clr); font-size:11px;">ORGANIZATION</text>
+            <div class="corporate-hub reveal in nonon">
+                <div class="hub-center">
+                    <h3>CLIENT<br><span class="highlight">ORGANIZATION</span></h3>
+                </div>
 
-                    <!-- dimension line top -->
-                    <line x1="220" y1="32" x2="220" y2="80" class="sch-dim" />
-                    <line x1="220" y1="80" x2="140" y2="80" class="sch-dim" />
-                    <circle cx="140" cy="80" r="3" class="sch-node-dot" />
-                    <text x="30" y="76" class="sch-label">GOVERN <tspan class="sch-sublabel">· RMP / IAP</tspan></text>
+                <div class="hub-nodes-container">
+                    <div class="hub-node node-top">
+                        <h4>Govern</h4>
+                        <p><strong>RMP / IAP</strong></p>
+                    </div>
 
-                    <line x1="360" y1="140" x2="392" y2="140" class="sch-dim" />
-                    <circle cx="300" cy="140" r="3" class="sch-node-dot" />
-                    <line x1="392" y1="140" x2="300" y2="140" class="sch-dim" />
-                    <text x="330" y="132" class="sch-label">PROTECT</text>
-                    <text x="330" y="146" class="sch-sublabel">DSP / SEDP / VPMP</text>
+                    <div class="hub-node node-right">
+                        <h4>Protect</h4>
+                        <p><strong>DSP / SEDP / VPMP</strong></p>
+                    </div>
 
-                    <line x1="360" y1="300" x2="392" y2="300" class="sch-dim" />
-                    <circle cx="300" cy="300" r="3" class="sch-node-dot" />
-                    <line x1="392" y1="300" x2="300" y2="300" class="sch-dim" />
-                    <text x="330" y="292" class="sch-label">RESPOND</text>
-                    <text x="330" y="306" class="sch-sublabel">IIRP / COOP</text>
+                    <div class="hub-node node-bottom-right">
+                        <h4>Respond</h4>
+                        <p><strong>IIRP / COOP</strong></p>
+                    </div>
 
-                    <line x1="80" y1="300" x2="48" y2="300" class="sch-dim" />
-                    <circle cx="140" cy="300" r="3" class="sch-node-dot" />
-                    <line x1="48" y1="300" x2="140" y2="300" class="sch-dim" />
-                    <text x="16" y="292" class="sch-label">ASSURE</text>
-                    <text x="16" y="306" class="sch-sublabel">DPP / CSOP</text>
+                    <div class="hub-node node-bottom-left">
+                        <h4>Assure</h4>
+                        <p><strong>DPP / CSOP</strong></p>
+                    </div>
 
-                    <line x1="220" y1="360" x2="220" y2="408" class="sch-dim" />
-                    <circle cx="220" cy="360" r="3" class="sch-node-dot" />
-                    <text x="150" y="422" class="sch-label">SUPPLY CHAIN <tspan class="sch-sublabel">· C-SCRM</tspan></text>
-
-                    <circle cx="220" cy="220" r="3" fill="var(--p2-clr)" />
-                </svg>
+                    <div class="hub-node node-left">
+                        <h4>Supply Chain</h4>
+                        <p><strong>C-SCRM</strong></p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -871,7 +1251,8 @@
                         <li>Governance, risk, and compliance built into daily operations</li>
                         <li>Minimum security controls aligned to assessed risk</li>
                     </ul>
-                    <a href="data-security-program.html" class="card-link">Explore this program <span class="arrow">→</span></a>
+                    <a href="data-security-program.html" class="card-link">Explore this program <span
+                            class="arrow">→</span></a>
                 </div>
 
                 <div class="prog-card reveal" id="dpp">
@@ -889,7 +1270,8 @@
                         <li>DPO advisory, DPIAs, and cross-border transfer guidance</li>
                         <li>Privacy incident response and breach management</li>
                     </ul>
-                    <a href="data-privacy-program.html" class="card-link">Explore this program <span class="arrow">→</span></a>
+                    <a href="data-privacy-program.html" class="card-link">Explore this program <span
+                            class="arrow">→</span></a>
                 </div>
 
                 <div class="prog-card reveal" id="csop">
@@ -907,7 +1289,8 @@
                         <li>Rapid customization to your governance structure</li>
                         <li>Faster onboarding and reduced key-person dependency</li>
                     </ul>
-                    <a href="cybersecurity-sop-program.html" class="card-link">Explore this program <span class="arrow">→</span></a>
+                    <a href="cybersecurity-sop-program.html" class="card-link">Explore this program <span
+                            class="arrow">→</span></a>
                 </div>
 
                 <div class="prog-card reveal" id="rmp">
@@ -925,7 +1308,8 @@
                         <li>Executive oversight and accountability</li>
                         <li>Aligned to ISO 27002, NIST CSF/800-53, and CIS Controls</li>
                     </ul>
-                    <a href="risk-management-program.html" class="card-link">Explore this program <span class="arrow">→</span></a>
+                    <a href="risk-management-program.html" class="card-link">Explore this program <span
+                            class="arrow">→</span></a>
                 </div>
 
                 <div class="prog-card reveal" id="iap">
@@ -942,7 +1326,8 @@
                         <li>Security embedded from concept through production</li>
                         <li>Executive visibility into SDLC risk</li>
                     </ul>
-                    <a href="information-assurance-program.html" class="card-link">Explore this program <span class="arrow">→</span></a>
+                    <a href="information-assurance-program.html" class="card-link">Explore this program <span
+                            class="arrow">→</span></a>
                 </div>
 
                 <div class="prog-card reveal" id="iirp">
@@ -960,7 +1345,8 @@
                         <li>Trained responders and clear escalation paths</li>
                         <li>Faster detection, containment, and recovery</li>
                     </ul>
-                    <a href="integrated-incident-response-program.html" class="card-link">Explore this program <span class="arrow">→</span></a>
+                    <a href="integrated-incident-response-program.html" class="card-link">Explore this program <span
+                            class="arrow">→</span></a>
                 </div>
 
                 <div class="prog-card reveal" id="coop">
@@ -977,7 +1363,8 @@
                         <li>Coordinated BC/DR across business, clients, and vendors</li>
                         <li>Reduced downtime and faster recovery</li>
                     </ul>
-                    <a href="continuity-of-operations-program.html" class="card-link">Explore this program <span class="arrow">→</span></a>
+                    <a href="continuity-of-operations-program.html" class="card-link">Explore this program <span
+                            class="arrow">→</span></a>
                 </div>
 
                 <div class="prog-card reveal" id="sedp">
@@ -995,7 +1382,8 @@
                         <li>Secure development lifecycle practices</li>
                         <li>Continuous evaluation of technical and human controls</li>
                     </ul>
-                    <a href="secure-engineering-data-privacy-program.html" class="card-link">Explore this program <span class="arrow">→</span></a>
+                    <a href="secure-engineering-data-privacy-program.html" class="card-link">Explore this program <span
+                            class="arrow">→</span></a>
                 </div>
 
                 <div class="prog-card reveal" id="vpmp">
@@ -1012,7 +1400,8 @@
                         <li>Ongoing Attack Surface Management, not one-off scans</li>
                         <li>Governance reporting for executive leadership</li>
                     </ul>
-                    <a href="vulnerability-patch-management-program.html" class="card-link">Explore this program <span class="arrow">→</span></a>
+                    <a href="vulnerability-patch-management-program.html" class="card-link">Explore this program <span
+                            class="arrow">→</span></a>
                 </div>
 
                 <div class="prog-card reveal" id="cscrm">
@@ -1030,7 +1419,8 @@
                         <li>Concept of Operations for supply chain governance</li>
                         <li>Resilience against compromised technology components</li>
                     </ul>
-                    <a href="cybersecurity-scrm-strategy-implementation-plan.html" class="card-link">Explore this program <span class="arrow">→</span></a>
+                    <a href="cybersecurity-scrm-strategy-implementation-plan.html" class="card-link">Explore this
+                        program <span class="arrow">→</span></a>
                 </div>
 
             </div>
@@ -1093,6 +1483,39 @@
         }, { threshold: 0.15 });
         items.forEach(i => io.observe(i));
     </script>
+
+</body>
+
+</html>
+</div>
+</section>
+
+<!-- Dynamic Footer Injection -->
+<div id="footer"></div>
+
+<!-- ======== Standard Website JS Scripts ======== -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/viewport.jquery.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/jquery.waypoints.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/lenis.min.js"></script>
+<script src="assets/js/scrollSmoother.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/spilitext-gsap.js"></script>
+<script src="assets/js/vanilla-tilt.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- Header and Footer Injected Dynamically -->
+<script src="assets/js/common-header.js"></script>
+
+
 
 </body>
 

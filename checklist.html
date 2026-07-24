@@ -41,9 +41,9 @@
             --p3-clr: #FF5455;
 
             /* Maturity Bands mapped to templates colours */
-            --band1: rgba(80, 53, 255, 0.548);      /* Soft Purple (Foundational) */
-            --band2: rgba(255, 221, 50, 0.626);      /* Soft Gold (Developing) */
-            --band3: rgba(255, 84, 84, 0.597);      /* Soft Red (Cert-Ready) */
+            --band1: var(--p1-clr);      /* Soft Purple (Foundational) */
+            --band2: var(--p2-clr);      /* Soft Gold (Developing) */
+            --band3: var(--p3-clr);      /* Soft Red (Cert-Ready) */
         }
 
         * {
@@ -199,20 +199,50 @@
             font-family: "Inter", sans-serif;
         }
 
-        /* ---------- SCHEMATIC ---------- */
+        
+        
+        /* ---------- SCHEMATIC 3D ---------- */
+        .schematic-wrapper {
+            perspective: 1200px;
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes float3D {
+            0% { transform: rotateY(-20deg) rotateX(15deg) translateY(0px); }
+            50% { transform: rotateY(20deg) rotateX(25deg) translateY(-15px); }
+            100% { transform: rotateY(-20deg) rotateX(15deg) translateY(0px); }
+        }
+
         .schematic {
             position: relative;
-            width: 460px;
-            margin: 0 auto;
+            width: 100%;
+            transform-style: preserve-3d;
+            /* Removed float3D animation */
         }
 
         .schematic svg {
             width: 100%;
             height: auto;
             overflow: visible;
+            filter: drop-shadow(0 20px 30px rgba(81, 53, 255, 0.2));
+            transform: translateZ(20px);
+        }
+        
+        .gauge-needle {
+            transform-origin: 220px 260px;
+            filter: drop-shadow(-5px 10px 5px rgba(0,0,0,0.15));
         }
 
-        .sch-label {
+        /* Lift the dots and text for a pop effect */
+        .sch-label, circle {
+            filter: drop-shadow(-2px 4px 3px rgba(0,0,0,0.1));
+        }
+.sch-label {
             font-family: "Plus Jakarta Sans", sans-serif;
             font-size: 12px;
             fill: var(--paper);
@@ -224,12 +254,26 @@
             stroke: rgba(81, 53, 255, 0.45);
             stroke-width: 1.2;
         }
+        @keyframes revGauge {
+            0%, 5% { transform: rotate(-50deg); }
+            15% { transform: rotate(70deg); }
+            25% { transform: rotate(10deg); }
+            35% { transform: rotate(40deg); }
+            50% { transform: rotate(0deg); }
+            60% { transform: rotate(-3deg); }
+            65% { transform: rotate(2deg); }
+            70% { transform: rotate(0deg); }
+            85%, 100% { transform: rotate(-50deg); }
+        }
 
         .gauge-needle {
-            stroke: var(--p1-clr);
+            stroke: var(--paper);
             stroke-width: 3.5;
             stroke-linecap: round;
+            transform-origin: 220px 260px;
+            animation: revGauge 5s infinite cubic-bezier(0.25, 1, 0.5, 1);
         }
+
 
         /* ---------- SECTION SHELLS ---------- */
         section {
@@ -776,7 +820,8 @@
                 </div>
             </div>
 
-            <div class="schematic reveal in">
+            <div class="schematic-wrapper reveal in">
+            <div class="schematic">
                 <svg viewBox="0 0 440 300">
                     <!-- gauge arc -->
                     <path d="M 40 260 A 180 180 0 0 1 400 260" class="sch-dim" stroke-dasharray="2 5" fill="none" />
@@ -785,7 +830,7 @@
                     <path d="M 267 92 A 180 180 0 0 1 400 260" stroke="var(--band3)" stroke-width="14" fill="none" />
 
                     <line x1="220" y1="260" x2="120" y2="140" class="gauge-needle" />
-                    <circle cx="220" cy="260" r="7" fill="var(--p2-clr)" />
+                    <circle cx="220" cy="260" r="7" fill="var(--paper)" />
 
                     <text x="70" y="290" class="sch-label">FOUNDATIONAL</text>
                     <text x="185" y="70" class="sch-label">DEVELOPING</text>
@@ -793,6 +838,7 @@
 
                     <text x="220" y="230" text-anchor="middle" class="sch-label" style="fill:var(--p1-clr); font-size:12px; font-weight:700;">YOUR SCORE</text>
                 </svg>
+            </div>
             </div>
         </div>
     </section>

@@ -937,7 +937,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center mb-5">
                     
-                    <h2 class="black fw-bold mb-3">The Workforce Intelligence Framework</h2>
+                    <h2 id="workforce" style="scroll-margin-top: 100px;" class="black fw-bold mb-3">The Workforce Intelligence Framework</h2>
                     <p class="pra fs-six">Five integrated intelligence layers — each grounded in psychometric science, each delivering actionable data for better people decisions.</p>
                 </div>
             </div>
@@ -1094,7 +1094,7 @@
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
                     
-                    <h2 class="black fw-bold mb-3">The Cadence Frameworks</h2>
+                    <h2 id="cadence" style="scroll-margin-top: 100px;" class="black fw-bold mb-3">The Cadence Frameworks</h2>
                     <p class="pra fs-six">Four specialised predictive intelligence frameworks — from early childhood through career entry — designed for education providers, student welfare teams, and organisations investing in human potential at every life stage.</p>
                 </div>
             </div>
@@ -1147,7 +1147,7 @@
                     <div class="sx-header" onclick="toggleSX('sx-luminary')">
                         <span class="sx-ico"><i class="fa-solid fa-star"></i></span>
                         <div class="sx-meta">
-                            <h3>Luminary Intelligence Framework</h3>
+                            <h3 id="luminary" style="scroll-margin-top: 100px;">Luminary Intelligence Framework</h3>
                             <p>Predictive intelligence for junior school students — ages 6 to 12</p>
                         </div>
                         <div class="sx-pills me-3 d-none d-md-flex">
@@ -1267,7 +1267,7 @@
                     <div class="sx-header" onclick="toggleSX('sx-meridian')">
                         <span class="sx-ico"><i class="fa-solid fa-compass"></i></span>
                         <div class="sx-meta">
-                            <h3>Meridian Intelligence Framework</h3>
+                            <h3 id="meridian" style="scroll-margin-top: 100px;">Meridian Intelligence Framework</h3>
                             <p>Predictive intelligence for high school students — ages 13 to 17</p>
                         </div>
                         <div class="sx-pills me-3 d-none d-md-flex">
@@ -1387,7 +1387,7 @@
                     <div class="sx-header" onclick="toggleSX('sx-traverse')">
                         <span class="sx-ico"><i class="fa-solid fa-graduation-cap"></i></span>
                         <div class="sx-meta">
-                            <h3>Traverse Intelligence Framework</h3>
+                            <h3 id="traverse" style="scroll-margin-top: 100px;">Traverse Intelligence Framework</h3>
                             <p>Education-to-career predictive intelligence — graduates, TAFE completers and interns</p>
                         </div>
                         <div class="sx-pills me-3 d-none d-md-flex">
@@ -1507,7 +1507,7 @@
                     <div class="sx-header" onclick="toggleSX('sx-anchor')">
                         <span class="sx-ico"><i class="fa-solid fa-anchor"></i></span>
                         <div class="sx-meta">
-                            <h3>Anchor Intelligence Framework</h3>
+                            <h3 id="anchor" style="scroll-margin-top: 100px;">Anchor Intelligence Framework</h3>
                             <p>Mental health & wellbeing screening for young people — under 18</p>
                         </div>
                         <div class="sx-pills me-3 d-none d-md-flex">
@@ -1636,7 +1636,7 @@
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
                     
-                    <h2 class="black fw-bold mb-3">Built for Your Sector — Not Off the Shelf</h2>
+                    <h2 id="industry" style="scroll-margin-top: 100px;" class="black fw-bold mb-3">Built for Your Sector — Not Off the Shelf</h2>
                     <p class="pra fs-six">Unlike generic personality tests, Clarent 360 develops industry-specific assessment frameworks aligned to your operational realities, workforce requirements, and regulatory context.</p>
                 </div>
             </div>
@@ -2486,6 +2486,24 @@
             // open clicked if it was closed
             if (!isOpen) card.classList.add('open');
         }
+
+        // ── AUTO OPEN TAB BASED ON HASH 
+        function handleHash() {
+            const hash = window.location.hash.replace('#', '');
+            if (['luminary', 'meridian', 'traverse', 'anchor'].includes(hash)) {
+                const cardId = 'sx-' + hash;
+                const card = document.getElementById(cardId);
+                if (card && !card.classList.contains('open')) {
+                    // Close others
+                    document.querySelectorAll('.sx-card').forEach(c => c.classList.remove('open'));
+                    // Open target
+                    card.classList.add('open');
+                }
+            }
+        }
+        
+        window.addEventListener('load', handleHash);
+        window.addEventListener('hashchange', handleHash);
 
         // ── FORM TOGGLE
         const consultTrigger = document.getElementById('consultation-trigger');

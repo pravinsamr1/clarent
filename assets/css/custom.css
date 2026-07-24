@@ -4065,3 +4065,9 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
         color: var(--header) !important;
     }
 }
+
+@media(max-width:767px){
+    .nonon{
+        display: none !important;
+    }
+}

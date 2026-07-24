@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                         data-href="framework.html">
                                                         Framework <i class="fa-solid fa-chevron-right"></i>
                                                     </button>
-                                                    <button type="button" class="services-mega__tab" id="psychometricBtn" data-href="clarent-psychometrics.html">
+                                                    <button type="button" class="services-mega__tab" id="psychometricBtn" data-services-tab="psychometric" data-href="clarent-psychometrics.html">
                                                         Pyschometric Analysis <i class="fa-solid fa-chevron-right"></i>
                                                     </button>
                                                 </li>
@@ -917,6 +917,74 @@ document.addEventListener("DOMContentLoaded", () => {
                                                              </li>
                                                          </ul>
                                                      </div>
+
+                                                    <div class="services-mega__panel" data-services-panel="psychometric">
+                                                        <ul class="services-mega__list">
+                                                            <li class="services-mega__item">
+                                                                <a href="clarent-psychometrics.html#workforce" class="mega-card-item">
+                                                                    <div class="micon-box"><i class="fa-solid fa-users"></i></div>
+                                                                    <div class="mcontent-box">
+                                                                        <span class="mtitle">Workforce Intelligence Framework</span>
+                                                                        <span class="mdesc">Assess and optimize adult hiring and development.</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="services-mega__item">
+                                                                <a href="clarent-psychometrics.html#cadence" class="mega-card-item">
+                                                                    <div class="micon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                                                                    <div class="mcontent-box">
+                                                                        <span class="mtitle">Cadence Frameworks</span>
+                                                                        <span class="mdesc">Extend science into schools, pathways, and youth.</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="services-mega__item">
+                                                                <a href="clarent-psychometrics.html#luminary" class="mega-card-item">
+                                                                    <div class="micon-box"><i class="fa-solid fa-brain"></i></div>
+                                                                    <div class="mcontent-box">
+                                                                        <span class="mtitle">Luminary Intelligence</span>
+                                                                        <span class="mdesc">Early cognitive, social, and emotional discovery.</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="services-mega__item">
+                                                                <a href="clarent-psychometrics.html#meridian" class="mega-card-item">
+                                                                    <div class="micon-box"><i class="fa-solid fa-compass"></i></div>
+                                                                    <div class="mcontent-box">
+                                                                        <span class="mtitle">Meridian Intelligence</span>
+                                                                        <span class="mdesc">Senior years subject selection and future pathway mapping.</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="services-mega__item">
+                                                                <a href="clarent-psychometrics.html#traverse" class="mega-card-item">
+                                                                    <div class="micon-box"><i class="fa-solid fa-briefcase"></i></div>
+                                                                    <div class="mcontent-box">
+                                                                        <span class="mtitle">Traverse Intelligence</span>
+                                                                        <span class="mdesc">Transition from study to early career and workforce.</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="services-mega__item">
+                                                                <a href="clarent-psychometrics.html#anchor" class="mega-card-item">
+                                                                    <div class="micon-box"><i class="fa-solid fa-heart-pulse"></i></div>
+                                                                    <div class="mcontent-box">
+                                                                        <span class="mtitle">Anchor Intelligence</span>
+                                                                        <span class="mdesc">Clinical wellbeing and early intervention screening.</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="services-mega__item">
+                                                                <a href="clarent-psychometrics.html#industry" class="mega-card-item">
+                                                                    <div class="micon-box"><i class="fa-solid fa-building"></i></div>
+                                                                    <div class="mcontent-box">
+                                                                        <span class="mtitle">Industry Focused</span>
+                                                                        <span class="mdesc">Built for your sector, not off the shelf solutions.</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </li>
@@ -999,32 +1067,36 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="row gy-5 pb-5 border-bottom border-secondary">
 
                 <!-- Company Info -->
-                <div class="col-xl-3 col-lg-3 col-md-12">
-                    <div class="footer-widget pe-lg-5">
+                
 
-                        <a href="index.html" class="footer-logo d-inline-block mb-4">
-                            <img src="assets/webimages/log-footer.png" width="200px" alt="logo" class="white-logoo">
-                        </a>
+                <!-- GRC Services -->
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                    <div class="footer-widget">
 
-                        <p class="white65 mb-4">
-                            Delivering enterprise-grade cybersecurity, compliance,
-                            cloud security and governance solutions for modern businesses.
-                        </p>
-
-
-                        <!-- Social -->
-                        <div class="social-custom d-flex align-items-center gap-3 mt-4">
-
-                            <a href="https://www.linkedin.com/in/clarent-solutions-472a16407/" target="_blank" class="black">
-                                <i class="fab fa-linkedin-in white65"></i>
-                            </a>
+                        <div class="widget-head mb-4">
+                            <h5 class="white">GRC Services</h5>
                         </div>
+
+                        <ul class="list-area d-grid gap-1">
+                            <li><a href="governance-services.html">Governance Services</a></li>
+                            <li><a href="risk-management-services.html">Risk Management Services</a></li>
+                            <li><a href="compliance-services.html">Compliance Services</a></li>
+                            <li><a href="isms-standards-implementation.html">ISMS & Standards Implementation</a></li>
+                            <li><a href="audit-assurance-services.html">Audit & Assurance Services</a></li>
+                            <li><a href="third-party-vendor-services.html">Third-Party & Vendor Services</a></li>
+                            <li><a href="privacy-data-protection-services.html">Privacy & Data Protection Services</a></li>
+                            <li><a href="business-resilience-services.html">Business Resilience Services</a></li>
+                            <li><a href="security-governance-operations.html">Security Governance Operations</a></li>
+                            <li><a href="identity-access-governance.html">Identity & Access Governance</a></li>
+                            <li><a href="ai-emerging-technology-governance.html">AI & Emerging Technology Governance</a></li>
+                            <li><a href="security-advisory-services.html">Security Advisory Services</a></li>
+                        </ul>
 
                     </div>
                 </div>
 
                 <!-- Programs -->
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
@@ -1044,6 +1116,27 @@ document.addEventListener("DOMContentLoaded", () => {
                             <li><a href="vulnerability-patch-management-program.html">Vulnerability & Patch Management Program</a></li>
                             <li><a href="cybersecurity-scrm-strategy-implementation-plan.html">Cybersecurity SCRM Strategy & Implementation Plan</a></li>
 
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Psychometric Analysis -->
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                    <div class="footer-widget">
+
+                        <div class="widget-head mb-4">
+                            <h5 class="white">Psychometric Analysis</h5>
+                        </div>
+
+                        <ul class="list-area d-grid gap-1">
+                            <li><a href="clarent-psychometrics.html#workforce">Workforce Intelligence Framework</a></li>
+                            <li><a href="clarent-psychometrics.html#cadence">Cadence Frameworks</a></li>
+                            <li><a href="clarent-psychometrics.html#luminary">Luminary Intelligence</a></li>
+                            <li><a href="clarent-psychometrics.html#meridian">Meridian Intelligence</a></li>
+                            <li><a href="clarent-psychometrics.html#traverse">Traverse Intelligence</a></li>
+                            <li><a href="clarent-psychometrics.html#anchor">Anchor Intelligence</a></li>
+                            <li><a href="clarent-psychometrics.html#industry">Industry Focused</a></li>
                         </ul>
 
                     </div>
@@ -1146,7 +1239,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <div class="row align-items-center gy-3">
 
-                    <div class="col-lg-12 text-center text-lg-center">
+                    <!-- Logo on left -->
+                    <div class="col-lg-4 text-center text-lg-start">
+                        <a href="index.html" class="footer-logo d-inline-block">
+                            <img src="assets/webimages/log-footer.png" width="150px" alt="logo" class="white-logoo">
+                        </a>
+                    </div>
+
+                    <!-- Copyright in center -->
+                    <div class="col-lg-4 text-center">
                         <p class="white65 mb-0">
                             © 2026
                             <a href="index.html" class="white fw-semibold">
@@ -1154,6 +1255,15 @@ document.addEventListener("DOMContentLoaded", () => {
                             </a>.
                             All Rights Reserved.
                         </p>
+                    </div>
+                    
+                    <!-- LinkedIn on right -->
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="social-custom d-flex justify-content-center justify-content-lg-end align-items-center gap-3">
+                            <a href="https://www.linkedin.com/in/clarent-solutions-472a16407/" target="_blank" style="background-color: #ffffff; color: #0a66c2; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-linkedin-in fs-5"></i>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
@@ -1280,6 +1390,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 overlay.classList.remove('overlay-open');
             });
         }
+
+        // Close mega menu when clicking any link inside it
+        const megaLinks = document.querySelectorAll('.submenu.services-mega a');
+        megaLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                const megaMenu = this.closest('.submenu.services-mega');
+                if (megaMenu) {
+                    // Temporarily hide to break the CSS hover state
+                    megaMenu.style.display = 'none';
+                    setTimeout(() => {
+                        megaMenu.style.display = '';
+                    }, 300);
+                }
+            });
+        });
 
         // Dispatch load notifications
         document.dispatchEvent(new CustomEvent("headerLoaded"));
