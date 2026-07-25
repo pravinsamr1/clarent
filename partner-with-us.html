@@ -69,7 +69,7 @@
         radial-gradient(circle at 90% 80%, rgba(81, 53, 255, 0.08) 0%, transparent 45%) !important;
       position: relative;
       overflow: hidden;
-      padding: 100px 0 100px !important;
+      padding: 75px 0 75px !important;
       border-bottom: 1px solid rgba(81, 53, 255, 0.06) !important;
     }
 
@@ -77,8 +77,30 @@
       color: var(--navy) !important;
       font-family: var(--font-display);
       font-weight: 800;
-      line-height: 1.1;
+      font-size: 42px;
+      line-height: 1.15;
       letter-spacing: -0.025em;
+    }
+
+    .banner-section2 .hero-subheading {
+      color: var(--navy);
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 767px) {
+      .banner-section2 {
+        padding: 45px 0 35px !important;
+      }
+      .banner-section2 .banner-content h1 {
+        font-size: 32px !important;
+      }
+      .banner-section2 .hero-subheading {
+        font-size: 20px !important;
+        line-height: 1.35 !important;
+      }
     }
 
     .banner-section2 .banner-content h1 em {
@@ -341,38 +363,46 @@
     .compare-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .compare-table thead tr th {
-      padding: 16px 20px;
+      padding: 18px 22px;
       font-family: var(--font-display);
       font-weight: 800;
-      font-size: 12px;
+      font-size: 14px;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
     }
 
     .compare-table thead tr th:first-child {
       background: var(--navy);
       color: var(--white);
-      width: 30%;
+      width: 25%;
     }
 
     .compare-table thead tr th:nth-child(2) {
-      background: #4A5568;
+      background: #5135FF;
       color: var(--white);
       text-align: center;
+      width: 37.5%;
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .compare-table thead tr th:nth-child(3) {
-      background: var(--blue);
+      background: linear-gradient(135deg, #5135FF 0%, #3B1EBE 100%);
       color: var(--white);
       text-align: center;
+      width: 37.5%;
     }
 
     .compare-table tbody tr {
       border-bottom: 1px solid rgba(81, 53, 255, 0.08);
+      transition: background 0.2s ease;
+    }
+
+    .compare-table tbody tr:hover {
+      background: rgba(81, 53, 255, 0.02);
     }
 
     .compare-table tbody tr:last-child {
@@ -380,25 +410,27 @@
     }
 
     .compare-table tbody td {
-      padding: 18px 20px;
-      color: var(--text-muted);
-      vertical-align: top;
+      padding: 22px 24px;
+      color: #2D3748;
+      vertical-align: middle;
       font-weight: 500;
-      line-height: 1.6;
+      font-size: 16px;
+      line-height: 1.65;
     }
 
     .compare-table tbody td:first-child {
       font-weight: 700;
+      font-size: 16px;
       color: var(--navy);
     }
 
     .compare-table tbody td:nth-child(2) {
-      background: rgba(74, 85, 104, 0.03);
+      background: rgba(81, 53, 255, 0.015);
     }
 
     .compare-table tbody td:nth-child(3) {
-      background: rgba(81, 53, 255, 0.03);
-      color: var(--blue);
+      background: rgba(81, 53, 255, 0.04);
+      color: #1A202C;
     }
 
     .col-label {
@@ -482,24 +514,13 @@
     }
 
     @media (max-width: 767px) {
-      .compare-table thead {
-        display: none;
+      .compare-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
 
-      .compare-table tbody td {
-        display: block;
-        padding: 12px 20px;
-        border-bottom: none;
-      }
-
-      .compare-table tbody tr {
-        display: block;
-        padding: 16px 0;
-        border-bottom: 1px solid rgba(81, 53, 255, 0.08);
-      }
-
-      .compare-table tbody td:first-child {
-        padding-bottom: 4px;
+      .compare-table {
+        min-width: 600px;
       }
     }
   </style>
@@ -578,9 +599,12 @@
       <div class="row g-4 justify-content-lg-between justify-content-center align-items-center">
         <div class="col-lg-7">
           <div class="banner-content text-lg-start text-center">
-            <h1 class="white mb-md-4 mb-3 pb-lg-2 d-block wow fadeInUp" data-wow-delay=".5s">
-              Two ways to build a cybersecurity &amp; governance business with Clarent360.
+            <h1 class="white mb-2 d-block wow fadeInUp" data-wow-delay=".4s">
+              Partner With Us
             </h1>
+            <h3 class="hero-subheading mb-md-4 mb-3 wow fadeInUp" data-wow-delay=".5s">
+              Two ways to build a cybersecurity &amp; governance business with Clarent360.
+            </h3>
             <p class="white75 fs-seven mb-lg-5 mb-4 pb-lg-0 pb-sm-2 pb-1 wow fadeInUp" data-wow-delay=".6s">
               Whether you introduce opportunities or operate under our brand, both tracks give you a structured path to
               work alongside an established cybersecurity, governance, risk and compliance advisory.
@@ -590,7 +614,7 @@
         <div class="col-lg-5">
           <div class="banner-thumb2-wrap mt-lg-0 mt-3 wow fadeInUp" data-wow-delay=".5s">
             <div class="thumb1" style="display:flex; align-items:center; justify-content:center;">
-              <img src="assets/webimages/ideal_partner_leader.png" alt="Ideal Partner Leader Visual" class="w-100 partner-img"
+              <img src="assets/webimages/partener-with-us.jpg" alt="Ideal Partner Leader Visual" class="w-100 partner-img"
                 style="border-radius: 30px; box-shadow: 0 15px 35px rgba(3, 23, 64, 0.08);">
             </div>
           </div>
@@ -677,8 +701,7 @@
       <div class="inner">
         <div class="row align-items-center mb-5">
           <div class="col-lg-6">
-            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Compare the two tracks<br><span>at a
-                glance.</span></h2>
+            <h2 class="section-title mb-0 wow fadeInUp" data-wow-delay=".3s">Compare the two tracks <br> at a glance</h2>
           </div>
           <div class="col-lg-6 mt-3 mt-lg-0">
             <p class="section-body mb-0 wow fadeInUp" data-wow-delay=".4s" style="max-width: 100%;">
@@ -699,29 +722,29 @@
             <tbody>
               <tr>
                 <td>Commitment</td>
-                <td><span class="col-label">Affiliate</span>Low — refer clients as opportunities arise</td>
-                <td><span class="col-label">Franchise</span>High — build and run a dedicated local business</td>
+                <td>Low — refer clients as opportunities arise</td>
+                <td>High — build and run a dedicated local business</td>
               </tr>
               <tr>
                 <td>Service delivery</td>
-                <td><span class="col-label">Affiliate</span>Handled entirely by Clarent360</td>
-                <td><span class="col-label">Franchise</span>Delivered by the franchise partner, under our frameworks
+                <td>Handled entirely by Clarent360</td>
+                <td>Delivered by the franchise partner, under our frameworks
                 </td>
               </tr>
               <tr>
                 <td>Brand &amp; IP access</td>
-                <td><span class="col-label">Affiliate</span>Approved marketing collateral only</td>
-                <td><span class="col-label">Franchise</span>Full brand, methodology and IP licence</td>
+                <td>Approved marketing collateral only</td>
+                <td>Full brand, methodology and IP licence</td>
               </tr>
               <tr>
                 <td>Territory rights</td>
-                <td><span class="col-label">Affiliate</span>None required</td>
-                <td><span class="col-label">Franchise</span>Approved territory allocated</td>
+                <td>None required</td>
+                <td>Approved territory allocated</td>
               </tr>
               <tr>
                 <td>Ideal for</td>
-                <td><span class="col-label">Affiliate</span>MSPs, IT consultants, advisors, industry specialists</td>
-                <td><span class="col-label">Franchise</span>Cybersecurity consultants, boutique firms, former CISOs</td>
+                <td>MSPs, IT consultants, advisors, industry specialists</td>
+                <td>Cybersecurity consultants, boutique firms, former CISOs</td>
               </tr>
             </tbody>
           </table>

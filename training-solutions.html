@@ -330,6 +330,26 @@
             font-size: 16px;
             line-height: 1.6;
         }
+        @media (max-width: 500px) {
+            .card-footer-custom {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 15px;
+                text-align: center;
+            }
+            .card-footer-custom a {
+                display: block;
+                padding: 12px;
+                background-color: rgba(81, 53, 255, 0.08);
+                border-radius: 8px;
+                text-align: center;
+                transition: background-color 0.3s ease;
+            }
+            .card-footer-custom a:hover {
+                background-color: rgba(81, 53, 255, 0.15);
+                text-decoration: none;
+            }
+        }
     </style>
 </head>
 

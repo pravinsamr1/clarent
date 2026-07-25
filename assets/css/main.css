@@ -8800,3 +8800,53 @@ input.main-search-input::placeholder {
   height: 500px;
   border-radius: 30px;
 }
+
+@media(max-width: 991px) {
+  .iso-img {
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+    .grc-pagenav {
+        flex-direction: row !important;
+        gap: 12px;
+    }
+    .grc-nav-card {
+        padding: 12px 10px !important;
+        justify-content: center;
+        flex: 1;
+        text-align: center !important;
+        align-items: center !important;
+        border-radius: 12px !important;
+    }
+    .grc-nav-card.prev {
+        background: rgba(81, 53, 255, 0.05) !important;
+        border: 1px solid rgba(81, 53, 255, 0.15) !important;
+    }
+    .grc-nav-card.next {
+        background: #5135FF !important;
+        border: 1px solid #5135FF !important;
+    }
+    .grc-nav-card .plabel {
+        font-size: 0 !important;
+        margin: 0 !important;
+    }
+    .grc-nav-card.prev .plabel::after {
+        content: "← PREVIOUS";
+        font-size: 13px;
+        letter-spacing: .08em;
+        color: #5135FF;
+        font-weight: 700;
+    }
+    .grc-nav-card.next .plabel::after {
+        content: "NEXT →";
+        font-size: 13px;
+        letter-spacing: .08em;
+        color: #ffffff;
+        font-weight: 700;
+    }
+    .grc-nav-card .ptitle {
+        display: none !important;
+    }
+}
