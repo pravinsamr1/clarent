@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checklists — Clarent360</title>
-
     <!-- ======== Favicon ======== -->
     <link rel="shortcut icon" href="assets/img/logo/favs.png">
-
     <!-- ======== Standard Website Stylesheets ======== -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
@@ -21,7 +19,6 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
     <style>
         :root {
             /* Mapped to Clarent360 Light Corporate Theme */
@@ -39,21 +36,17 @@
             --p1-clr: #5135FF;
             --p2-clr: #FED500;
             --p3-clr: #FF5455;
-
             /* Maturity Bands mapped to templates colours */
             --band1: var(--p1-clr);      /* Soft Purple (Foundational) */
             --band2: var(--p2-clr);      /* Soft Gold (Developing) */
             --band3: var(--p3-clr);      /* Soft Red (Cert-Ready) */
         }
-
         * {
             box-sizing: border-box;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             margin: 0;
             background: var(--ink);
@@ -62,14 +55,12 @@
             line-height: 1.55;
             -webkit-font-smoothing: antialiased;
         }
-
         @media (prefers-reduced-motion: reduce) {
             * {
                 animation-duration: 0.001ms !important;
                 transition-duration: 0.001ms !important;
             }
         }
-
         /* blueprint grid background */
         .grid-bg {
             background-image:
@@ -78,19 +69,15 @@
             background-size: 48px 48px;
             background-position: -1px -1px;
         }
-
         a {
             color: inherit;
         }
-
         .mono {
             font-family: "Inter", sans-serif;
         }
-
         .display {
             font-family: "Plus Jakarta Sans", sans-serif;
         }
-
         /* ---------- HERO ---------- */
         .hero {
             position: relative;
@@ -98,7 +85,6 @@
             padding: 96px 32px 60px;
             border-bottom: 1px solid rgba(81, 53, 255, 0.1);
         }
-
         .hero-inner {
             max-width: 1280px;
             margin: 0 auto;
@@ -107,7 +93,6 @@
             gap: 56px;
             align-items: center;
         }
-
         .eyebrow {
             font-family: "Inter", sans-serif;
             font-size: 0.78rem;
@@ -120,14 +105,12 @@
             margin-bottom: 22px;
             font-weight: 600;
         }
-
         .eyebrow::before {
             content: "";
             width: 26px;
             height: 1px;
             background: var(--p1-clr);
         }
-
         h1 {
             font-family: "Plus Jakarta Sans", sans-serif;
             font-weight: 700;
@@ -137,18 +120,15 @@
             letter-spacing: -0.01em;
             color: var(--paper);
         }
-
         h1 span {
             color: var(--p1-clr);
         }
-
         .hero p.lede {
             font-size: 1.05rem;
             color: var(--slate);
             max-width: 46ch;
             margin: 0 0 30px;
         }
-
         .hero-ctas {
             display: flex;
             gap: 16px;
@@ -156,7 +136,6 @@
             margin-bottom: 38px;
             align-items: center;
         }
-
         .btn-outline-custom {
             border: 1px solid var(--p1-clr);
             color: var(--p1-clr);
@@ -168,39 +147,31 @@
             align-items: center;
             text-decoration: none;
         }
-
         .btn-outline-custom:hover {
             background: var(--p1-clr);
             color: #ffffff;
             box-shadow: 0 8px 20px rgba(81, 53, 255, 0.15);
         }
-
         .stat-strip {
             display: flex;
             gap: 38px;
             flex-wrap: wrap;
         }
-
         .stat-strip div {
             border-left: 1px solid var(--line);
             padding-left: 14px;
         }
-
         .stat-strip .num {
             font-family: "Plus Jakarta Sans", sans-serif;
             font-size: 1.5rem;
             color: var(--paper);
             font-weight: 600;
         }
-
         .stat-strip .lbl {
             font-size: 0.76rem;
             color: var(--slate);
             font-family: "Inter", sans-serif;
         }
-
-        
-        
         /* ---------- SCHEMATIC 3D ---------- */
         .schematic-wrapper {
             perspective: 1200px;
@@ -211,20 +182,17 @@
             justify-content: center;
             align-items: center;
         }
-
         @keyframes float3D {
             0% { transform: rotateY(-20deg) rotateX(15deg) translateY(0px); }
             50% { transform: rotateY(20deg) rotateX(25deg) translateY(-15px); }
             100% { transform: rotateY(-20deg) rotateX(15deg) translateY(0px); }
         }
-
         .schematic {
             position: relative;
             width: 100%;
             transform-style: preserve-3d;
             /* Removed float3D animation */
         }
-
         .schematic svg {
             width: 100%;
             height: auto;
@@ -232,12 +200,10 @@
             filter: drop-shadow(0 20px 30px rgba(81, 53, 255, 0.2));
             transform: translateZ(20px);
         }
-        
         .gauge-needle {
             transform-origin: 220px 260px;
             filter: drop-shadow(-5px 10px 5px rgba(0,0,0,0.15));
         }
-
         /* Lift the dots and text for a pop effect */
         .sch-label, circle {
             filter: drop-shadow(-2px 4px 3px rgba(0,0,0,0.1));
@@ -249,7 +215,6 @@
             letter-spacing: 0.05em;
             font-weight: 700;
         }
-
         .sch-dim {
             stroke: rgba(81, 53, 255, 0.45);
             stroke-width: 1.2;
@@ -265,7 +230,6 @@
             70% { transform: rotate(0deg); }
             85%, 100% { transform: rotate(-50deg); }
         }
-
         .gauge-needle {
             stroke: var(--paper);
             stroke-width: 3.5;
@@ -273,18 +237,14 @@
             transform-origin: 220px 260px;
             animation: revGauge 5s infinite cubic-bezier(0.25, 1, 0.5, 1);
         }
-
-
         /* ---------- SECTION SHELLS ---------- */
         section {
             /* padding: 88px 32px; */
         }
-
         .section-inner {
             max-width: 1280px;
             margin: 0 auto;
         }
-
         .section-head {
             display: flex;
             justify-content: space-between;
@@ -295,11 +255,9 @@
             border-bottom: 1px solid rgba(81, 53, 255, 0.15);
             padding-bottom: 28px;
         }
-
         .section-head .eyebrow {
             margin-bottom: 12px;
         }
-
         .section-head h2 {
             font-family: "Plus Jakarta Sans", sans-serif;
             font-size: clamp(1.6rem, 2.6vw, 2.1rem);
@@ -308,21 +266,18 @@
             letter-spacing: -0.01em;
             color: var(--paper);
         }
-
         .section-head p {
             color: var(--slate);
             max-width: 38ch;
             margin: 0;
             font-size: 0.95rem;
         }
-
         /* ---------- CHECKLIST GRID ---------- */
         .checklist-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
-
         .chk-card {
             background: #ffffff;
             border: 1px solid rgba(81, 53, 255, 0.08);
@@ -338,14 +293,12 @@
             overflow: hidden;
             height: 100%;
         }
-
         .chk-card:hover {
             transform: translateY(-5px);
             border-color: #5135FF;
             box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.1);
             background: #ffffff;
         }
-
         .card-top {
             display: flex;
             justify-content: space-between;
@@ -353,7 +306,6 @@
             gap: 14px;
             margin-bottom: 4px;
         }
-
         .card-code {
             font-family: "Inter", sans-serif;
             font-size: 0.72rem;
@@ -368,16 +320,12 @@
             display: inline-block;
             transition: all 0.4s ease;
         }
-
-
-
         .card-index {
             font-family: "Inter", sans-serif;
             font-size: 0.72rem;
             color: var(--slate);
             font-weight: 600;
         }
-
         .chk-card h3 {
             font-family: "Plus Jakarta Sans", sans-serif;
             font-size: 1.28rem;
@@ -386,14 +334,12 @@
             line-height: 1.25;
             color: var(--paper);
         }
-
         .chk-card .tag {
             color: var(--slate);
             font-size: 0.9rem;
             margin: 0;
             font-style: italic;
         }
-
         .chk-card .meta {
             display: flex;
             gap: 16px;
@@ -403,7 +349,6 @@
             border-bottom: 1px solid rgba(81, 53, 255, 0.08);
             padding: 12px 0;
         }
-
         .chk-card .meta div {
             font-family: "Inter", sans-serif;
             font-size: 0.65rem;
@@ -411,7 +356,6 @@
             font-weight: 600;
             letter-spacing: 0.03em;
         }
-
         .chk-card .meta div b {
             color: var(--paper);
             font-size: 1.05rem;
@@ -420,7 +364,6 @@
             font-weight: 700;
             margin-bottom: 2px;
         }
-
         .card-link {
             font-family: "Inter", sans-serif;
             font-size: 0.78rem;
@@ -432,19 +375,15 @@
             font-weight: 600;
             transition: color 0.2s;
         }
-
         .card-link .arrow {
             transition: transform 0.2s;
         }
-
         .card-link:hover .arrow {
             transform: translateX(4px);
         }
-
         .card-link:hover {
             color: var(--p3-clr);
         }
-
         /* scorebar */
         .scorebar-wrap {
             display: flex;
@@ -453,7 +392,6 @@
             margin-top: auto;
             margin-bottom: 8px;
         }
-
         .scorebar {
             display: flex;
             height: 24px;
@@ -462,7 +400,6 @@
             border: none;
             box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
         }
-
         .scorebar div {
             display: flex;
             align-items: center;
@@ -473,19 +410,15 @@
             font-weight: 700;
             letter-spacing: 0.05em;
         }
-
         .seg1 {
             background: var(--band1);
         }
-
         .seg2 {
             background: var(--band2);
         }
-
         .seg3 {
             background: var(--band3);
         }
-
         .scorebar-legend {
             display: flex;
             justify-content: space-between;
@@ -496,55 +429,46 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-
         .scorebar-legend span:nth-child(2) {
             color: var(--p3-clr);
         }
-
         @media (max-width: 1199px) {
             .hero-inner {
                 grid-template-columns: 1fr;
             }
-
             .schematic {
                 order: -1;
                 max-width: 340px;
             }
         }
-
         @media (max-width: 991px) {
             .checklist-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
             }
         }
-
         @media (max-width: 768px) {
             .checklist-grid {
                 grid-template-columns: 1fr;
                 gap: 16px;
             }
         }
-
         /* ---------- APPROACH STRIP ---------- */
         .approach {
             padding: 60px 0;
             background: #ffffff;
         }
-
         .approach-banner {
             background: linear-gradient(90deg, #5135ff 0%, #ff5455 100%);
             border-radius: 16px;
             padding: 48px 40px;
             box-shadow: 0px 10px 30px rgba(81, 53, 255, 0.15);
         }
-
         .approach-step {
             display: flex;
             align-items: center;
             gap: 20px;
         }
-
         .step-num {
             width: 60px;
             height: 60px;
@@ -560,13 +484,11 @@
             font-family: "Plus Jakarta Sans", sans-serif;
             transition: all 0.3s ease;
         }
-
         .approach-step:hover .step-num {
             background: #ffffff;
             color: #5135ff;
             transform: scale(1.05);
         }
-
         .step-content h4 {
             font-family: "Plus Jakarta Sans", sans-serif;
             font-size: 1.15rem;
@@ -574,14 +496,12 @@
             color: #ffffff;
             margin: 0 0 6px;
         }
-
         .step-content p {
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.85);
             margin: 0;
             line-height: 1.5;
         }
-
         @media (max-width: 991px) {
             .approach-banner {
                 padding: 40px 30px;
@@ -593,20 +513,17 @@
                 margin-bottom: 0;
             }
         }
-
         /* ---------- CTA ---------- */
         .cta {
             padding: 80px 0;
             background: #ffffff;
         }
-
         .cta-banner {
             background: linear-gradient(90deg, #5135ff 0%, #ff5455 100%);
             border-radius: 16px;
             padding: 56px 60px;
             box-shadow: 0px 10px 30px rgba(81, 53, 255, 0.15);
         }
-
         .cta-banner h2 {
             font-family: "Plus Jakarta Sans", sans-serif;
             font-size: clamp(1.8rem, 3vw, 2.3rem);
@@ -615,7 +532,6 @@
             margin: 0 0 12px;
             line-height: 1.25;
         }
-
         .cta-banner p {
             font-size: 1.05rem;
             color: rgba(255, 255, 255, 0.85);
@@ -623,7 +539,6 @@
             line-height: 1.6;
             max-width: 65ch;
         }
-
         .cta-btn {
             background: #ffffff;
             color: #17111f;
@@ -638,14 +553,12 @@
             display: inline-block;
             white-space: nowrap;
         }
-
         .cta-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
             background: #f0f2f5;
             color: #5135ff;
         }
-
         @media (max-width: 991px) {
             .cta-banner {
                 padding: 40px;
@@ -658,24 +571,20 @@
                 margin-top: 24px;
             }
         }
-
         /* reveal animation */
         .reveal {
             opacity: 0;
             transform: translateY(14px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
-
         .reveal.in {
             opacity: 1;
             transform: translateY(0);
         }
-
         #header {
             width: 100%;
             z-index: 100;
         }
-
         /* Reduce breadcrumb padding */
         .breadcrumb-section .bread-content {
             padding: 70px 0 60px !important;
@@ -696,6 +605,73 @@
             }
         }
     </style>
+
+    <!-- Dual-Region Sydney & Dubai SEO Meta Tags -->
+    <meta name="geo.region" content="AU-NSW, AE-DU">
+    <meta name="geo.placename" content="Sydney, Dubai">
+    <meta name="geo.position" content="-33.8688;151.2093">
+    <meta name="ICBM" content="-33.8688, 151.2093">
+    <meta name="author" content="Clarent360 Cybersecurity & Advisory">
+    <meta name="keywords" content="checklist, Cybersecurity Sydney, Cyber Security Dubai, Clarent360">
+    <meta name="description" content="Expert Checklist advisory and enterprise cybersecurity solutions delivered across Sydney (Australia) and Dubai (UAE) by Clarent360.">
+    <link rel="canonical" href="https://www.clarent360.com.au/checklist.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Checklists — Clarent360">
+    <meta property="og:description" content="Expert Checklist advisory and enterprise cybersecurity solutions delivered across Sydney (Australia) and Dubai (UAE) by Clarent360.">
+    <meta property="og:url" content="https://www.clarent360.com.au/checklist.html">
+    <meta property="og:site_name" content="Clarent360 Cybersecurity">
+    <meta property="og:image" content="https://www.clarent360.com.au/assets/img/logo/logo-clarent.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Checklists — Clarent360">
+    <meta name="twitter:description" content="Expert Checklist advisory and enterprise cybersecurity solutions delivered across Sydney (Australia) and Dubai (UAE) by Clarent360.">
+    <meta name="twitter:image" content="https://www.clarent360.com.au/assets/img/logo/logo-clarent.png">
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Service",
+            "@id": "https://www.clarent360.com.au/checklist.html#service",
+            "name": "Checklists \u2014 Clarent360",
+            "provider": {
+                "@type": "Organization",
+                "name": "Clarent360",
+                "url": "https://www.clarent360.com.au"
+            },
+            "description": "Expert Checklist advisory and enterprise cybersecurity solutions delivered across Sydney (Australia) and Dubai (UAE) by Clarent360.",
+            "areaServed": [
+                "Australia",
+                "Sydney",
+                "United Arab Emirates",
+                "Dubai"
+            ]
+        },
+        {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.clarent360.com.au"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Checklist",
+                    "item": "https://www.clarent360.com.au/checklist.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
 </head>
 
 <body class="grid-bg">

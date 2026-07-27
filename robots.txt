@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/js/
+Disallow: /assets/webimages/gif/*.json
+Disallow: /*.php$
+
+# Sitemap location
+Sitemap: https://www.clarent360.com.au/sitemap.xml
