@@ -9,7 +9,7 @@
             badge.id = 'clarentPopupBadge';
             badge.className = 'clarent-popup-trigger-badge';
             badge.setAttribute('aria-label', 'Open enquiry form');
-            badge.innerHTML = `<img src="assets/webimages/gif/chatbot.gif" alt="Get in Touch" width="120px" height="120px" style="object-fit: contain;">`;
+            badge.innerHTML = `<div id="clarentPopupBadgeLottie" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 6px 16px rgba(81, 53, 255, 0.25));"><img src="assets/webimages/gif/chatbot.gif" alt="Get in Touch" width="120px" height="120px" style="object-fit: contain;"></div>`;
             document.body.appendChild(badge);
         }
 
@@ -27,7 +27,7 @@
                     <div class="clarent-popup-form-view" id="clarentPopupFormView">
                         <div class="clarent-popup-header">
                             <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 8px;">
-                                <img src="assets/webimages/gif/chatbot.gif" alt="Chatbot" width="48px" height="48px" style="object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 4px 10px rgba(81, 53, 255, 0.2));">
+                                <div id="clarentPopupHeaderLottie" style="width: 52px; height: 52px; flex-shrink: 0; filter: drop-shadow(0 4px 10px rgba(81, 53, 255, 0.2));"><img src="assets/webimages/gif/chatbot.gif" alt="Chatbot" width="52px" height="52px" style="object-fit: contain;"></div>
                                 <div>
                                     <span class="clarent-popup-subtitle" style="margin-bottom: 2px;">Get in Touch</span>
                                     <h3 class="clarent-popup-title" style="margin: 0;">How Can We Help You?</h3>
@@ -453,7 +453,49 @@
             successView.classList.remove('active');
         }
 
+        function loadLottieAnimations() {
+            function renderLottie() {
+                const jsonPath = 'assets/webimages/gif/Live%20chatbot.json';
+                const badgeContainer = document.getElementById('clarentPopupBadgeLottie');
+                const headerContainer = document.getElementById('clarentPopupHeaderLottie');
+
+                if (badgeContainer && window.lottie) {
+                    badgeContainer.innerHTML = '';
+                    window.lottie.loadAnimation({
+                        container: badgeContainer,
+                        renderer: 'svg',
+                        loop: true,
+                        autoplay: true,
+                        path: jsonPath
+                    });
+                }
+                if (headerContainer && window.lottie) {
+                    headerContainer.innerHTML = '';
+                    window.lottie.loadAnimation({
+                        container: headerContainer,
+                        renderer: 'svg',
+                        loop: true,
+                        autoplay: true,
+                        path: jsonPath
+                    });
+                }
+            }
+
+            if (window.lottie) {
+                renderLottie();
+            } else {
+                let script = document.createElement('script');
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js';
+                script.onload = renderLottie;
+                script.onerror = function() {
+                    console.warn("Lottie script unavailable, fallback image displayed.");
+                };
+                document.head.appendChild(script);
+            }
+        }
+
         showBadge();
+        loadLottieAnimations();
 
         function showPopup() {
             resetPopupForm();

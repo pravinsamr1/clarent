@@ -3660,10 +3660,10 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
 /* Floating Action Trigger Badge (Bottom Left) */
 .clarent-popup-trigger-badge {
     position: fixed;
-    left: 24px;
-    bottom: 24px;
-    width: 75px;
-    height: 75px;
+    left: 15px;
+    bottom: 15px;
+    width: 120px;
+    height: 120px;
     background: transparent !important;
     display: flex;
     align-items: center;
@@ -3688,7 +3688,7 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
 /* Tooltip bubble above the badge */
 .clarent-popup-trigger-badge .badge-tooltip {
     position: absolute;
-    bottom: 82px;
+    bottom: 125px;
     left: -10px;
     background: #031740;
     color: #ffffff;
