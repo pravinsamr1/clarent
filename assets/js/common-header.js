@@ -1176,7 +1176,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <h5 class="white">Psychometric Analysis</h5>
                         </div>
 
-                        <ul class="list-area d-grid gap-1">
+                        <ul class="list-area d-grid gap-1 mb-4">
                             <li><a href="clarent-psychometrics.html#workforce">Workforce Intelligence Framework</a></li>
                             <li><a href="clarent-psychometrics.html#cadence">Cadence Frameworks</a></li>
                             <li><a href="clarent-psychometrics.html#luminary">Luminary Intelligence</a></li>
@@ -1184,6 +1184,20 @@ document.addEventListener("DOMContentLoaded", () => {
                             <li><a href="clarent-psychometrics.html#traverse">Traverse Intelligence</a></li>
                             <li><a href="clarent-psychometrics.html#anchor">Anchor Intelligence</a></li>
                             <li><a href="clarent-psychometrics.html#industry">Industry Focused</a></li>
+                        </ul>
+
+                        <div class="widget-head mb-4">
+                            <h5 class="white">Security Services</h5>
+                        </div>
+
+                        <ul class="list-area d-grid gap-1">
+                            <li><a href="zero-trust-implementations.html">Zero Trust Implementations</a></li>
+                            <li><a href="microsoft-365-security-review.html">Microsoft365 Security reviews</a></li>
+                            <li><a href="microsoft-defender-security-review.html">Microsoft Defender Security reviews</a></li>
+                            <li><a href="service-now-solutions.html">ServiceNow solutions</a></li>
+                            <li><a href="rsa-archer-solutions.html">RSA Archer solutions</a></li>
+                            <li><a href="virtualization-services.html">Virtualization Security</a></li>
+                            <li><a href="dlp-solutions.html">DLP solutions</a></li>
                         </ul>
 
                     </div>
@@ -1228,7 +1242,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <h5 class="white">Checklists</h5>
                         </div>
 
-                        <ul class="list-area d-grid gap-1">
+                        <ul class="list-area d-grid gap-1 mb-4">
 
                             <li><a href="iso-9001-2015-quality-checklist.html">ISO 9001:2015 Quality Checklist</a></li>
                             <li><a href="iso-42001-2023-artificial-intelligence-management-system.html">ISO 42001:2023 Artificial Intelligence Management System</a></li>
@@ -1236,6 +1250,16 @@ document.addEventListener("DOMContentLoaded", () => {
                             <li><a href="iso-27701-2019-privacy-checklist.html">ISO 27701:2025 Privacy Checklist</a></li>
                             <li><a href="iso-3100-risk-checklist.html">ISO 31000 Risk Checklist</a></li>
 
+                        </ul>
+
+                        <div class="widget-head mb-4">
+                            <h5 class="white">Penetration testing</h5>
+                        </div>
+
+                        <ul class="list-area d-grid gap-1">
+                            <li><a href="network-penetration-testing.html">Network penetration testing</a></li>
+                            <li><a href="wireless-remote-access-testing.html">Wireless penetration testing</a></li>
+                            <li><a href="active-directory-identity-testing.html">Active Directory penetration testing</a></li>
                         </ul>
 
                     </div>
