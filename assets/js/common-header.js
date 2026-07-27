@@ -1274,9 +1274,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     <div class="col-md-6 text-center text-md-start">
                         <p class="white65 mb-0" style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important;">
-                            <a href="#" class="white65 hover-white" style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important; text-decoration: none;">Privacy Policy</a>
+                            <a href="privacy-policy.html" class="white65 hover-white" style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important; text-decoration: none;">Privacy Policy</a>
                             <span class="mx-2" style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important;">•</span>
-                            <a href="#" class="white65 hover-white" style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important; text-decoration: none;">Terms of Use</a>
+                            <a href="terms-of-use.html" class="white65 hover-white" style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important; text-decoration: none;">Terms of Use</a>
                         </p>
                     </div>
 

@@ -8,8 +8,12 @@
             badge = document.createElement('div');
             badge.id = 'clarentPopupBadge';
             badge.className = 'clarent-popup-trigger-badge';
-            badge.setAttribute('aria-label', 'Open enquiry form');
-            badge.innerHTML = `<div id="clarentPopupBadgeLottie" style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 6px 16px rgba(81, 53, 255, 0.25));"><img src="assets/webimages/gif/chatbot.gif" alt="Get in Touch" width="120px" height="120px" style="object-fit: contain;"></div>`;
+            badge.innerHTML = `
+                <div class="talk-to-us-btn">
+                    <span class="talk-icon"><i class="fa-solid fa-comments"></i></span>
+                    <span class="talk-text">Talk to Us</span>
+                </div>
+            `;
             document.body.appendChild(badge);
         }
 
@@ -26,8 +30,7 @@
                     <!-- Form View -->
                     <div class="clarent-popup-form-view" id="clarentPopupFormView">
                         <div class="clarent-popup-header">
-                            <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 8px;">
-                                <div id="clarentPopupHeaderLottie" style="width: 52px; height: 52px; flex-shrink: 0; filter: drop-shadow(0 4px 10px rgba(81, 53, 255, 0.2));"><img src="assets/webimages/gif/chatbot.gif" alt="Chatbot" width="52px" height="52px" style="object-fit: contain;"></div>
+                            <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 8px;justify-content:center">
                                 <div>
                                     <span class="clarent-popup-subtitle" style="margin-bottom: 2px;">Get in Touch</span>
                                     <h3 class="clarent-popup-title" style="margin: 0;">How Can We Help You?</h3>
@@ -515,8 +518,51 @@
         
         function showBadge() {
             badge.classList.add('visible');
-            console.log("Clarent Trigger Badge: Displayed.");
+            setTimeout(checkBadgeBackgroundLuminance, 300);
         }
+
+        function checkBadgeBackgroundLuminance() {
+            if (!badge || !badge.classList.contains('visible')) return;
+
+            const rect = badge.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+
+            badge.style.pointerEvents = 'none';
+            const elemBelow = document.elementFromPoint(centerX, centerY);
+            badge.style.pointerEvents = '';
+
+            if (elemBelow) {
+                const darkSection = elemBelow.closest('.breadcrumb-section, .footer-section, .footer-bottom, .bg-dark, .dark-section, [data-theme="dark"]');
+                let isDark = !!darkSection;
+
+                if (!isDark) {
+                    const style = window.getComputedStyle(elemBelow);
+                    const bgColor = style.backgroundColor;
+                    if (bgColor && bgColor.startsWith('rgb')) {
+                        const rgb = bgColor.match(/\d+/g);
+                        if (rgb && rgb.length >= 3) {
+                            const r = parseInt(rgb[0], 10);
+                            const g = parseInt(rgb[1], 10);
+                            const b = parseInt(rgb[2], 10);
+                            const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+                            if (luma < 140 && (rgb.length < 4 || parseFloat(rgb[3]) > 0.3)) {
+                                isDark = true;
+                            }
+                        }
+                    }
+                }
+
+                if (isDark) {
+                    badge.classList.add('dark-bg-mode');
+                } else {
+                    badge.classList.remove('dark-bg-mode');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', checkBadgeBackgroundLuminance, { passive: true });
+        window.addEventListener('resize', checkBadgeBackgroundLuminance, { passive: true });
         
         function hideBadge() {
             badge.classList.remove('visible');
