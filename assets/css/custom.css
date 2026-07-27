@@ -4120,3 +4120,13 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
     .abouutt-imgg{
         border-radius: 30px;
     }}
+/* Sticky Sidebar Fix for Blog Details Page */
+.news-details-section {
+    overflow: visible !important;
+}
+.sticky-sidebar-box {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 120px !important;
+    z-index: 10;
+}

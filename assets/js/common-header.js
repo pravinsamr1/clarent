@@ -920,6 +920,15 @@ document.addEventListener("DOMContentLoaded", () => {
                                                                      </div>
                                                                  </a>
                                                              </li>
+                                                              <li class="services-mega__item">
+                                                                  <a href="nis-ai-rmf.html" class="mega-card-item">
+                                                                      <div class="micon-box"><i class="fa-solid fa-robot"></i></div>
+                                                                      <div class="mcontent-box">
+                                                                          <span class="mtitle">NIS AI RMF</span>
+                                                                          <span class="mdesc">NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0).</span>
+                                                                      </div>
+                                                                  </a>
+                                                              </li>
                                                          </ul>
                                                      </div>
 
