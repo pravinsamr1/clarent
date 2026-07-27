@@ -1088,18 +1088,18 @@ document.addEventListener("DOMContentLoaded", () => {
                             <img src="assets/webimages/log-footer.png" width="150px" alt="logo" class="white-logoo">
                         </a>
 
-                        <p class="white65 mb-4">
+                        <p class="white65 mb-4" style="font-size: 14px;text-align:justify">
                             Delivering enterprise-grade cybersecurity, compliance,
                             cloud security and governance solutions for modern businesses.
                         </p>
 
                         <div class="d-flex flex-column gap-3 mb-4">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="fal fa-envelope white fs-5"></i>
+                            <div>
+                                <span class="fs-eight white d-block mb-1">Mail Us</span>
                                 <a href="mailto:info@clarent360.com.au" class="white65 hover-white">info@clarent360.com.au</a>
                             </div>
-                            <div class="d-flex align-items-start gap-3">
-                                <i class="fal fa-map-marker-alt white fs-5 mt-1"></i>
+                            <div>
+                                <span class="fs-eight white d-block mb-1">Location</span>
                                 <p class="white65 mb-0">
                                     Sydney, Australia <br>
                                     Dubai, UAE
@@ -1109,7 +1109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <!-- Social -->
                         <div class="social-custom d-flex align-items-center gap-2">
-                            <a href="https://www.linkedin.com/in/clarent-solutions-472a16407/" target="_blank" style="background-color: #ffffff; color: #0a66c2; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                            <a href="https://www.linkedin.com/in/clarent-solutions-472a16407/" target="_blank" class="white65 hover-white">
                                 <i class="fab fa-linkedin-in fs-5"></i>
                             </a>
                         </div>
@@ -1204,7 +1204,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <!-- Frameworks -->
-                <div class="col-xl col-lg-2 col-md-4 col-sm-6">
+                <div class="col-xl-1 col-lg-2 col-md-4 col-sm-6">
                     <div class="footer-widget">
 
                         <div class="widget-head mb-4">
@@ -1265,11 +1265,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                 </div>
 
-                
-
-                    </div>
-                </div>
-
             </div>
 
             <!-- Bottom Footer -->
@@ -1277,13 +1272,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <div class="row align-items-center gy-3">
 
-                    <div class="col-12 text-center">
-                        <p class="white65 mb-0">
-                            © 2026
-                            <a href="index.html" class="white fw-semibold">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="white65 mb-0" style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important;">
+                            <a href="#" class="white65 hover-white" style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important; text-decoration: none;">Privacy Policy</a>
+                            <span class="mx-2" style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important;">•</span>
+                            <a href="#" class="white65 hover-white" style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important; text-decoration: none;">Terms of Use</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="white65 mb-0" style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important;">
+                            <span style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important;">© 2026</span>
+                            <a href="index.html" class="white65 hover-white" style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important; text-decoration: none;">
                                 Clarent360
-                            </a>.
-                            All Rights Reserved.
+                            </a>
+                            <span style="font-size: 13px !important; color: rgba(255, 255, 255, 0.65) !important;">. All Rights Reserved.</span>
                         </p>
                     </div>
 

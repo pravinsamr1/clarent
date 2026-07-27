@@ -633,11 +633,11 @@
             }
         }
 
-        /* ---------- CORPORATE HUB ---------- */
+        /* ---------- ENHANCED CATCHY CORPORATE HUB ---------- */
         .corporate-hub {
             position: relative;
             width: 100%;
-            max-width: 580px;
+            max-width: 640px;
             margin: 0 auto;
             aspect-ratio: 1.1 / 1;
             display: flex;
@@ -645,53 +645,140 @@
             justify-content: center;
         }
 
+        /* Ambient Glow Backdrop */
+        .hub-ambient-glow {
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.22) 0%, rgba(168, 85, 247, 0.1) 50%, transparent 70%);
+            z-index: 1;
+            pointer-events: none;
+            animation: pulseGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(0.92); opacity: 0.7; }
+            100% { transform: scale(1.1); opacity: 1; }
+        }
+
+        /* Orbit Rings */
+        .hub-orbit-ring {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* .inner-orbit {
+            width: 270px;
+            height: 270px;
+            border: 1px dashed rgba(168, 85, 247, 0.3);
+            animation: rotateReverse 18s linear infinite;
+        } */
+
+        @keyframes rotateReverse {
+            0% { transform: rotate(360deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        /* SVG Connections */
+        .hub-svg-connections {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .conn-line {
+            stroke: rgba(99, 102, 241, 0.35);
+            stroke-width: 2;
+            stroke-dasharray: 6 6;
+            animation: dashFlow 20s linear infinite;
+        }
+
+        @keyframes dashFlow {
+            to { stroke-dashoffset: -100; }
+        }
+
+        /* Center Hub Circle */
         .hub-center {
-            width: 150px;
-            height: 150px;
-            background: #ffffff;
-            border: 3px solid var(--p1-clr);
+            width: 175px;
+            height: 175px;
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
             border-radius: 50%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             z-index: 10;
-            box-shadow: 0 10px 30px rgba(81, 53, 255, 0.15);
+            box-shadow: 0 18px 45px rgba(81, 53, 255, 0.22), inset 0 0 20px rgba(99, 102, 241, 0.05);
             position: relative;
+            transition: all 0.4s ease;
+            padding: 10px;
         }
 
-        .hub-center::before {
+        .hub-center::after {
             content: '';
             position: absolute;
-            top: -24px;
-            left: -24px;
-            right: -24px;
-            bottom: -24px;
-            border: 1px dashed rgba(81, 53, 255, 0.25);
+            inset: -4px;
             border-radius: 50%;
-            z-index: -1;
-            animation: rotateSlow 20s linear infinite;
+            padding: 3px;
+            background: linear-gradient(135deg, #4f46e5 0%, #a855f7 50%, #f59e0b 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: 1;
+            animation: glowRotate 6s linear infinite;
         }
 
-        @keyframes rotateSlow {
-            100% {
-                transform: rotate(360deg);
-            }
+        @keyframes glowRotate {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
         }
 
-        .hub-center h3 {
+        .hub-center-badge {
+            font-size: 20px;
+            color: #4f46e5;
+            margin-bottom: 4px;
+            filter: drop-shadow(0 2px 4px rgba(79, 70, 229, 0.3));
+        }
+
+        .hub-label-top {
             font-family: "Plus Jakarta Sans", sans-serif;
-            font-size: 16px;
+            font-size: 13px;
             font-weight: 800;
-            margin: 0;
-            line-height: 1.3;
-            text-align: center;
-            color: var(--paper);
-            letter-spacing: 0.05em;
+            letter-spacing: 1.5px;
+            color: #0f172a;
+            line-height: 1.2;
         }
 
-        .hub-center .highlight {
-            color: var(--p2-clr);
+        .hub-label-main {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+            margin-top: 2px;
+        }
+
+        .hub-pulse-ring {
+            position: absolute;
+            inset: -14px;
+            border-radius: 50%;
+            border: 2px solid rgba(99, 102, 241, 0.22);
+            animation: pulseOut 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+            pointer-events: none;
+        }
+
+        @keyframes pulseOut {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            100% { transform: scale(1.25); opacity: 0; }
         }
 
         .hub-nodes-container {
@@ -703,285 +790,110 @@
             pointer-events: none;
         }
 
+        /* ---------- INTERVAL STEP ORBIT ANIMATION (PAUSES AT EACH INTERVAL) ---------- */
+        .hub-nodes-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            animation: stepOrbit 20s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+        }
+
+        .corporate-hub:hover .hub-nodes-container,
+        .corporate-hub:hover .hub-node-counter {
+            animation-play-state: paused !important;
+        }
+
+        @keyframes stepOrbit {
+            0%, 16%   { transform: rotate(0deg); }
+            20%, 36%  { transform: rotate(72deg); }
+            40%, 56%  { transform: rotate(144deg); }
+            60%, 76%  { transform: rotate(216deg); }
+            80%, 96%  { transform: rotate(288deg); }
+            100%      { transform: rotate(360deg); }
+        }
+
+        /* Hub Node Position Holders */
         .hub-node {
             position: absolute;
             top: 50%;
             left: 50%;
-            background: #ffffff;
-            border: none;
-            border-radius: 20px;
-            padding: 14px 16px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
-            min-width: 160px;
-            max-width: 175px;
+            min-width: 170px;
+            max-width: 195px;
             pointer-events: auto;
             text-align: center;
         }
 
-        .hub-node:hover {
-            border-color: #5135FF;
-            box-shadow: 0px 15px 35px rgba(81, 53, 255, 0.1);
+        .node-top          { transform: translate(calc(-50% + 0px), calc(-50% - 215px)); }
+        .node-right        { transform: translate(calc(-50% + 204px), calc(-50% - 66px)); }
+        .node-bottom-right { transform: translate(calc(-50% + 126px), calc(-50% + 174px)); }
+        .node-bottom-left  { transform: translate(calc(-50% - 126px), calc(-50% + 174px)); }
+        .node-left         { transform: translate(calc(-50% - 204px), calc(-50% - 66px)); }
+
+        /* Counter-Rotation Layer (Keeps card level & upright at all times) */
+        .hub-node-counter {
+            display: block;
+            width: 100%;
+            animation: counterStep 20s cubic-bezier(0.65, 0, 0.35, 1) infinite;
         }
 
-        .hub-node h4 {
+        @keyframes counterStep {
+            0%, 16%   { transform: rotate(0deg); }
+            20%, 36%  { transform: rotate(-72deg); }
+            40%, 56%  { transform: rotate(-144deg); }
+            60%, 76%  { transform: rotate(-216deg); }
+            80%, 96%  { transform: rotate(-288deg); }
+            100%      { transform: rotate(-360deg); }
+        }
+
+        /* Inner Visual Node Card */
+        .hub-node-card {
+            background: #ffffff;
+            border: none;
+            border-radius: 14px;
+            padding: 12px 16px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hub-node-card h4 {
             font-family: "Plus Jakarta Sans", sans-serif;
             font-size: 13px;
-            font-weight: 700;
-            color: var(--paper);
-            margin: 0 0 8px;
-            text-transform: capitalize;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 4px;
             text-transform: uppercase;
+            letter-spacing: 0.4px;
         }
 
-        .hub-node p {
+        .hub-node-card p {
             font-family: "Inter", sans-serif;
             font-size: 11px;
-            font-weight: 500;
-            color: var(--slate);
+            color: #64748b;
             margin: 0;
-            line-height: 1.5;
+            line-height: 1.35;
         }
 
-        .hub-node p strong {
-            color: var(--paper);
+        .hub-node-card p strong {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #1e293b;
+            font-size: 10.5px;
             font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            letter-spacing: 0.2px;
+            margin-bottom: 2px;
         }
 
-        /* Absolute positioning in a circle using translate */
-        .node-top {
-            transform: translate(calc(-50% + 0px), calc(-50% - 180px));
-        }
-
-        .node-right {
-            transform: translate(calc(-50% + 180px), calc(-50% - 50px));
-        }
-
-        .node-bottom-right {
-            transform: translate(calc(-50% + 110px), calc(-50% + 140px));
-        }
-
-        .node-bottom-left {
-            transform: translate(calc(-50% - 110px), calc(-50% + 140px));
-        }
-
-        .node-left {
-            transform: translate(calc(-50% - 180px), calc(-50% - 50px));
-        }
-
-        @keyframes spinHub {
-
-            0%,
-            15% {
-                transform: rotate(0deg);
-            }
-
-            20%,
-            35% {
-                transform: rotate(72deg);
-            }
-
-            40%,
-            55% {
-                transform: rotate(144deg);
-            }
-
-            60%,
-            75% {
-                transform: rotate(216deg);
-            }
-
-            80%,
-            95% {
-                transform: rotate(288deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .hub-nodes-container {
-            animation: spinHub 25s infinite ease-in-out;
-        }
-
-        @keyframes counterSpin_node-top {
-
-            0%,
-            15% {
-                transform: translate(calc(-50% + 0px), calc(-50% - 180px)) rotate(0deg);
-            }
-
-            20%,
-            35% {
-                transform: translate(calc(-50% + 0px), calc(-50% - 180px)) rotate(-72deg);
-            }
-
-            40%,
-            55% {
-                transform: translate(calc(-50% + 0px), calc(-50% - 180px)) rotate(-144deg);
-            }
-
-            60%,
-            75% {
-                transform: translate(calc(-50% + 0px), calc(-50% - 180px)) rotate(-216deg);
-            }
-
-            80%,
-            95% {
-                transform: translate(calc(-50% + 0px), calc(-50% - 180px)) rotate(-288deg);
-            }
-
-            100% {
-                transform: translate(calc(-50% + 0px), calc(-50% - 180px)) rotate(-360deg);
-            }
-        }
-
-        .node-top {
-            animation: counterSpin_node-top 25s infinite ease-in-out;
-        }
-
-        @keyframes counterSpin_node-right {
-
-            0%,
-            15% {
-                transform: translate(calc(-50% + 180px), calc(-50% - 50px)) rotate(0deg);
-            }
-
-            20%,
-            35% {
-                transform: translate(calc(-50% + 180px), calc(-50% - 50px)) rotate(-72deg);
-            }
-
-            40%,
-            55% {
-                transform: translate(calc(-50% + 180px), calc(-50% - 50px)) rotate(-144deg);
-            }
-
-            60%,
-            75% {
-                transform: translate(calc(-50% + 180px), calc(-50% - 50px)) rotate(-216deg);
-            }
-
-            80%,
-            95% {
-                transform: translate(calc(-50% + 180px), calc(-50% - 50px)) rotate(-288deg);
-            }
-
-            100% {
-                transform: translate(calc(-50% + 180px), calc(-50% - 50px)) rotate(-360deg);
-            }
-        }
-
-        .node-right {
-            animation: counterSpin_node-right 25s infinite ease-in-out;
-        }
-
-        @keyframes counterSpin_node-bottom-right {
-
-            0%,
-            15% {
-                transform: translate(calc(-50% + 110px), calc(-50% + 140px)) rotate(0deg);
-            }
-
-            20%,
-            35% {
-                transform: translate(calc(-50% + 110px), calc(-50% + 140px)) rotate(-72deg);
-            }
-
-            40%,
-            55% {
-                transform: translate(calc(-50% + 110px), calc(-50% + 140px)) rotate(-144deg);
-            }
-
-            60%,
-            75% {
-                transform: translate(calc(-50% + 110px), calc(-50% + 140px)) rotate(-216deg);
-            }
-
-            80%,
-            95% {
-                transform: translate(calc(-50% + 110px), calc(-50% + 140px)) rotate(-288deg);
-            }
-
-            100% {
-                transform: translate(calc(-50% + 110px), calc(-50% + 140px)) rotate(-360deg);
-            }
-        }
-
-        .node-bottom-right {
-            animation: counterSpin_node-bottom-right 25s infinite ease-in-out;
-        }
-
-        @keyframes counterSpin_node-bottom-left {
-
-            0%,
-            15% {
-                transform: translate(calc(-50% - 110px), calc(-50% + 140px)) rotate(0deg);
-            }
-
-            20%,
-            35% {
-                transform: translate(calc(-50% - 110px), calc(-50% + 140px)) rotate(-72deg);
-            }
-
-            40%,
-            55% {
-                transform: translate(calc(-50% - 110px), calc(-50% + 140px)) rotate(-144deg);
-            }
-
-            60%,
-            75% {
-                transform: translate(calc(-50% - 110px), calc(-50% + 140px)) rotate(-216deg);
-            }
-
-            80%,
-            95% {
-                transform: translate(calc(-50% - 110px), calc(-50% + 140px)) rotate(-288deg);
-            }
-
-            100% {
-                transform: translate(calc(-50% - 110px), calc(-50% + 140px)) rotate(-360deg);
-            }
-        }
-
-        .node-bottom-left {
-            animation: counterSpin_node-bottom-left 25s infinite ease-in-out;
-        }
-
-        @keyframes counterSpin_node-left {
-
-            0%,
-            15% {
-                transform: translate(calc(-50% - 180px), calc(-50% - 50px)) rotate(0deg);
-            }
-
-            20%,
-            35% {
-                transform: translate(calc(-50% - 180px), calc(-50% - 50px)) rotate(-72deg);
-            }
-
-            40%,
-            55% {
-                transform: translate(calc(-50% - 180px), calc(-50% - 50px)) rotate(-144deg);
-            }
-
-            60%,
-            75% {
-                transform: translate(calc(-50% - 180px), calc(-50% - 50px)) rotate(-216deg);
-            }
-
-            80%,
-            95% {
-                transform: translate(calc(-50% - 180px), calc(-50% - 50px)) rotate(-288deg);
-            }
-
-            100% {
-                transform: translate(calc(-50% - 180px), calc(-50% - 50px)) rotate(-360deg);
-            }
-        }
-
-        .node-left {
-            animation: counterSpin_node-left 25s infinite ease-in-out;
+        /* Hovering the card scales it up cleanly without affecting keyframe animation */
+        .hub-node-card:hover {
+            transform: scale(1.12);
+            box-shadow: 0 22px 45px rgba(81, 53, 255, 0.22);
         }
 
         @media (max-width: 991px) {
@@ -1149,34 +1061,63 @@
             </div>
 
             <div class="corporate-hub reveal in nonon">
+                <!-- Ambient Glow Backdrop & Inner Orbit Ring -->
+                <div class="hub-ambient-glow"></div>
+                <div class="hub-orbit-ring inner-orbit"></div>
+
                 <div class="hub-center">
-                    <h3>CLIENT<br><span class="highlight">ORGANIZATION</span></h3>
+                    <div class="hub-center-badge">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <span class="hub-label-top">CLIENT</span>
+                    <span class="hub-label-main">ORGANIZATION</span>
+                    <div class="hub-pulse-ring"></div>
                 </div>
 
                 <div class="hub-nodes-container">
                     <div class="hub-node node-top">
-                        <h4>Govern</h4>
-                        <p><strong>RMP / IAP</strong></p>
+                        <div class="hub-node-counter">
+                            <div class="hub-node-card">
+                                <h4>Govern</h4>
+                                <p><strong>RMP / IAP</strong></p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="hub-node node-right">
-                        <h4>Protect</h4>
-                        <p><strong>DSP / SEDP / VPMP</strong></p>
+                        <div class="hub-node-counter">
+                            <div class="hub-node-card">
+                                <h4>Protect</h4>
+                                <p><strong>DSP / SEDP / VPMP</strong></p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="hub-node node-bottom-right">
-                        <h4>Respond</h4>
-                        <p><strong>IIRP / COOP</strong></p>
+                        <div class="hub-node-counter">
+                            <div class="hub-node-card">
+                                <h4>Respond</h4>
+                                <p><strong>IIRP / COOP</strong></p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="hub-node node-bottom-left">
-                        <h4>Assure</h4>
-                        <p><strong>DPP / CSOP</strong></p>
+                        <div class="hub-node-counter">
+                            <div class="hub-node-card">
+                                <h4>Assure</h4>
+                                <p><strong>DPP / CSOP</strong></p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="hub-node node-left">
-                        <h4>Supply Chain</h4>
-                        <p><strong>C-SCRM</strong></p>
+                        <div class="hub-node-counter">
+                            <div class="hub-node-card">
+                                <h4>Supply Chain</h4>
+                                <p><strong>C-SCRM</strong></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

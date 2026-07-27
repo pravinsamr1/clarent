@@ -9,7 +9,7 @@
             badge.id = 'clarentPopupBadge';
             badge.className = 'clarent-popup-trigger-badge';
             badge.setAttribute('aria-label', 'Open enquiry form');
-            badge.innerHTML = `<img src="assets/webimages/about/contact-form.png" alt="" width="30px">`;
+            badge.innerHTML = `<img src="assets/webimages/gif/chatbot.gif" alt="Get in Touch" width="120px" height="120px" style="object-fit: contain;">`;
             document.body.appendChild(badge);
         }
 
@@ -26,8 +26,13 @@
                     <!-- Form View -->
                     <div class="clarent-popup-form-view" id="clarentPopupFormView">
                         <div class="clarent-popup-header">
-                            <span class="clarent-popup-subtitle">Get in Touch</span>
-                            <h3 class="clarent-popup-title">How Can We Help You?</h3>
+                            <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 8px;">
+                                <img src="assets/webimages/gif/chatbot.gif" alt="Chatbot" width="48px" height="48px" style="object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 4px 10px rgba(81, 53, 255, 0.2));">
+                                <div>
+                                    <span class="clarent-popup-subtitle" style="margin-bottom: 2px;">Get in Touch</span>
+                                    <h3 class="clarent-popup-title" style="margin: 0;">How Can We Help You?</h3>
+                                </div>
+                            </div>
                             <p class="clarent-popup-desc">Specify your details and choose the service you require. Our team will get back to you shortly.</p>
                         </div>
                         
