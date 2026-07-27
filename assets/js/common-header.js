@@ -1441,6 +1441,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.dispatchEvent(new CustomEvent("footerLoaded"));
     }
 
-
+    // 3. Inject Common Enquiry Form & Floating Pill Badge Site-Wide
+    if (!document.querySelector('script[src*="common-enquiry-form.js"]')) {
+        const enquiryScript = document.createElement('script');
+        enquiryScript.src = 'assets/js/common-enquiry-form.js?v=1.0.6';
+        document.body.appendChild(enquiryScript);
+    }
 
 });

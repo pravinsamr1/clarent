@@ -511,7 +511,6 @@
         function closePopup() {
             overlay.classList.remove('active');
             document.body.style.overflow = '';
-            sessionStorage.setItem('clarent_popup_closed', 'true');
             badge.classList.remove('active-modal');
             console.log("Clarent Popup: Modal closed.");
         }
@@ -569,19 +568,29 @@
             console.log("Clarent Trigger Badge: Hidden.");
         }
         
-        const isLocal = window.location.protocol === 'file:' || 
-                        window.location.hostname === 'localhost' || 
-                        window.location.hostname === '127.0.0.1' ||
-                        window.location.hash === '#test-popup';
-                        
-        const alreadyClosed = sessionStorage.getItem('clarent_popup_closed');
-        const alreadySubmitted = sessionStorage.getItem('clarent_popup_submitted');
+        const pathName = window.location.pathname.toLowerCase();
+        const isIndexPage = pathName.endsWith('/') || 
+                            pathName.endsWith('/index.html') || 
+                            pathName.endsWith('/index.htm') || 
+                            pathName === '' ||
+                            pathName.endsWith('/source') ||
+                            pathName.endsWith('/source/') ||
+                            pathName.includes('index') ||
+                            window.location.hash === '#test-popup';
+                            
+        let alreadySubmitted = false;
+        try {
+            alreadySubmitted = sessionStorage.getItem('clarent_popup_submitted') === 'true' || 
+                               localStorage.getItem('clarent_popup_submitted') === 'true';
+        } catch (e) {
+            console.warn("Storage access warning", e);
+        }
         
-        if (isLocal || (!alreadyClosed && !alreadySubmitted)) {
-            console.log("Clarent Popup: Scheduled to show in 5 seconds.");
-            setTimeout(showPopup, 5000);
+        if (isIndexPage && !alreadySubmitted) {
+            console.log("Clarent Popup: Index page detected. Scheduled auto-popup in 8 seconds.");
+            setTimeout(showPopup, 8000);
         } else {
-            console.log("Clarent Popup: Suppressed by sessionStorage.");
+            console.log("Clarent Popup: Inner page detected. Auto-popup disabled.");
         }
         
         if (closeBtn) closeBtn.addEventListener('click', closePopup);
