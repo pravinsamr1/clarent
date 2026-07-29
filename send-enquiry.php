@@ -1,8 +1,32 @@
 <?php
 // send-enquiry.php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
 
 // Set response headers to JSON
 header('Content-Type: application/json');
+
+$ip = $_SERVER['REMOTE_ADDR'];
+$rateLimitFile = __DIR__ . '/.ip_rate_limits.json';
+$rateLimits = file_exists($rateLimitFile) ? json_decode(file_get_contents($rateLimitFile), true) : [];
+
+// Clean up old entries (older than 1 hour)
+foreach ($rateLimits as $storedIp => $data) {
+    if (time() - $data['timestamp'] > 3600) {
+        unset($rateLimits[$storedIp]);
+    }
+}
+
+if (isset($rateLimits[$ip]) && $rateLimits[$ip]['count'] >= 5) {
+    http_response_code(429);
+    echo json_encode(['success' => false, 'message' => 'Too many requests from this IP. Please try again later.']);
+    exit;
+}
 
 // Only allow POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -39,28 +63,75 @@ if (!$name || !$email || !$message) {
     exit;
 }
 
+$recaptchaToken = isset($input['recaptcha_token']) ? $input['recaptcha_token'] : filter_input(INPUT_POST, 'recaptcha_token', FILTER_SANITIZE_SPECIAL_CHARS);
+
+if (empty($recaptchaToken)) {
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'reCAPTCHA verification failed (Token missing).']);
+    exit;
+}
+
+$recaptchaSecret = $_ENV['RECAPTCHA_SECRET_KEY'] ?? 'your_secret_key_here';
+if ($recaptchaSecret !== 'your_secret_key_here') {
+    $recaptchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptchaData = [
+        'secret' => $recaptchaSecret,
+        'response' => $recaptchaToken,
+        'remoteip' => $ip
+    ];
+
+    $options = [
+        'http' => [
+            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method'  => 'POST',
+            'content' => http_build_query($recaptchaData)
+        ]
+    ];
+    $context  = stream_context_create($options);
+    $recaptchaResult = file_get_contents($recaptchaUrl, false, $context);
+    $recaptchaJson = json_decode($recaptchaResult);
+
+    if (!$recaptchaJson->success || (isset($recaptchaJson->score) && $recaptchaJson->score < 0.5)) {
+        http_response_code(400);
+        echo json_encode(['success' => false, 'message' => 'reCAPTCHA verification failed. Bots are not allowed.']);
+        exit;
+    }
+}
+
 // Recipient email address
 $to = 'pravinsamr@gmail.com'; 
 
 // Subject line
 $subject = "New Clarent360 Enquiry from " . $name;
 
+// Format services as a bulleted list
+$formatted_services = '<strong>Not selected</strong>';
+if (!empty($services)) {
+    $services_arr = array_map('trim', explode(',', $services));
+    $formatted_services = '<ul style="margin: 0; padding-left: 20px;">';
+    foreach ($services_arr as $srv) {
+        $formatted_services .= '<li><strong>' . htmlspecialchars($srv) . '</strong></li>';
+    }
+    $formatted_services .= '</ul>';
+}
+
 // HTML Email Template
 $email_content = "
 <html>
 <head>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f5f8; color: #333333; margin: 0; padding: 20px; }
-        .container { max-width: 600px; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 30px; margin: 0 auto; border-top: 4px solid #5135ff; }
-        .logo { font-size: 24px; font-weight: bold; color: #030611; margin-bottom: 20px; text-align: center; letter-spacing: 0.5px; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f9fafb; color: #374151; margin: 0; padding: 20px; }
+        .container { width: 100%; max-width: 100%; background: #ffffff; border-radius: 8px; border: 1px solid #e5e7eb; padding: 30px; box-sizing: border-box; }
+        .logo { font-size: 24px; font-weight: bold; color: #111827; margin-bottom: 24px; text-align: center; letter-spacing: 0.5px; }
         .logo span { color: #5135ff; }
-        h2 { font-size: 20px; color: #030611; border-bottom: 1px solid #eeeeee; padding-bottom: 10px; margin-top: 0; }
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { text-align: left; padding: 10px; border-bottom: 1px solid #f5f5f5; }
-        th { font-weight: 600; color: #666666; width: 35%; }
-        td { color: #111111; }
-        .message-box { background-color: #f8f9fc; border-left: 3px solid #ff5455; padding: 15px; border-radius: 4px; margin-top: 15px; font-style: italic; line-height: 1.5; }
-        .footer { margin-top: 30px; font-size: 12px; color: #999999; text-align: center; }
+        h2 { font-size: 18px; color: #111827; margin-top: 0; margin-bottom: 12px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 24px; border: 1px solid #e5e7eb; }
+        th, td { text-align: left; padding: 14px; border: 1px solid #e5e7eb; }
+        th { font-weight: 600; color: #4b5563; width: 35%; background-color: #f9fafb; }
+        td { color: #111827; }
+        a { color: #5135ff; text-decoration: none; }
+        .message-box { border: 1px solid #e5e7eb; padding: 16px; border-radius: 6px; font-style: normal; line-height: 1.6; color: #374151; background-color: #ffffff; }
+        .footer { margin-top: 30px; font-size: 12px; color: #9ca3af; text-align: center; }
     </style>
 </head>
 <body>
@@ -86,11 +157,11 @@ $email_content = "
             </tr>
             <tr>
                 <th>Services Needed:</th>
-                <td><strong>" . htmlspecialchars($services ? $services : 'Not selected') . "</strong></td>
+                <td>" . $formatted_services . "</td>
             </tr>
         </table>
         
-        <h2>User Message</h2>
+        <h2>Client Message</h2>
         <div class='message-box'>" . nl2br(htmlspecialchars($message)) . "</div>
         
         <div class='footer'>
@@ -101,18 +172,47 @@ $email_content = "
 </html>
 ";
 
-// Headers
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
-$headers .= "From: Clarent360 Website <no-reply@clarent360.com>" . "\r\n";
-$headers .= "Reply-To: " . $name . " <" . $email . ">" . "\r\n";
-$headers .= "X-Mailer: PHP/" . phpversion();
+// Send using PHPMailer
+$mail = new PHPMailer(true);
 
-// Send
-if (mail($to, $subject, $email_content, $headers)) {
+try {
+    // Server settings
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = $_ENV['GMAIL_ADDRESS']; 
+    $mail->Password   = $_ENV['GMAIL_APP_PASSWORD']; 
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
+
+    // Recipients
+    $mail->setFrom('vtu11064@veltech.edu.in', 'Clarent360 Website');
+    $mail->addAddress($to);
+    $mail->addReplyTo($email, $name);
+
+    // Content
+    $mail->isHTML(true);
+    $mail->Subject = $subject;
+    $mail->Body    = $email_content;
+
+    // Set Priority
+    $mail->Priority = 1;
+    $mail->addCustomHeader('X-Priority', '1');
+    $mail->addCustomHeader('X-MSMail-Priority', 'High');
+    $mail->addCustomHeader('Importance', 'High');
+
+    $mail->send();
+    
+    // Increment IP submission count upon successful send
+    if (!isset($rateLimits[$ip])) {
+        $rateLimits[$ip] = ['count' => 0, 'timestamp' => time()];
+    }
+    $rateLimits[$ip]['count']++;
+    file_put_contents($rateLimitFile, json_encode($rateLimits));
+    
     echo json_encode(['success' => true, 'message' => 'Enquiry sent successfully.']);
-} else {
+} catch (Exception $e) {
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'Failed to send enquiry email. Please check your SMTP mail server configuration.']);
+    echo json_encode(['success' => false, 'message' => "Failed to send enquiry email. Mailer Error: {$mail->ErrorInfo}"]);
 }
 ?>
