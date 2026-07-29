@@ -4113,13 +4113,18 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
 }
 
 .business-thumbnail .mimg {
-    /* width: 100% !important; */
-    /* max-width: 100% !important; */
-    width: 630px;
+    /* width: 100%; */
+    max-width: 630px;
     height: auto !important;
+    object-fit: cover;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    
+}
+
+@media(max-width:1200px){
+    .business-thumbnail .mimg {
+    margin-top: 20px;
+}
 }
 
 .why-padding-bottom{
