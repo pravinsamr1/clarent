@@ -783,15 +783,14 @@
                 fields.forEach(f => { if (f) f.disabled = false; });
             }
 
-            function sendEnquiry(recaptchaToken) {
+            function sendEnquiry() {
                 const payload = {
                     name: nameField.value.trim(),
                     email: emailField.value.trim(),
                     phone: phoneField.value.trim(),
                     country: countryField.value,
                     services: Array.from(checkedServices).map(c => c.value).join(', '),
-                    message: messageField.value.trim(),
-                    recaptcha_token: recaptchaToken
+                    message: messageField.value.trim()
                 };
 
                 fetch('send-enquiry.php', {
@@ -855,30 +854,12 @@
             });
             }
 
-            if (RECAPTCHA_SITE_KEY === 'your_site_key_here' || typeof grecaptcha === 'undefined') {
-                sendEnquiry('dev_placeholder_token');
-            } else {
-                grecaptcha.ready(function() {
-                    grecaptcha.execute(RECAPTCHA_SITE_KEY, {action: 'submit'}).then(function(token) {
-                        sendEnquiry(token);
-                    }).catch(function(err) {
-                        console.error('reCAPTCHA error:', err);
-                        enableFormInputs();
-                        alert('Could not verify reCAPTCHA. Please try again.');
-                    });
-                });
-            }
+            sendEnquiry();
         });
     }
 
     if (document.readyState === 'loading') {
-        // Initialize Google reCAPTCHA v3
-const RECAPTCHA_SITE_KEY = '6LeIr2ktAAAAAKiPy_h-hoCT7xib9829bvxHXGUn';
-const recaptchaScript = document.createElement('script');
-recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
-document.head.appendChild(recaptchaScript);
-
-document.addEventListener('DOMContentLoaded', initCommonPopup);
+        document.addEventListener('DOMContentLoaded', initCommonPopup);
     } else {
         initCommonPopup();
     }

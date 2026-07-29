@@ -63,40 +63,6 @@ if (!$name || !$email || !$message) {
     exit;
 }
 
-$recaptchaToken = isset($input['recaptcha_token']) ? $input['recaptcha_token'] : filter_input(INPUT_POST, 'recaptcha_token', FILTER_SANITIZE_SPECIAL_CHARS);
-
-if (empty($recaptchaToken)) {
-    http_response_code(400);
-    echo json_encode(['success' => false, 'message' => 'reCAPTCHA verification failed (Token missing).']);
-    exit;
-}
-
-$recaptchaSecret = $_ENV['RECAPTCHA_SECRET_KEY'] ?? 'your_secret_key_here';
-if ($recaptchaSecret !== 'your_secret_key_here') {
-    $recaptchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
-    $recaptchaData = [
-        'secret' => $recaptchaSecret,
-        'response' => $recaptchaToken,
-        'remoteip' => $ip
-    ];
-
-    $options = [
-        'http' => [
-            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-            'method'  => 'POST',
-            'content' => http_build_query($recaptchaData)
-        ]
-    ];
-    $context  = stream_context_create($options);
-    $recaptchaResult = file_get_contents($recaptchaUrl, false, $context);
-    $recaptchaJson = json_decode($recaptchaResult);
-
-    if (!$recaptchaJson->success || (isset($recaptchaJson->score) && $recaptchaJson->score < 0.5)) {
-        http_response_code(400);
-        echo json_encode(['success' => false, 'message' => 'reCAPTCHA verification failed. Bots are not allowed.']);
-        exit;
-    }
-}
 
 // Recipient email address
 $to = 'pravinsamr@gmail.com'; 

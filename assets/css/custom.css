@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-/* Hide Google reCAPTCHA Badge */
-.grecaptcha-badge {
-    visibility: hidden !important;
-}
-
 /* Remove relative context from parent menus down to the mega menu li wrapper */
 .header-main .main-menu > nav > ul > li:has(.services-mega) {
     position: static !important;
