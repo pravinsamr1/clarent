@@ -5,9 +5,6 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->safeLoad();
-
 // Set response headers to JSON
 header('Content-Type: application/json');
 
@@ -146,8 +143,8 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = $_ENV['GMAIL_ADDRESS']; 
-    $mail->Password   = $_ENV['GMAIL_APP_PASSWORD']; 
+    $mail->Username   = 'pravinsamr@gmail.com'; // TODO: Put your actual email here
+    $mail->Password   = 'vjmnqtemoehjdsar'; // TODO: Put your actual app password here
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
