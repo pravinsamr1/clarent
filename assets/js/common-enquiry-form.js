@@ -497,7 +497,6 @@
             }
         }
 
-        showBadge();
         loadLottieAnimations();
 
         function showPopup() {
@@ -560,7 +559,12 @@
             }
         }
 
-        window.addEventListener('scroll', checkBadgeBackgroundLuminance, { passive: true });
+        window.addEventListener('scroll', function() {
+            if (!badge.classList.contains('visible') && window.scrollY > 0) {
+                showBadge();
+            }
+            checkBadgeBackgroundLuminance();
+        }, { passive: true });
         window.addEventListener('resize', checkBadgeBackgroundLuminance, { passive: true });
         
         function hideBadge() {

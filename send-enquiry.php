@@ -143,13 +143,13 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'clarent360@gmail.com'; // TODO: Put your actual email here
-    $mail->Password   = 'dduwnnnbedjuvvwm'; // TODO: Put your actual app password here
+    $mail->Username   = 'pravinsamr@gmail.com'; 
+    $mail->Password   = 'vjmnqtemoehjdsar';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
     // Recipients
-    $mail->setFrom('vtu11064@veltech.edu.in', 'Clarent360 Website');
+    $mail->setFrom('pravinsamr@gmail.com', 'Clarent360 Website');
     $mail->addAddress($to);
     $mail->addReplyTo($email, $name);
 
