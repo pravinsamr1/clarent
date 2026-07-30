@@ -143,13 +143,13 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'pravinsamr@gmail.com'; 
-    $mail->Password   = 'vjmnqtemoehjdsar';
+    $mail->Username   = 'clarent360@gmail.com'; 
+    $mail->Password   = 'dduwnnnbedjuvvwm';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
     // Recipients
-    $mail->setFrom('pravinsamr@gmail.com', 'Clarent360 Website');
+    $mail->setFrom('clarent360@gmail.com', 'Clarent360 Website');
     $mail->addAddress($to);
     $mail->addReplyTo($email, $name);
 
