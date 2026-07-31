@@ -155,7 +155,7 @@ try {
 
     // Recipients
     $mail->setFrom('noreply@clarent360.com.au', 'Clarent360 Website');
-    $mail->addAddress('pravinsamr@gmail.com');
+    $mail->addAddress($to);
     $mail->addReplyTo($email, $name);
 
     // Content
