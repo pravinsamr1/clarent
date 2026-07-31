@@ -149,7 +149,7 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
-    // Bypass SSL verification in case of certificate mismatch on the live server
+    // Bypass SSL verification in case of certificate mismatch on the live serverr
     $mail->SMTPOptions = array(
         'ssl' => array(
             'verify_peer' => false,
