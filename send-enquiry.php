@@ -157,12 +157,9 @@ try {
     $mail->isHTML(true);
     $mail->Subject = $subject;
     $mail->Body    = $email_content;
-
-    // Set Priority
-    $mail->Priority = 1;
-    $mail->addCustomHeader('X-Priority', '1');
-    $mail->addCustomHeader('X-MSMail-Priority', 'High');
-    $mail->addCustomHeader('Importance', 'High');
+    
+    // Add a plain-text alternative body (helps bypass spam filters)
+    $mail->AltBody = strip_tags(str_replace(['<br>', '<br/>', '</p>'], "\n", $email_content));
 
     $mail->send();
     
