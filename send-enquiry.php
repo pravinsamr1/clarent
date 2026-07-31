@@ -62,7 +62,7 @@ if (!$name || !$email || !$message) {
 
 
 // Recipient email address
-$to = 'pravinsamr@gmail.com'; 
+$to = 'clarent360@gmail.com'; 
 
 // Subject line
 $subject = "New Clarent360 Enquiry from " . $name;
