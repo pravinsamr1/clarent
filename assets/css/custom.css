@@ -1176,7 +1176,7 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
 
 @media (max-width: 767px) {
     .touchhh {
-        font-size: 30px !important;
+        font-size: 27px !important;
     }
 }
 
@@ -2362,7 +2362,7 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
     }
 
     .section-padding {
-        padding: 40px 0px;
+        padding: 40px 0px !important;
     }
 }
 
@@ -4180,7 +4180,14 @@ body:has(.header-main .main-menu ul li:hover > .submenu.services-mega) .mega-pag
 @media(max-width:767px){
     .abouutt-imgg{
         border-radius: 30px;
-    }}
+    }
+    .contacttt{
+        padding: 40px 0px !important;
+    }
+    .connnfat-forma{
+        padding: 0px 0px 40px !important;
+    }
+}
 /* Sticky Sidebar Fix for Blog Details Page */
 .news-details-section {
     overflow: visible !important;

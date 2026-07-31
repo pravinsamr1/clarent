@@ -141,16 +141,16 @@ $mail = new PHPMailer(true);
 try {
     // Server settings
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
+    $mail->Host       = 'mail.clarent360.com.au';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'clarent360@gmail.com'; 
-    $mail->Password   = 'ovwhfqlfuevycodt';
+    $mail->Username   = 'noreply@clarent360.com.au'; 
+    $mail->Password   = 'g@iP6L[*B~3XF*8E';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
     // Recipients
-    $mail->setFrom('clarent360@gmail.com', 'Clarent360 Website');
-    $mail->addAddress($to);
+    $mail->setFrom('noreply@clarent360.com.au', 'Clarent360 Website');
+    $mail->addAddress('pravinsamr@gmail.com');
     $mail->addReplyTo($email, $name);
 
     // Content
