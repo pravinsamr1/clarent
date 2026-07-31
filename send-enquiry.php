@@ -79,9 +79,10 @@ if (!empty($services)) {
 }
 
 // HTML Email Template
-$email_content = "
-<html>
+$email_content = "<!DOCTYPE html>
+<html lang=\"en\">
 <head>
+    <meta charset=\"UTF-8\">
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f9fafb; color: #374151; margin: 0; padding: 20px; }
         .container { width: 100%; max-width: 100%; background: #ffffff; border-radius: 8px; border: 1px solid #e5e7eb; padding: 30px; box-sizing: border-box; }
@@ -147,6 +148,10 @@ try {
     $mail->Password   = 'g@iP6L[*B~3XF*8E';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
+    
+    // Disguise the mailer and set the hostname for Message-ID to improve deliverability
+    $mail->XMailer = ' ';
+    $mail->Hostname = 'clarent360.com.au';
 
     // Recipients
     $mail->setFrom('noreply@clarent360.com.au', 'Clarent360 Website');
