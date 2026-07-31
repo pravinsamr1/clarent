@@ -146,12 +146,10 @@ try {
     $mail->SMTPAuth   = true;
     $mail->Username   = 'noreply@clarent360.com.au'; 
     $mail->Password   = 'g@iP6L[*B~3XF*8E';
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Changed from STARTTLS to SMTPS (SSL)??
-    $mail->Port       = 465; // Changed from 587 to 465
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
 
-    // Optional: If you still get connection errors, it might be a certificate mismatch. 
-    // You can uncomment the lines below to bypass SSL verification (for debugging only).
-    /*
+    // Bypass SSL verification in case of certificate mismatch on the live server
     $mail->SMTPOptions = array(
         'ssl' => array(
             'verify_peer' => false,
@@ -159,7 +157,6 @@ try {
             'allow_self_signed' => true
         )
     );
-    */
     
     // Disguise the mailer and set the hostname for Message-ID to improve deliverability
     $mail->XMailer = ' ';
